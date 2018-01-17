@@ -4,19 +4,26 @@ Object.assign(Homepage.prototype, { template(){ return `
         <div class="col px-0">
           <!-- Slider / Carousel -->
           <div id="movieslider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="col-md-3 calendertoday">
+            <div class="col col-lg-3 calendertoday p-3">
+              <button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+                Se kommande visningar
+              </button>
+              <div id="calendertoday" class="collapse mt-3 d-lg-block">
+                <h3>Visningar idag</h3>
                 <ul>
-                  <li>14.00 Justice League</li>
-                  <li>16.00 En annan Justice League</li>
-                  <li>18.00 Krigsfilm</li>
+                  <li><span>14.00</span> Justice League</li>
+                  <li><span>16.00</span> En annan Justice League</li>
+                  <li><span>18.00</span> Krigsfilm</li>
                 </ul>
+                <h3>Visningar imorgon</h3>
                 <ul>
-                  <li>15.30 Netflix Binge watch</li>
-                  <li>18.00 Beck</li>
-                  <li>20.00 Kärleksfilmen</li>
+                  <li><span>15.30</span> Netflix Binge watch</li>
+                  <li><span>18.00</span> Beck</li>
+                  <li><span>20.00</span> Kärleksfilmen</li>
                 </ul>
               </div>
+            </div>
+            <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="infobox">
                   <a href="#" title="Länk till filmen">All the money in the world</a>
