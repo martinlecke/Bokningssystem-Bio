@@ -6,10 +6,10 @@ class Film{
 		// this.name = jsonFilmer[urlName].runtime;
 	}
 
-	load(data){
+	// load(data){
 
-	}
+	// }
 
-	getData(){
-	}
+	// getData(){
+	// }
 }

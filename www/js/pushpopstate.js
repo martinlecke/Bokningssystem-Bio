@@ -52,17 +52,17 @@ class PopStateHandler {
     let urls = {
       '/': Homepage,
       '/filmer': Film,
-      '/filmer': Schedule
+      // '/schedule': Schedule
     };
 
     // Sparar "gamla sidan" om man behöver spara variabel, sträng etc. för annan sida.
-    let oldPage = this.currentPage; 
+    // let oldPage = this.currentPage; 
     this.currentPage = (urls[url] && new urls[url]) || undefined;
 
     //Kollar om oldPage har getData och CurrentPage har load. load funktion laddar data från oldPage.
-    if (oldPage.getData && this.currentPage.load){
-      this.currentPage.load( oldPage.getData() );
-    }
+    // if (oldPage.getData && this.currentPage.load){
+      // this.currentPage.load( oldPage.getData() );
+    // }
     // Call the template method of current page or load default method.
     // 'bind' binder "currentPage" till classen som .this
     let method = (this.currentPage && this.currentPage.template.bind(this.currentPage)) || this.default;
