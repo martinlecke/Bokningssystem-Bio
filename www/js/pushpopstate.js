@@ -44,8 +44,8 @@ class PopStateHandler {
     let url = location.pathname;
 
     // Change which menu link that is active
-    $('header a').removeClass('active');
-    $(`header a[href="${url}"]`).addClass('active');
+    $('header div ul li a').removeClass('active');
+    $(`header div ul li a[href="${url}"]`).addClass('active');
 
     // A small "dictionary" of what class to call
     // on which url
