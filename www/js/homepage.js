@@ -6,10 +6,13 @@ class Homepage{
 		// this.name = jsonFilmer[urlName].runtime;
 	}
 
-	// load(data){
+	load(data){
 		
-	// }
+	}
 
-	// getData(){
-	// }
+	getData(){
+		return {
+			numberOfMovies: 42
+		}
+	}
 }
