@@ -52,6 +52,7 @@ class PopStateHandler {
     let urls = {
       '/': Homepage,
       '/filmer': Film,
+      '/kalendarium': Kalendarium,
       // '/schedule': Schedule
     };
 
