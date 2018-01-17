@@ -1,9 +1,52 @@
 Object.assign(Homepage.prototype, { template(){ return `
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				
-			</div>	
-		</div>
-	</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col px-0">
+          <!-- Slider / Carousel -->
+          <div id="movieslider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="col-md-3 calendertoday">
+                <ul>
+                  <li>14.00 Justice League</li>
+                  <li>16.00 En annan Justice League</li>
+                  <li>18.00 Krigsfilm</li>
+                </ul>
+                <ul>
+                  <li>15.30 Netflix Binge watch</li>
+                  <li>18.00 Beck</li>
+                  <li>20.00 Kärleksfilmen</li>
+                </ul>
+              </div>
+              <div class="carousel-item active">
+                <div class="infobox">
+                  <a href="#" title="Länk till filmen">All the money in the world</a>
+                  <button>Mer om filmen</button>
+                </div>
+                <img class="d-block w-100" src="imgs/allthemoney.jpg" alt="Se filmen">
+              </div>
+              <div class="carousel-item">
+                <div class="infobox">
+                  <a href="#" title="Länk till filmen">Django: Unchained</a>
+                  <button>Mer om filmen</button>
+                </div>
+                <img class="d-block w-100" src="imgs/django.jpg" alt="Se filmen">
+              </div>
+              <div class="carousel-item">
+                <div class="infobox">
+                  <a href="#" title="Länk till filmen">Transformers</a>
+                  <button>Mer om filmen</button>
+                </div>
+                <img class="d-block w-100" src="imgs/transformers.jpg" alt="Se filmen">
+              </div>
+              <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 `;}});

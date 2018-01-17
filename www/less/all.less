@@ -2,6 +2,8 @@
 // Styling for the overall page before header, main and footer loads
 
 body {
+  background: black;
+  color: white;
   font-family: 'Open Sans';
   display: flex;
   flex-direction: column;
@@ -13,7 +15,8 @@ main {
 
 
 // Ska flyttas in i main  när slidern finns i main
-.carousel-item a {
+.carousel-item {
+  .infobox {
     display: block;
     position: absolute;
     bottom: 10px;
@@ -21,8 +24,34 @@ main {
     text-shadow: 1px 1px 0 black;
     font-size: 34px;
     margin-left: 50px;
+    button {
+      display: block;
+      border: none;
+      box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
+      background: tomato;
+      color: white;
+      border-radius: 2px 4px;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        background: firebrick;
+      }
+    }
+    a {
+      color: white;
+    }
   }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
 
 div.calendertoday {
+  position: absolute;
   background: slategrey;
+  z-index: 100;
+  top: 20px;
+  right: 50px;
+
 }
