@@ -11,5 +11,8 @@ class Homepage{
 	}
 
 	getData(){
+		return {
+			numberOfMovies: 42
+		}
 	}
 }
