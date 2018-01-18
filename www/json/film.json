@@ -15,7 +15,8 @@
     "images": "allthemoney.jpg",
     "youtubeTrailers": [
       "KXHrCBkIxQQ"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Django",
@@ -33,7 +34,8 @@
     "images": "django.jpg",
     "youtubeTrailers": [
       "Lw5DvTAVomA"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Transformers: The Last Knight",
@@ -51,7 +53,8 @@
     "images": "transformers.jpg",
     "youtubeTrailers": [
       "6Vtf0MszgP8"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Call me by your name",
@@ -69,7 +72,8 @@
     "images": "callmebyyourname.jpg",
     "youtubeTrailers": [
       "Z9AYPxH5NTM"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Your Name",
@@ -83,7 +87,8 @@
     "images": "yourname.jpg",
     "youtubeTrailers": [
       "BAiSEW64qY0"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Let The Sunshine In",
@@ -101,7 +106,8 @@
     "images": "letthesunshinein.jpg",
     "youtubeTrailers": [
       "Z9AYPxH5NTM"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Star Wars: The Last Jedi",
@@ -119,7 +125,8 @@
     "images": "starwars.jpg",
     "youtubeTrailers": [
       "aCiFXPbMV8Q"
-    ]
+    ],
+    "⚙": "Movie"
   },
   {
     "title": "Ballerinan och uppfinnaren",
@@ -136,6 +143,7 @@
     "images": "ballerinanochuppfinnaren.jpg",
     "youtubeTrailers": [
       "dTwTXk4O9fc"
-    ]
+    ],
+    "⚙": "Movie"
   }
 ]
