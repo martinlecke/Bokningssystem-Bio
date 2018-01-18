@@ -7,16 +7,16 @@ class Movie{
 		// this.name = jsonFilmer[urlName].releaseYear;
 		// this.name = jsonFilmer[urlName].runtime;
 
-		this.title = title;
-		this.productionYear = productionYear;
-		this.length = length;
-		this.genre = genre;
-		this.language = language;
-		this.director = director;
-		this.actors = actors;
-		this.description = description;
-		this.images = images;
-		this.youtubeTrailers = youtubeTrailers;
+		// this.title = title;
+		// this.productionYear = productionYear;
+		// this.length = length;
+		// this.genre = genre;
+		// this.language = language;
+		// this.director = director;
+		// this.actors = actors;
+		// this.description = description;
+		// this.images = images;
+		// this.youtubeTrailers = youtubeTrailers;
 	}
 
 

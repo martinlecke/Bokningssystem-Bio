@@ -11,15 +11,15 @@ Object.assign(Homepage.prototype, { template(){ return `
               <div id="calendertoday" class="collapse mt-3 d-lg-block">
                 <h3>Visningar idag</h3>
                 <ul>
-                  <li><span>14.00</span>${app.movie.title} Justice League</li>
-                  <li><span>16.00</span> En annan Justice League</li>
-                  <li><span>18.00</span> Krigsfilm</li>
+                  <li><span>14.00</span>${app.movie[0].title}</li>
+                  <li><span>16.00</span>${app.movie[1].title}</li>
+                  <li><span>18.00</span>${app.movie[2].title}</li>
                 </ul>
                 <h3>Visningar imorgon</h3>
                 <ul>
-                  <li><span>15.30</span> Netflix Binge watch</li>
-                  <li><span>18.00</span> Beck</li>
-                  <li><span>20.00</span> Kärleksfilmen</li>
+                  <li><span>15.30</span>${app.movie[3].title}</li>
+                  <li><span>18.00</span>${app.movie[4].title}</li>
+                  <li><span>20.00</span>${app.movie[5].title}</li>
                 </ul>
               </div>
             </div>

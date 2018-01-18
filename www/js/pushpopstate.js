@@ -75,5 +75,3 @@ class PopStateHandler {
   }
 }
 
-// Create an instance of the class
-new PopStateHandler();
