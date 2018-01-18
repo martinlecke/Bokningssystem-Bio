@@ -5,21 +5,21 @@ Object.assign(Homepage.prototype, { template(){ return `
          <!-- Slider / Carousel -->
          <div id="movieslider" class="carousel slide" data-ride="carousel">
            <div class="carousel-inner">
-             <div class="carousel-item active" style="min-height: 300px;background:url(imgs/allthemoney.jpg);background-size: cover;background-position: center;">
+             <div class="carousel-item active carousel-splash" style="background:url(imgs/${app.movie[0].images});">
                <div class="infobox">
-                 <a href="#" title="Länk till filmen">All the money in the world</a>
+                 <a href="#" title="Länk till filmen">${app.movie[0].title}</a>
                  <button>Mer om filmen</button>
                </div>
              </div>
-             <div class="carousel-item" style="background-size: cover;min-height: 300px;background:url(imgs/django.jpg);background-size: cover;background-position: center;">
+             <div class="carousel-item" style="background:url(imgs/${app.movie[1].images});">
                <div class="infobox">
-                 <a href="#" title="Länk till filmen">Django: Unchained</a>
+                 <a href="#" title="Länk till filmen">${app.movie[1].title}</a>
                  <button>Mer om filmen</button>
                </div>
              </div>
-             <div class="carousel-item" style="background-size: cover;min-height: 300px;background:url(imgs/transformers.jpg);background-size: cover;background-position: center;">
+             <div class="carousel-item" style="background:url(imgs/${app.movie[2].images});">
                <div class="infobox">
-                 <a href="#" title="Länk till filmen">Transformers</a>
+                 <a href="#" title="Länk till filmen">${app.movie[2].title}</a>
                  <button>Mer om filmen</button>
                </div>
              </div>
@@ -41,15 +41,15 @@ Object.assign(Homepage.prototype, { template(){ return `
            <div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
              <h3>Visningar idag</h3>
              <ul>
-               <li><span>14.00</span>${app.movie[0].title}</li>
-               <li><span>16.00</span>${app.movie[1].title}</li>
-               <li><span>18.00</span>${app.movie[2].title}</li>
+               <li><span>14.00</span><a href="#">${app.movie[0].title}</a></li>
+               <li><span>16.00</span><a href="#">${app.movie[1].title}</a></li>
+               <li><span>18.00</span><a href="#">${app.movie[2].title}</a></li>
              </ul>
              <h3>Visningar imorgon</h3>
              <ul class="mb-0">
-               <li><span>15.30</span>${app.movie[3].title}</li>
-               <li><span>18.00</span>${app.movie[4].title}</li>
-               <li><span>20.00</span>${app.movie[5].title}</li>
+               <li><span>15.30</span><a href="#">${app.movie[3].title}</a></li>
+               <li><span>18.00</span><a href="#">${app.movie[4].title}</a></li>
+               <li><span>20.00</span><a href="#">${app.movie[5].title}</a></li>
              </ul>
            </div>
          </div>
