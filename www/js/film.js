@@ -1,4 +1,4 @@
-class Film{
+class Movie{
 	
 	constructor(){
 		let urlName = location.pathname.split('/')[2];
@@ -6,7 +6,6 @@ class Film{
 		// this.name = jsonFilmer[urlName].title;
 		// this.name = jsonFilmer[urlName].releaseYear;
 		// this.name = jsonFilmer[urlName].runtime;
-
 
 		this.title = title;
 		this.productionYear = productionYear;
@@ -18,7 +17,6 @@ class Film{
 		this.description = description;
 		this.images = images;
 		this.youtubeTrailers = youtubeTrailers;
-
 	}
 
 
