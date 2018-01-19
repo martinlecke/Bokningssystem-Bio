@@ -1,115 +1,160 @@
 Object.assign(Homepage.prototype, { template(){ return `
-   <div class="container-fluid">
-     <div class="row">
-       <div class="col-lg-8 px-0">
-         <!-- Slider / Carousel -->
-         <div id="movieslider" class="carousel slide" data-ride="carousel">
-           <div class="carousel-inner">
-             <div class="carousel-item active carousel-splash" style="background:url(imgs/${app.movie[0].images});">
-               <div class="infobox">
-                 <a href="#" title="Länk till filmen">${app.movie[0].title}</a>
-                 <button>Mer om filmen</button>
-               </div>
-             </div>
-             <div class="carousel-item" style="background:url(imgs/${app.movie[1].images});">
-               <div class="infobox">
-                 <a href="#" title="Länk till filmen">${app.movie[1].title}</a>
-                 <button>Mer om filmen</button>
-               </div>
-             </div>
-             <div class="carousel-item" style="background:url(imgs/${app.movie[2].images});">
-               <div class="infobox">
-                 <a href="#" title="Länk till filmen">${app.movie[2].title}</a>
-                 <button>Mer om filmen</button>
-               </div>
-             </div>
-             <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon"></span>
-             </a>
-             <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
-               <span class="carousel-control-next-icon"></span>
-             </a>
-           </div>
-         </div>
-       </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8 px-0">
+      <!-- Slider / Carousel -->
+      <div id="movieslider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active carousel-splash" style="background:url(imgs/${app.movie[0].images});">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">${app.movie[0].title}</a>
+              <button>Mer om filmen</button>
+            </div>
+          </div>
+          <div class="carousel-item" style="background:url(imgs/${app.movie[1].images});">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">${app.movie[1].title}</a>
+              <button>Mer om filmen</button>
+            </div>
+          </div>
+          <div class="carousel-item" style="background:url(imgs/${app.movie[2].images});">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">${app.movie[2].title}</a>
+              <button>Mer om filmen</button>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-       <div class="col-lg-4 p-0">
-         <div class="calendertoday">
-           <button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
-             Se kommande visningar
-           </button>
-           <div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
-             <h3>Visningar idag</h3>
-             <ul>
-               <li><span>14.00</span><a href="#">${app.movie[0].title}</a></li>
-               <li><span>16.00</span><a href="#">${app.movie[1].title}</a></li>
-               <li><span>18.00</span><a href="#">${app.movie[2].title}</a></li>
-             </ul>
-             <h3>Visningar imorgon</h3>
-             <ul class="mb-0">
-               <li><span>15.30</span><a href="#">${app.movie[3].title}</a></li>
-               <li><span>18.00</span><a href="#">${app.movie[4].title}</a></li>
-               <li><span>20.00</span><a href="#">${app.movie[5].title}</a></li>
-             </ul>
-           </div>
-         </div>
-       </div>
+    <div class="col-lg-4 p-0">
+      <div class="calendertoday">
+        <button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday"
+          aria-expanded="false">
+          Se kommande visningar
+        </button>
+        <div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
+          <h3>Visningar idag</h3>
+          <ul>
+            <li>
+              <span>14.00</span>
+              <a href="#">${app.movie[0].title}</a>
+            </li>
+            <li>
+              <span>16.00</span>
+              <a href="#">${app.movie[1].title}</a>
+            </li>
+            <li>
+              <span>18.00</span>
+              <a href="#">${app.movie[2].title}</a>
+            </li>
+          </ul>
+          <h3>Visningar imorgon</h3>
+          <ul class="mb-0">
+            <li>
+              <span>15.30</span>
+              <a href="#">${app.movie[3].title}</a>
+            </li>
+            <li>
+              <span>18.00</span>
+              <a href="#">${app.movie[4].title}</a>
+            </li>
+            <li>
+              <span>20.00</span>
+              <a href="#">${app.movie[5].title}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-	</div>
+  </div>
 </div>
 <div class="row justify-content-around mt-5">
 
-	<div class="col-lg-2 col-md-3 col-4">
-		<div class="card border-0">
-			<a href="/"><img class="img-fluid image-block" src="/imgs/starwars.jpg"></a>
-			<div class="card-body curtain d-none">
-				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
-				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
-			</div>
-		</div>
-	</div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <div class="card border-0">
+      <a href="/">
+        <img class="img-fluid image-block" src="/imgs/starwars.jpg">
+      </a>
+      <div class="card-body curtain d-none">
+        <a href="/">
+          <h5 class="card-title">Star Wars: The Last Jedi</h5>
+        </a>
+        <p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength
+          of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+      </div>
+    </div>
+  </div>
 
-	<div class="col-lg-2 col-md-3 col-4">
-		<div class="card border-0">
-			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-			<div class="card-body curtain d-none">
-				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
-				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
-			</div>
-		</div>
-	</div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <div class="card border-0">
+      <a href="/">
+        <img class="img-fluid" src="/imgs/starwars.jpg">
+      </a>
+      <div class="card-body curtain d-none">
+        <a href="/">
+          <h5 class="card-title">Star Wars: The Last Jedi</h5>
+        </a>
+        <p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength
+          of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+      </div>
+    </div>
+  </div>
 
-	<div class="col-lg-2 col-md-3 col-4">
-		<div class="card border-0">
-			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-			<div class="card-body curtain d-none">
-				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
-				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
-			</div>
-		</div>
-	</div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <div class="card border-0">
+      <a href="/">
+        <img class="img-fluid" src="/imgs/starwars.jpg">
+      </a>
+      <div class="card-body curtain d-none">
+        <a href="/">
+          <h5 class="card-title">Star Wars: The Last Jedi</h5>
+        </a>
+        <p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength
+          of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+      </div>
+    </div>
+  </div>
 
-	<div class="col-lg-2 col-md-3 col-4">
-		<div class="card border-0">
-			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-			<div class="card-body curtain d-none">
-				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
-				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
-			</div>
-		</div>
-	</div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <div class="card border-0">
+      <a href="/">
+        <img class="img-fluid" src="/imgs/starwars.jpg">
+      </a>
+      <div class="card-body curtain d-none">
+        <a href="/">
+          <h5 class="card-title">Star Wars: The Last Jedi</h5>
+        </a>
+        <p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength
+          of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+      </div>
+    </div>
+  </div>
 
 </div>
 <div class="row justify-content-around mt-5">
-	<div class="col-lg-2 col-md-3 col-4">
-		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-	</div>
-	<div class="col-lg-2 col-md-3 col-4">
-		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-	</div>
-	<div class="col-lg-2 col-md-3 col-4">
-		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
-	</div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <a href="/">
+      <img class="img-fluid" src="/imgs/starwars.jpg">
+    </a>
+  </div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <a href="/">
+      <img class="img-fluid" src="/imgs/starwars.jpg">
+    </a>
+  </div>
+  <div class="col-lg-2 col-md-3 col-4">
+    <a href="/">
+      <img class="img-fluid" src="/imgs/starwars.jpg">
+    </a>
+  </div>
 </div>
 </div>
 <!-- test modal -start -->
@@ -140,116 +185,117 @@ Object.assign(Homepage.prototype, { template(){ return `
         <!-- !!!!!!!!!! Länken starwars bytas i films.json-->
 
         <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/Q0CbN8sfihY" frameborder="0"
-      </div>
+          </div>
           allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-      <!-- Image and films details -->
-      <div class="modal-body">
-        <div class="row mx-1">
-          <div class="col-12 col-md-4 mb-5 item1">
+        <!-- Image and films details -->
+        <div class="modal-body">
+          <div class="row mx-1">
+            <div class="col-12 col-md-4 mb-5 item1">
 
-            <!-- !!!!!!!!!! skriv text i alt -->
+              <!-- !!!!!!!!!! skriv text i alt -->
 
-            <img src="/imgs/starwars.jpg" alt="">
-            <div class="film-details">
-              <div>
-                <span class="font-weight-bold">Productionsår: </span>
-                <span>2017</span>
-              </div>
-              <div>
-                <span class="font-weight-bold">Längd: </span>
-                <span>152</span>
-              </div>
-              <div>
-                <span class="font-weight-bold">Genre: </span>
-                <span>Äventyr, Action, Fantasy</span>
-              </div>
-              <div>
-                <span class="font-weight-bold">Språk: </span>
-                <span>Engelska(svenska text)</span>
-              </div>
-              <div>
-                <span class="font-weight-bold">Regissör: </span>
-                <span>Rian Johnson</span>
-              </div>
-              <div>
-                <span class="font-weight-bold">Skådespelare: </span>
-                <span>Daisy Ridley, John Boyega, Mark Hamill</span>
+              <img src="/imgs/starwars.jpg" alt="">
+              <div class="film-details">
+                <div>
+                  <span class="font-weight-bold">Productionsår: </span>
+                  <span>2017</span>
+                </div>
+                <div>
+                  <span class="font-weight-bold">Längd: </span>
+                  <span>152</span>
+                </div>
+                <div>
+                  <span class="font-weight-bold">Genre: </span>
+                  <span>Äventyr, Action, Fantasy</span>
+                </div>
+                <div>
+                  <span class="font-weight-bold">Språk: </span>
+                  <span>Engelska(svenska text)</span>
+                </div>
+                <div>
+                  <span class="font-weight-bold">Regissör: </span>
+                  <span>Rian Johnson</span>
+                </div>
+                <div>
+                  <span class="font-weight-bold">Skådespelare: </span>
+                  <span>Daisy Ridley, John Boyega, Mark Hamill</span>
+                </div>
               </div>
             </div>
-          </div>
 
 
-          <!-- Discription & performances  -->
-          <div class="col-12 col-md-8 mb-5 item2">
-            <h1>Star Wars: The Last Jedi</h1>
-            <p>Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska legenderna
-              i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från det förflutna.</p>
-          </div>
+            <!-- Discription & performances  -->
+            <div class="col-12 col-md-8 mb-5 item2">
+              <h1>Star Wars: The Last Jedi</h1>
+              <p>Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska
+                legenderna i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från
+                det förflutna.</p>
+            </div>
 
-          <div class="col-12 col-md-8 item3">
+            <div class="col-12 col-md-8 item3">
 
 
-            <h3>Visningstider</h3>
+              <h3>Visningstider</h3>
 
-            <ul class="pl-0">
-              <hr>
+              <ul class="pl-0">
+                <hr>
                 <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
-              <li>
-                <a href="#" class="text-dark">
-                  <div>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <span>(Salong 2)</span>
-                    <span class="font-weight-bold ml-2">14:00</span>
-                    <span class="ml-5">
-                      <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                        Boka
-                      </button>
-                    </span>
-                  </div>
-                </a>
-              </li>
-              <hr>
-              <li>
-                <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
-                <a href="#" class="text-dark">
-                  <div>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <span class="ml-2 font-weight-bold">14:00</span>
-                    <span>(Salong 2)</span>
-                    <span class="ml-5">
-                      <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                        Boka
-                      </button>
-                    </span>
-                  </div>
-                </a>
-              </li>
+                <li>
+                  <a href="#" class="text-dark">
+                    <div>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                    </div>
+                    <div>
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                      <span>(Salong 2)</span>
+                      <span class="font-weight-bold ml-2">14:00</span>
+                      <span class="ml-5">
+                        <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                          Boka
+                        </button>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
+                  <a href="#" class="text-dark">
+                    <div>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                    </div>
+                    <div>
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                      <span class="ml-2 font-weight-bold">14:00</span>
+                      <span>(Salong 2)</span>
+                      <span class="ml-5">
+                        <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                          Boka
+                        </button>
+                      </span>
+                    </div>
+                  </a>
+                </li>
 
 
-            </ul>
+              </ul>
+
+            </div>
 
           </div>
 
         </div>
-
-      </div>
-      <!-- <div class="modal-footer">
+        <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div> -->
+      </div>
     </div>
   </div>
-</div>
 
 
-<!-- test modal -end -->
-`;}});
+  <!-- test modal -end -->
+  `;}});
