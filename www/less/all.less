@@ -13,9 +13,11 @@ main {
   flex-grow: 1;
 }
 
-
 // Ska flyttas in i main  när slidern finns i main
 .carousel-item {
+  min-height: 300px;
+  background-size: cover!important;
+  background-position: center!important;
   .infobox {
     display: block;
     position: absolute;
@@ -24,6 +26,9 @@ main {
     text-shadow: 1px 1px 0 black;
     font-size: 34px;
     margin-left: 50px;
+    @media @smartphone {
+      font-size: inherit;
+    }
     button {
       display: block;
       border: none;
@@ -42,16 +47,51 @@ main {
     }
   }
 }
+.calendertoday {
+    button {
+    width:100%;
+    cursor: pointer;
+  }
+}
+#calendertoday {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background: slategrey;
+  z-index: 100;
+  min-height: 300px;
+  &.collapse.show,
+  &.collapsing {
+    display: flex;
+  }
+  @media @smartphone {
+    min-height: intial;
+  }
+  h3 {
+    text-shadow: 1px 1px 0 black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 0;
+  }
+  li {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 0;
+    border-left: 0;
+  }
+  li span {
+    color: khaki;
+    font-weight: bold;
+    padding-right: 20px;
+  }
+  a {
+    color: white;
+  }
+}
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
-}
-
-div.calendertoday {
-  position: absolute;
-  background: slategrey;
-  z-index: 100;
-  top: 20px;
-  right: 50px;
-
 }

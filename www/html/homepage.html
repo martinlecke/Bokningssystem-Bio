@@ -1,75 +1,130 @@
 Object.assign(Homepage.prototype, { template(){ return `
-<div class="container-fluid">
-  <div class="row">
-    <div class="col px-0">
-      <!-- Slider / Carousel -->
-      <div id="movieslider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="col-md-3 calendertoday">
-            <ul>
-              <li>14.00 Justice League</li>
-              <li>16.00 En annan Justice League</li>
-              <li>18.00 Krigsfilm</li>
-            </ul>
-            <ul>
-              <li>15.30 Netflix Binge watch</li>
-              <li>18.00 Beck</li>
-              <li>20.00 Kärleksfilmen</li>
-            </ul>
-          </div>
-          <div class="carousel-item active">
-            <div class="infobox">
-              <a href="#" title="Länk till filmen">All the money in the world</a>
-              <button>Mer om filmen</button>
-            </div>
-            <img class="d-block w-100" src="imgs/allthemoney.jpg" alt="Se filmen">
-          </div>
-          <div class="carousel-item">
-            <div class="infobox">
-              <a href="#" title="Länk till filmen">Django: Unchained</a>
-              <button>Mer om filmen</button>
-            </div>
-            <img class="d-block w-100" src="imgs/django.jpg" alt="Se filmen">
-          </div>
-          <div class="carousel-item">
-            <div class="infobox">
-              <a href="#" title="Länk till filmen">Transformers</a>
-              <button>Mer om filmen</button>
-            </div>
-            <img class="d-block w-100" src="imgs/transformers.jpg" alt="Se filmen">
-          </div>
-          <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-lg-8 px-0">
+         <!-- Slider / Carousel -->
+         <div id="movieslider" class="carousel slide" data-ride="carousel">
+           <div class="carousel-inner">
+             <div class="carousel-item active carousel-splash" style="background:url(imgs/${app.movie[0].images});">
+               <div class="infobox">
+                 <a href="#" title="Länk till filmen">${app.movie[0].title}</a>
+                 <button>Mer om filmen</button>
+               </div>
+             </div>
+             <div class="carousel-item" style="background:url(imgs/${app.movie[1].images});">
+               <div class="infobox">
+                 <a href="#" title="Länk till filmen">${app.movie[1].title}</a>
+                 <button>Mer om filmen</button>
+               </div>
+             </div>
+             <div class="carousel-item" style="background:url(imgs/${app.movie[2].images});">
+               <div class="infobox">
+                 <a href="#" title="Länk till filmen">${app.movie[2].title}</a>
+                 <button>Mer om filmen</button>
+               </div>
+             </div>
+             <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+             </a>
+             <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+             </a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-lg-4 p-0">
+         <div class="calendertoday">
+           <button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+             Se kommande visningar
+           </button>
+           <div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
+             <h3>Visningar idag</h3>
+             <ul>
+               <li><span>14.00</span><a href="#">${app.movie[0].title}</a></li>
+               <li><span>16.00</span><a href="#">${app.movie[1].title}</a></li>
+               <li><span>18.00</span><a href="#">${app.movie[2].title}</a></li>
+             </ul>
+             <h3>Visningar imorgon</h3>
+             <ul class="mb-0">
+               <li><span>15.30</span><a href="#">${app.movie[3].title}</a></li>
+               <li><span>18.00</span><a href="#">${app.movie[4].title}</a></li>
+               <li><span>20.00</span><a href="#">${app.movie[5].title}</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+
+	</div>
 </div>
+<div class="row justify-content-around mt-5">
 
+	<div class="col-lg-2 col-md-3 col-4">
+		<div class="card border-0">
+			<a href="/"><img class="img-fluid image-block" src="/imgs/starwars.jpg"></a>
+			<div class="card-body curtain d-none">
+				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
+				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="col-lg-2 col-md-3 col-4">
+		<div class="card border-0">
+			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+			<div class="card-body curtain d-none">
+				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
+				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="col-lg-2 col-md-3 col-4">
+		<div class="card border-0">
+			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+			<div class="card-body curtain d-none">
+				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
+				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="col-lg-2 col-md-3 col-4">
+		<div class="card border-0">
+			<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+			<div class="card-body curtain d-none">
+				<a href="/"><h5 class="card-title">Star Wars: The Last Jedi</h5></a>
+				<p class="description">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
+			</div>
+		</div>
+	</div>
 
-
-
+</div>
+<div class="row justify-content-around mt-5">
+	<div class="col-lg-2 col-md-3 col-4">
+		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+	</div>
+	<div class="col-lg-2 col-md-3 col-4">
+		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+	</div>
+	<div class="col-lg-2 col-md-3 col-4">
+		<a href="/"><img class="img-fluid" src="/imgs/starwars.jpg"></a>
+	</div>
+</div>
+</div>
 <!-- test modal -start -->
 
 
 
 <!-- !!!!!!!!  Byta text till property -->
 <!-- !!!!!!!!  Modal länkas till films bilder -->
-
-
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#film-info">
   Test
 </button>
-
 <!-- Modal -->
+
+
 <div class="modal fade" id="film-info" tabindex="-1" role="dialog" aria-labelledby="trailer" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -85,8 +140,8 @@ Object.assign(Homepage.prototype, { template(){ return `
         <!-- !!!!!!!!!! Länken starwars bytas i films.json-->
 
         <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/Q0CbN8sfihY" frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
       <!-- Image and films details -->
       <div class="modal-body">
@@ -139,8 +194,8 @@ Object.assign(Homepage.prototype, { template(){ return `
 
             <ul class="pl-0">
               <hr>
-              <li>
                 <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
+              <li>
                 <a href="#" class="text-dark">
                   <div>
                     <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -148,8 +203,8 @@ Object.assign(Homepage.prototype, { template(){ return `
                   </div>
                   <div>
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <span class="font-weight-bold ml-2">14:00</span>
                     <span>(Salong 2)</span>
+                    <span class="font-weight-bold ml-2">14:00</span>
                     <span class="ml-5">
                       <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
                         Boka
@@ -180,9 +235,6 @@ Object.assign(Homepage.prototype, { template(){ return `
               </li>
 
 
-
-
-
             </ul>
 
           </div>
@@ -200,15 +252,4 @@ Object.assign(Homepage.prototype, { template(){ return `
 
 
 <!-- test modal -end -->
-
-
-
-
-
-
-
-
-
-
-
 `;}});
