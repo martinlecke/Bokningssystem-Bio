@@ -1,0 +1,214 @@
+Object.assign(Homepage.prototype, { template(){ return `
+<div class="container-fluid">
+  <div class="row">
+    <div class="col px-0">
+      <!-- Slider / Carousel -->
+      <div id="movieslider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="col-md-3 calendertoday">
+            <ul>
+              <li>14.00 Justice League</li>
+              <li>16.00 En annan Justice League</li>
+              <li>18.00 Krigsfilm</li>
+            </ul>
+            <ul>
+              <li>15.30 Netflix Binge watch</li>
+              <li>18.00 Beck</li>
+              <li>20.00 Kärleksfilmen</li>
+            </ul>
+          </div>
+          <div class="carousel-item active">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">All the money in the world</a>
+              <button>Mer om filmen</button>
+            </div>
+            <img class="d-block w-100" src="imgs/allthemoney.jpg" alt="Se filmen">
+          </div>
+          <div class="carousel-item">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">Django: Unchained</a>
+              <button>Mer om filmen</button>
+            </div>
+            <img class="d-block w-100" src="imgs/django.jpg" alt="Se filmen">
+          </div>
+          <div class="carousel-item">
+            <div class="infobox">
+              <a href="#" title="Länk till filmen">Transformers</a>
+              <button>Mer om filmen</button>
+            </div>
+            <img class="d-block w-100" src="imgs/transformers.jpg" alt="Se filmen">
+          </div>
+          <a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- test modal -start -->
+
+
+
+<!-- !!!!!!!!  Byta text till property -->
+<!-- !!!!!!!!  Modal länkas till films bilder -->
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#film-info">
+  Test
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="film-info" tabindex="-1" role="dialog" aria-labelledby="trailer" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <!-- Youtube trailer -->
+      <div class="modal-header d-flex justify-content-end">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="row">
+
+        <!-- !!!!!!!!!! Länken starwars bytas i films.json-->
+
+        <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/Q0CbN8sfihY" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+      <!-- Image and films details -->
+      <div class="modal-body">
+        <div class="row mx-1">
+          <div class="col-12 col-md-4 mb-5 item1">
+
+            <!-- !!!!!!!!!! skriv text i alt -->
+
+            <img src="/imgs/starwars.jpg" alt="">
+            <div class="film-details">
+              <div>
+                <span class="font-weight-bold">Productionsår: </span>
+                <span>2017</span>
+              </div>
+              <div>
+                <span class="font-weight-bold">Längd: </span>
+                <span>152</span>
+              </div>
+              <div>
+                <span class="font-weight-bold">Genre: </span>
+                <span>Äventyr, Action, Fantasy</span>
+              </div>
+              <div>
+                <span class="font-weight-bold">Språk: </span>
+                <span>Engelska(svenska text)</span>
+              </div>
+              <div>
+                <span class="font-weight-bold">Regissör: </span>
+                <span>Rian Johnson</span>
+              </div>
+              <div>
+                <span class="font-weight-bold">Skådespelare: </span>
+                <span>Daisy Ridley, John Boyega, Mark Hamill</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Discription & performances  -->
+          <div class="col-12 col-md-8 mb-5 item2">
+            <h1>Star Wars: The Last Jedi</h1>
+            <p>Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska legenderna
+              i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från det förflutna.</p>
+          </div>
+
+          <div class="col-12 col-md-8 item3">
+
+
+            <h3>Visningstider</h3>
+
+            <ul class="pl-0">
+              <hr>
+              <li>
+                <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
+                <a href="#" class="text-dark">
+                  <div>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                  </div>
+                  <div>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="font-weight-bold ml-2">14:00</span>
+                    <span>(Salong 2)</span>
+                    <span class="ml-5">
+                      <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                        Boka
+                      </button>
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <hr>
+              <li>
+                <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
+                <a href="#" class="text-dark">
+                  <div>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                  </div>
+                  <div>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="ml-2 font-weight-bold">14:00</span>
+                    <span>(Salong 2)</span>
+                    <span class="ml-5">
+                      <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                        Boka
+                      </button>
+                    </span>
+                  </div>
+                </a>
+              </li>
+
+
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- test modal -end -->
+
+
+
+
+
+
+
+
+
+
+
+`;}});
