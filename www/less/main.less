@@ -1,6 +1,6 @@
 p.description{
-font-size: 0.7rem;
-color: black;
+	font-size: 0.7rem;
+	color: white;;
 }
 h5{
 	font-size: 1rem;
@@ -12,20 +12,25 @@ h5{
 		display: inline-block;
 	}
 }
-
-.image-block:before { 
-  content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-     top: 0;
-       left: 0;  
-   opacity: .5;
-      background:;  }
-    
-   .image-block:hover:before {
-     background: white;
-     opacity: .3;
-     transition: all .3s ease-in-out; 
-    }
+@media (max-width: 575px){
+	.poster{
+		width: 80%;
+	}
+}
+@media (min-width: 576px) and (max-width: 992px){
+	.poster{
+		width: 60%;
+	}
+}
+@media (min-width: 993px){
+	.poster{
+		width: 50%;
+	}
+}
+img.poster {
+	opacity: 1.0;
+}
+img:hover {
+	opacity: 0.5;
+	transition: all .2s ease-in-out; 
+}
