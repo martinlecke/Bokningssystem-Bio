@@ -9,7 +9,7 @@ class FilmInfo extends Film {
 
 
 	// renderFilmInfo() {
-	// 	$('main #main-modal').remove();
+	// 	$('main #film-info').remove();
 	// 	$('main').append(`
 		
 		
