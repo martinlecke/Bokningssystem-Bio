@@ -1,6 +1,6 @@
-class Movie{
-	
-	constructor(){
+class Movie {
+
+	constructor() {
 		let urlName = location.pathname.split('/')[2];
 		this.number = 0;
 		// this.name = jsonFilmer[urlName].title;
@@ -17,21 +17,37 @@ class Movie{
 		// this.description = description;
 		// this.images = images;
 		// this.youtubeTrailers = youtubeTrailers;
+
+
+
+		this.showFilmInfo();
+
+
 	}
 
 
 
 
-	load(data){
+	load(data) {
 		console.log(data);
 		this.number = data.numberOfMovies;
 	}
 
-	getData(){
+	getData() {
 	}
 
 
 
+	// Modal
+	showFilmInfo() {
+
+		// this が　ボタンの場所（.modal-test)になってる？
+		$(document).on('click', '.modal-test', function () {
+			let that = this;
+			that.renderFilmInfo();
+		});
+
+	}
 
 
 
