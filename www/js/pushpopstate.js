@@ -71,6 +71,9 @@ class PopStateHandler {
 
     let method = (this.currentPage && this.currentPage.template.bind(this.currentPage)) || this.default;
     $('main').html(method());
+    if (this.currentPage && this.currentPage.afterTemplate){
+      this.currentPage.afterTemplate();
+    }
   }
 
   default(){
