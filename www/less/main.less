@@ -3,8 +3,13 @@ p.description{
 	color: black;
 	margin-bottom: 0;
 }
+.movie-link{
+	&:hover {
+		text-decoration: none;
+	}
+}
 .popover {
-	top: 40px !important;
+	top: 20px !important;
 }
 div.popover-body{
 	padding-bottom: 5px;
@@ -12,7 +17,14 @@ div.popover-body{
 }
 h5{
 	font-size: 1rem;
-	color: white;
+	color: black;
+}
+img.poster {
+	opacity: 1.0;
+	&:hover {
+		opacity: 0.5;
+		transition: all .2s ease-in-out; 
+	}
 }
 @media (max-width: 575px){
 	.poster{
@@ -27,12 +39,5 @@ h5{
 @media (min-width: 993px){
 	.poster{
 		width: 50%;
-	}
-}
-img.poster {
-	opacity: 1.0;
-	&:hover {
-		opacity: 0.5;
-		transition: all .2s ease-in-out; 
 	}
 }
