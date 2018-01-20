@@ -15,7 +15,3 @@ class Movie{
 	getData(){
 	}
 }
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})

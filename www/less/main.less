@@ -1,16 +1,18 @@
 p.description{
 	font-size: 0.7rem;
-	color: white;;
+	color: black;
+	margin-bottom: 0;
+}
+.popover {
+	top: 40px !important;
+}
+div.popover-body{
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 h5{
 	font-size: 1rem;
-}
-.curtain{
-	// z-index: 0;
-	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-	&:hover{
-		display: inline-block;
-	}
+	color: white;
 }
 @media (max-width: 575px){
 	.poster{
@@ -29,8 +31,8 @@ h5{
 }
 img.poster {
 	opacity: 1.0;
-}
-img:hover {
-	opacity: 0.5;
-	transition: all .2s ease-in-out; 
+	&:hover {
+		opacity: 0.5;
+		transition: all .2s ease-in-out; 
+	}
 }
