@@ -22,13 +22,13 @@ class Homepage{
 			placement: 'bottom',
 			content: function() {
 				return `
-				<h5 class="mb-0 d-inline">Handling: </h5>
+				<h6 class="mb-0 d-inline">Handling: </h6>
 				<p class="description d-inline">
-				Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</p>
-				<div class=" my-auto">
-					<a href="/film" class="">
-						<button type="button" class="btn btn-dark btn-sm btn-outline-dark mx-auto">Klicka här för att boka biljetter</button>
-					</a>
+				Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska legenderna i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från det förflutna.</p>
+				<div class="mt-2 mb-1 text-center">
+				<a href="/film">
+				<button type="button" class="btn btn-danger btn-sm">Klicka här för att boka biljetter</button>
+				</a>
 				</div>`
 			}
 		})
