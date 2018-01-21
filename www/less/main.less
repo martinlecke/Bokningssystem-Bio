@@ -8,8 +8,17 @@ p.description{
 		text-decoration: none;
 	}
 }
+.btn{
+	border: 1px solid #9c0000;
+	background-color: #9c0000;
+	color: white;
+}
 .popover {
-	top: 20px !important;
+	background-color: #f2f2f2;
+	top: 40px !important;
+	// -webkit-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
+	// -moz-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
+	// box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
 }
 div.popover-body{
 	padding-bottom: 5px;
@@ -17,7 +26,15 @@ div.popover-body{
 }
 h5{
 	font-size: 1rem;
-	color: black;
+	color: white;
+	&:hover {
+		text-decoration-color: white;
+		text-decoration: underline;
+	}
+}
+h6{
+	font-size: 0.8rem;
+	color: #9c0000;
 }
 img.poster {
 	opacity: 1.0;
