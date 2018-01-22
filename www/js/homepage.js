@@ -24,10 +24,11 @@ class Homepage{
 				return `
 				<h6 class="mb-0 d-inline">Handling: </h6>
 				<p class="description d-inline">
-				Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska legenderna i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från det förflutna.</p>
+				Dummy Text......
+				</p>
 				<div class="mt-2 mb-1 text-center">
-				<a href="/film">
-				<button type="button" class="btn btn-danger btn-sm">Klicka här för att boka biljetter</button>
+				<a class="pop" href="/film">
+				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
 				</a>
 				</div>`
 			}
