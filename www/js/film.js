@@ -6,7 +6,7 @@ class Movie {
 		// this.name = jsonFilmer[urlName].title;
 		// this.name = jsonFilmer[urlName].releaseYear;
 		// this.name = jsonFilmer[urlName].runtime;
-		this.showFilmInfo();
+		
 	}
 
 	load(data){
@@ -15,20 +15,6 @@ class Movie {
 	}
 	getData(){
 	}
-
-
-
-	// Modal
-	showFilmInfo() {
-
-		// this が　ボタンの場所（.modal-test)になってる？
-		$(document).on('click', '.modal-test', function () {
-			let that = this;
-			that.renderFilmInfo();
-		});
-
-	}
-
 
 
 }
