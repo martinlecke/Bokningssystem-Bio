@@ -5,16 +5,18 @@ Object.assign(Homepage.prototype, { template(){ return `
 			<!-- Slider / Carousel -->
 			<div id="movieslider" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
+
 					<div class="carousel-item active carousel-splash" style="background:url(imgs/${app.movie[0].images});">
 						<div class="infobox">
 							<a href="#" title="Länk till filmen">${app.movie[0].title}</a>
 							<button>Mer om filmen</button>
 						</div>
 					</div>
+					
 					<div class="carousel-item" style="background:url(imgs/${app.movie[1].images});">
 						<div class="infobox">
 							<a href="#" title="Länk till filmen">${app.movie[1].title}</a>
-							<button>Mer om filmen</button>
+							<button class="remove-focus">Mer om filmen</button>
 						</div>
 					</div>
 					<div class="carousel-item" style="background:url(imgs/${app.movie[2].images});">
@@ -56,25 +58,27 @@ Object.assign(Homepage.prototype, { template(){ return `
 		</div>
 
 	</div>
-</div>
-<div class="row justify-content-around mt-5">
-
-	<div class="col-4 text-center">
-		<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-			<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
-		</a>
-	</div>
+	<div class="row justify-content-around mt-5">
 
 		<div class="col-4 text-center">
-			<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-				<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[0].poster}">
+				<h5 class="mt-3">${app.movie[0].title}</h5>
+			</a>
+		</div>
+
+		<div class="col-4 text-center">
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[1].poster}">
+				<h5 class="mt-3">${app.movie[1].title}</h5>
 			</a>
 		</div>
 
 
 		<div class="col-4 text-center">
-			<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-				<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[2].poster}">
+				<h5 class="mt-3">${app.movie[2].title}</h5>
 			</a>
 		</div>
 
@@ -83,20 +87,23 @@ Object.assign(Homepage.prototype, { template(){ return `
 	<div class="row justify-content-around mt-5">
 
 		<div class="col-4 text-center">
-			<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-				<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[3].poster}">
+				<h5 class="mt-3">${app.movie[3].title}</h5>
 			</a>
 		</div>
 
 		<div class="col-4 text-center">
-			<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-				<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[4].poster}">
+				<h5 class="mt-3">${app.movie[4].title}</h5>
 			</a>
 		</div>
 
 		<div class="col-4 text-center">
-			<a href="/"><img class="img-fluid poster" data-toggle="popover" src="/imgs/starwars.jpg">
-				<h5 class="card-title mt-3">Star Wars: The Last Jedi</h5>
+			<a href="/" class="movie-link pop">
+				<img class="img-fluid poster poster-3" data-toggle="popover" src="${app.movie[5].poster}">
+				<h5 class="mt-3">${app.movie[5].title}</h5>
 			</a>
 		</div>
 

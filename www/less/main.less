@@ -3,41 +3,84 @@ p.description{
 	color: black;
 	margin-bottom: 0;
 }
+.movie-link{
+	&:hover {
+		text-decoration: none;
+	}
+}
+.btn{
+	border: 1px solid #9c0000;
+	background-color: #9c0000;
+	color: white;
+}
 .popover {
+	background-color: #f2f2f2;
 	top: 40px !important;
+	// -webkit-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
+	// -moz-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
+	// box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
 }
 div.popover-body{
 	padding-bottom: 5px;
 	padding-top: 5px;
 }
 h5{
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: white;
-}
-@media (max-width: 575px){
-	.poster{
-		width: 80%;
+	&:hover {
+		text-decoration-color: white;
+		text-decoration: underline;
+	}
+	@media (max-width: 575px){
+	font-size: 0.7rem;
+	}
+	@media (max-width: 992px) and (min-width: 576px){
+    font-size: 1rem
 	}
 }
-@media (min-width: 576px) and (max-width: 992px){
-	.poster{
-		width: 60%;
+h6{
+	font-size: 0.8rem;
+	color: #9c0000;
+}
+.poster-3{
+	height: 80%;
+	@media (max-width: 575px){
+		// max-height: 122px;
+		width: 100% !important;
+		height: 75% !important;
+	}
+	@media (min-width: 993px){
+			width: 60% !important;
 	}
 }
-@media (min-width: 993px){
-	.poster{
-		width: 50%;
+.poster-4{
+	max-height: 250px;
+	@media (max-width: 575px){
+    width: 100% !important;
+	}
+	@media (max-width: 992px) and (min-width: 576px){
+    width: 100% !important;
+    height: 75% !important;
+	}
+	@media (min-width: 993px){
+			width: 80% !important;
+			max-height: 305px;
 	}
 }
-img.poster {
+img.poster{
 	opacity: 1.0;
 	&:hover {
 		opacity: 0.5;
-		transition: all .2s ease-in-out; 
+		transition: all .2s ease-in-out;
+	}
+	@media (max-width: 575px){
+		width: 80%;
+	}
+	@media (min-width: 576px) and (max-width: 992px){
+			width: 155px;
+			height: 225px;
+	}
+	@media (min-width: 993px){
+			width: 50%;
 	}
 }
-// .pop:hover:after{
-//   border-radius: 5px;
-//   content: attr(tooltip);
-//   z-index: 99;
-// }
