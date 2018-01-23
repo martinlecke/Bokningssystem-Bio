@@ -168,7 +168,7 @@ Object.assign(Homepage.prototype, { template(){ return `
               <div class="col-12 col-md-4 mb-5 item1">
 
                 <!-- !!!!!!!!!! skriv text i alt -->
-                <img src="/imgs/${app.movie[0].poster}" alt="${app.movie[0].title}">
+                <img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
 
                 <div class="film-details mt-3">
                   <div>
@@ -216,14 +216,14 @@ Object.assign(Homepage.prototype, { template(){ return `
                           <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
                         </div>
                         <div>
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>
-                          <span>(Salong 2)</span>
-                          <span class="font-weight-bold ml-2">14:00</span>
-                          <span class="ml-5">
-                            <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                              Boka
-                            </button>
-                          </span>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="ml-2 font-weight-bold">14:00</span>
+                            <span>(Salong 2)</span>
+                            <span class="ml-5">
+                              <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                                Boka
+                              </button>
+                            </span>
                         </div>
                       </a>
                     </li>
@@ -236,6 +236,7 @@ Object.assign(Homepage.prototype, { template(){ return `
                           <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
                         </div>
                         <div>
+
                           <i class="fa fa-clock-o" aria-hidden="true"></i>
                           <span class="ml-2 font-weight-bold">14:00</span>
                           <span>(Salong 2)</span>
@@ -244,6 +245,8 @@ Object.assign(Homepage.prototype, { template(){ return `
                               Boka
                             </button>
                           </span>
+
+
                         </div>
                       </a>
                     </li>
