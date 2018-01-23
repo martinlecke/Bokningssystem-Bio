@@ -1,0 +1,9 @@
+Object.assign(CarouselItem.prototype, { template(){ return `
+
+<div class="carousel-item carousel-splash ${this.active ? 'd-block' : ''}" style="background:url(imgs/${this.images});">
+	<div class="infobox">
+		<a href="#" title="Länk till filmen">${this.title}</a>
+		<button>Mer om filmen</button>
+	</div>
+</div>
+`;}});
