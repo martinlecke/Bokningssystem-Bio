@@ -38,46 +38,113 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 	<div class="row">
 		<div class="col-12">
 			<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
+			<div class="col-12 d-flex justify-content-center">
 
-			<div class="col-12 d-flex justify-content-around">
-
-
-				<div class=" d-flex justify-content-center rounded border border-white">
-					<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-					</button>
-					<div class="col-2 mt-2 font-weight-bold  mr-2 number">1</div>
-					<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
-						<i class="fa fa-minus" aria-hidden="true"></i>
-					</button>
-				</div>
-
-				<div class=" d-flex justify-content-center rounded border border-white">
+				<div>
+					<p class="text-center mb-2">Ordenarie</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
 						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
 							<i class="fa fa-plus" aria-hidden="true"></i>
 						</button>
-						<div class="col-2 mt-2 font-weight-bold mr-2 number">1</div>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
 						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
 							<i class="fa fa-minus" aria-hidden="true"></i>
 						</button>
 					</div>
+				</div>
 
-					<div class="d-flex justify-content-center rounded border border-white">
-							<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
-								<i class="fa fa-plus" aria-hidden="true"></i>
-							</button>
-							<div class="col-2 mt-2 font-weight-bold  mr-2 number">1</div>
-							<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
-								<i class="fa fa-minus" aria-hidden="true"></i>
-							</button>
-						</div>
+				<div class="mx-5">
+					<p class="text-center mb-2">Barn (under 12år)</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
 
-
-
+				<div>
+					<p class="text-center mb-2">Pensionär</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
 			</div>
 
+			<p class="text-center my-5 font-weight-bold number">Totalt:
+				<span>1</span>
+			</p>
+
+		</div>
+	</div>
+
+	<hr class="bg-secondary">
+	<div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Välja platser</h2>
+			<div class="col-12 d-flex justify-content-center">
+				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
+			</div>
+
+			<div class="col-12 text-center my-5" style="font-size: 50px; color: red">!!!! Salongen renoveras nu !!!!!!!</div>
 
 
+			<div class="col-12 bg-white text-dark my-5 mx-auto seat-info mb-5">
+				<ul class="d-flex justify-content-start d-flex justify-content-around py-3">
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">32</span>Ledig
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">16</span>Otillgängliga plats
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">2</span>Vald plats
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-primary mr-3 px-2 py-2">2</span>Specialstol
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<hr class="bg-secondary">
+	<div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Boka</h2>
+			<div class="col-12 d-flex justify-content-center">
+				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
+			</div>
+
+			<div class="col-12 text-center my-5" style="font-size: 50px; color: red">!!!! Salongen renoveras nu !!!!!!!</div>
+
+
+			<div class="col-12 bg-white text-dark my-5 mx-auto seat-info mb-5">
+				<ul class="d-flex justify-content-start d-flex justify-content-around py-3">
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">32</span>Ledig
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">16</span>Otillgängliga plats
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">2</span>Vald plats
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-primary mr-3 px-2 py-2">2</span>Specialstol
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -85,11 +152,37 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 
 
 
+
+
+	<div class="row">
+		<div class="col-12 d-flex justify-content-center">
+			<div class="col-12 col-md-2 text-center mb-5">
+				<img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
+			</div>
+			<!-- Discription & performances  -->
+			<div class="col-12 col-md-6 mb-3">
+				<h3 class="font-weight-bold mb-2">${app.movie[0].title}</h3>
+				<div>
+					${app.movie[0].length}min, ${app.movie[0].language}
+				</div>
+
+				<div class="film-details mt-4 ml-3">
+					<div>
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+					</div>
+
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="ml-2 font-weight-bold">14:00</span>
+					<span>(Salong 2)</span>
+					<span class="ml-5"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </div>
-
-
-
-
 
 
 
