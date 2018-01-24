@@ -1,4 +1,5 @@
 class HomePage extends Base {
+	
 	constructor(){
 		super();
 		this.slider = []
@@ -35,6 +36,7 @@ class HomePage extends Base {
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
-
+		this.poster = Data.movies.slice(0, 6);
+		
 	}
 }

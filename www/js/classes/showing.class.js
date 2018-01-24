@@ -3,6 +3,5 @@ class Showing extends Base {
 		super();
 		Object.assign(this, showstoday);
 		Object.assign(this, showstomorrow);
-		console.log(showstomorrow);
 	}
 }
