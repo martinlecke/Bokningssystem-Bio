@@ -53,6 +53,7 @@ class PopStateHandler {
       '/': Homepage,
       '/filmer': Movie,
       '/kalendarium': Kalendarium,
+      '/auditorium': Auditorium
       // '/schedule': Schedule
     };
 
@@ -66,8 +67,8 @@ class PopStateHandler {
     // }
     // Call the template method of current page or load default method.
     // 'bind' binder "currentPage" till classen som .this
-    console.log(this.currentPage)
-    console.log(this.currentPage.template)
+    // console.log(this.currentPage)
+    // console.log(this.currentPage.template)
 
     let method = (this.currentPage && this.currentPage.template.bind(this.currentPage)) || this.default;
     $('main').html(method());

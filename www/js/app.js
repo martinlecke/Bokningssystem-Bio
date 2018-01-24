@@ -19,8 +19,14 @@ class App{
       })
     });
 
-
-
+    JSON._load('salong.json').then(salong=>{
+      this.salong = salong;
+    });
 	}
+
+
+  renderSeats() {
+    return `<div class="seat"></div>`;
+  }
 }
 
