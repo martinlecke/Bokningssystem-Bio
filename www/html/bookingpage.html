@@ -148,38 +148,106 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 							<h4 class="font-weight-bold mb-2">${app.movie[0].title}</h4>
 							<div class="mt-4">
 								<ul class="pl-0">
-									<li>
+									<li class="mb-1">
 										<span class="font-weight-bold mr-2">Datum:</span>Jan 19, 2018 - 14:00
 									</li>
-									<li>
+									<li class="mb-1">
 										<span class="font-weight-bold mr-2">Plats:</span>Salong 2
 									</li>
-									<li>
-										<span class="font-weight-bold mr-2">Biljetter:</span>
+									<div class="d-flex justify-content-start mt-2 mb-3">
 										<ul class="pl-4">
 											<li>
-												<span class="mr-2">Ordenarie:</span>
-												<span>85 kr</span> x
-												<span>1 = </span>
-												<span class="ml-1"> 85 kr</span>
+												<span class="mr-1">Rad:</span>
+												<span>4</span>,
+												<span class="mr-1">Stolsnr:</span>
+												<span>4</span>
 											</li>
 											<li>
-												<span class="mr-2">Barn (under 12år) :</span>
-												<span>65 kr</span> x
-												<span>1 = </span>
-												<span class="ml-1"> 65 kr</span>
+												<span class="mr-1">Rad:</span>
+												<span>4</span>,
+												<span class="mr-1">Stolsnr:</span>
+												<span>5</span>
 											</li>
 											<li>
-												<span class="mr-2">Pensionäre :</span>
-												<span>75 kr</span> x
-												<span>1 = </span>
-												<span class="ml-1"> 75 kr</span>
+												<span class="mr-1">Rad:</span>
+												<span>4</span>,
+												<span class="mr-1">Stolsnr:</span>
+												<span>6</span>
 											</li>
+
 										</ul>
+									</div>
+
+
+
+									<li class="mb-1">
+										<span class="font-weight-bold mr-2">Antal biljetter:</span>
+										<span class="mr-2">3</span>st
+
+										<div class="d-flex justify-content-start mt-2 mb-3">
+											<ul class="pl-4">
+												<li>
+													<span class="mr-2">Ordenarie:</span>
+												</li>
+												<li>
+													<span class="mr-2">Barn (under 12år) :</span>
+												</li>
+												<li>
+													<span class="mr-2">Pensionäre:</span>
+												</li>
+
+
+
+
+
+												
+												<!-- <li> -->
+												<hr class="text-dark my-2 underline">
+												<!-- </li> -->
+												<li class="mr-2">
+													<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
+
+												</li>
+											</ul>
+
+											<ul class="pl-4">
+												<li>
+													<span>85</span> kr ( 85 kr x
+													<span>1</span> st )
+												</li>
+												<li>
+													<span>65</span> kr ( 65 kr x
+													<span>1</span> st )
+												</li>
+												<li>
+													<span>75</span> kr ( 75 kr x
+													<span>1</span> st )
+												</li>
+												<li class="mr-2 mt-3">
+													<span>225</span> kr
+												</li>
+											</ul>
+										</div>
 									</li>
-									<li></li>
-									<li></li>
+									<!-- <hr class="text-dark my-2 underline">
+									<li class="mr-2">
+										<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
+										<span>225</span> kr
+									</li> -->
+
+									<li class="mb-1">
+										<span class="font-weight-bold mr-2">Plats:</span>Salong 2
+									</li>
+
+
+
+
+
+
+
+
 								</ul>
+
 							</div>
 						</div>
 					</div>
