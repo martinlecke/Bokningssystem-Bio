@@ -4,20 +4,9 @@ class FilmInfo {
 
     // this.showFilmInfo();
     // this.renderFilmInfo();
-    //  $(window).resize(() => this.moveFilmDetails());
 
 
   }
-
-
-
-  // // Change the order of items (only mobile) モバイルの時に、詳細の順番を変える   
-  // moveFilmDetails() {
-  //   let small = $(window).width() < 768;
-  //   if(small) {
-  //     $('.item1').insertAfter('.item3'); 
-  //   }
-  // }
 
 
 

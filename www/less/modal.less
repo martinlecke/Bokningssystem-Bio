@@ -14,40 +14,25 @@
 	}
 
 
-	// .item-parent {
-	// 	display: flex;
-	// 	// flex-wrap: nowrap;
-	// }
-
-
-	
-	// flexbox - change order
-	.item1 {
-		order: 2;
-		@media @tablet-min {
-		order: 1;
-		}
-	}
-
-	.item2 {
-		order: 1;
-		@media @tablet-min {
-		order: 2;
-		}
-	}
-
-
-	.item3 {
-		order: 3;
-		@media @tablet-min {
-	
-		order: 3
-		}
-	}
-
 	li {
 		list-style: none;
 	}
 
+	hr {
+		width: 150%;
+		@media @tablet-min {
+			width: 100%;
+		}
+	}
+
+	.booking {
+		margin-left: 3rem!important;
+		@media @mobile-min {
+			margin-left: 200px!important;
+		}
+		@media @tablet-min {
+		margin-left: 6rem!important;
+		}
+	}
 
 }
