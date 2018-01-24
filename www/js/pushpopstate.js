@@ -53,6 +53,7 @@ class PopStateHandler {
       '/': Homepage,
       '/filmer': Movie,
       '/kalendarium': Kalendarium,
+      '/bookingpage': Bookingpage
       // '/schedule': Schedule
     };
 
