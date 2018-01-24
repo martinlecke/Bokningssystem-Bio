@@ -159,7 +159,7 @@ Object.assign(Homepage.prototype, { template(){ return `
 
           <!-- !!!!!!!!!! Länken starwars bytas i films.json-->
 
-          <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/${app.movie[0].youtubeTrailers}"
+          <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/${app.movie[9].youtubeTrailers}"
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
           <!-- Image and films details -->
@@ -172,39 +172,39 @@ Object.assign(Homepage.prototype, { template(){ return `
 
               <!-- (item1)  Image and films details　 映画の写真（小）と　詳細　Start-->
               <div class="col-12 d-block d-md-none">
-                <h1>${app.movie[0].title}</h1>
-                <p>${app.movie[0].description}</p>
+                <h1>${app.movie[9].title}</h1>
+                <p>${app.movie[9].description}</p>
               </div>
               
               <div class="col-12 col-md-4 mb-5">
 
                 <!-- !!!!!!!!!! skriv text i alt -->
-                <img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
+                <img src="${app.movie[9].poster}" alt="${app.movie[9].title}">
 
                 <div class="film-details mt-3">
                   <div>
                     <span class="font-weight-bold">Productionsår: </span>
-                    <span>${app.movie[0].productionYear}</span>
+                    <span>${app.movie[9].productionYear}</span>
                   </div>
                   <div>
                     <span class="font-weight-bold">Längd: </span>
-                    <span>${app.movie[0].length}</span>
+                    <span>${app.movie[9].length}</span>
                   </div>
                   <div>
                     <span class="font-weight-bold">Genre: </span>
-                    <span>${app.movie[0].genre}</span>
+                    <span>${app.movie[9].genre}</span>
                   </div>
                   <div>
                     <span class="font-weight-bold">Språk: </span>
-                    <span>${app.movie[0].language}</span>
+                    <span>${app.movie[9].language}</span>
                   </div>
                   <div>
                     <span class="font-weight-bold">Regissör: </span>
-                    <span>${app.movie[0].director}</span>
+                    <span>${app.movie[9].director}</span>
                   </div>
                   <div>
                     <span class="font-weight-bold">Skådespelare: </span>
-                    <span>${app.movie[0].actors}</span>
+                    <span>${app.movie[9].actors}</span>
                   </div>
                 </div>
               </div>
@@ -217,8 +217,8 @@ Object.assign(Homepage.prototype, { template(){ return `
                 <div class="row">
 
                   <div class="col-12 mb-3 d-none d-md-block">
-                    <h1>${app.movie[0].title}</h1>
-                    <p>${app.movie[0].description}</p>
+                    <h1>${app.movie[9].title}</h1>
+                    <p>${app.movie[9].description}</p>
                   </div>
 
 
@@ -226,7 +226,7 @@ Object.assign(Homepage.prototype, { template(){ return `
                   <!-- item 3  Performances   タイトルと内容　Start-->
                   
                   <div class="col-12 mt-5">
-                    <h3>Visningstider</h3>
+                    <h3>Premiär</h3>
                     <ul class="pl-0">
                       <hr>
                       <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
@@ -234,15 +234,15 @@ Object.assign(Homepage.prototype, { template(){ return `
                         <a href="#" class="text-dark">
                           <div>
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                            <span class="ml-2 font-weight-bold">${app.movie[9].date}</span>
                           </div>
                           <div>
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <span class="ml-2 font-weight-bold">14:00</span>
-                            <span>(Salong 2)</span>
+                            <span class="ml-2 font-weight-bold">${app.movie[9].time}</span>
+                            <span>${app.movie[9].cinema}</span>
                             <span class="ml-5">
                               <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                                Boka
+                                Förboka
                               </button>
                             </span>
                           </div>
@@ -254,16 +254,16 @@ Object.assign(Homepage.prototype, { template(){ return `
                         <a href="#" class="text-dark">
                           <div>
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                            <span class="ml-2 font-weight-bold">${app.movie[9].date2}</span>
                           </div>
                           <div>
 
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <span class="ml-2 font-weight-bold">14:00</span>
-                            <span>(Salong 2)</span>
+                            <span class="ml-2 font-weight-bold">${app.movie[9].time2}</span>
+                            <span>${app.movie[9].cinema2}</span>
                             <span class="ml-5">
                               <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                                Boka
+                                Förboka
                               </button>
                             </span>
                           </div>
