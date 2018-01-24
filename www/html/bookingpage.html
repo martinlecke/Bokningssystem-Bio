@@ -34,6 +34,7 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 		</div>
 	</div>
 
+	<!-- Number of ticket -->
 	<hr class="bg-secondary">
 	<div class="row">
 		<div class="col-12">
@@ -87,6 +88,7 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 		</div>
 	</div>
 
+	<!-- Choose seats -->
 	<hr class="bg-secondary">
 	<div class="row">
 		<div class="col-12">
@@ -118,35 +120,12 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 	</div>
 
 
+	<!-- Booking -->
 	<hr class="bg-secondary">
+
 	<div class="row">
 		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Boka</h2>
-			<div class="col-12 d-flex justify-content-center">
-				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
-			</div>
-
-			<div class="col-12 text-center my-5" style="font-size: 50px; color: red">!!!! Salongen renoveras nu !!!!!!!</div>
-
-
-			<div class="col-12 bg-white text-dark my-5 mx-auto seat-info mb-5">
-				<ul class="d-flex justify-content-start d-flex justify-content-around py-3">
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-success mr-3 px-2 py-2">32</span>Ledig
-					</li>
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">16</span>Otillgängliga plats
-					</li>
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">2</span>Vald plats
-					</li>
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-primary mr-3 px-2 py-2">2</span>Specialstol
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+			<h2 class="text-center mt-4 mb-5">Bekräfta bokningen</h2>
 
 
 
@@ -154,36 +133,128 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 
 
 
-	<div class="row">
-		<div class="col-12 d-flex justify-content-center">
-			<div class="col-12 col-md-2 text-center mb-5">
-				<img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
-			</div>
-			<!-- Discription & performances  -->
-			<div class="col-12 col-md-6 mb-3">
-				<h3 class="font-weight-bold mb-2">${app.movie[0].title}</h3>
-				<div>
-					${app.movie[0].length}min, ${app.movie[0].language}
-				</div>
 
-				<div class="film-details mt-4 ml-3">
-					<div>
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+
+<!-- 時間など、プロパティに差し替える -->
+
+
+			<div class="row">
+				<div class="col-9 d-flex justify-content-center mx-auto">
+					<div class="bg-light text-dark d-flex justify-content-start confirmation mx-auto">
+
+						<!-- Bookning info  -->
+						<div class="col-12 col-md-4 text-center mb-5 mt-4">
+							<img src="/imgs/allthemoneyintheworld.jpg" alt="All the Money in the World">
+						</div>
+						<div class="col-12 col-md-8 mb-3 mt-4 justify-content-center">
+							<h4 class="font-weight-bold mb-2">${app.movie[0].title}</h4>
+							<div class="mt-4">
+								<ul class="pl-0">
+									<li>
+										Datum: Jan 19, 2018 - 14:00
+									</li>
+									<li>
+										Plats: Salong 2
+									</li>
+									<li>
+										Biljetter: 
+											<ul>
+												<li>Ordenarie <span>85 kr</span> x <span>1</span> = <span>85 kr</span></li>
+												<li>Barn(under 12år) <span>85 kr</span> x <span>1</span> = <span>85 kr</span></li>
+												<li></li>
+											</ul>
+									</li>
+									<li></li>
+									<li></li>
+
+
+
+
+
+
+									
+
+
+								</ul>
+
+
+								<div>
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+								</div>
+
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+								<span class="ml-2 font-weight-bold">14:00</span>
+								<span>(Salong 2)</span>
+								<span class="ml-5"></span>
+							</div>
+						</div>
 					</div>
-
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<span class="ml-2 font-weight-bold">14:00</span>
-					<span>(Salong 2)</span>
-					<span class="ml-5"></span>
 				</div>
 			</div>
+
+
 		</div>
+
 	</div>
 
 
-</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Bekräfta bokningen</h2>
+
+
+
+			<div class="row">
+				<div class="col-12 d-flex justify-content-center">
+					<div class="bg-light text-dark d-flex justify-content-start confirmation">
+
+						<div class="col-12 col-md-3 text-center mb-5">
+							<img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
+						</div>
+						<div class="col-12 col-md-9 mb-3">
+							<h4 class="font-weight-bold mb-2">${app.movie[0].title}</h4>
+							<div class="film-details mt-4 ml-3">
+								<div>
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+								</div>
+
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+								<span class="ml-2 font-weight-bold">14:00</span>
+								<span>(Salong 2)</span>
+								<span class="ml-5"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div> -->
+</div>
 
 
 
