@@ -11,13 +11,13 @@ class App{
       new PopStateHandler();
 		});
 
-    JSON._load('shows.json').then(shows=>{
-      this.shows = shows;
-      // console.log(this.movie);
-      this.shows.forEach(thing=>{
-        // console.log(thing.title);
-      })
-    });
+    // JSON._load('shows.json').then(shows=>{
+    //   this.shows = shows;
+    //   // console.log(this.movie);
+    //   this.shows.forEach(thing=>{
+    //     // console.log(thing.title);
+    //   })
+    // });
 
     JSON._load('salong.json').then(salong=>{
       this.salong = salong;

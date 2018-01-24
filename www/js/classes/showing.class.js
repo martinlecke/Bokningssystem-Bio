@@ -1,12 +1,8 @@
 class Showing extends Base {
-	
-	constructor(props){
+	constructor(showstoday, showstomorrow){
 		super();
-		for(let name in props){
-    	if(['time','title'].indexOf(name)>=6){break;}
-    	this[name] = props[name];
-    }
-    console.log('showing', this);
-
+		Object.assign(this, showstoday);
+		Object.assign(this, showstomorrow);
+		console.log(showstomorrow);
 	}
 }
