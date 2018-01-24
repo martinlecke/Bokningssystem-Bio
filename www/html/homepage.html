@@ -171,8 +171,12 @@ Object.assign(Homepage.prototype, { template(){ return `
 
 
               <!-- (item1)  Image and films details　 映画の写真（小）と　詳細　Start-->
-
-              <div class="col-12 col-md-4 mb-5 item1">
+              <div class="col-12 d-block d-md-none">
+                <h1>${app.movie[0].title}</h1>
+                <p>${app.movie[0].description}</p>
+              </div>
+              
+              <div class="col-12 col-md-4 mb-5">
 
                 <!-- !!!!!!!!!! skriv text i alt -->
                 <img src="${app.movie[0].poster}" alt="${app.movie[0].title}">
@@ -210,63 +214,65 @@ Object.assign(Homepage.prototype, { template(){ return `
               <!-- item 2  Discription  タイトルと内容　Start-->
               <div class="col-8 mb-3"> <!-- 外枠 -->
 
-                <div class="col-12 col-md-8 mb-3 order-12 order-md-2 item2">
-                  <h1>${app.movie[0].title}</h1>
-                  <p>${app.movie[0].description}</p>
-                </div>
+                <div class="row">
+
+                  <div class="col-12 mb-3 d-none d-md-block">
+                    <h1>${app.movie[0].title}</h1>
+                    <p>${app.movie[0].description}</p>
+                  </div>
 
 
 
-                <!-- item 3  Performances   タイトルと内容　Start-->
-                
-                <div class="col-12 col-md-8 mt-5 order-3 item3">
-                  <h3>Visningstider</h3>
-                  <ul class="pl-0">
-                    <hr>
-                    <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
-                    <li>
-                      <a href="#" class="text-dark">
-                        <div>
-                          <i class="fa fa-calendar" aria-hidden="true"></i>
-                          <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
-                        </div>
-                        <div>
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>
-                          <span class="ml-2 font-weight-bold">14:00</span>
-                          <span>(Salong 2)</span>
-                          <span class="ml-5">
-                            <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                              Boka
-                            </button>
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                    <hr>
-                    <li>
+                  <!-- item 3  Performances   タイトルと内容　Start-->
+                  
+                  <div class="col-12 mt-5">
+                    <h3>Visningstider</h3>
+                    <ul class="pl-0">
+                      <hr>
                       <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
-                      <a href="#" class="text-dark">
-                        <div>
-                          <i class="fa fa-calendar" aria-hidden="true"></i>
-                          <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
-                        </div>
-                        <div>
+                      <li>
+                        <a href="#" class="text-dark">
+                          <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                          </div>
+                          <div>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="ml-2 font-weight-bold">14:00</span>
+                            <span>(Salong 2)</span>
+                            <span class="ml-5">
+                              <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                                Boka
+                              </button>
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                      <hr>
+                      <li>
+                        <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida -->
+                        <a href="#" class="text-dark">
+                          <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+                          </div>
+                          <div>
 
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>
-                          <span class="ml-2 font-weight-bold">14:00</span>
-                          <span>(Salong 2)</span>
-                          <span class="ml-5">
-                            <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
-                              Boka
-                            </button>
-                          </span>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span class="ml-2 font-weight-bold">14:00</span>
+                            <span>(Salong 2)</span>
+                            <span class="ml-5">
+                              <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="#film-info">
+                                Boka
+                              </button>
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
 
+                  </div>
                 </div>
-
               </div>
               <!-- item 2   Discription & performances   タイトルと内容　 End -->
 
