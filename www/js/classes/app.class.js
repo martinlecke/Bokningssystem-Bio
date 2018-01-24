@@ -13,6 +13,10 @@ class App {
     this.filmer = new Movie();
     $('main').empty();
     this.filmer.render('main');
+    // Create auditorium page
+    this.auditorium = new Auditorium();
+    $('main').empty();
+    this.auditorium.render('main');
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
   } 
