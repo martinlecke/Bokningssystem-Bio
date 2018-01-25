@@ -141,103 +141,124 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 					<div class="bg-white text-dark d-flex justify-content-start confirmation mx-auto">
 
 						<!-- Bookning info  -->
-						<div class="col-12 col-md-4 text-center mb-5 mt-4">
+						<div class="col-12 col-md-4 text-center my-5">
 							<img src="/imgs/allthemoneyintheworld.jpg" alt="All the Money in the World">
 						</div>
-						<div class="col-12 col-md-8 mb-3 mt-4 justify-content-center">
+						<div class="col-12 col-md-8 mb-3 mt-5 justify-content-center">
 							<h4 class="font-weight-bold mb-2">${app.movie[0].title}</h4>
 							<div class="mt-4">
 								<ul class="pl-0">
-									<li class="mb-1">
-										<span class="font-weight-bold mr-2">Datum:</span>Jan 19, 2018 - 14:00
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Visningstid:</span>Jan 19, 2018 - 14:00
 									</li>
-									<li class="mb-1">
+									<li class="mb-2">
 										<span class="font-weight-bold mr-2">Plats:</span>Salong 2
+									</li>
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Antal biljetter:</span>
+										<span class="mr-2">3</span>st
+									</li>
+									<li class="mr-2">
+										<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
+										<span class="mr-2">225</span> kr
+									</li>
+
+									<div class="d-flex justify-content-start mt-2 mb-4">
+										<ul class="pl-4">
+											<li>
+												<span class="mr-2">Ordenarie:</span>
+											</li>
+											<li>
+												<span class="mr-2">Barn (under 12år) :</span>
+											</li>
+											<li>
+												<span class="mr-2">Pensionäre:</span>
+											</li>
+											<hr class="text-dark my-2 underline">
+											<li class="mr-2">
+												<span class="mr-2 mb-2">Summa:</span>
+											</li>
+										</ul>
+
+										<ul class="pl-4">
+											<li>
+												<span>85</span> kr ( 85 kr x
+												<span>1</span> st )
+											</li>
+											<li>
+												<span>65</span> kr ( 65 kr x
+												<span>1</span> st )
+											</li>
+											<li>
+												<span>75</span> kr ( 75 kr x
+												<span>1</span> st )
+											</li>
+											<li class="mr-2 mt-3">
+												<span>225</span> kr
+											</li>
+										</ul>
+									</div>
+
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Stolsnummer:</span>
 									</li>
 									<div class="d-flex justify-content-start mt-2 mb-3">
 										<ul class="pl-4">
 											<li>
 												<span class="mr-1">Rad:</span>
-												<span>4</span>,
+												<span class="mr-3">4</span>
 												<span class="mr-1">Stolsnr:</span>
 												<span>4</span>
 											</li>
 											<li>
 												<span class="mr-1">Rad:</span>
-												<span>4</span>,
+												<span class="mr-3">4</span>
 												<span class="mr-1">Stolsnr:</span>
 												<span>5</span>
 											</li>
 											<li>
 												<span class="mr-1">Rad:</span>
-												<span>4</span>,
+												<span class="mr-3">4</span>
 												<span class="mr-1">Stolsnr:</span>
 												<span>6</span>
 											</li>
-
 										</ul>
 									</div>
 
+									<li class="mr-2 font-weight-bold mt-4" id="booking-nr">
+										<span class="mr-2 mb-1">Bokningsnummer:</span>
+										<span class="mr-2 mb-1">XXXXXXX</span>
+									</li>
+									<p>
+										<small class="text-danger">* Glöm inte bokningsnummer</small>
+									</p>
+									<hr class="email mt-5">
 
-
-									<li class="mb-1">
-										<span class="font-weight-bold mr-2">Antal biljetter:</span>
-										<span class="mr-2">3</span>st
-
-										<div class="d-flex justify-content-start mt-2 mb-3">
-											<ul class="pl-4">
-												<li>
-													<span class="mr-2">Ordenarie:</span>
-												</li>
-												<li>
-													<span class="mr-2">Barn (under 12år) :</span>
-												</li>
-												<li>
-													<span class="mr-2">Pensionäre:</span>
-												</li>
-
-
-
-
-
-												
-												<!-- <li> -->
-												<hr class="text-dark my-2 underline">
-												<!-- </li> -->
-												<li class="mr-2">
-													<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
-
-												</li>
-											</ul>
-
-											<ul class="pl-4">
-												<li>
-													<span>85</span> kr ( 85 kr x
-													<span>1</span> st )
-												</li>
-												<li>
-													<span>65</span> kr ( 65 kr x
-													<span>1</span> st )
-												</li>
-												<li>
-													<span>75</span> kr ( 75 kr x
-													<span>1</span> st )
-												</li>
-												<li class="mr-2 mt-3">
-													<span>225</span> kr
-												</li>
-											</ul>
+									<!-- Forms -->
+									<form class="mt-5 mb-4">
+										<div class="form-group">
+											<label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ange användarens e-postadress">
 										</div>
-									</li>
-									<!-- <hr class="text-dark my-2 underline">
-									<li class="mr-2">
-										<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
-										<span>225</span> kr
-									</li> -->
+										<div class="form-group">
+											<label for="exampleInputEmail1" class="font-weight-bold">Bekräfta e-mailadress</label>
+											<input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Vänligen bekräfta er e-mailadress">
+										</div>
+										<!-- <div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+											<label class="form-check-label" for="exampleCheck1">Check me out</label>
+										</div> -->
+										<button type="submit" class="btn btn-primary mt-4 bookning-alert">Boka</button>
+									</form>
 
-									<li class="mb-1">
-										<span class="font-weight-bold mr-2">Plats:</span>Salong 2
-									</li>
+
+
+									<p>
+										<span class="font-weight-bold mr-2">Observera!</span>Vänligen berätta
+										<span>
+											<ins>ditt bokningsnummer</ins>
+										</span> och betala för biljetterna på bio.</p>
+
 
 
 
