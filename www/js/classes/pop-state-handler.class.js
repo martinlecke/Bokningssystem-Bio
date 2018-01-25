@@ -53,7 +53,7 @@ class PopStateHandler {
     // on which url
     let urls = {
       '/': 'home',
-      '/filmer': 'filmsida'
+      '/filmer': 'filmsida',
       '/auditorium': 'auditorium'
     };
 
