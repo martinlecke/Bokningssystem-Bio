@@ -10,17 +10,10 @@ class App {
     $('main').empty();
     this.homePage.render('main');
     // // create moviepage
-    // this.moviePage = new MoviePage();
-    // $('main').empty();
-    // this.moviePage.render('main');
-    // Create filmer
-    this.filmer = new Movie();
+    this.moviePage = new MoviePage();
     $('main').empty();
-    this.filmer.render('main');
-    //Create movies
-    // this.currentPage = new MoviePage();
-    // $('main').empty();
-    // this.moviePage.render('main');
+    this.moviePage.render('main');
+   
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
   } 
