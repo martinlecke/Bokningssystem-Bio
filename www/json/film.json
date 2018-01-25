@@ -3,6 +3,7 @@
     "title": "All the Money in the World",
     "productionYear": 2017,
     "length": 132,
+    "active": true,
     "genre": "Biografi, Kriminalitet, Drama",
     "language": "Engelska(svenska text)",
     "director": "Ridley Scott",
@@ -12,7 +13,8 @@
       "Mark Wahlberg"
     ],
     "description": "<p>The story of the kidnapping of 16-year-old John Paul Getty III and the desperate attempt by his devoted mother to convince his billionaire grandfather Jean Paul Getty to pay the ransom.</p>",
-    "images": "allthemoneyintheworld.jpg",
+    "images": "allthemoney.jpg",
+    "poster": "/imgs/allthemoneyintheworld.jpg",
     "youtubeTrailers": [
       "KXHrCBkIxQQ"
     ],
@@ -31,7 +33,8 @@
       "Bea Palya"
     ],
     "description": "<p>The story of Django Reinhardt, famous guitarist and composer, and his flight from German-occupied Paris in 1943.</p>",
-    "images": "django_poster.jpg",
+    "images": "django.jpg",
+    "poster": "/imgs/django_poster.jpg",
     "youtubeTrailers": [
       "Lw5DvTAVomA"
     ],
@@ -41,6 +44,7 @@
     "title": "Transformers: The Last Knight",
     "productionYear": 2017,
     "length": 154,
+    "active": false,
     "genre": "Action, Äventyr, Sci-Fi",
     "language": "Engelska(svenska text)",
     "director": "Michael Bay",
@@ -50,7 +54,8 @@
       "Josh Duhamel"
     ],
     "description": "<p>Autobots and Decepticons are at war, with humans on the sidelines. Optimus Prime is gone. The key to saving our future lies buried in the secrets of the past, in the hidden history of Transformers on Earth.</p>",
-    "images": "transformersthelastknight.jpeg",
+    "images": "transformers.jpg",
+    "poster": "/imgs/transformersthelastknight.jpeg",
     "youtubeTrailers": [
       "6Vtf0MszgP8"
     ],
@@ -69,7 +74,8 @@
       "Michael Stuhlbarg"
     ],
     "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
-    "images": "callmebyyourname_poster.jpg",
+    "images": "callmebyyourname.jpg",
+    "poster": "/imgs/callmebyyourname_poster.jpg",
     "youtubeTrailers": [
       "Z9AYPxH5NTM"
     ],
@@ -84,7 +90,8 @@
     "director": "Makoto Shinkai",
     "actors": "-",
     "description": "<p>Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?</p>",
-    "images": "yourname_poster.jpg",
+    "images": "yourname.jpg",
+    "poster": "/imgs/yourname_poster.jpg",
     "youtubeTrailers": [
       "BAiSEW64qY0"
     ],
@@ -103,7 +110,8 @@
       "Philippe Katerine"
     ],
     "description": "<p>Juliette Binoche är lysande i rollen som Isabelle, en frånskild konstnär i 50-årsåldern, som försöker sålla bland alla självcentrerade män i hopp om att åter finna kärleken. En elegant romantisk komedi av kritikerrosade Claire Denis om vad som är viktigt i livet och om vad man vill ha i en mogen relation.</p>",
-    "images": "letthesunshinein_poster.jpg",
+    "images": "letthesunshinein.jpg",
+    "poster": "/imgs/letthesunshinein_poster.jpg",
     "youtubeTrailers": [
       "Z9AYPxH5NTM"
     ],
@@ -123,6 +131,7 @@
     ],
     "description": "<p>Den episka Skywalker-sagan fortsätter när hjältarna från The Force Awakens ansluter sig till de galaktiska legenderna i ett storslaget äventyr som avslöjar Kraftens uråldriga mysterier och chockerande sanningar från det förflutna.</p>",
     "images": "starwars.jpg",
+    "poster": "/imgs/starwars.jpg",
     "youtubeTrailers": [
       "Q0CbN8sfihY"
     ],
@@ -141,6 +150,7 @@
     "actors": "-",
     "description": "<p>Felicia är en föräldralös flicka med en passion i livet: att dansa! Tillsammans med kamraten Victor, som har planer på att bli en stor uppfinnare, kommer hon på en makalös plan för att fly från barnhemmet och ge sig ut på äventyr mot Paris – en stad fylld av ljus och med Eiffeltornet under uppbyggnad. Men för Felicia har äventyret bara börjat. Nu måste hon kämpa som aldrig förr för att visa att hon har vad som behövs för att bli prima ballerina på Operan i Paris.</p>",
     "images": "ballerinanochuppfinnaren.jpg",
+    "poster": "/imgs/leap_poster.jpg",
     "youtubeTrailers": [
       "dTwTXk4O9fc"
     ],

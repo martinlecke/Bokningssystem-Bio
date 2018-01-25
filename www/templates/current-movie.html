@@ -1,0 +1,20 @@
+Object.assign(CurrentMovie.prototype, { template(){ return `
+
+<div class="col-3 text-center">
+	<a href="/" class="movie-link pop" data-movie="${this.title}">
+		<img class="img-fluid poster poster-4" data-toggle="popover" src="${this.poster}">
+		<h5 class="mt-3 mb-5">${this.title}</h5>
+	</a>
+</div>
+
+`;}});
+
+
+
+<!-- 	// <div class="col-4 text-center image-capsule">
+	// <a href="/" class="movie-link pop">
+	// <img class="poster poster-comming-soon" data-toggle="popover" src="${app.movie[0].poster}">
+	// <!-- <p class="poster-date d-inline-block text-center">Test</p> -->
+	<!-- // </a>
+	// <h5 class="mt-3">${app.movie[0].title}</h5>
+	// </div> -->
