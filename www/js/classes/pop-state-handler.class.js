@@ -53,7 +53,7 @@ class PopStateHandler {
     // on which url
     let urls = {
       '/': 'home',
-      '/filmer': 'filmer',
+      '/filmer': 'filmsida'
       '/auditorium': 'auditorium'
     };
 
@@ -71,9 +71,9 @@ class PopStateHandler {
     this.app.homePage.render('main');
   }
 
-  filmer(){
+  filmsida(){
     $('main').empty();
-    this.app.filmer.render('main');
+    this.app.moviePage.render('main');
   }
 
   auditorium(){

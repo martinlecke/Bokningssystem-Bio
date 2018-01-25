@@ -9,10 +9,10 @@ class App {
     this.homePage = new HomePage();
     $('main').empty();
     this.homePage.render('main');
-    // Create filmer page
-    this.filmer = new Movie();
+    // // create moviepage
+    this.moviePage = new MoviePage();
     $('main').empty();
-    this.filmer.render('main');
+    this.moviePage.render('main');
     // Create auditorium page
     this.auditorium = new Auditorium();
     $('main').empty();
