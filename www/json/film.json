@@ -153,5 +153,84 @@
       "dTwTXk4O9fc"
     ],
     "⚙": "Movie"
+  },
+
+  {
+    "cinema": " (Salong: Stor)",
+    "cinema2": " (Salong: Liten)",
+    "date": "11 Februari 2018",
+    "date2": "12 Februari 2018",
+    "time": "18:00",
+    "time2": "20:00",
+    "title": "Black Panter",
+    "productionYear": 2018,
+    "length": 135,
+    "genre": "Action, Äventyr, Sci-Fi",
+    "language": "Engelska(svenska text)",
+    "director": [
+      "Ryan Coogler",
+      ""
+    ],
+    "actors": "Chadwick Boseman, Michael B. Jordan, Andy Serkis, Lupita Nyong'o, Forrest Whitaker",
+    "description": "<p>Efter händelserna i Captain America: Civil War återvänder T’Challa till sitt hemland, det isolerade, högteknologiska afrikanska landet Wakanda, för att bli dess kung. Men när en gammal fiende dyker upp måste T’Challa, både som kung och Black Panther visa sin styrka. Han dras in i en konflikt som hotar inte bara Wakandas öde, utan hela världen. I rollerna bl a: Chadwick Boseman, Michael B. Jordan, Lupita Nyong’o, Angela Basset, Forest Whitaker och Martin Freeman. Regi: Ryan Coogler.</p>",
+    "images": "black-panther-img.jpg",
+    "poster": "/imgs/black-panther.jpg",
+    "youtubeTrailers": [
+      "x02xX2dv6bQ"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "cinema": " (Salong: Stor)",
+    "cinema2": " (Salong: Liten)",
+    "date": "9 Februari 2018",
+    "date2": "10 Februari 2018",
+    "time": "16:00",
+    "time2": "18:00",
+    "title": "Alpha",
+    "productionYear": 2018,
+    "length": 125,
+    "genre": "Action, Drama, Thriller",
+    "language": "Engelska(svenska text)",
+    "director": [
+      "Albert Hughes",
+      ""
+    ],
+    "actors": "Kodi Smit-McPhee, Leonor Varela, Natassia Malthe, Jóhannes Haukur Jóhannesson, Mercedes de la Zerda, Jens Hultén",
+    "description": "<p>Under sin första jakt med stammens främsta jägare såras en man och lämnas för att dö. När han vaknar upp är han själv och allvarligt skadad, och för att överleva måste han navigera den ogästvänliga, oförlåtande vildmarken. En ensam varg, också övergiven av sin flock, blir mannens enda sällskap och allierade i kampen mot oräkneliga faror och odds som starkt talar emot att de ska hinna hem före den livsfarliga vintern anländer.</p>",
+    "images": "alpha-img.jpg",
+    "poster": "/imgs/alpha-poster.jpg",
+    "youtubeTrailers": [
+      "uIxnTi4GmCo"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "cinema": " (Salong: Stor)",
+    "cinema2": " (Salong: Liten)",
+    "date": "7 Februari 2018",
+    "date2": "8 Februari 2018",
+    "time": "16:00",
+    "time2": "20:00",
+    "title": "The Disaster Artist",
+    "productionYear": 2018,
+    "length": 123,
+    "genre": "Komedi",
+    "language": "Engelska(svenska text)",
+    "director": [
+      "James Franco",
+      ""
+    ],
+    "actors": "James Franco, Seth Rogen, Kristen Bell, Zac Efron",
+    "description": "<p>Den excentriske Hollywood-outsidern Tommy Wiseau vars passion för sitt filmskapande är lika stor som hans metoder är ifrågasatta. The Disaster Artist påminner oss om att det finns mer än ett sätt att bli en legend, samt om att det finns ingen begränsning i vad man kan åstadkomma – om man inte har någon som helst aning om vad man håller på med. The Disaster Artist är komedin som tar oss med bakom kulisserna av 'The Room' – filmen som uppmärksammades stort över hela världen när den kom, då den anses vara den bästa sämsta filmen någonsin gjorts.</p>",
+    "images": "disaster.jpg",
+    "poster": "/imgs/disaster-poster.jpg",
+    "youtubeTrailers": [
+      "cMKX2tE5Luk"
+    ],
+    "⚙": "Movie"
   }
+
 ]
