@@ -17,8 +17,7 @@ class HomePage extends Base {
 				let time = new Date(shows.date + ' 00:00:00')// tomorrow should  + 86400000;
 				return new Date() > new Date(time.getTime());
 			})
-			.map((shows)=>new Showing(shows))
-		;
+			.map((shows)=>new Showing(shows));
 		this.tomorrow = Data.shows
 			.filter((shows)=>{
 				// Removes all shows from past todays date
@@ -30,13 +29,11 @@ class HomePage extends Base {
 				let time = new Date(shows.date + ' 00:00:00').getTime(); // 24h*60min*60sek*1000ms = 86400000ms
 				return new Date().getTime() > time - 86400000;
 			})
-			.map((shows)=>new Showing(undefined, shows))
-		; 
+			.map((shows)=>new Showing(undefined, shows)); 
 		// Startar slider om 0 sekunder! (nästa frame). Tidintervall på slider är 5 sekunder
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
 		this.poster = Data.movies.slice(0, 6);
-		
 	}
 }

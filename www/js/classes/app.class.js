@@ -7,8 +7,9 @@ class App {
     this.navbar.render('header');
     // Create a homepage
     this.homePage = new HomePage();
-    $('main').empty();
     this.homePage.render('main');
+    $('main').empty();
+
     // // create moviepage
     this.moviePage = new MoviePage();
     $('main').empty();
@@ -19,6 +20,5 @@ class App {
     this.auditorium.render('main');
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
-  } 
-
-}
+    }
+} 
