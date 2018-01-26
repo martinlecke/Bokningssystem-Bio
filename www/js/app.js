@@ -9,7 +9,7 @@ class App{
   // 			// console.log(thing.title);
   // 		})
       new PopStateHandler();
-		});
+		};
 
     // JSON._load('shows.json').then(shows=>{
     //   this.shows = shows;
