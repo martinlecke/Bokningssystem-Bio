@@ -50,10 +50,11 @@ class PopStateHandler extends Base {
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
+      '/auditorium': 'auditorium',
+      '/kalendarium': 'kalendarium',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
       '/Transformers: The Last Knight': 'transformers'
-      '/auditorium': 'auditorium'
     };
     // Call the right method
     let methodName = urls[url];
@@ -88,6 +89,11 @@ class PopStateHandler extends Base {
   filmsida(){
     $('main').empty();
     this.app.moviePage.render('main');
+  }
+
+  kalendarium(){
+    $('main').empty();
+    this.app.Kalendarium.render('main');
   }
 
   auditorium(){
