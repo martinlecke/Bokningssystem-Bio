@@ -1,9 +1,9 @@
-class PopStateHandler extends Base {
+class PopStateHandler {
 
   // Note: Only instantiate PopStateHandler once!
 
   constructor(app){
-    super();
+  
     this.app = app;
     // Add event handlers for a.pop-links once
     this.addEventHandler();
@@ -16,12 +16,12 @@ class PopStateHandler extends Base {
     window.addEventListener('popstate', () => this.changePage());
   }
 
-  shortenUrl(url){
-    url = url.replace(/,/g, "");
-    url = url.replace(/ /g, "");
-    url = url.toLowerCase();
-    return url;
-  }
+  // shortenUrl(url){
+  //   url = url.replace(/,/g, "");
+  //   url = url.replace(/ /g, "");
+  //   url = url.toLowerCase();
+  //   return url;
+  // }
 
   addEventHandler(){
     // make "that" the PopStateHandler object (since this will be the a tag inside the click function)
@@ -29,7 +29,7 @@ class PopStateHandler extends Base {
     $(document).on('click','a.pop',function(e){
       // Create a push state event
       let href = $(this).attr('href');
-      href = that.shortenUrl(href);
+      // href = that.shortenUrl(href);
       history.pushState(null, null, href);
       // Call the changePage function
       that.changePage();
@@ -51,34 +51,16 @@ class PopStateHandler extends Base {
       '/': 'home',
       '/filmer': 'filmsida',
       '/auditorium': 'auditorium',
-      '/kalendarium': 'kalendarium',
-      '/All the Money in the World': 'allTheMoney',
-      '/Django': 'django',
-      '/Transformers: The Last Knight': 'transformers'
+      '/kalendarium': 'kalendarium'
+      // '/All the Money in the World': 'allTheMoney',
+      // '/Django': 'django',
+      // '/Transformers: The Last Knight': 'transformers'
     };
     // Call the right method
     let methodName = urls[url];
     this[methodName]();
     // Set the right menu item active
     this.app.navbar.setActive(url);
-  }
-
-  allTheMoney(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
-  }
-
-  django(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
-  }
-
-  transformers(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
   }
 
   home(){
@@ -89,11 +71,6 @@ class PopStateHandler extends Base {
   filmsida(){
     $('main').empty();
     this.app.moviePage.render('main');
-  }
-
-  kalendarium(){
-    $('main').empty();
-    this.app.Kalendarium.render('main');
   }
 
   auditorium(){

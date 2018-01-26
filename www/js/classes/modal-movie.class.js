@@ -1,8 +1,5 @@
 class ModalMovie extends Base {
-	constructor(props){
+	constructor(){
 		super();
-		for(let name in props){
-				this[name] = props[name];
-		}
 	}
 }

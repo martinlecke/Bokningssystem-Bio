@@ -3,16 +3,20 @@ class Movie extends Base {
 	constructor(props){
 		super();
 		for(let name in props){
+			if(['title','poster', 'description'].includes(name)){ 
 				this[name] = props[name];
+			}
 		}
 
-        setTimeout(()=>{
-            this.title && this.attachEventListeners();
-        }, 100);
-    }
+		setTimeout(()=>{
+			this.title && this.attachEventListeners();
+		}, 100);
+	}
 
 	attachEventListeners(){
 		let that = this;
+		//Denna funktionen körs efter den körts 1 gång tidigare. Nu körs den som en tom funktion.
+		that.attachEventListeners = ()=>{};
 
 		$(document).on("click", "#modalid", function(){
 			that.mymodal = new ModalMovie();
@@ -22,9 +26,9 @@ class Movie extends Base {
 		});
 
 		$(document).find(`[data-movie="${that.title}"] [data-toggle="popover"]`).popover({ 
-			trigger: "manual" , 
+			trigger: "manual", 
 			html: true,
-			placement: 'top',
+			placement: 'auto',
 			content: function() {
 				return `
 				<h6 class="mb-0 d-inline">Handling: </h6>
@@ -33,7 +37,7 @@ class Movie extends Base {
 				</p>
 				<div class="mt-2 mb-1 text-center">
 				<a class="pop" href="${that.title}">
-					<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
+				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
 				</a>
 				</div>`
 			}
@@ -52,7 +56,5 @@ class Movie extends Base {
 				}
 			}, 300);
 		});
-		//Denna funktionen körs efter den körts 1 gång tidigare. Nu körs den som en tom funktion.
-		that.attachEventListeners = ()=>{};
 	}
 }

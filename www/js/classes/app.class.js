@@ -9,7 +9,6 @@ class App {
     this.homePage = new HomePage();
     this.homePage.render('main');
     $('main').empty();
-
     // // create moviepage
     this.moviePage = new MoviePage();
     $('main').empty();
