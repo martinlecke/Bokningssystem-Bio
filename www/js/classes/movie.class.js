@@ -6,10 +6,10 @@ class Movie extends Base {
 				this[name] = props[name];
 		}
 
-		setTimeout(()=>{
-			this.title && this.attachEventListeners();
-		}, 100);
-	}
+        setTimeout(()=>{
+            this.title && this.attachEventListeners();
+        }, 100);
+    }
 
 	attachEventListeners(){
 		let that = this;

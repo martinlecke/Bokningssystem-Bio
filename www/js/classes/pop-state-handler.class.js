@@ -53,6 +53,7 @@ class PopStateHandler extends Base {
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
       '/Transformers: The Last Knight': 'transformers'
+      '/auditorium': 'auditorium'
     };
     // Call the right method
     let methodName = urls[url];
@@ -87,5 +88,10 @@ class PopStateHandler extends Base {
   filmsida(){
     $('main').empty();
     this.app.moviePage.render('main');
+  }
+
+  auditorium(){
+    $('main').empty();
+    this.app.auditorium.render('main');
   }
 }
