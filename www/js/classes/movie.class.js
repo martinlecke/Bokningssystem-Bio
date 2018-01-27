@@ -28,7 +28,7 @@ class Movie extends Base {
 		$(document).find(`[data-movie="${that.title}"] [data-toggle="popover"]`).popover({ 
 			trigger: "manual", 
 			html: true,
-			placement: 'auto',
+			placement: 'top',
 			content: function() {
 				return `
 				<h6 class="mb-0 d-inline">Handling: </h6>

@@ -16,12 +16,12 @@ class PopStateHandler {
     window.addEventListener('popstate', () => this.changePage());
   }
 
-  // shortenUrl(url){
-  //   url = url.replace(/,/g, "");
-  //   url = url.replace(/ /g, "");
-  //   url = url.toLowerCase();
-  //   return url;
-  // }
+  shortenUrl(url){
+    url = url.replace(/,/g, "");
+    url = url.replace(/ /g, "");
+    url = url.toLowerCase();
+    return url;
+  }
 
   addEventHandler(){
     // make "that" the PopStateHandler object (since this will be the a tag inside the click function)
@@ -49,12 +49,12 @@ class PopStateHandler {
     // A small "dictionary" of what method to call on which url
     let urls = {
       '/': 'home',
-      '/filmer': 'filmsida',
+      '/filmer': 'filmsida'
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium'
-      // '/All the Money in the World': 'allTheMoney',
-      // '/Django': 'django',
-      // '/Transformers: The Last Knight': 'transformers'
+      '/All the Money in the World': 'allTheMoney',
+      '/Django': 'django',
+      '/Transformers: The Last Knight': 'transformers'
     };
     // Call the right method
     let methodName = urls[url];
