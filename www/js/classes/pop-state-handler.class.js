@@ -49,9 +49,9 @@ class PopStateHandler {
     // A small "dictionary" of what method to call on which url
     let urls = {
       '/': 'home',
-      '/filmer': 'filmsida'
+      '/filmer': 'filmsida',
       '/auditorium': 'auditorium',
-      '/kalendarium': 'kalendarium'
+      '/kalendarium': 'kalendarium',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
       '/Transformers: The Last Knight': 'transformers'
