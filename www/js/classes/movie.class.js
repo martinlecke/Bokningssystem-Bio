@@ -48,7 +48,8 @@ class Movie extends Base {
 			$(".popover").on("mouseleave", function () {
 				$(that).popover('hide');
 			});
-		}).on("mouseleave", function () {
+		})
+		.on("mouseleave", function () {
 			let that = this;
 			setTimeout(function () {
 				if (!$(".popover:hover").length) {
