@@ -1,5 +1,7 @@
 class App {
 
+// ３．すべてのページをここで作って、観れるようになる（bookningpageもここに追加しないといけない）
+
   start(){
     // Create a navbar
     this.navbar = new Navbar();
@@ -17,7 +19,12 @@ class App {
     this.auditorium = new Auditorium();
     $('main').empty();
     this.auditorium.render('main');
+    // Create booking page
+    this.booking = new Booking();
+    $('main').empty();
+    this.booking.render('main');
+
     // Initiate handling of SPA push/pop-state
-    new PopStateHandler(this);
+    new PopStateHandler(this);　　　// this = App クラス（Appクラスに書かれているものが、全てpopStateHandlerに送られる）
     }
 } 

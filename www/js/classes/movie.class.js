@@ -20,6 +20,10 @@ class Movie extends Base {
 
 		$(document).on("click", "#modalid", function(){
 			that.mymodal = new ModalMovie();
+
+			// ９．　console.log("this", this);  this = '#modalid' を指している　(例: line 28,29)
+			// console.log("that", that);   that = 'class Movie' (= class)
+			
 			that.mymodal.render('.modal-container');
 			// $('#modalbutton').data("toggle", 'modal');
 			// $("#modalbutton").data("target", "film-info");
@@ -51,7 +55,7 @@ class Movie extends Base {
 		}).on("mouseleave", function () {
 			let that = this;
 			setTimeout(function () {
-				if (!$(".popover:hover").length) {
+				if (!$(".popover:hover").length) {　　// hoverの時間をキープできる
 					$(that).popover("hide");
 				}
 			}, 300);

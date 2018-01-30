@@ -2,7 +2,7 @@ class PopStateHandler {
 
   // Note: Only instantiate PopStateHandler once!
 
-  constructor(app){
+  constructor(app){　　// ４．App クラスから送られた、引数
   
     this.app = app;
     // Add event handlers for a.pop-links once
@@ -16,6 +16,7 @@ class PopStateHandler {
     window.addEventListener('popstate', () => this.changePage());
   }
 
+  // ５．urlのデーターの文字の大文字、スペース、コンマを消してくれる
   shortenUrl(url){
     url = url.replace(/,/g, "");
     url = url.replace(/ /g, "");
@@ -47,11 +48,15 @@ class PopStateHandler {
     $('header a').removeClass('active');
     $(`header a[href="${url}"]`).addClass('active');
     // A small "dictionary" of what method to call on which url
+
+
+    // 6.urlを追加する時にここに書く
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
+      '/bokningssida': 'bokningssida',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
     };
@@ -62,9 +67,10 @@ class PopStateHandler {
     this.app.navbar.setActive(url);
   }
 
+  // 6.urlを追加する時にここにも書く(line:53)
   home(){
     $('main').empty();
-    this.app.homePage.render('main');
+    this.app.homePage.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
   }
 
   filmsida(){
@@ -76,4 +82,10 @@ class PopStateHandler {
     $('main').empty();
     this.app.auditorium.render('main');
   }
+
+  bokningssida(){
+    $('main').empty();
+    this.app.booking.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+  }
+
 }

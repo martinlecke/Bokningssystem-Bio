@@ -1,0 +1,17 @@
+Object.assign(Navbar.prototype, { template(){ return `
+
+<div>
+	<p class="text-center mb-2">${type}</p>
+	<div class=" d-flex justify-content-center rounded border border-white">
+		<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</button>
+		<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+		<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+			<i class="fa fa-minus" aria-hidden="true"></i>
+		</button>
+	</div>
+</div>
+
+
+`;}});

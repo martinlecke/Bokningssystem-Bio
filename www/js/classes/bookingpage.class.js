@@ -1,6 +1,7 @@
-class Bookingpage {
+class Booking extends Base {
 
 	constructor() {
+		super();
 		let urlName = location.pathname.split('/')[2];
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
@@ -18,7 +19,7 @@ class Bookingpage {
 	// Alert
 	bookingAlert() {
 		$(document).on('click', '.bookning-alert', function () {
-			alert('Vi skickade ett mail till dig. Ditt bokningsnummer är: xxxx.');
+			alert('Tack för bokning! Vi skickade ett mail till dig.');
 		});
 	}
 

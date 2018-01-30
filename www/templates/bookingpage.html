@@ -1,4 +1,4 @@
-Object.assign(Bookingpage.prototype, { template(){ return `
+Object.assign(Booking.prototype, { template(){ return `
 
 <div class="booking container-fluid">
 	<div class="row">
@@ -14,13 +14,13 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 
 				<!-- Bookning info  -->
 				<div class="col-12 col-md-4 text-center mb-5 mt-4">
-					<img src="/imgs/allthemoneyintheworld.jpg" alt="All the Money in the World">
+					<img src="" alt="">
 				</div>
 
 				<div class="col-12 col-md-8 mb-3 mt-4 ml-5 justify-content-center">
-					<h3 class="font-weight-bold mb-2">${app.movie[0].title}</h3>
+					<h3 class="font-weight-bold mb-2"></h3>
 					<div>
-						${app.movie[0].length}min, ${app.movie[0].language}
+						<p> min, </p>
 					</div>
 
 					<div class="film-details mt-4 ml-3">
@@ -47,6 +47,8 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 		<div class="col-12">
 			<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
 			<div class="col-12 d-flex justify-content-center">
+
+			
 
 				<div>
 					<p class="text-center mb-2">Ordenarie</p>
@@ -177,7 +179,7 @@ Object.assign(Bookingpage.prototype, { template(){ return `
 							<img src="/imgs/allthemoneyintheworld.jpg" alt="All the Money in the World">
 						</div>
 						<div class="col-12 col-md-8 mb-3 mt-5 justify-content-center">
-							<h4 class="font-weight-bold mb-2">${app.movie[0].title}</h4>
+							<h4 class="font-weight-bold mb-2"></h4>
 							<div class="mt-4">
 								<ul class="pl-0">
 									<li class="mb-2">
