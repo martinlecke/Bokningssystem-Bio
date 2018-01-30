@@ -59,6 +59,7 @@ class PopStateHandler {
       '/bokningssida': 'bokningssida',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
+      '#login': 'login'
     };
     // Call the right method
     let methodName = urls[url];
