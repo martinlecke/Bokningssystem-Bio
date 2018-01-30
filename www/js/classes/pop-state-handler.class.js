@@ -1,9 +1,9 @@
-class PopStateHandler extends Base {
+class PopStateHandler {
 
   // Note: Only instantiate PopStateHandler once!
 
-  constructor(app){
-    super();
+  constructor(app){　　// ４．App クラスから送られた、引数
+  
     this.app = app;
     // Add event handlers for a.pop-links once
     this.addEventHandler();
@@ -16,6 +16,7 @@ class PopStateHandler extends Base {
     window.addEventListener('popstate', () => this.changePage());
   }
 
+  // ５．urlのデーターの文字の大文字、スペース、コンマを消してくれる
   shortenUrl(url){
     url = url.replace(/,/g, "");
     url = url.replace(/ /g, "");
@@ -29,7 +30,7 @@ class PopStateHandler extends Base {
     $(document).on('click','a.pop',function(e){
       // Create a push state event
       let href = $(this).attr('href');
-      href = that.shortenUrl(href);
+      // href = that.shortenUrl(href);
       history.pushState(null, null, href);
       // Call the changePage function
       that.changePage();
@@ -47,14 +48,17 @@ class PopStateHandler extends Base {
     $('header a').removeClass('active');
     $(`header a[href="${url}"]`).addClass('active');
     // A small "dictionary" of what method to call on which url
+
+
+    // 6.urlを追加する時にここに書く
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
+      '/bokningssida': 'bokningssida',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
-      '/Transformers: The Last Knight': 'transformers'
     };
     // Call the right method
     let methodName = urls[url];
@@ -63,27 +67,10 @@ class PopStateHandler extends Base {
     this.app.navbar.setActive(url);
   }
 
-  allTheMoney(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
-  }
-
-  django(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
-  }
-
-  transformers(){
-    $('').empty();
-    let movie = new Movie();
-    console.log("movie", movie);
-  }
-
+  // 6.urlを追加する時にここにも書く(line:53)
   home(){
     $('main').empty();
-    this.app.homePage.render('main');
+    this.app.homePage.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
   }
 
   filmsida(){
@@ -91,13 +78,14 @@ class PopStateHandler extends Base {
     this.app.moviePage.render('main');
   }
 
-  kalendarium(){
-    $('main').empty();
-    this.app.Kalendarium.render('main');
-  }
-
   auditorium(){
     $('main').empty();
     this.app.auditorium.render('main');
   }
+
+  bokningssida(){
+    $('main').empty();
+    this.app.booking.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+  }
+
 }

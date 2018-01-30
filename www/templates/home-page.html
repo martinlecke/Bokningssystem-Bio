@@ -1,3 +1,6 @@
+ <!-- ここでの操作は、Homepageに書く -->
+
+
 Object.assign(HomePage.prototype, { template(){ return `
 
 <div class="container-fluid">
@@ -29,7 +32,7 @@ Object.assign(HomePage.prototype, { template(){ return `
 					</ul>
 					<h3>Visningar imorgon</h3>
 					<ul class="mb-0">
-						${this.tomorrow.render()}
+						${this.tomorrow.render()} 
 					</ul>
 				</div>
 			</div>
@@ -37,7 +40,12 @@ Object.assign(HomePage.prototype, { template(){ return `
 	</div>
 	
 	<div class="row justify-content-around mt-5">
-		${this.poster.render()}
+
+		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
+
+		${this.poster.render()}  
+
+
 	</div>
 </div>
 

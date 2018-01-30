@@ -5,6 +5,9 @@ Object.assign(Array.prototype, {
   // and also collects and returns the temp html divs
   // (see Base)
 
+
+  // 7. レンダリングが作られる (Arrayはinbyggda i JS), selector =どこにレンダリングするか（例えば、mainとか）
+
   render(selector = '', templateNo = ''){
 
     let html = '';

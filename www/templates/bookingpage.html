@@ -1,0 +1,324 @@
+Object.assign(Booking.prototype, { template(){ return `
+
+<div class="booking container-fluid">
+	<div class="row">
+		<div class="col-12 mt-4 mb-5">
+			<h1 class="text-center">Bokning</h1>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-9 d-flex justify-content-center mx-auto">
+			<div class="d-flex justify-content-start confirmation mx-auto">
+
+				<!-- Bookning info  -->
+				<div class="col-12 col-md-4 text-center mb-5 mt-4">
+					<img src="" alt="">
+				</div>
+
+				<div class="col-12 col-md-8 mb-3 mt-4 ml-5 justify-content-center">
+					<h3 class="font-weight-bold mb-2"></h3>
+					<div>
+						<p> min, </p>
+					</div>
+
+					<div class="film-details mt-4 ml-3">
+						<div>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+						</div>
+
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span class="ml-2 font-weight-bold">14:00</span>
+						<span>(Salong 2)</span>
+						<span class="ml-5"></span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Number of ticket -->
+	<hr class="bg-secondary">
+	<div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
+			<div class="col-12 d-flex justify-content-center">
+
+			
+
+				<div>
+					<p class="text-center mb-2">Ordenarie</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="mx-5">
+					<p class="text-center mb-2">Barn (under 12år)</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+
+				<div>
+					<p class="text-center mb-2">Pensionär</p>
+					<div class=" d-flex justify-content-center rounded border border-white">
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+						<div class="col-2 font-weight-bold mr-3 mt-2 number">1</div>
+						<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<p class="text-center my-5 font-weight-bold number">Totalt:
+				<span>1</span>
+			</p>
+
+		</div>
+	</div>
+
+	<!-- Choose seats -->
+	<hr class="bg-secondary">
+	<div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Välja platser</h2>
+			<div class="col-12 d-flex justify-content-center">
+				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
+			</div>
+
+			<div class="col-12 text-center my-5" style="font-size: 50px; color: red">!!!! Salongen renoveras nu !!!!!!!</div>
+
+
+			<div class="col-12 bg-white text-dark my-5 mx-auto seat-info mb-5">
+				<ul class="d-flex justify-content-start d-flex justify-content-around py-3">
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">32</span>Ledig
+					</li>
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">1</span>Otillgängliga plats
+					</li>
+					<!-- <li class="font-weight-bold">
+							<span class="badge badge-pill badge-danger mr-3 px-2 py-2">16</span>Otillgängliga plats
+						</li> -->
+
+					<!-- 
+						test start
+	<button type="button" class="btn btn-lg btn-success rounded-circle ticket my-2">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+		</button>
+	
+
+<li class="d-flex justify-content-start"><div class="curled-box bg-danger" style=" border-radius: 50%; width: 20px; height: 20px; margin:10px;">
+</div>Otillgängliga plats</li>
+
+
+	test end -->
+
+					<li class="font-weight-bold">
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">2</span>Vald plats
+					</li>
+					<!-- <li class="font-weight-bold">
+						<span class="badge badge-pill badge-primary mr-3 px-2 py-2">2</span>Specialstol
+					</li> -->
+				</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Booking -->
+	<hr class="bg-secondary">
+
+	<div class="row">
+		<div class="col-12">
+			<h2 class="text-center mt-4 mb-5">Bekräfta bokningen</h2>
+
+			<!-- 時間など、プロパティに差し替える -->
+
+			<div class="row">
+				<div class="col-9 d-flex justify-content-center mx-auto">
+					<div class="bg-white text-dark d-flex justify-content-start confirmation mx-auto">
+
+						<!-- Bookning info  -->
+						<div class="col-12 col-md-4 text-center my-5">
+							<img src="/imgs/allthemoneyintheworld.jpg" alt="All the Money in the World">
+						</div>
+						<div class="col-12 col-md-8 mb-3 mt-5 justify-content-center">
+							<h4 class="font-weight-bold mb-2"></h4>
+							<div class="mt-4">
+								<ul class="pl-0">
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Visningstid:</span>Jan 19, 2018 - 14:00
+									</li>
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Plats:</span>Salong 2
+									</li>
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Antal biljetter:</span>
+										<span class="mr-2">3</span>st
+									</li>
+									<li class="mr-2">
+										<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
+										<span class="mr-2">225</span> kr
+									</li>
+
+									<div class="d-flex justify-content-start mt-2 mb-4">
+										<ul class="pl-4">
+											<li>
+												<span class="mr-2">Ordenarie:</span>
+											</li>
+											<li>
+												<span class="mr-2">Barn (under 12år) :</span>
+											</li>
+											<li>
+												<span class="mr-2">Pensionäre:</span>
+											</li>
+											<hr class="text-dark my-2 underline">
+											<li class="mr-2">
+												<span class="mr-2 mb-2">Summa:</span>
+											</li>
+										</ul>
+
+										<ul class="pl-4">
+											<li>
+												<span>85</span> kr ( 85 kr x
+												<span>1</span> st )
+											</li>
+											<li>
+												<span>65</span> kr ( 65 kr x
+												<span>1</span> st )
+											</li>
+											<li>
+												<span>75</span> kr ( 75 kr x
+												<span>1</span> st )
+											</li>
+											<li class="mr-2 mt-3">
+												<span>225</span> kr
+											</li>
+										</ul>
+									</div>
+
+									<li class="mb-2">
+										<span class="font-weight-bold mr-2">Stolsnummer:</span>
+									</li>
+									<div class="d-flex justify-content-start mt-2 mb-3">
+										<ul class="pl-4">
+											<li>
+												<span class="mr-1">Rad:</span>
+												<span class="mr-3">4</span>
+												<span class="mr-1">Stolsnr:</span>
+												<span>4</span>
+											</li>
+											<li>
+												<span class="mr-1">Rad:</span>
+												<span class="mr-3">4</span>
+												<span class="mr-1">Stolsnr:</span>
+												<span>5</span>
+											</li>
+											<li>
+												<span class="mr-1">Rad:</span>
+												<span class="mr-3">4</span>
+												<span class="mr-1">Stolsnr:</span>
+												<span>6</span>
+											</li>
+										</ul>
+									</div>
+
+									<li class="mr-2 font-weight-bold mt-4" id="booking-nr">
+										<span class="mr-2 mb-1">Bokningsnummer:</span>
+										<span class="mr-2 mb-1">XXXXXXX</span>
+									</li>
+									<p>
+										<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
+									</p>
+									<hr class="email mt-5">
+
+									<!-- Forms -->
+									<form class="mt-5 mb-4">
+										<div class="form-group">
+											<label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ange användarens e-postadress">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputEmail1" class="font-weight-bold">Bekräfta e-mailadress</label>
+											<input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Vänligen bekräfta er e-mailadress">
+										</div>
+										<!-- <div class="form-check">
+												<input type="checkbox" class="form-check-input" id="exampleCheck1">
+												<label class="form-check-label" for="exampleCheck1">Check me out</label>
+											</div> -->
+										<button type="submit" class="btn btn-primary mt-4 bookning-alert">Boka</button>
+									</form>
+
+
+
+									<p class="font-weight-bold mr-2">Observera!</p>
+									<p>Vänligen berätta
+										<ins>ditt bokningsnummer</ins> och betala för biljetterna på bio.</p>
+
+
+
+
+
+
+
+
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+`;}});
