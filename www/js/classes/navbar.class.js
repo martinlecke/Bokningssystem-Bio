@@ -7,6 +7,7 @@ class Navbar extends Base {
       new NavbarItem('Filmer','/filmer'),
       new NavbarItem('Auditorium (tillfällig)','/auditorium'),
       new NavbarItem('Bokningssida','/bokningssida')
+      new NavbarItem('Logga in','#login')
 
     ];
     this.setActive('/');
