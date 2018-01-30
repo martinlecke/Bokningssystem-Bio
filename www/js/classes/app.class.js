@@ -27,6 +27,8 @@ class App {
     $('main').empty();
     this.booking.render('main');
 
+    this.login = new Login();
+
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);　　　// this = App クラス（Appクラスに書かれているものが、全てpopStateHandlerに送られる）
     }
