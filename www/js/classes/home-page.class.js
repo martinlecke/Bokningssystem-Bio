@@ -6,9 +6,10 @@ class HomePage extends Base {
 		for(let movie of Data.movies){
 				this.slider.push(new CarouselItem(movie))
 		}
+
 		this.today = Data.shows
 				.filter((shows)=>{
-				// Removes all shows from past todays date
+				// Removes all shows from past todays date 
 				let time = new Date(shows.date + ' 23:59:59');
 				return new Date() < new Date(time.getTime());
 			})
