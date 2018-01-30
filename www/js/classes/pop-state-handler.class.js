@@ -89,4 +89,8 @@ class PopStateHandler {
     this.app.booking.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
   }
 
+  login(){
+    this.app.login.render('main');
+  }
+
 }
