@@ -13,6 +13,14 @@ class Booking extends Base {
 		this.calcTotalPrice();
 		this.bookingAlert();
 
+
+
+
+
+
+
+
+		
 	}
 
 
