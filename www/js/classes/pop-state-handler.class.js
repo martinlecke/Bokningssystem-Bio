@@ -44,6 +44,7 @@ class PopStateHandler {
     // (replace part of the DOM etc.)
     // Get the current url
     let url = location.pathname;
+    
     // Change which menu link that is active
     $('header nav div ul li a').removeClass('active');
     $(`header nav div ul li a[href="${url}"]`).addClass('active');
@@ -59,14 +60,31 @@ class PopStateHandler {
       '/bokningssida': 'bokningssida',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
-      '#login': 'login'
     };
+
     // Call the right method
     let methodName = urls[url];
     this[methodName]();
     // Set the right menu item active
     this.app.navbar.setActive(url);
+  
+
+    let hash = location.hash.replace(/^#/, '');
+    console.log("hash", hash);
+
+    let hashes = {
+      'login': 'login'
+    }
+
+    if(!hash || !hashes[hash]){
+      return;
+    }
+
+    methodName = hashes[hash];
+    this[methodName]();
+
   }
+
 
   // 6.urlを追加する時にここにも書く(line:53)
   home(){
@@ -90,7 +108,9 @@ class PopStateHandler {
   }
 
   login(){
+    this.app.login = new Login();
     this.app.login.render('main');
+
   }
 
 }

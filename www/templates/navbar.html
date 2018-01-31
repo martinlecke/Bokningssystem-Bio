@@ -33,7 +33,7 @@ Object.assign(Navbar.prototype, { template(){ return `
         		<!-- Modal Password Input Start -->
         	  <div class="form-group row">
         	    <label for="exampleInputPassword1">Lösenord	</label>
-        	    <input type="password" class="form-control" id="passwordinput" placeholder="Skriv i ditt lösenord här">
+        	    <input type="password" class="form-control" id="password-input-login" placeholder="Skriv i ditt lösenord här">
         	  </div>
         	  <div class="row float-right">
         	  	<button type="submit" class="btn btn-primary">Logga in</button>
@@ -53,10 +53,10 @@ Object.assign(Navbar.prototype, { template(){ return `
         	    </div>
         			<!-- Modal Password Input Start -->
         	    <div class="form-group col-md-6">
-        	      <label for="inputPassword4">Password</label>
-        	      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        	      <label for="inputPassword">Password</label>
+        	      <input type="password" class="form-control" id="password-input-register" placeholder="Password">
         	    	<div class="float-right mr-5 mt-3">
-        	  			<button type="submit" class="btn btn-primary">Skapa konto</button>
+        	  			<button type="submit" class="btn btn-primary" id="submit-register">Skapa konto</button>
         	  		</div>
         			</div>
         	  </div>
