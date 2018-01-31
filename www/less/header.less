@@ -1,5 +1,8 @@
 header{
 	background: linear-gradient(to top, #131414 1%, #ff0000 99%);
+	.active{
+	text-decoration: underline;
+	}
 	h1{
 		color: white;
 		text-decoration: none;
@@ -7,10 +10,9 @@ header{
 		font-family: 'Spectral SC', serif;
 	}
 	a.nav-link{
-		&.active, &:hover{
-			text-decoration: underline;
+		&.active, &:hover {
 		}
-		&{
+		& {
 			color: white;
 			font-weight: bold;
 			text-decoration: none;
