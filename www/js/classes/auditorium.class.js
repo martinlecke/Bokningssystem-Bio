@@ -22,13 +22,20 @@ class Auditorium extends Base {
   }
 
   scale() {
+    // returns largest number in row
     let numberOfSeats = Math.max.apply(null, this.stora.seatsPerRow);
+    // seatsize in px on width on 960px
     let seatSize = 960 / numberOfSeats;
-    let salongSize = seatSize * numberOfSeats;
-    let windowWidth = $(window).width();
-    const widthScale = windowWidth / salongSize;
-    let seatSizeResize = (salongSize * widthScale) / numberOfSeats;
-    $('.salong').width(salongSize > 960 ? 960 : salongSize * widthScale).css('max-width', 960);
-    $('.seat').width(seatSizeResize).height(seatSizeResize).css('max-width', 80).css('max-height', 80);
+    if (seatSize > 50) seatSize = 50;
+    // window sizes
+    let w = $(window).width();
+    let h = $(window).height();
+    // getting the scales in both axis
+    let wScale = w / 960;
+    let hScale = h / 500; // 50% of viewport
+    // Sets sizes for .seat
+    $('.seat').css('width', seatSize).css('height', seatSize);
+    // Change salong scale if height is too big
+    $('.salong').css('transform', `scale(${Math.min(hScale, wScale) > 1 ? 1 : Math.min(hScale, wScale)})`);
   }
 }
