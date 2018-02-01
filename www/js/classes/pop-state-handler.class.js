@@ -109,12 +109,10 @@ class PopStateHandler {
 
   login(){
     this.app.login = new Login();
-    this.app.login.render('main');
   }
 
   movie(){
-    this.app.movie = new ModalMovie();
-    this.app.movie.render('.modal-container');
+    // this.app.movie = new ModalMovie();
   }
 
 }
