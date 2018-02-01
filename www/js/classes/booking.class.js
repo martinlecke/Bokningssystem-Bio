@@ -9,105 +9,130 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
+		this.bookingAlert();
+		this.bookingItems = [
+			{
+				type: 'ordinarie',
+				text: 'Ordenarie'
+			},
+			{
+				type: 'child',
+				text: 'Barn (under 12år)'
+			},
+			{
+				type: 'pensioner',
+				text: 'Pensionär'
+			}];
+
+		this.bookingItems.forEach((button, i) => {
+			this.bookingItems[i] = new BookingItem(button);
+		});
+
+		this.onRendered();
+
+	} // Closes constructor
+
+
+
+	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
-		this.bookingAlert();
-
-
-
-
-
-
-
-
-		
 	}
 
 
 	// Alert
 	bookingAlert() {
-		$(document).on('click', '.bookning-alert', function () {
+		$(document).on('click', '#booking-alert', function () {
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
 		});
 	}
 
 
-	// Ticket - plus and minus buttons
+	// // // Save the booking info i JSON
+	// // saveBookingInfo () {
+	// 	$(document).on('click', '#booking-alert', function() {
+
+	// 	});
+
+	// //	JSON._save('bookinginfo.json', bookinginfo);
+	// // }
+
+
+
+
+
+	// Ticket - plus buttons
 	clickPlusOrdinary() {
-		$(document).on('click', '#plus-ordinarie', function () {
+		$(document).on('click', '#plus-ordinarie', () => {
 			let number = Number($('#number-ordinarie').text());
 			number += 1;
 			$('#number-ordinarie').val('');
 			$('#number-ordinarie').html(number);
+			this.onRendered();
 		});
 	}
 
 
-	// consoleで　$('.number-ordinarie').text();
-	//　数字が出力する(consoleで)
-
-
-
-
 	clickPlusChild() {
-		$(document).on('click', '#plus-child', function () {
+		$(document).on('click', '#plus-child', () => {
 			let number = Number($('#number-child').text());
 			number += 1;
 			//		$('.number-child').val('');
 			$('#number-child').html(number);
+			this.onRendered();
 		});
 	}
 
 
 	clickPlusPensioner() {
-		$(document).on('click', '#plus-pensioner', function () {
+		$(document).on('click', '#plus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
 			number += 1;
 			//		$('.number-pensioner').val('');
 			$('#number-pensioner').html(number);
+			this.onRendered();
 		});
 	}
 
 
-	// Ticket - minus button
+	// Ticket - minus buttons
 	clickMinusOrdinary() {
-		$(document).on('click', '#minus-ordinarie', function () {
+		$(document).on('click', '#minus-ordinarie', () => {
 			let number = Number($('#number-ordinarie').text());
 			if (number !== 0) {
 				number -= 1;
 				$('#number-ordinarie').html(number);
 			}
+			this.onRendered();
 		});
 	}
 
 
 	clickMinusChild() {
-		$(document).on('click', '#minus-child', function () {
+		$(document).on('click', '#minus-child', () => {
 			let number = Number($('#number-child').text());
 			if (number !== 0) {
 				number -= 1;
 				$('#number-child').html(number);
 			}
+			this.onRendered();
 		});
 	}
 
 
 	clickMinusPensioner() {
-		$(document).on('click', '#minus-pensioner', function () {
+		$(document).on('click', '#minus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
 			if (number !== 0) {
 				number -= 1;
 				$('#number-pensioner').html(number);
 			}
+			this.onRendered();
 		});
 	}
 
 
-
-	// ??? 最初に＋でチケット増やす。その後、最初の３行をコンソール、その後、後半のコードをコンソールした時は、数字が入れ替わる
-	// でも、実際にページで数字を変えても（ボタン）、変化なし
 	calcTotalTickets() {
-		
 		let ordinarieNr = Number($('#number-ordinarie').text());
 		let childNr = Number($('#number-child').text());
 		let pensionerNr = Number($('#number-pensioner').text());
@@ -116,7 +141,6 @@ class Booking extends Base {
 		if (sum !== 0) {
 			$('#total-tickets').html(sum);
 		}
-		
 	}
 
 
@@ -131,13 +155,14 @@ class Booking extends Base {
 		$('#number-pensioner2').html(pensionerNr);
 
 		if (sum !== 0) {
-			$('.amount').html(sum);
+			$('#amount').html(sum);
 		}
-		
 	}
-	
-
-
 
 
 }
+
+
+
+
+
