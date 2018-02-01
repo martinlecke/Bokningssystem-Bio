@@ -52,8 +52,6 @@ class Base {
 
   }
 
-  }  
-
   subrender(templateNo){
     // Temporarily return a unique holder for things to be subrendered
     Base.subRenderCounter++;
