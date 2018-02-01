@@ -30,16 +30,11 @@ class Booking extends Base {
 
 		this.onRendered();
 
-
 		// Save booking's info till booking.json
 		this.bookingInfo = [];
 		this.saveBookingInfoToJson();
 
-
-
-
 	} // Closes constructor
-
 
 
 	onRendered() {
@@ -48,15 +43,7 @@ class Booking extends Base {
 	}
 
 
-	// Alert
-	bookingAlert() {
-		$(document).on('click', '#booking-alert', function () {
-			alert('Tack för bokning! Vi skickade ett mail till dig.');
-		});
-	}
-
-
-	// Ticket - Ordinary (plus button)
+	// Ticket - ordinary (plus button)
 	clickPlusOrdinary() {
 		$(document).on('click', '#plus-ordinary', () => {
 			let number = Number($('#number-ordinary').text());
@@ -67,7 +54,8 @@ class Booking extends Base {
 		});
 	}
 
-// Ticket - plus buttons(ordinary)
+
+	// Ticket - child (plus button)
 	clickPlusChild() {
 		$(document).on('click', '#plus-child', () => {
 			let number = Number($('#number-child').text());
@@ -79,6 +67,7 @@ class Booking extends Base {
 	}
 
 
+	// Ticket - pensioner (plus button)
 	clickPlusPensioner() {
 		$(document).on('click', '#plus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
@@ -90,7 +79,7 @@ class Booking extends Base {
 	}
 
 
-	// Ticket - minus buttons
+	// Ticket - ordinary (minus button)
 	clickMinusOrdinary() {
 		$(document).on('click', '#minus-ordinary', () => {
 			let number = Number($('#number-ordinary').text());
@@ -103,6 +92,7 @@ class Booking extends Base {
 	}
 
 
+	// Ticket - child (minus button)
 	clickMinusChild() {
 		$(document).on('click', '#minus-child', () => {
 			let number = Number($('#number-child').text());
@@ -115,6 +105,7 @@ class Booking extends Base {
 	}
 
 
+	// Ticket - pensioner (minus button)
 	clickMinusPensioner() {
 		$(document).on('click', '#minus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
@@ -155,7 +146,12 @@ class Booking extends Base {
 	}
 
 
-
+	// Alert
+	bookingAlert() {
+		$(document).on('click', '#booking-alert', function () {
+			alert('Tack för bokning! Vi skickade ett mail till dig.');
+		});
+	}
 
 
 	// Save the booking info till JSON
@@ -173,9 +169,6 @@ class Booking extends Base {
 			let amount = $('#amount').text();
 			let bookingNr = $('#bookingNr-booking').text();
 			let email = $('#email-booking1').val();
-
-
-
 
 			that.bookingInfo.push(
 				{
@@ -198,7 +191,6 @@ class Booking extends Base {
 					// 		seatnumber: number
 					// 	}
 					// ],
-
 					bookingNr: bookingNr,
 					email: email
 				});
