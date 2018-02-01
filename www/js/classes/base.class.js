@@ -50,6 +50,8 @@ class Base {
 
     this.onRendered && this.onRendered();
 
+  }
+
   }  
 
   subrender(templateNo){
