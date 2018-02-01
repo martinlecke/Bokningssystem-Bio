@@ -1,55 +1,162 @@
  <!-- ここでの操作は、Homepageに書く -->
-
-
 Object.assign(HomePage.prototype, { template(){ return `
-
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-lg-8 px-0">
-			<!-- Slider / Carousel -->
-			<div id="movieslider" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					${this.slider.render()}
-				</div>
-				<a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon"></span>
-				</a>
-				<a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
-					<span class="carousel-control-next-icon"></span>
-				</a>
-			</div>
-		</div>
+ 	<div class="row">
+ 		<div class="col-lg-8 px-0">
+ 			<!-- Slider / Carousel -->
+ 			<div id="movieslider" class="carousel slide" data-ride="carousel">
+ 				<div class="carousel-inner">
+ 					${this.slider.render()}
+ 				</div>
+ 				<a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+ 					<span class="carousel-control-prev-icon"></span>
+ 				</a>
+ 				<a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+ 					<span class="carousel-control-next-icon"></span>
+ 				</a>
+ 			</div>
+ 		</div>
 
-		<div class="col-lg-4 p-0">
-			<div class="calendertoday">
-				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
-					Se kommande visningar
-				</button>
-				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
-					<h3>Visningar idag</h3>
-					<ul>
-						${this.today.render()}
-					</ul>
-					<h3>Visningar imorgon</h3>
-					<ul class="mb-0">
-						${this.tomorrow.render()} 
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row justify-content-around mt-5">
+ 		<div class="col-lg-4 p-0">
+ 			<div class="calendertoday">
+ 				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+ 					Se kommande visningar
+ 				</button>
+ 				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
+ 					<h3>Visningar idag</h3>
+ 					<ul>
+ 						${this.today.render()}
+ 					</ul>
+ 					<h3>Visningar imorgon</h3>
+ 					<ul class="mb-0">
+ 						${this.tomorrow.render()} 
+ 					</ul>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
 
-		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
-
-		${this.poster.render()}  
-
-
-	</div>
+  <div class="row justify-content-around mt-5">
+ 		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
+ 		${this.poster.render()}  
+ 	</div>
 </div>
 
-<div class="modal-container">
-</div>
+ <!-- Modal start--> 
+ <div class="modal fade text-dark" id="filmmodal" tabindex="-1" role="dialog" aria-labelledby="filmmodal" aria-hidden="true"> 
+ 	<div class="modal-dialog" role="document"> 
+ 		<div class="modal-content"> 
+ 			<!-- Youtube trailer --> 
+ 			<div class="modal-header d-flex justify-content-end"> 
+ 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            
+ 				</button> 
+ 			</div> 
+ 			<div class="row"> 
+ 				<iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/" 
+ 				frameborder="0"  allowfullscreen> 
+ 			</iframe> 
+ 			<!-- Image and films details --> 
+ 			<div class="modal-body"> 
+ 				<div class="row mx-1 item-parent"> 
+ 					<!-- (item1)  Image and films details　 映画の写真（小）と　詳細　Start--> 
+ 					<div class="col-12 d-block d-md-none"> 
+ 						<h1></h1> 
+ 						<p></p> 
+ 					</div> 
 
-`;}});
+ 					<div class="col-12 col-md-4 mb-5"> 
+ 						<img src="" alt=""> 
+ 						<div class="film-details mt-3"> 
+ 							<div> 
+ 								<span class="font-weight-bold">Productionsår: </span> 
+ 								<span></span> 
+ 							</div> 
+ 							<div> 
+ 								<span class="font-weight-bold">Längd: </span> 
+ 								<span></span> 
+ 							</div> 
+ 							<div> 
+ 								<span class="font-weight-bold">Genre: </span> 
+ 								<span></span> 
+ 							</div> 
+ 							<div> 
+ 								<span class="font-weight-bold">Språk: </span> 
+ 								<span></span> 
+ 							</div> 
+ 							<div> 
+ 								<span class="font-weight-bold">Regissör: </span> 
+ 								<span></span> 
+ 							</div> 
+ 							<div> 
+ 								<span class="font-weight-bold">Skådespelare: </span> 
+ 								<span></span> 
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 					<!-- (item1)  Image and films details　 映画の写真（小）と　詳細　End--> 
+ 					<!-- item 2  Discription  タイトルと内容　Start--> 
+ 					<div class="col-8 mb-3"> <!-- 外枠 --> 
+ 						<div class="row"> 
+ 							<div class="col-12 mb-3 d-none d-md-block"> 
+ 								<h1></h1> 
+ 								<p></p> 
+ 							</div> 
+ 							<!-- item 3  Performances   タイトルと内容　Start--> 
+ 							<div class="col-12 mt-5"> 
+ 								<h3>Premiär</h3> 
+ 								<ul class="pl-0"> 
+ 									<hr> 
+ 									<!-- !!!!!!!!!  Länka <a href="#"> till boknings sida --> 
+ 										<li> 
+ 											<a href="#" class="text-dark"> 
+ 												<div> 
+ 													<i class="fa fa-calendar" aria-hidden="true"></i> 
+ 													<span class="ml-2 font-weight-bold"></span> 
+ 												</div> 
+ 												<div> 
+ 													<i class="fa fa-clock-o" aria-hidden="true"></i> 
+                            <span class="ml-2 font-weight-bold"></span> 
+                            <span></span> 
+                            <span class="ml-5"> 
+                              <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target=""> 
+                                Förboka 
+                              </button> 
+                            </span> 
+                          </div> 
+                        </a> 
+                      </li> 
+                      <hr> 
+                      <li> 
+                        <!-- !!!!!!!!!  Länka <a href="#"> till boknings sida --> 
+                        <a href="#" class="text-dark"> 
+                          <div> 
+                            <i class="fa fa-calendar" aria-hidden="true"></i> 
+                            <span class="ml-2 font-weight-bold"></span> 
+                          </div> 
+                          <div> 
+                            <i class="fa fa-clock-o" aria-hidden="true"></i> 
+                            <span class="ml-2 font-weight-bold"></span> 
+                            <span></span> 
+                            <span class="ml-5"> 
+                              <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target=""> 
+                                Förboka
+                                </button> 
+                            </span> 
+                          </div> 
+                        </a> 
+                      </li> 
+                    </ul> 
+                  </div> 
+                </div> 
+              </div> 
+              <!-- item 2   Discription & performances   タイトルと内容　 End --> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+<!-- Modal end--> 
+`;}});	
