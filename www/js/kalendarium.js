@@ -7,13 +7,4 @@ class Kalendarium{
     // this.name = jsonFilmer[urlName].runtime;
   }
 
-  load(data){
-    
-  }
-
-  getData(){
-    return {
-      numberOfMovies: 42
-    }
-  }
 }

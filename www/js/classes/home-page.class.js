@@ -19,6 +19,7 @@ class HomePage extends Base {
 				return new Date() > new Date(time.getTime());
 			})
 			.map((shows)=>new Showing(shows));  // shows = shows.today i showing.class
+      console.log(this.today);
 		this.tomorrow = Data.shows
 			.filter((shows)=>{
 				// Removes all shows from past todays date

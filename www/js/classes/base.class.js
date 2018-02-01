@@ -70,6 +70,7 @@ class Base {
         this.baseEl[type]((e) => this[methodName](e));
       }
     }
+
   }
 
 }
