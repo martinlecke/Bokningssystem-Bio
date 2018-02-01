@@ -41,4 +41,5 @@ class HomePage extends Base {
 		// this.poster はData.movies (JSONの全部の映画), ...slice(0,6)で数を指定
 
 	}
+
 }

@@ -8,5 +8,15 @@
     "email": "test2@test.com",
     "password": "1245678",
     "⚙": "User"
+  },
+  {
+    "email": "Test3@test.com",
+    "password": "123456",
+    "⚙": "User"
+  },
+  {
+    "email": "Test3@test.com",
+    "password": "123456",
+    "⚙": "User"
   }
 ]

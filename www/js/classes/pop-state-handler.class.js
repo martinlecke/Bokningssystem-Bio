@@ -70,10 +70,10 @@ class PopStateHandler {
   
 
     let hash = location.hash.replace(/^#/, '');
-    console.log("hash", hash);
 
     let hashes = {
-      'login': 'login'
+      'login': 'login',
+      'movie': 'movie'
     }
 
     if(!hash || !hashes[hash]){
@@ -110,7 +110,11 @@ class PopStateHandler {
   login(){
     this.app.login = new Login();
     this.app.login.render('main');
+  }
 
+  movie(){
+    this.app.movie = new ModalMovie();
+    this.app.movie.render('.modal-container');
   }
 
 }

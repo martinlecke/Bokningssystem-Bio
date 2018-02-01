@@ -8,8 +8,6 @@ class Login extends Base {
 		$('#login').on('hidden.bs.modal', function (e){
 			location.hash = "";
 		});
-		// this.userList = [];
-		// this.userList.push(Data.user);
 		this.saveDataToJson();
 	}
 	saveDataToJson(){
