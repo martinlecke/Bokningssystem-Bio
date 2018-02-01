@@ -12,7 +12,7 @@ class Booking extends Base {
 		this.bookingAlert();
 		this.bookingItems = [
 			{
-				type: 'ordinarie',
+				type: 'ordinary',
 				text: 'Ordenarie'
 			},
 			{
@@ -29,6 +29,14 @@ class Booking extends Base {
 		});
 
 		this.onRendered();
+
+
+		// Save booking's info till booking.json
+		this.bookingInfo = [];
+		this.saveBookingInfoToJson();
+
+
+
 
 	} // Closes constructor
 
@@ -48,31 +56,18 @@ class Booking extends Base {
 	}
 
 
-	// Save the booking info i JSON
-	saveBookingInfo () {
-		$(document).on('click', '#booking-alert', function() {
-
-		});
-
-		JSON._save('bookinginfo.json', bookinginfo);
-	}
-
-
-
-
-
-	// Ticket - plus buttons
+	// Ticket - Ordinary (plus button)
 	clickPlusOrdinary() {
-		$(document).on('click', '#plus-ordinarie', () => {
-			let number = Number($('#number-ordinarie').text());
+		$(document).on('click', '#plus-ordinary', () => {
+			let number = Number($('#number-ordinary').text());
 			number += 1;
-			$('#number-ordinarie').val('');
-			$('#number-ordinarie').html(number);
+			$('#number-ordinary').val('');
+			$('#number-ordinary').html(number);
 			this.onRendered();
 		});
 	}
 
-
+// Ticket - plus buttons(ordinary)
 	clickPlusChild() {
 		$(document).on('click', '#plus-child', () => {
 			let number = Number($('#number-child').text());
@@ -97,11 +92,11 @@ class Booking extends Base {
 
 	// Ticket - minus buttons
 	clickMinusOrdinary() {
-		$(document).on('click', '#minus-ordinarie', () => {
-			let number = Number($('#number-ordinarie').text());
+		$(document).on('click', '#minus-ordinary', () => {
+			let number = Number($('#number-ordinary').text());
 			if (number !== 0) {
 				number -= 1;
-				$('#number-ordinarie').html(number);
+				$('#number-ordinary').html(number);
 			}
 			this.onRendered();
 		});
@@ -133,30 +128,82 @@ class Booking extends Base {
 
 
 	calcTotalTickets() {
-		let ordinarieNr = Number($('#number-ordinarie').text());
+		let ordinaryNr = Number($('#number-ordinary').text());
 		let childNr = Number($('#number-child').text());
 		let pensionerNr = Number($('#number-pensioner').text());
 
-		let sum = ordinarieNr + childNr + pensionerNr;
+		let sum = ordinaryNr + childNr + pensionerNr;
 		if (sum !== 0) {
-			$('#total-tickets').html(sum);
+			$('#total-tickets').html(sum + ' st');
 		}
 	}
 
 
 	calcTotalPrice() {
-		let ordinarieNr = Number($('#number-ordinarie').text());
+		let ordinaryNr = Number($('#number-ordinary').text());
 		let childNr = Number($('#number-child').text());
 		let pensionerNr = Number($('#number-pensioner').text());
-		let sum = (ordinarieNr * 85) + (childNr * 65) + (pensionerNr * 75);
+		let sum = (ordinaryNr * 85) + (childNr * 65) + (pensionerNr * 75);
 
-		$('#number-ordinarie2').html(ordinarieNr);
-		$('#number-child2').html(childNr);
-		$('#number-pensioner2').html(pensionerNr);
+		$('#number-ordinary2').html(ordinaryNr + ' st');
+		$('#number-child2').html(childNr + ' st');
+		$('#number-pensioner2').html(pensionerNr + ' st');
 
 		if (sum !== 0) {
-			$('#amount').html(sum);
+			$('#amount').html(sum + ' kr');
 		}
+	}
+
+
+
+
+
+	// Save the booking info till JSON
+	saveBookingInfoToJson() {
+		let that = this;
+		$(document).on('click', '#booking-alert', function () {
+			let title = $('#title-booking').text();
+			let date = $('#date-booking').text();
+			let time = $('#time-booking').text();
+			let auditorium = $('#auditorium-booking').text();
+			let ordinary = $('#number-ordinary2').text();
+			let child = $('#number-child2').text();
+			let pensioner = $('#number-pensioner2').text();
+			let totalNr = $('#total-tickets').text();
+			let amount = $('#amount').text();
+			let bookingNr = $('#bookingNr-booking').text();
+			let email = $('#email-booking1').val();
+
+
+
+
+			that.bookingInfo.push(
+				{
+					title: title,
+					date: date,
+					time: time,
+					auditorium: auditorium,
+					tickets: [
+						{
+							ordinary: ordinary,
+							child: child,
+							pensioner: pensioner,
+							totalNr: totalNr
+						}
+					],
+					amount: amount,
+					// ????  seats: [
+					// 	{
+					// 		row: row,
+					// 		seatnumber: number
+					// 	}
+					// ],
+
+					bookingNr: bookingNr,
+					email: email
+				});
+			JSON._save('bookinginfo.json', that.bookingInfo);
+		});
 	}
 
 

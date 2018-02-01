@@ -26,11 +26,11 @@ Object.assign(Booking.prototype, { template(){ return `
 						<div class="film-details mt-4 mb-5 ml-3">
 							<div>
 								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<span class="ml-2 font-weight-bold">Jan 19, 2018</span>
+								<span class="ml-2 font-weight-bold">2018-02-14</span>
 							</div>
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<span class="ml-2 font-weight-bold">14:00</span>
-							<span>(Salong 2)</span>
+							<span class="ml-2 font-weight-bold">18.00</span>
+							<span>(Stora Salongen)</span>
 							<span class="ml-5"></span>
 						</div>
 					</div>
@@ -44,7 +44,7 @@ Object.assign(Booking.prototype, { template(){ return `
 		<div class="row">
 			<div class="col-12">
 				<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
-				<div class="col-12 col-xl-10 d-md-flex justify-content-center  mx-lg-auto">
+				<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto">
 	
 					${this.bookingItems.render()}
 	
@@ -97,18 +97,21 @@ Object.assign(Booking.prototype, { template(){ return `
 								<img src="" alt="">Film bild(lägg till senare)
 							</div>
 							<div class="col-12 col-md-8 mb-3 mt-4 mt-md-5 px-4 px-md-5 justify-content-center">
-								<h4 class="font-weight-bold mb-2">Fiml title (lägg till senare)</h4>
+								<h4 id="title-booking" class="font-weight-bold mb-2">Fiml title (lägg till senare)</h4>
 								<div class="mt-4">
 									<ul class="pl-0">
 										<li class="mb-2">
-											<span class="font-weight-bold mr-2">Visningstid:</span>Jan 19, 2018 - 14:00
+											<span class="font-weight-bold mr-2">Visningsdatum: </span><span id="date-booking">2018-02-14</span>
 										</li>
 										<li class="mb-2">
-											<span class="font-weight-bold mr-2">Plats:</span>Salong 2
+												<span class="font-weight-bold mr-2">Tid: </span><span id="time-booking">18.00</span>
+											</li>
+										<li class="mb-2">
+											<span class="font-weight-bold mr-2">Salong: </span><span id="auditorium-booking">Stora Salongen</span>
 										</li>
 										<li class="mb-2">
 											<span class="font-weight-bold mr-2">Antal biljetter:</span>
-											<span class="mr-2" id="total-tickets">0</span>st
+											<span class="mr-2" id="total-tickets">0</span>
 										</li>
 										<!-- <li class="mr-2">
 											<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
@@ -130,20 +133,20 @@ Object.assign(Booking.prototype, { template(){ return `
 												<li>
 													<span>85</span> kr
 													<span>x</span>
-													<span id="number-ordinarie2">0</span> st
+													<span id="number-ordinary2">0</span>
 												</li>
 												<li>
 													<span>65</span> kr
 													<span>x</span>
-													<span id="number-child2">0</span> st
+													<span id="number-child2">0</span>
 												</li>
 												<li>
 													<span>75</span> kr
 													<span>x</span>
-													<span id="number-pensioner2">0</span> st
+													<span id="number-pensioner2">0</span>
 												</li>
 												<li class="mr-2 mt-3">
-													<span id="amount">0</span> kr
+													<span id="amount">0</span>
 												</li>
 											</ul>
 										</div>
@@ -165,7 +168,7 @@ Object.assign(Booking.prototype, { template(){ return `
 	
 										<li class="mr-2 font-weight-bold mt-4" id="booking-nr">
 											<span class="mr-2 mb-1">Bokningsnummer:</span>
-											<span class="mr-2 mb-1">XXXXXXX</span>
+											<span class="mr-2 mb-1" id="bookingNr-booking">XXXXXXX</span>
 										</li>
 										<p>
 											<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
@@ -175,8 +178,8 @@ Object.assign(Booking.prototype, { template(){ return `
 										<!-- Forms -->
 										<form class="my-4">
 											<div class="form-group">
-												<label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
-												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ange användarens e-postadress">
+												<label for="email-booking1" class="font-weight-bold">Email address</label>
+												<input type="email" class="form-control" id="email-booking1" aria-describedby="emailHelp" placeholder="Ange användarens e-postadress">
 											</div>
 											<div class="form-group mt-4">
 												<label for="exampleInputEmail1" class="font-weight-bold">Bekräfta e-mailadress</label>
