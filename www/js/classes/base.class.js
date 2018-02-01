@@ -48,7 +48,11 @@ class Base {
       queued.obj.render.apply(queued.obj, queued.args);
     }
 
+    this.onRendered && this.onRendered();
+
   }
+
+  }  
 
   subrender(templateNo){
     // Temporarily return a unique holder for things to be subrendered

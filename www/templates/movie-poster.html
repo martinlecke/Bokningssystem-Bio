@@ -1,15 +1,11 @@
 <!-- this.title はklass Movie のfor(let name in props) i constructorからきている -->
-
-
 Object.assign(Movie.prototype, { template(){ return `
 
 <div class="col-4 text-center">
-	<a class="movie-link pop" data-movie="${this.title}">
+	<a class="movie-link pop" data-movie="${this.title}" id="film-info" data-toggle="modal" data-target="#film-info">
 		<img class="img-fluid poster poster-3" src="${this.poster}" data-toggle="popover">
 	</a>
 	<h5 class="mt-3">${this.title}</h5>
 </div>
-
-<!-- id="modalid" data-toggle="modal" data-target="#film-info" -->
 
 `;}});
