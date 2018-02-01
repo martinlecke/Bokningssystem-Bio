@@ -48,14 +48,14 @@ class Booking extends Base {
 	}
 
 
-	// // // Save the booking info i JSON
-	// // saveBookingInfo () {
-	// 	$(document).on('click', '#booking-alert', function() {
+	// Save the booking info i JSON
+	saveBookingInfo () {
+		$(document).on('click', '#booking-alert', function() {
 
-	// 	});
+		});
 
-	// //	JSON._save('bookinginfo.json', bookinginfo);
-	// // }
+		JSON._save('bookinginfo.json', bookinginfo);
+	}
 
 
 
