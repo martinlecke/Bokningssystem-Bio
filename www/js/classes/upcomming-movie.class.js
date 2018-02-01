@@ -1,7 +1,7 @@
-class CurrentMovie extends Base {
+class UpcomingMovie extends Base {
 	
 	constructor(props){
-		super();
+	super();
 		for(let name in props){
 			if(['title','poster', 'description'].includes(name)){
 				this[name] = props[name];

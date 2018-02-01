@@ -4,9 +4,9 @@ class Data{
 		this.load();
 	}
 	async load(){
-		JSON._classes(Movie, Show, User);
+		JSON._classes(Movie, UpcomingMovie, Show, User);
 		Data.movies = await JSON._load("film");　　// 7. film = film.json, もしjsonファイルを増やしたらここに追加
-		Data.upcomming = await JSON._load("premiar");
+		Data.upcoming = await JSON._load("premiar");
     Data.shows = await JSON._load("shows");
     Data.user = await JSON._load("users");
     

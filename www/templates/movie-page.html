@@ -12,6 +12,7 @@ Object.assign(MoviePage.prototype, { template(){ return `
 			<h2 class="mt-2">Alla kommande filmer</h2>
 
 			<div class="row justify-content-around mt-5">
+				${this.upcomingMovie.render()}
 			</div>
 
 			<div class="modal-container">
