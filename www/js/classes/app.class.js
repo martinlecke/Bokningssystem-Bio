@@ -19,6 +19,9 @@ class App {
     // Create booking page
     this.booking = new Booking();
 
+    // Create About page
+    this.omOss = new About();
+
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);　　　// this = App クラス（Appクラスに書かれているものが、全てpopStateHandlerに送られる）
     }
