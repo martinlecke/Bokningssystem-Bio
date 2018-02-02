@@ -48,6 +48,7 @@ class Movie extends Base {
 	}
 
   click() {
-    this.clickedMovie = new ModalMovie(this.title);
+  	$('#modalmovie').empty();
+    this.clickedMovie = new ModalMovie(this);
   }
 }

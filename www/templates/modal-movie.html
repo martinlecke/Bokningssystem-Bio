@@ -7,7 +7,6 @@ Object.assign(ModalMovie.prototype, { template(){ return `
         <div class="modal-header d-flex justify-content-end"> 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-              
           </button> 
         </div> 
         <div class="row"> 
@@ -19,36 +18,36 @@ Object.assign(ModalMovie.prototype, { template(){ return `
           <div class="row mx-1 item-parent"> 
             <!-- (item1)  Image and films details　 映画の写真（小）と　詳細　Start--> 
             <div class="col-12 d-block d-md-none"> 
-              <h1></h1> 
-              <p></p> 
+              <h1>${this.title}</h1> 
+              <p>${this.description}</p> 
             </div> 
 
             <div class="col-12 col-md-4 mb-5"> 
               <img src="" alt=""> 
               <div class="film-details mt-3"> 
                 <div> 
-                  <span class="font-weight-bold">Productionsår: ${this.title}</span> 
-                  <span></span> 
+                  <span class="font-weight-bold">Productionsår: </span> 
+                  <span>${this.productionYear}</span> 
                 </div> 
                 <div> 
-                  <span class="font-weight-bold">Längd: ${this.title}</span> 
-                  <span></span> 
+                  <span class="font-weight-bold">Längd: </span> 
+                  <span>${this.length}</span> 
                 </div> 
                 <div> 
                   <span class="font-weight-bold">Genre: </span> 
-                  <span></span> 
+                  <span>${this.genre}</span> 
                 </div> 
                 <div> 
                   <span class="font-weight-bold">Språk: </span> 
-                  <span></span> 
+                  <span>${this.language}</span> 
                 </div> 
                 <div> 
-                  <span class="font-weight-bold">Regissör: </span> 
-                  <span></span> 
+                  <span class="font-weight-bold">Regissör: </span>
+                  <span>${this.director}</span> 
                 </div> 
                 <div> 
                   <span class="font-weight-bold">Skådespelare: </span> 
-                  <span></span> 
+                  <span>${this.actors}</span> 
                 </div> 
               </div> 
             </div> 
