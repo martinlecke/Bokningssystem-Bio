@@ -79,11 +79,9 @@ class PopStateHandler {
     if(!hash || !hashes[hash]){
       return;
     }
-
-    methodName = hashes[hash];
-    this[methodName]();
-
-  }
+      methodName = hashes[hash];
+      this[methodName]();
+    }
 
 
   // 6.urlを追加する時にここにも書く(line:53)

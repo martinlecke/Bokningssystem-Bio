@@ -46,4 +46,7 @@ class Movie extends Base {
 		});
 		
 	}
+    click() {
+      let x = new ModalMovie(this);
+  }
 }
