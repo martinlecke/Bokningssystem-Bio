@@ -1,26 +1,106 @@
-Object.assign(Show.prototype, { template(){ return ` 
- 
-<div class="container-fluid"> 
-  <div class="row"> 
-    <div class="col-12"> 
- 
-      <div id="accordion"> 
-        <div class="card"> 
-          <div class="card-header" id="headingOne"> 
-            <h5 class="kalendarium-h5" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">${this.date}</h5> 
-          </div> 
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion"> 
-            <div class="card-body"> 
-              <li class="li-tag d-inline-block float-left col-4 mb-5 pl-3">${this.film}</li> 
-              <li class="li-tag d-inline-block float-left col-3 mb-5 pl-5">${this.auditorium}</li> 
-              <li class="li-tag d-inline-block float-left col-2 mb-5 ">${this.time}</li> 
-              <button class="btn btn-warning buttons d-inline-block float-left col-1 mb-5 text-center">Boka nu</button> 
-            </div> 
-          </div> 
-        </div> 
-      </div> 
-       
-    </div> 
-  </div> 
-</div> 
+Object.assign(Kalendarium.prototype, { template(){ return `
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <h1>Kalendarium</h1>
+      </div>  
+    </div>
+  </div>
+
+<div class="container">
+
+	<div class ="row justify-content-around mt-5">
+
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container1">
+			 <div class="weekdays">Monday 13/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Transformers </li>
+				  	<li class="ul-1">Salong: Lilla </li>
+				  	<li class="li-tag">Tid: 18:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container2">
+			 <div class="weekdays">Tuesday 14/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Django </li>
+				  	<li class="ul-1">Salong: Stora </li>
+				  	<li class="li-tag">Tid: 15:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+	</div>
+
+	<div class ="row justify-content-around mt-5">
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container4">
+			 <div class="weekdays">Wednesday 15/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Your name </li>
+				  	<li class="ul-1">Salong: Lilla </li>
+				  	<li class="li-tag">Tid: 14:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container4">
+			 <div class="weekdays">Thursday 16/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Starwars </li>
+				  	<li class="ul-1">Salong: Stora </li>
+				  	<li class="li-tag">Tid: 18:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+	</div>
+
+	<div class ="row justify-content-around mt-5">
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container5">
+			 <div class="weekdays">Friday 17/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: The Sunshine </li>
+				  	<li class="ul-1">Salong: Stora </li>
+				  	<li class="li-tag">Tid: 15:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container6">
+			 <div class="weekdays">Saturday 18/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Leap </li>
+				  	<li class="ul-1">Salong: Lilla </li>
+				  	<li class="li-tag">Tid: 18:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+	</div>
+
+	<div class ="row justify-content-around mt-5">
+		<div class=" col-lg-6 col-md-6 col-sm-12 mt-2">
+		 <div id="container2">
+			 <div class="weekdays">Sunday 19/2 </div>
+				<ul class="ul-1">
+				  	<li class="ul-1">Titel: Ballerinan </li>
+				  	<li class="ul-1">Salong: Stora </li>
+				  	<li class="li-tag">Tid: 15:00 </li>
+			  		<div class="btn btn-warning buttons">Boka </div>
+				</ul>
+		 </div>
+		</div>
+	</div>
+
+</div>
+
 `;}});
