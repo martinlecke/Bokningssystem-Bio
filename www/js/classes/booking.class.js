@@ -9,7 +9,7 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
-		this.bookingAlert();
+
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -29,13 +29,9 @@ class Booking extends Base {
 		});
 
 		this.onRendered();
-
-		// Save booking's info till booking.json
 		this.bookingData = [];
-
 		this.saveBookingDataToJson();
-		// this.saveDataToJSON();
-
+		this.bookingAlert();
 
 	} // Closes constructor
 
@@ -149,25 +145,17 @@ class Booking extends Base {
 	}
 
 
-	// Alert
-	bookingAlert() {
-		$(document).on('click', '#booking-alert', function () {
-			alert('Tack för bokning! Vi skickade ett mail till dig.');
-		});
-	}
 
 
-	// Save the booking info till JSON
+
+	// Save the booking info till JSON (電話番号にアルファベットも入力できてしまう)
 	saveBookingDataToJson() {
 		let that = this;
-		
-		$("#mobil-error").empty();
-		$("#email-error").empty();
 
-
+		// $("#mobil-error").empty();
+		// $("#email-error").empty();
 
 		$(document).on('click', '#booking-alert', function () {
-		
 			let title = $('#title-booking').text();
 			let date = $('#date-booking').text();
 			let time = $('#time-booking').text();
@@ -180,16 +168,33 @@ class Booking extends Base {
 			let bookingNr = $('#bookingNr-booking').text();
 			let email = $('#email-booking').val();
 			let mobile = $('#mobile-booking').val();
-	
 
 
-
-			// if(mobile == '')  {
-			// 	$('#mobil-error').html("<i class='fa fa-exclamation-circle'></i>Ange rätt number");
+			//  if (mobile === '') {
+			// 	$('#booking-alert').attr('data-content', 'Ange mobilnummer');
+			// 	$('#booking-alert').popover('show');
 			// }
+			// else if (email === '') {
+			// 	$('#booking-alert').attr('data-content', 'Ange email adress');
+			// 	$('#booking-alert').popover('show');
+			// }
+			// else if (!email.includes('@')) {
+			// 	$('#booking-alert').attr('data-content', 'Ange rätt email adress');
+			// 	$('#booking-alert').popover('show');
+			// }
+			// else if (!mobile.match(/^[0-9]+$/)) {
+			// 	$('#booking-alert').attr('data-content', 'Ange rätt mobil nummer');
+			// 	$('#booking-alert').popover('show');
+			// }
+			// else {
+			// 	// location.replace('/bokningssida');
+			// 	$('#booking-alert').popover('hide');
+			// 	// }
 
-			// else 
-			if (mobile !== '' && email !== '') {
+
+
+
+				// else if (mobile !== '' && email !== '') {
 
 				Data.booking.push(new BookingData(
 					{
@@ -218,23 +223,23 @@ class Booking extends Base {
 					}
 				));
 				that.saveToJSON(Data.booking);
-			}
-			// else {
-
 			// }
-
-
-
-
+		
 		});
 	}
 
 
 	saveToJSON(array) {
 		JSON._save('booking.json', array);
-
 	}
 
+
+	// Alert
+	bookingAlert() {
+		$(document).on('click', '#booking-alert', function () {
+			alert('Tack för bokning! Vi skickade ett mail till dig.');
+		});
+	}
 
 
 }

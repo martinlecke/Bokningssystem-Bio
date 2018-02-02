@@ -14,90 +14,8 @@
     ],
     "amount": "0",
     "bookingNr": "XXXXXXX",
-    "mobile": "5433",
-    "email": "123456"
-  },
-  {
-    "title": "Fiml title (lägg till senare)",
-    "date": "2018-02-14",
-    "time": "18.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "3 st",
-        "child": "3 st",
-        "pensioner": "0 st",
-        "totalNr": "6 st"
-      }
-    ],
-    "amount": "450 kr",
-    "bookingNr": "XXXXXXX",
-    "mobile": "4343",
-    "email": "te4343"
-  },
-  {
-    "title": "",
-    "date": "",
-    "time": "",
-    "auditorium": "",
-    "tickets": [
-      {
-        "ordinary": "",
-        "child": "",
-        "pensioner": "",
-        "totalNr": ""
-      }
-    ],
-    "amount": "",
-    "bookingNr": ""
-  },
-  {
-    "title": "",
-    "date": "",
-    "time": "",
-    "auditorium": "",
-    "tickets": [
-      {
-        "ordinary": "",
-        "child": "",
-        "pensioner": "",
-        "totalNr": ""
-      }
-    ],
-    "amount": "",
-    "bookingNr": ""
-  },
-  {
-    "title": "",
-    "date": "",
-    "time": "",
-    "auditorium": "",
-    "tickets": [
-      {
-        "ordinary": "",
-        "child": "",
-        "pensioner": "",
-        "totalNr": ""
-      }
-    ],
-    "amount": "",
-    "bookingNr": ""
-  },
-  {
-    "title": "",
-    "date": "",
-    "time": "",
-    "auditorium": "",
-    "tickets": [
-      {
-        "ordinary": "",
-        "child": "",
-        "pensioner": "",
-        "totalNr": ""
-      }
-    ],
-    "amount": "",
-    "bookingNr": ""
+    "mobile": "dls",
+    "email": "rewe@rerw"
   },
   {
     "title": "Fiml title (lägg till senare)",
@@ -114,7 +32,7 @@
     ],
     "amount": "0",
     "bookingNr": "XXXXXXX",
-    "mobile": "4322",
-    "email": "113"
+    "mobile": "0708965347",
+    "email": "rewe@rerw"
   }
 ]
