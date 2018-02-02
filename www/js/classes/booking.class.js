@@ -31,8 +31,11 @@ class Booking extends Base {
 		this.onRendered();
 
 		// Save booking's info till booking.json
-		this.bookingInfo = [];
-		this.saveBookingInfoToJson();
+		this.bookingData = [];
+
+		this.saveBookingDataToJson();
+		// this.saveDataToJSON();
+
 
 	} // Closes constructor
 
@@ -155,9 +158,16 @@ class Booking extends Base {
 
 
 	// Save the booking info till JSON
-	saveBookingInfoToJson() {
+	saveBookingDataToJson() {
 		let that = this;
+		
+		$("#mobil-error").empty();
+		$("#email-error").empty();
+
+
+
 		$(document).on('click', '#booking-alert', function () {
+		
 			let title = $('#title-booking').text();
 			let date = $('#date-booking').text();
 			let time = $('#time-booking').text();
@@ -168,40 +178,66 @@ class Booking extends Base {
 			let totalNr = $('#total-tickets').text();
 			let amount = $('#amount').text();
 			let bookingNr = $('#bookingNr-booking').text();
-			let email = $('#email-booking1').val();
+			let email = $('#email-booking').val();
+			let mobile = $('#mobile-booking').val();
+	
 
-			that.bookingInfo.push(
-				{
-					title: title,
-					date: date,
-					time: time,
-					auditorium: auditorium,
-					tickets: [
-						{
-							ordinary: ordinary,
-							child: child,
-							pensioner: pensioner,
-							totalNr: totalNr
-						}
-					],
-					amount: amount,
-					// ????  seats: [
-					// 	{
-					// 		row: row,
-					// 		seatnumber: number
-					// 	}
-					// ],
-					bookingNr: bookingNr,
-					email: email
-				});
-			JSON._save('bookinginfo.json', that.bookingInfo);
+
+
+			// if(mobile == '')  {
+			// 	$('#mobil-error').html("<i class='fa fa-exclamation-circle'></i>Ange rätt number");
+			// }
+
+			// else 
+			if (mobile !== '' && email !== '') {
+
+				Data.booking.push(new BookingData(
+					{
+						title: title,
+						date: date,
+						time: time,
+						auditorium: auditorium,
+						tickets: [
+							{
+								ordinary: ordinary,
+								child: child,
+								pensioner: pensioner,
+								totalNr: totalNr
+							}
+						],
+						amount: amount,
+						// ????  seats: [
+						// 	{
+						// 		row: row,
+						// 		seatnumber: number
+						// 	}
+						// ],
+						bookingNr: bookingNr,
+						mobile: mobile,
+						email: email
+					}
+				));
+				that.saveToJSON(Data.booking);
+			}
+			// else {
+
+			// }
+
+
+
+
 		});
 	}
 
 
+	saveToJSON(array) {
+		JSON._save('booking.json', array);
+
+	}
+
+
+
 }
-
-
 
 
 

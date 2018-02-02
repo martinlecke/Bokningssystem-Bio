@@ -8,7 +8,9 @@ class Data{
 		Data.movies = await JSON._load("film");　　// 7. film = film.json, もしjsonファイルを増やしたらここに追加
 		Data.upcoming = await JSON._load("premiar");
     Data.shows = await JSON._load("shows");
-    Data.user = await JSON._load("users");
+		Data.user = await JSON._load("users");
+		Data.booking = await JSON._load("booking");
+
     
 		app.start();	// ２．上のが読み込まれたら、appクラスがスタートする
 	}
