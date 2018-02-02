@@ -37,19 +37,6 @@ class HomePage extends Base {
 		}, 0);
 		this.poster = Data.movies.slice(0, 6);   
 
-		// ８．Dataクラスからきた(Data.moviesは、film.json ファイル i Dataクラス), これをhome-page.class.js(0から6個)で使える。
-		// this.poster はData.movies (JSONの全部の映画), ...slice(0,6)で数を指定
-
-		// $(document).on('click', '.close', function (e) {
-  // 		$('#filmmodal').modal('hide');
-		// });
-
-// 		$(function () {
-//     $(".close").on('click', function() {
-//         $('#filmmodal').modal('hide');
-//     });
-// });
-  this.toggleMovie();
 	}
 
   toggleMovie() {
