@@ -116,7 +116,8 @@ class PopStateHandler {
   }
 
   movie(){
-    // this.app.movie = new ModalMovie();
+    this.app.movie = new ModalMovie();
+
   }
 
 }
