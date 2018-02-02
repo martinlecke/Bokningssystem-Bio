@@ -19,7 +19,6 @@ class HomePage extends Base {
 				return new Date() > new Date(time.getTime());
 			})
 			.map((shows)=>new Showing(shows));  // shows = shows.today i showing.class
-      console.log(this.today);
 		this.tomorrow = Data.shows
 			.filter((shows)=>{
 				// Removes all shows from past todays date
@@ -36,8 +35,8 @@ class HomePage extends Base {
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
+		this.poster = Data.movies.slice(0, 6);   
 
-		this.poster = Data.movies.slice(0, 6);    
 		// ８．Dataクラスからきた(Data.moviesは、film.json ファイル i Dataクラス), これをhome-page.class.js(0から6個)で使える。
 		// this.poster はData.movies (JSONの全部の映画), ...slice(0,6)で数を指定
 
@@ -50,6 +49,17 @@ class HomePage extends Base {
 //         $('#filmmodal').modal('hide');
 //     });
 // });
-
+  this.toggleMovie();
 	}
+
+  toggleMovie() {
+    $(document).on('click','.movie-link', function() {
+      let movie = $(this).data('movie');
+      movie = movie.replace(/[, :']/g, "").toLowerCase();
+      movie = movie.replace(/[åä]/g, "a");
+      movie = movie.replace(/[ö]/g, "o");
+
+    });
+  
+  }
 }

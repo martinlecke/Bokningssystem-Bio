@@ -38,7 +38,7 @@ Object.assign(HomePage.prototype, { template(){ return `
 
   <div class="row justify-content-around mt-5">
  		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
- 		${this.poster.render()}  
+ 		${this.poster.render()}
  	</div>
 </div>
 
@@ -54,7 +54,7 @@ Object.assign(HomePage.prototype, { template(){ return `
  				</button> 
  			</div> 
  			<div class="row"> 
- 				<iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/" 
+ 				<iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/${this.youtubeTrailers}" 
  				frameborder="0"  allowfullscreen> 
  			</iframe> 
  			<!-- Image and films details --> 
