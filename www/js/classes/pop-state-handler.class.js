@@ -55,6 +55,7 @@ class PopStateHandler {
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
+      '/om-oss': 'omOss',
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
       '/bokningssida': 'bokningssida',
@@ -93,6 +94,11 @@ class PopStateHandler {
   filmsida(){
     $('main').empty();
     this.app.moviePage.render('main');
+  }
+
+  omOss(){
+    $('main').empty();
+    this.app.omOss.render('main');
   }
 
   auditorium(){
