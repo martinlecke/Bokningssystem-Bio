@@ -29,7 +29,9 @@ class Booking extends Base {
 		});
 
 		this.onRendered();
-		this.bookingData = [];
+		this.bookingData = [];  // クラスを作ったので、配列は不要？
+
+		this.randomBookingNr();
 		this.saveBookingDataToJson();
 		this.bookingAlert();
 
@@ -148,7 +150,7 @@ class Booking extends Base {
 
 
 
-	// Save the booking info till JSON (電話番号にアルファベットも入力できてしまう)
+	// Save the booking info till JSON (バグ：電話番号にアルファベットも入力できてしまう)
 	saveBookingDataToJson() {
 		let that = this;
 
@@ -194,37 +196,37 @@ class Booking extends Base {
 
 
 
-				// else if (mobile !== '' && email !== '') {
+			// else if (mobile !== '' && email !== '') {
 
-				Data.booking.push(new BookingData(
-					{
-						title: title,
-						date: date,
-						time: time,
-						auditorium: auditorium,
-						tickets: [
-							{
-								ordinary: ordinary,
-								child: child,
-								pensioner: pensioner,
-								totalNr: totalNr
-							}
-						],
-						amount: amount,
-						// ????  seats: [
-						// 	{
-						// 		row: row,
-						// 		seatnumber: number
-						// 	}
-						// ],
-						bookingNr: bookingNr,
-						mobile: mobile,
-						email: email
-					}
-				));
-				that.saveToJSON(Data.booking);
+			Data.booking.push(new BookingData(
+				{
+					title: title,
+					date: date,
+					time: time,
+					auditorium: auditorium,
+					tickets: [
+						{
+							ordinary: ordinary,
+							child: child,
+							pensioner: pensioner,
+							totalNr: totalNr
+						}
+					],
+					amount: amount,
+					// ????  seats: [
+					// 	{
+					// 		row: row,
+					// 		seatnumber: number
+					// 	}
+					// ],
+					bookingNr: bookingNr,
+					mobile: mobile,
+					email: email
+				}
+			));
+			that.saveToJSON(Data.booking);
 			// }
-		
+
 		});
 	}
 
@@ -234,9 +236,20 @@ class Booking extends Base {
 	}
 
 
+
+	// もしアドレスが入力されたら、予約番号が出現する（それまでは、番号は隠される）
+	randomBookingNr() {
+		$(document).on('keypress', '#email-booking', function (event) {
+			document.getElementById('bookingNr-booking').innerHTML = Math.floor(Math.random() * 1001);
+			$('.hide-text').show();
+		});
+	}
+	
+
+
 	// Alert
 	bookingAlert() {
-		$(document).on('click', '#booking-alert', function () {
+		$(document).on('keyup', '#booking-alert', function () {
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
 		});
 	}

@@ -14,7 +14,7 @@ Object.assign(Booking.prototype, { template(){ return `
 				<!-- Bookning info  -->
 				<div class="col-12 col-md-5 text-center mb-5 mt-4">
 
-					<img src="" alt=""> Film bild(lägg till senare)
+					<img src="" alt=""> ${Data.movies.title} Film bild(lägg till senare)
 				</div>
 
 				<div class="col-12 col-md-7 mb-3 mt-4 ml-md-5 justify-content-center">
@@ -169,27 +169,37 @@ Object.assign(Booking.prototype, { template(){ return `
 										</ul>
 									</div>
 
-									<li class="mr-2 font-weight-bold mt-4" id="booking-nr">
-										<span class="mr-2 mb-1">Bokningsnummer:</span>
-										<span class="mr-2 mb-1" id="bookingNr-booking">XXXXXXX</span>
-									</li>
-									<p>
-										<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
-									</p>
+
 									<hr class="email mt-4">
 
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
-											<label for="email-booking" class="font-weight-bold">Email address</label>
-											<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
-										</div>
-										<div class="form-group mt-4">
 											<label for="mobile-booking" class="font-weight-bold">Mobilnummer</label>
 											<!-- pattern="\d*" -->
-											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="11" placeholder="Ange mobilnummer (t.ex 0701234..., +45 701234...)">
+											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="11" placeholder="Ange mobilnummer (t.ex 07012..., +45 701234...)">
 										</div>
-										<button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
+
+										<div class="form-group mt-4">
+												<label for="email-booking" class="font-weight-bold">Email address</label>
+												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
+										</div>
+
+										<li class="mr-2 font-weight-bold mt-5 d-flex justify-content-start" id="booking-nr">
+											<span class="mr-2 mb-1 hide-text">Bokningsnummer:</span>
+											<span class="mr-2 mb-1 hide-text" id="bookingNr-booking"></span>
+										</li>
+										<p class="hide-text">
+											<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
+										</p>
+
+
+									<!-- <hr class="email mt-4"> -->
+
+
+
+										<button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
+										 data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
 									<p class="mb-5">Vänligen berätta ditt bokningsnummer och betala för biljetterna på bio.</p>
