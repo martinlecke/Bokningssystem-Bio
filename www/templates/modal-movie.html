@@ -1,7 +1,7 @@
 Object.assign(ModalMovie.prototype, { template(){ return `
 <!-- Modal start--> 
   <div class="modal fade text-dark" id="filmmodal" tabindex="-1" role="dialog" aria-labelledby="filmmodal" aria-hidden="true"> 
-    <div class="modal-dialog" role="document"> 
+    <div class="modal-dialog modal-lg" role="document"> 
       <div class="modal-content"> 
       
         <!-- Youtube Trailer Start -->
@@ -11,7 +11,7 @@ Object.assign(ModalMovie.prototype, { template(){ return `
           </button> 
         </div> 
         <div class="row"> 
-          <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/${this.youtubeTrailers}" 
+          <iframe class="col-12" id="trailer" width="560" height="315" src="https://www.youtube.com/embed/${this.youtubeTrailers}?showinfo=0&rel=0" 
           frameborder="0"  allowfullscreen> 
           </iframe>
         </div> 
@@ -29,7 +29,7 @@ Object.assign(ModalMovie.prototype, { template(){ return `
               <img class="img-fluid" src="${this.poster}" alt="${this.title}"> 
               <div class="film-details mt-3"> 
                 <div> 
-                  <span class="font-weight-bold">Productionsår: </span> 
+                  <span class="font-weight-bold">Produktionsår: </span> 
                   <span>${this.productionYear}</span> 
                 </div> 
                 <div> 
