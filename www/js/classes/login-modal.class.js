@@ -21,7 +21,6 @@ class Login extends Base {
 						password: password
 					}
 				));
-			console.log(Data.user)
 				that.saveToJSON(Data.user);
 			});
 		}

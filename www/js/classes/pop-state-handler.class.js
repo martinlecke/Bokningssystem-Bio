@@ -55,6 +55,7 @@ class PopStateHandler {
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
+      '/om-oss': 'omOss',
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
       '/bokningssida': 'bokningssida',
@@ -79,11 +80,9 @@ class PopStateHandler {
     if(!hash || !hashes[hash]){
       return;
     }
-
-    methodName = hashes[hash];
-    this[methodName]();
-
-  }
+      methodName = hashes[hash];
+      this[methodName]();
+    }
 
 
   // 6.urlを追加する時にここにも書く(line:53)
@@ -95,6 +94,11 @@ class PopStateHandler {
   filmsida(){
     $('main').empty();
     this.app.moviePage.render('main');
+  }
+
+  omOss(){
+    $('main').empty();
+    this.app.omOss.render('main');
   }
 
   auditorium(){
@@ -109,12 +113,11 @@ class PopStateHandler {
 
   login(){
     this.app.login = new Login();
-    this.app.login.render('main');
   }
 
   movie(){
     this.app.movie = new ModalMovie();
-    this.app.movie.render('.modal-container');
+
   }
 
 }

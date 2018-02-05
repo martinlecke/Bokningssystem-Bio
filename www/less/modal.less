@@ -1,30 +1,27 @@
 .modal {
 
-	
-	.modal-dialog {
-		max-width: 550px;
-	}
+	// .modal-dialog {
+	// 	max-width: 550px;
+	// }
 
 	.modal-body img {
 		display: none;
 		@media @tablet-min {
 			display: block;
-			max-width: 150px;
 		}
 	}
-
-
+  .film-details {
+    font-size: 13px;
+  }
 	li {
 		list-style: none;
 	}
-
 	hr {
 		width: 150%;
 		@media @tablet-min {
 			width: 100%;
 		}
 	}
-
 	.booking {
 		margin-left: 3rem!important;
 		@media @mobile-min {
@@ -34,5 +31,44 @@
 		margin-left: 6rem!important;
 		}
 	}
+	h1 {
+		font-size: 2.1rem;
+	}
+	small {
+		font-size: 67%; 
+	}
+	h1 {
+		font-size: 2.1rem;
+	}
+	small {
+		font-size: 67%; 
+	}
 
+
+}
+#filmmodal {
+  .modal-header {
+    border: 0;
+    padding: 0;
+  }
+  .close {
+    border-radius: 50% 50%;
+    color: lightgray;
+    background: black;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 100;
+    border: 1px solid lightgray;
+    font-size: 2rem;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: 0;
+    &:hover {
+      border-color: white;
+      color: white;
+    }
+  }
 }

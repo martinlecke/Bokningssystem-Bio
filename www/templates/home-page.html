@@ -1,55 +1,48 @@
  <!-- ここでの操作は、Homepageに書く -->
-
-
 Object.assign(HomePage.prototype, { template(){ return `
-
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-lg-8 px-0">
-			<!-- Slider / Carousel -->
-			<div id="movieslider" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					${this.slider.render()}
-				</div>
-				<a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon"></span>
-				</a>
-				<a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
-					<span class="carousel-control-next-icon"></span>
-				</a>
-			</div>
-		</div>
+ 	<div class="row">
+ 		<div class="col-lg-8 px-0">
+ 			<!-- Slider / Carousel -->
+ 			<div id="movieslider" class="carousel slide" data-ride="carousel">
+ 				<div class="carousel-inner">
+ 					${this.slider.render()}
+ 				</div>
+ 				<a class="carousel-control-prev" href="#movieslider" role="button" data-slide="prev">
+ 					<span class="carousel-control-prev-icon"></span>
+ 				</a>
+ 				<a class="carousel-control-next" href="#movieslider" role="button" data-slide="next">
+ 					<span class="carousel-control-next-icon"></span>
+ 				</a>
+ 			</div>
+ 		</div>
 
-		<div class="col-lg-4 p-0">
-			<div class="calendertoday">
-				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
-					Se kommande visningar
-				</button>
-				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
-					<h3>Visningar idag</h3>
-					<ul>
-						${this.today.render()}
-					</ul>
-					<h3>Visningar imorgon</h3>
-					<ul class="mb-0">
-						${this.tomorrow.render()} 
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row justify-content-around mt-5">
+ 		<div class="col-lg-4 p-0">
+ 			<div class="calendertoday">
+ 				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+ 					Se kommande visningar
+ 				</button>
+ 				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
+ 					<h3>Visningar idag</h3>
+ 					<ul>
+ 						${this.today.render()}
+ 					</ul>
+ 					<h3>Visningar imorgon</h3>
+ 					<ul class="mb-0">
+ 						${this.tomorrow.render()} 
+ 					</ul>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
 
-		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
-
-		${this.poster.render()}  
-
-
-	</div>
+  <div class="row justify-content-around mt-5">
+ 		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
+ 		${this.poster.render()}
+ 	</div>
 </div>
 
-<div class="modal-container">
+<div id="modalmovie">
 </div>
-
-`;}});
+ 
+`;}});	
