@@ -213,7 +213,7 @@ class Booking extends Base {
 						}
 					],
 					amount: amount,
-					// ????  seats: [
+					// seats: [
 					// 	{
 					// 		row: row,
 					// 		seatnumber: number
@@ -244,7 +244,7 @@ class Booking extends Base {
 			$('.hide-text').show();
 		});
 	}
-	
+
 
 
 	// Alert
