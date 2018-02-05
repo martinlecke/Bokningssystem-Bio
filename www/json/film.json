@@ -6,7 +6,7 @@
     "length": 140,
     "active": false,
     "genre": "Drama",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Aaron Sorkin",
     "actors": [
       "Jessica Chastain",
@@ -30,7 +30,7 @@
     "length": 114,
     "active": false,
     "genre": "Deckare, Drama",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Kenneth Branagh",
     "actors": [
       "Kenneth Branagh",
@@ -82,7 +82,7 @@
     "length": 142,
     "active": false,
     "genre": "Action, Sci-Fi, Thriller",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Wes Ball",
     "actors": [
       "Kaya Scodelario",
@@ -134,7 +134,7 @@
     "length": 119,
     "active": false,
     "genre": "Familj, Äventyr, Komedi",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Jake Kasdan",
     "actors": [
       "Dwayne Johnson",
@@ -158,7 +158,7 @@
     "length": 135,
     "active": false,
     "genre": "Komedi, Drama, Sci-Fi",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Alexander Payne",
     "actors": [
       "Kristen Wiig",
@@ -183,7 +183,7 @@
     "length": 132,
     "active": false,
     "genre": "Biografi, Kriminalitet, Drama",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Ridley Scott",
     "actors": [
       "Michelle Williams",
@@ -204,7 +204,7 @@
     "productionYear": 2017,
     "length": 117,
     "genre": "Biografi, Drama, Musik",
-    "language": "Franska<small>(svensk text)</small>",
+    "language": "Franska <small>(svensk text)</small>",
     "director": "Étienne Comar",
     "actors": [
       "Reda Kateb",
@@ -226,7 +226,7 @@
     "length": 115,
     "active": false,
     "genre": "Drama, Komedi",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Martin McDonagh",
     "actors": [
       "Frances McDormand",
@@ -248,7 +248,7 @@
     "productionYear": 2017,
     "length": 132,
     "genre": "Drama",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Luca Guadagnino",
     "actors": [
       "Armie Hammer",
@@ -270,7 +270,7 @@
     "length": 107,
     "active": true,
     "genre": "Drama, Sport",
-    "language": "Engelska<small>(svensk text)</small> & Svenska",
+    "language": "Engelska <small>(svensk text)</small> & Svenska",
     "director": "Janus Metz",
     "actors": [
       "Sverrir Gudnason",
@@ -293,7 +293,7 @@
     "productionYear": 2017,
     "length": 94,
     "genre": "Drama",
-    "language": "Franska<small>(svensk text)</small>",
+    "language": "Franska <small>(svensk text)</small>",
     "director": "Claire Denis",
     "actors": [
       "Juliette Binoche",
@@ -314,7 +314,7 @@
     "productionYear": 2017,
     "length": 152,
     "genre": "Äventyr, Action, Fantasy",
-    "language": "Engelska<small>(svensk text)</small>",
+    "language": "Engelska <small>(svensk text)</small>",
     "director": "Rian Johnson",
     "actors": [
       "Daisy Ridley",
