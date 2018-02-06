@@ -325,7 +325,7 @@ class Booking extends Base {
 		});
 	}
 
-
+test
 
 
 	// 新しいメソッド
