@@ -7,6 +7,10 @@ class App {
     this.navbar = new Navbar();
     this.navbar.render('header');
 
+    // Create a footer
+    this.footer = new Footer();
+    this.footer.render('footer');
+
     // Create a homepage
     this.homePage = new HomePage();
 
