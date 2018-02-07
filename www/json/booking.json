@@ -36,5 +36,81 @@
     "mobile": "",
     "email": "r",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Fiml title (lägg till senare)",
+    "date": "2018-02-14",
+    "time": "18.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "bookingNr": "180214N2",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Fiml title (lägg till senare)",
+    "date": "2018-02-14",
+    "time": "18.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "2 st",
+        "child": "3 st",
+        "pensioner": "2 st",
+        "totalNr": "7 st"
+      }
+    ],
+    "amount": "515 kr",
+    "bookingNr": "180214N0",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Fiml title (lägg till senare)",
+    "date": "2018-02-14",
+    "time": "18.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "6 st",
+        "pensioner": "0 st",
+        "totalNr": "9 st"
+      }
+    ],
+    "amount": "645 kr",
+    "bookingNr": "180214N2",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Fiml title (lägg till senare)",
+    "date": "2018-02-14",
+    "time": "18.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "1 st",
+        "pensioner": "0 st",
+        "totalNr": "2 st"
+      }
+    ],
+    "amount": "150 kr",
+    "bookingNr": "180214N2",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
   }
 ]

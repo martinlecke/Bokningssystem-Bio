@@ -29,19 +29,16 @@ class Booking extends Base {
 		});
 
 		this.onRendered();
-		this.bookingData = [];  // クラスを作ったので、配列は不要？
-
-		this.randomGenerator();
+		// this.bookingData = [];  // クラスを作ったので、配列は不要？
 		this.randomBookingNr();
-		//this.checkRandomNumber(date);
-
 		this.saveBookingDataToJson();
 		this.bookingAlert();
-		// this.showDate();
+
 
 	} // Closes constructor
 
 
+	// コンソールだけで動作していたメソッドが、このコードのおかげで、メソッドとして動くようになった
 	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
@@ -124,14 +121,15 @@ class Booking extends Base {
 
 
 	calcTotalTickets() {
+		let that = this;
 		let ordinaryNr = Number($('#number-ordinary').text());
 		let childNr = Number($('#number-child').text());
 		let pensionerNr = Number($('#number-pensioner').text());
-
 		let sum = ordinaryNr + childNr + pensionerNr;
 		if (sum !== 0) {
 			$('#total-tickets').html(sum + ' st');
 		}
+		that.randomBookingNr();
 	}
 
 
@@ -149,9 +147,6 @@ class Booking extends Base {
 			$('#amount').html(sum + ' kr');
 		}
 	}
-
-
-
 
 
 	// Save the booking info till JSON (バグ：電話番号にアルファベットも入力できてしまう)
@@ -175,6 +170,9 @@ class Booking extends Base {
 			let email = $('#email-booking').val();
 			let mobile = $('#mobile-booking').val();
 
+
+
+			// Bootstrapのエラーメッセージでなく、こっちを使いたい
 
 			//  if (mobile === '') {
 			// 	$('#booking-alert').attr('data-content', 'Ange mobilnummer');
@@ -229,8 +227,6 @@ class Booking extends Base {
 				}
 			));
 			that.saveToJSON(Data.booking);
-			// }
-
 		});
 	}
 
@@ -240,152 +236,69 @@ class Booking extends Base {
 	}
 
 
+	// Make a random number
+	randomGenerator() {
+		let that = this;
+		let date = Data.booking[0].date;  // test data (仮のデーター)
+		date = date.replace(/-/g, "");
+		date = date.split("-").join("");
+		date = date.slice(2, 8);
+		let number = date + 'N' + Math.floor(Math.random() * 3);
+		that.checkRandomNumber(number);
+	}
+
+
+	// 乱数が重複してないか、チェックする
+	// Check the booking number if the number is not duplicated
+	checkRandomNumber(number) {
+		// console.log('typeof number - impara:', typeof number);
+		let that = this;
+
+		// test 
+		// number = '180214N732';  // test - the same number in booking.json (JSONのリストと同じ番号にする)
+
+		for (let i = 0; i < Data.booking.length; i++) {
+
+			// the numbers are duplicated (重複ありの場合)
+			if (Data.booking[i].bookingNr === number) {
+
+				console.log('typeof リストの中のbookingNr', Data.booking[i].bookingNr);  // typeof Data.booking[i].bookingNr -- type: string
+				console.log('typeof number', number);  // typeof number -- type: number
+				console.log('重複している!!'); // the numbers are duplicated
+
+				// that.randomGenerator();   // これを入れるとループになる。（このランダムのメソッドを使いたい）
+
+				let date = Data.booking[0].date;
+				date = date.replace(/-/g, "");
+				date = date.split("-").join("");
+				date = date.slice(2, 8);
+				let number2 = date + 'N' + Math.floor(Math.random() * 3);
+				console.log('typeof number2: ', typeof number2);
+				$('#bookingNr-booking').html(number2);
+				$('.hide-text').show();  // A reservation number appears
+
+			}
+			else if (Data.booking[i].bookingNr !== number) {
+				// console.log('bookingNr(booking.json)', Data.booking[i].bookingNr);  
+				// console.log('number', number);
+				// console.log('重複なし'); 	 // the numbers are NOT duplicated
+				$('#bookingNr-booking').html(number);
+				$('.hide-text').show();  // (バグ: リフレッシュしても、文字が消えない)
+			}
+			else { return; }
+		}
+	}
 
 
 
 
 
 	// 乱数を作る（日付+ N + 乱数）
+	// Make a booking number (date + N + random nr)
 	randomBookingNr() {
-		$(document).on('keypress', '#email-booking', function (event) {
-
-
-			let date = Data.booking[0].date;
-			// console.log('before date: ', date);
-			date = date.replace(/-/g, "");
-			date = date.split("-").join("");
-			//	console.log('efter date: ', date);
-
-			date = date.slice(2, 8);
-			date = date + 'N' + Math.floor(Math.random() * 1001);
-			console.log('finally date: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
-
-			// let that = this;
-			// that.checkRandomNumber(date);
-
-
-			// ここから、他のメソッドにしたい
-
-
-
-			let randomArray = [];
-			randomArray.push(date);
-
-
-			console.log('randomArray', randomArray);  // ok! （arrayに数字が入った）
-
-			for (let i = 0; i < randomArray.length; i++) {
-				// console.log('array i:', randomArray[i]);   //ok! (arrayの数字が見える)
-				// console.log('date:', date);   // ok! (dateの数が見える)　上下同じ数字
-
-
-
-				// 重複なしの場合
-				if (randomArray[i] !== date) {
-
-					// console.log('重複なし & date', date);
-					document.getElementById('bookingNr-booking').innerHTML = date + '重複なし';
-					$('.hide-text').show();
-				}
-				// 重複する場合
-				else if (randomArray[i] === date) {
-					console.log('重複 & date', date);
-
-					// test test start
-					//　ランダムを作るコード
-					date = Data.booking[0].date;
-					console.log('before 2 date: ', date);
-					date = date.replace(/-/g, "");
-					date = date.split("-").join("");
-					console.log('efter2  date: ', date);
-
-					date = date.slice(2, 8);
-					date = date + 'N' + Math.floor(Math.random() * 1001);
-
-
-
-					console.log('乱数を再度作る: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
-					document.getElementById('bookingNr-booking').innerHTML = date + '新しい乱数';
-					$('.hide-text').show();
-
-
-					console.log('新しい乱数', date);
-					console.log('randomArray最終', randomArray);
-					// randomArray.push(date);    // これを表示すると永久にループ
-					// test test end
-
-
-
-				}
-
-
-			}
-			// }
-
-		});
+		let that = this;
+		that.randomGenerator();
 	}
-
-test
-
-
-	// 新しいメソッド
-
-	randomGenerator() {
-  
-		let date = Data.booking[0].date;  // 仮のデーター
-		console.log('before date: ', date);
-		date = date.replace(/-/g, "");
-		date = date.split("-").join("");
-			console.log('efter date: ', date);
-
-		date = date.slice(2, 8);
-		date = date + 'N' + Math.floor(Math.random() * 1001);
-		console.log('finally date: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
-
-	}
-
-
-	// Check the booking number if the number is not duplicated
-	// 乱数が重複してないか、チェックする
-	// checkRandomNumber(date) {
-
-
-	// }
-
-
-
-
-	// console.log('before randomArray', randomArray);
-	// console.log('beforerandomNr', randomNr);
-
-	// 	for (let i = 0; i < randomArray.length; i++) {
-	// 		if(randomArray[i] !== randomNr) {
-	// 			randomArray.push(randomNr);
-	// 		}
-	// 	}
-
-	// console.log('after randomArray', randomArray);	
-
-
-
-
-	// $(document).on('keypress', '#email-booking', function (event) {
-
-	// 	randomArray.push(Math.floor(Math.random() * 11));
-
-
-
-	// 	document.getElementById('bookingNr-booking').innerHTML = (date + 'N' + Math.floor(Math.random() * 1001));
-	// 	$('.hide-text').show();
-	// });
-	// }
-
-
-
-
-
-
-
 
 
 	// Alert
