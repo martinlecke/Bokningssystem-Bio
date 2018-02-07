@@ -57,7 +57,9 @@ Object.assign(Booking.prototype, { template(){ return `
 				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
 			</div>
 
-			<div class="col-12 text-center my-5" style="font-size: 50px; color: red">!!!! Salongen renoveras nu !!!!!!!</div>
+			<div class="col-12 text-center my-5 salong-holder">
+        ${this.auditorium.render()}
+      </div>
 
 			<div class="col-6 col-sm-4 col-md-8 col-lg-6 bg-white text-dark my-5 mx-auto seat-info mb-5">
 				<ul class="d-md-flex justify-content-around py-3 pl-0">

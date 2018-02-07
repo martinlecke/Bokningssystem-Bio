@@ -1,6 +1,6 @@
 [  
   {
-    "name": "Stora Salongen",
+    "auditorium": "Stora Salongen",
     "seats": 81,
     "seatsPerRow": [
       8,
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "name": "Lilla Salongen",
+    "auditorium": "Lilla Salongen",
     "seats": 56,
     "seatsPerRow": [
       6,

@@ -2,7 +2,7 @@ class Booking extends Base {
 
 	constructor(showid) {
 		super();
-		let urlName = location.pathname.split('/')[2];
+    this.auditorium = new Auditorium(showid);
     this.show = this.findShow(showid);
     this.movie = this.findMovie(this.film);
 		this.clickPlusOrdinary();
