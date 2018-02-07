@@ -5,6 +5,7 @@ class Show {
     for (let name in props){
       this[name] = props[name];
     }
+
     // this.auditorium = data.auditorium;
     // this.film = data.film;
     // this.date = data.date;

@@ -5,6 +5,7 @@ class Showmaker {
     this.showtimes = ['16.00', '18.30', '21.00'];
     this.auditorium = ['Lilla Salongen', 'Stora Salongen'];
     this.showlist = [];
+    
     this.date = {
       year: new Date().getFullYear(),
       month: new Date().getMonth() + 1,
