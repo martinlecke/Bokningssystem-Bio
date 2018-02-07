@@ -1,22 +1,25 @@
 class Kalendarium extends Base {
 	
-	constructor(){
+	constructor(props){
 		super();
 
-		this.days = [];
-		let array = [];
+		let showsByDayHash = {};
 		for(let show of Data.shows){
-			let day = new Date(show.date).getDate();
-			let month = new Date(show.date).getMonth() + 1;
-			if (  ) {
-				array.push(show);
-			} else {
-				this.days.push({ [show.date]: array});
-			}
+		  if(!showsByDayHash[show.date]){
+		    showsByDayHash[show.date] = [];
+		  }
+		  showsByDayHash[show.date].push(show);
+		}
 
-		}	// /loop
-		console.log(this.days);
-	} // /constructor
+		console.log('showsByDay',showsByDayHash);
 
+		let showsByDay = [];
+		for(let date in showsByDayHash){
+		  showsByDay.push(new Day({shows: showsByDayHash[date]}));
+		}
+
+		console.log('showsByDay', showsByDay);
+		this.days = showsByDay
+	}
 } // /class
 
