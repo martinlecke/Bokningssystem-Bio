@@ -113,12 +113,12 @@ class PopStateHandler {
     let id = location.pathname;
     $('main').empty();
        // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
-    if(Showing.x == true) {
-      Showing.x.render('main');
-    } else {
+    // if(Showing.x == true) {
+    //   Showing.x.render('main');
+    // } else {
       Showing.x = new Booking(id.slice(1, id.length));
       Showing.x.render('main');
-    }
+    // }
   }
 
   login(){

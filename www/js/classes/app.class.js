@@ -18,7 +18,7 @@ class App {
     this.moviePage = new MoviePage();
 
     // Create auditorium page
-    this.auditorium = new Auditorium();
+    // this.auditorium = new Auditorium();
 
     // // Create booking page
     // this.booking = new Booking();

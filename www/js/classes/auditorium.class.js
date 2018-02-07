@@ -2,8 +2,8 @@ class Auditorium extends Base {
   
   constructor(showid) {
     super();
-    this.show = this.find(showid, 'shows');
-    // this.salong = this.find(this.show.auditorium, 'salong');
+    this.show = this.find(showid, 'shows', 'showid');
+    this.salong = this.find(this.show.auditorium, 'salong', 'auditorium');
     this.rows = [];
     this.stora = {name: 'Stora Salongen', seats: 81, seatsPerRow: [8, 9, 10, 10, 10, 10, 12, 12]};
     let urlName = location.pathname.split('/')[2];
@@ -11,14 +11,13 @@ class Auditorium extends Base {
     setTimeout(() => { 
       this.scale();
     }, 500);
-    console.log(this);
   }
 
-  find(find, where) {
-    // Finds the show and return it
+  find(find, where, property) {
+    // Finds the show/auditorium and returns it by input arguments
     for (let i = 0; i < Data[where].length; i++) {
-      if (Data[where][i][find] == find) {
-        return Data[where][i];
+      if (Data[where][i][property] == find) {
+        return Data[where][i]
       }
     }
   }
