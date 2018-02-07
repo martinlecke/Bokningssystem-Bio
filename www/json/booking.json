@@ -55,5 +55,24 @@
     "mobile": "",
     "email": "rewe@rerw",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-07",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "0 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "0"
+      }
+    ],
+    "amount": "0",
+    "bookingNr": "",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
   }
 ]

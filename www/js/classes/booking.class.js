@@ -5,7 +5,6 @@ class Booking extends Base {
 		let urlName = location.pathname.split('/')[2];
     this.show = this.findShow(showid);
     this.movie = this.findMovie(this.film);
-    console.log('this.movie', this.movie);
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
 		this.clickPlusPensioner();

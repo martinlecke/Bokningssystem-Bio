@@ -7,6 +7,10 @@ class ModalMovie extends Base {
    		 this[name] = props[name];
  			}
 		}
+		this.modalShowing = [] 
+    for(let movie of Data.shows.slice(0, 7)){ 
+      this.modalShowing.push(new ModalShowing(movie)) 
+    } 
     this.render('#modalmovie');
 	}		
 }
