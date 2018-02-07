@@ -6,7 +6,6 @@ class Showing extends Base {
 	}
   click() {
     Showing.x = new Booking(this.showid);
-    console.log(this.showid);
   }
 
 }
