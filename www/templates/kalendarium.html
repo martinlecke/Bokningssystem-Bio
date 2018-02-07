@@ -6,18 +6,7 @@ Object.assign(Kalendarium.prototype, { template(){ return `
         <h1>Kalendarium</h1>
 
         <div id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="kalendarium-h5" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">${this.date}</h5>
-            </div>
-
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                ${this.days.render}
-              </div>
-            </div>
-
-          </div>
+          ${this.days.render()}
         </div>
         
       </div>
