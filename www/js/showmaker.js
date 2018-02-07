@@ -18,20 +18,34 @@ class Showmaker {
     return Math.floor(Math.random() * length);
    }
 
+   makeMovieUrl(movie) {
+    movie = movie.replace(/[, :']/g, "").toLowerCase();
+    movie = movie.replace(/[åä]/g, "a");
+    movie = movie.replace(/[ö]/g, "o");
+    return movie;
+   }
+
    makeObject() {
     let day = this.date.day;
     let month = this.date.month;
     let year = this.date.year;
-
       for (let i = 0; i < 28; i++) {
         for (let j = 0; j < 3; j++) {
+          let movie = this.movies[this.random(this.movies.length)];
+          let salong = this.auditorium[this.random(this.auditorium.length)];
+          let urlMovie = this.makeMovieUrl(movie);
+          let date = `${year}-${month < 10 ? "0" + month : month}-${day < 10 ? "0" + day : day}`;
+          let showid = (date.replace(/[-]/g, "") + j + i);
           this.showlist.push( new Show(
           {
-            auditorium: this.auditorium[this.random(this.auditorium.length)],
-            film: this.movies[this.random(this.movies.length)],
-            date: `${year}-${month < 10 ? "0" + month : month}-${day < 10 ? "0" + day : day}`,
-            time: this.showtimes[j]
-          }));  
+            auditorium: salong,
+            film: movie,
+            date: date,
+            time: this.showtimes[j],
+            showid: showid.slice(2, showid.length),
+            url: urlMovie
+          })); 
+          console.log(this); 
         }
         if (day == 31 && month == 12) {
           year += 1;
@@ -58,6 +72,6 @@ class Showmaker {
       } // /for loop
    }
    saveToJSON(array){
-    JSON._save('shows.json', array);
+    JSON._save('shows1.json', array);
   }
 }

@@ -1,0 +1,758 @@
+[
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-07",
+    "time": "16.00",
+    "showid": "18020700",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-07",
+    "time": "18.30",
+    "showid": "18020710",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-07",
+    "time": "21.00",
+    "showid": "18020720",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-08",
+    "time": "16.00",
+    "showid": "18020801",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-08",
+    "time": "18.30",
+    "showid": "18020811",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-08",
+    "time": "21.00",
+    "showid": "18020821",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-09",
+    "time": "16.00",
+    "showid": "18020902",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-09",
+    "time": "18.30",
+    "showid": "18020912",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-09",
+    "time": "21.00",
+    "showid": "18020922",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-10",
+    "time": "16.00",
+    "showid": "18021003",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-10",
+    "time": "18.30",
+    "showid": "18021013",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-10",
+    "time": "21.00",
+    "showid": "18021023",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-11",
+    "time": "16.00",
+    "showid": "18021104",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-02-11",
+    "time": "18.30",
+    "showid": "18021114",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-11",
+    "time": "21.00",
+    "showid": "18021124",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-12",
+    "time": "16.00",
+    "showid": "18021205",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-12",
+    "time": "18.30",
+    "showid": "18021215",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-12",
+    "time": "21.00",
+    "showid": "18021225",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-02-13",
+    "time": "16.00",
+    "showid": "18021306",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-13",
+    "time": "18.30",
+    "showid": "18021316",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-13",
+    "time": "21.00",
+    "showid": "18021326",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-14",
+    "time": "16.00",
+    "showid": "18021407",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-14",
+    "time": "18.30",
+    "showid": "18021417",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-14",
+    "time": "21.00",
+    "showid": "18021427",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "showid": "18021508",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "showid": "18021518",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "showid": "18021528",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "showid": "18021609",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-16",
+    "time": "18.30",
+    "showid": "18021619",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-16",
+    "time": "21.00",
+    "showid": "18021629",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-17",
+    "time": "16.00",
+    "showid": "180217010",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-17",
+    "time": "18.30",
+    "showid": "180217110",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-17",
+    "time": "21.00",
+    "showid": "180217210",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "showid": "180218011",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-18",
+    "time": "18.30",
+    "showid": "180218111",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-18",
+    "time": "21.00",
+    "showid": "180218211",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-19",
+    "time": "16.00",
+    "showid": "180219012",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-19",
+    "time": "18.30",
+    "showid": "180219112",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-02-19",
+    "time": "21.00",
+    "showid": "180219212",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-20",
+    "time": "16.00",
+    "showid": "180220013",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-20",
+    "time": "18.30",
+    "showid": "180220113",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-20",
+    "time": "21.00",
+    "showid": "180220213",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-21",
+    "time": "16.00",
+    "showid": "180221014",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-21",
+    "time": "18.30",
+    "showid": "180221114",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-21",
+    "time": "21.00",
+    "showid": "180221214",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-22",
+    "time": "16.00",
+    "showid": "180222015",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-22",
+    "time": "18.30",
+    "showid": "180222115",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-22",
+    "time": "21.00",
+    "showid": "180222215",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-23",
+    "time": "16.00",
+    "showid": "180223016",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-23",
+    "time": "18.30",
+    "showid": "180223116",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-23",
+    "time": "21.00",
+    "showid": "180223216",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-24",
+    "time": "16.00",
+    "showid": "180224017",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-24",
+    "time": "18.30",
+    "showid": "180224117",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-24",
+    "time": "21.00",
+    "showid": "180224217",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-25",
+    "time": "16.00",
+    "showid": "180225018",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-02-25",
+    "time": "18.30",
+    "showid": "180225118",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-25",
+    "time": "21.00",
+    "showid": "180225218",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-26",
+    "time": "16.00",
+    "showid": "180226019",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-26",
+    "time": "18.30",
+    "showid": "180226119",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-26",
+    "time": "21.00",
+    "showid": "180226219",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-02-27",
+    "time": "16.00",
+    "showid": "180227020",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-02-27",
+    "time": "18.30",
+    "showid": "180227120",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-02-27",
+    "time": "21.00",
+    "showid": "180227220",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-28",
+    "time": "16.00",
+    "showid": "180228021",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-02-28",
+    "time": "18.30",
+    "showid": "180228121",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-28",
+    "time": "21.00",
+    "showid": "180228221",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-03-01",
+    "time": "16.00",
+    "showid": "180301022",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-03-01",
+    "time": "18.30",
+    "showid": "180301122",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-03-01",
+    "time": "21.00",
+    "showid": "180301222",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-03-02",
+    "time": "16.00",
+    "showid": "180302023",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-03-02",
+    "time": "18.30",
+    "showid": "180302123",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-03-02",
+    "time": "21.00",
+    "showid": "180302223",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-03-03",
+    "time": "16.00",
+    "showid": "180303024",
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-03-03",
+    "time": "18.30",
+    "showid": "180303124",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-03-03",
+    "time": "21.00",
+    "showid": "180303224",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-03-04",
+    "time": "16.00",
+    "showid": "180304025",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call me by your name",
+    "date": "2018-03-04",
+    "time": "18.30",
+    "showid": "180304125",
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Transformers: The Last Knight",
+    "date": "2018-03-04",
+    "time": "21.00",
+    "showid": "180304225",
+    "url": "transformersthelastknight",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Your Name",
+    "date": "2018-03-05",
+    "time": "16.00",
+    "showid": "180305026",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-03-05",
+    "time": "18.30",
+    "showid": "180305126",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Your Name",
+    "date": "2018-03-05",
+    "time": "21.00",
+    "showid": "180305226",
+    "url": "yourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-03-06",
+    "time": "16.00",
+    "showid": "180306027",
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-03-06",
+    "time": "18.30",
+    "showid": "180306127",
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-03-06",
+    "time": "21.00",
+    "showid": "180306227",
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  }
+]

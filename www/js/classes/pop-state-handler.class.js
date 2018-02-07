@@ -8,7 +8,10 @@ class PopStateHandler {
     // Add event handlers for a.pop-links once
     this.addEventHandler();
     // Call changePage on initial page load
-    this.changePage();
+    setTimeout(() => {
+      this.changePage();
+    }, 100);
+    
     // Call changePage on pop events
     // (the user clicks the forward or backward button)
     // from an arrow function to keep "this"
@@ -59,10 +62,16 @@ class PopStateHandler {
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
       '/bokningssida': 'bokningssida',
-      '/All the Money in the World': 'allTheMoney',
-      '/Django': 'django',
-      '/KLSMF657': 'bokningssida'
+      '/KLSMF657': 'bokningssida',
+      '/18020700': 'bokningssida'
     };
+
+    let idxUrls = [];
+    for (let i = 0; i < Data.shows.length; i++) {
+      let idUrls = {['/'+ Data.shows[i].showid] : 'bokningssida'};
+      Object.assign(urls, idUrls);
+    }
+    console.log(urls);
 
     // Call the right method
     let methodName = urls[url];
