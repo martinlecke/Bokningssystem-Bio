@@ -1,11 +1,11 @@
 Object.assign(Day.prototype, { template(){ return `
-					<div class="card">
+					<div class="card my-2">
             <div class="card-header" id="heading${this.date}">
               <h5 class="kalendarium-h5" data-toggle="collapse" data-target="#collapse${this.date}" aria-expanded="true" aria-controls="collapse${this.date}">${this.date}</h5>
             </div>
 
-            <div id="collapse${this.date}" class="collapse" aria-labelledby="heading${this.date}" data-parent="#accordion">
-              <div class="card-body">
+            <div id="collapse${this.date}" class="collapse p-3" aria-labelledby="heading${this.date}" data-parent="#accordion">
+         <!--      <div class="card-body col-12"> -->
               	${this.shows.render()}
                 
               </div>
