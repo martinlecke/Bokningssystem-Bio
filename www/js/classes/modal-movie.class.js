@@ -7,9 +7,11 @@ class ModalMovie extends Base {
    		 this[name] = props[name];
  			}
 		}
-		this.modalShowing = [] 
-    for(let movie of Data.shows.slice(0, 7)){ 
-      this.modalShowing.push(new ModalShowing(movie)) 
+		this.modalShowing = []
+    for(let i = 0; i < Data.shows.length; i++){ 
+    	if(Data.shows[i].film === this.title){
+      	this.modalShowing.push(new ModalShowing(Data.shows[i])); 
+    	}
     } 
     this.render('#modalmovie');
 	}		
