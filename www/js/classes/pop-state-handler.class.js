@@ -61,6 +61,7 @@ class PopStateHandler {
       '/bokningssida': 'bokningssida',
       '/All the Money in the World': 'allTheMoney',
       '/Django': 'django',
+      '/KLSMF657': 'bokningssida'
     };
 
     // Call the right method
@@ -108,7 +109,7 @@ class PopStateHandler {
 
   bokningssida(){
     $('main').empty();
-    this.app.booking.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+    Showing.x.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
   }
 
   login(){
@@ -119,5 +120,7 @@ class PopStateHandler {
     this.app.movie = new ModalMovie();
 
   }
+
+
 
 }

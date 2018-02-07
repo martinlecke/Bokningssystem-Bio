@@ -20,8 +20,8 @@ class App {
     // Create auditorium page
     this.auditorium = new Auditorium();
 
-    // Create booking page
-    this.booking = new Booking();
+    // // Create booking page
+    // this.booking = new Booking();
 
     // Create About page
     this.omOss = new About();

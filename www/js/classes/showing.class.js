@@ -5,7 +5,7 @@ class Showing extends Base {
 		Object.assign(this, showstomorrow);
 	}
   click() {
-    console.log(this);
+    Showing.x = new Booking(this.showid);
   }
 
 }

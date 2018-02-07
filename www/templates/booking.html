@@ -13,14 +13,13 @@ Object.assign(Booking.prototype, { template(){ return `
 
 				<!-- Bookning info  -->
 				<div class="col-12 col-md-5 text-center mb-5 mt-4">
-
-					<img src="" alt=""> ${Data.movies.title} Film bild(lägg till senare)
+					<img src="${this.movie.poster}" alt="${this.show.film}">
 				</div>
 
 				<div class="col-12 col-md-7 mb-3 mt-4 ml-md-5 justify-content-center">
-					<h4 class="font-weight-bold mb-2"> Fiml title (lägg till senare)</h4>
+					<h4 class="font-weight-bold mb-2">${this.movie.title}</h4>
 					<div>
-						Film längd (min), språk (lägg till senare)
+						${this.movie.length} minuter, ${this.movie.language}
 					</div>
 
 					<div class="film-details mt-4 mb-5 ml-3">
@@ -46,7 +45,7 @@ Object.assign(Booking.prototype, { template(){ return `
 			<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
 			<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto">
 
-				${this.bookingItems.render()}
+				${this.bookingItems}
 
 			</div>
 		</div>

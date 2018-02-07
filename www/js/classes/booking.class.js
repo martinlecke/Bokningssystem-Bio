@@ -1,15 +1,17 @@
 class Booking extends Base {
 
-	constructor() {
+	constructor(showid) {
 		super();
 		let urlName = location.pathname.split('/')[2];
+    this.show = this.findShow(showid);
+    this.movie = this.findMovie(this.film);
+    console.log('this.movie', this.movie);
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
 		this.clickPlusPensioner();
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
-
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -34,9 +36,25 @@ class Booking extends Base {
 		this.randomBookingNr();
 		this.saveBookingDataToJson();
 		this.bookingAlert();
-
+    
 	} // Closes constructor
 
+  findShow(showid) {
+    // Finds the show and return it
+    for (let i = 0; i < Data.shows.length; i++) {
+      if (Data.shows[i].showid == showid) {
+        return Data.shows[i]
+      }
+    }
+  }
+  findMovie(showid) {
+    // Finds the show and return it
+    for (let i = 0; i < Data.movies.length; i++) {
+      if (Data.movies[i].title == this.show.film) {
+        return Data.movies[i]
+      }
+    }
+  }
 
 	onRendered() {
 		this.calcTotalTickets();
