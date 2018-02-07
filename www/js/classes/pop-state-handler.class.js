@@ -8,9 +8,9 @@ class PopStateHandler {
     // Add event handlers for a.pop-links once
     this.addEventHandler();
     // Call changePage on initial page load
-    setTimeout(() => {
+    // setTimeout(() => {
       this.changePage();
-    }, 100);
+    // }, 100);
     
     // Call changePage on pop events
     // (the user clicks the forward or backward button)
