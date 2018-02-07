@@ -35,6 +35,7 @@ class HomePage extends Base {
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
+    console.log(this.today);
 		
 		this.poster = Data.movies.slice(0, 6);   
 
@@ -50,4 +51,5 @@ class HomePage extends Base {
     });
   
   }
+
 }
