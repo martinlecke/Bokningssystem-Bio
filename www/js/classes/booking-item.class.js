@@ -5,9 +5,5 @@ class BookingItem extends Base {
 		this.type = props.type;
 		this.text = props.text;
 	}
-
-
-
-
 }
 
