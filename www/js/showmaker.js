@@ -1,7 +1,7 @@
 class Showmaker {
 
    constructor() {
-    this.movies = ["All the Money in the World", "Transformers: The Last Knight", "Call me by your name", "Your Name", "Let The Sunshine In", "Star Wars: The Last Jedi", "Ballerinan och uppfinnaren"];
+    this.movies = this.getMovies();
     this.showtimes = ['16.00', '18.30', '21.00'];
     this.auditorium = ['Lilla Salongen', 'Stora Salongen'];
     this.showlist = [];
@@ -25,6 +25,14 @@ class Showmaker {
     return movie;
    }
 
+   getMovies() {
+    let array = [];
+    for (let movie of Data.movies) {
+      array.push(movie.title);
+    }
+    return array;
+   }
+
    makeObject() {
     let day = this.date.day;
     let month = this.date.month;
@@ -45,7 +53,6 @@ class Showmaker {
             showid: showid.slice(2, showid.length),
             url: urlMovie
           })); 
-          console.log(this); 
         }
         if (day == 31 && month == 12) {
           year += 1;
@@ -72,6 +79,6 @@ class Showmaker {
       } // /for loop
    }
    saveToJSON(array){
-    JSON._save('shows1.json', array);
+    JSON._save('shows.json', array);
   }
 }

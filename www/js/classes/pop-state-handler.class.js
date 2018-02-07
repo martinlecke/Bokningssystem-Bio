@@ -62,8 +62,6 @@ class PopStateHandler {
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
       '/bokningssida': 'bokningssida',
-      '/KLSMF657': 'bokningssida',
-      '/18020700': 'bokningssida'
     };
 
     let idxUrls = [];
@@ -71,7 +69,6 @@ class PopStateHandler {
       let idUrls = {['/'+ Data.shows[i].showid] : 'bokningssida'};
       Object.assign(urls, idUrls);
     }
-    console.log(urls);
 
     // Call the right method
     let methodName = urls[url];
