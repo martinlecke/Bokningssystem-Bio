@@ -1,7 +1,5 @@
 class App {
 
-// ３．すべてのページをここで作って、観れるようになる（bookningpageもここに追加しないといけない）
-
   start(){
     // Create a navbar
     this.navbar = new Navbar();
@@ -16,12 +14,6 @@ class App {
 
     // // create moviepage
     this.moviePage = new MoviePage();
-
-    // Create auditorium page
-    // this.auditorium = new Auditorium();
-
-    // // Create booking page
-    // this.booking = new Booking();
 
     // Create About page
     this.omOss = new About();
