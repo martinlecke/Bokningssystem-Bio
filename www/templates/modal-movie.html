@@ -51,6 +51,12 @@ Object.assign(ModalMovie.prototype, { template(){ return `
                 <div> 
                   <span class="font-weight-bold">Skådespelare: </span> 
                   <span>${this.actors}</span> 
+                </div>
+                <div> 
+                  <span class="font-weight-bold">Pris: </span> 
+                  <span>Ordinarie ${this.priceOrdinarie}kr, </span> 
+                  <span>Pensionär ${this.pricePensionar}kr, </span> 
+                  <span>Barn ${this.priceBarn}kr</span> 
                 </div> 
               </div> 
             </div>
