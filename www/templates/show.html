@@ -1,0 +1,11 @@
+Object.assign(Show.prototype, { template(){ return `
+		
+			<ul class="d-flex justify-content-between w-100 p-0">
+				<li class="li-tag film d-block mb-lg-0 pl-lg-3">${this.film}</li>
+				<li class="li-tag auditorium d-block mb-lg-0 pl-lg-5 w-25 mx-2 ">${this.auditorium}</li>
+				<li class="li-tag time d-block float-right mb-lg-0">${this.time}</li>
+				<li class="li-tag button d-block float-right"><button class="btn btn-warning buttons btn-sm mb-lg-0 mr-sm-3 text-center pr-3">Boka</button></li>
+
+			</ul>
+			<hr>
+`;}});

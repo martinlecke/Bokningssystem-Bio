@@ -15,6 +15,9 @@ class App {
     // // create moviepage
     this.moviePage = new MoviePage();
 
+    // Create kalendarium page
+    this.kalendarium = new Kalendarium();
+
     // Create About page
     this.omOss = new About();
 

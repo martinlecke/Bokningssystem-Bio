@@ -7,6 +7,7 @@ class Navbar extends Base {
       new NavbarItem('Filmer','/filmer'),
       new NavbarItem('Om oss','/om-oss'),
       new NavbarItem('Bokningssida','/bokningssida'),
+      new NavbarItem('Kalendarium','/kalendarium'),
       new NavbarItem('Logga in','#login')
 
     ];

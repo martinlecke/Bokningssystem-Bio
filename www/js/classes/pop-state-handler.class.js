@@ -16,21 +16,12 @@ class PopStateHandler {
     window.addEventListener('popstate', () => this.changePage());
   }
 
-  // ５．urlのデーターの文字の大文字、スペース、コンマを消してくれる
-  shortenUrl(url){
-    url = url.replace(/,/g, "");
-    url = url.replace(/ /g, "");
-    url = url.toLowerCase();
-    return url;
-  }
-
   addEventHandler(){
     // make "that" the PopStateHandler object (since this will be the a tag inside the click function)
     let that = this;
     $(document).on('click','a.pop',function(e){
       // Create a push state event
       let href = $(this).attr('href');
-      // href = that.shortenUrl(href);
       history.pushState(null, null, href);
       // Call the changePage function
       that.changePage();
@@ -44,6 +35,8 @@ class PopStateHandler {
     // (replace part of the DOM etc.)
     // Get the current url
     let url = location.pathname;
+    
+// .split('/')[0]
     
     // Change which menu link that is active
     $('header nav div ul li a').removeClass('active');
@@ -107,6 +100,11 @@ class PopStateHandler {
   auditorium(){
     $('main').empty();
     this.app.auditorium.render('main');
+  }
+
+  kalendarium(){
+    $('main').empty();
+    this.app.kalendarium.render('main');
   }
 
   bokningssida(){

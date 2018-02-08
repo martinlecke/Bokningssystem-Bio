@@ -14,5 +14,6 @@ class ModalMovie extends Base {
     	}
     } 
     this.render('#modalmovie');
+
 	}		
 }
