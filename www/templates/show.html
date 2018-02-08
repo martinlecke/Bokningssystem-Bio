@@ -1,9 +1,9 @@
 Object.assign(Show.prototype, { template(){ return `
 		
 			<ul class="d-flex justify-content-between w-100 p-0">
-				<li class="li-tag d-block mb-lg-5 pl-lg-3 w-50">${this.film}</li>
-				<li class="li-tag d-block mb-lg-5 pl-lg-5 w-25 mx-2 ">${this.auditorium}</li>
-				<li class="li-tag d-block float-right mb-lg-5">${this.time}</li>
-				<li class=" li-tag d-block float-right"><button class="btn btn-warning buttons btn-sm mb-lg-5 text-center ml-2">Boka</button></li>
+				<li class="li-tag film d-block mb-lg-5 pl-lg-3">${this.film}</li>
+				<li class="li-tag auditorium d-block mb-lg-5 pl-lg-5 w-25 mx-2 ">${this.auditorium}</li>
+				<li class="li-tag time d-block float-right mb-lg-5">${this.time}</li>
+				<li class=" li-tag button d-block float-right"><button class="btn btn-warning buttons btn-sm mb-lg-5 text-center ml-2">Boka</button></li>
 			</ul>
 `;}});
