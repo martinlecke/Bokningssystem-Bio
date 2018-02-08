@@ -10,5 +10,6 @@ class CarouselItem extends Base {
 				this[name] = props[name];
 			}
 		}
+		
 	}
 }

@@ -16,21 +16,12 @@ class PopStateHandler {
     window.addEventListener('popstate', () => this.changePage());
   }
 
-  // ５．urlのデーターの文字の大文字、スペース、コンマを消してくれる
-  shortenUrl(url){
-    url = url.replace(/,/g, "");
-    url = url.replace(/ /g, "");
-    url = url.toLowerCase();
-    return url;
-  }
-
   addEventHandler(){
     // make "that" the PopStateHandler object (since this will be the a tag inside the click function)
     let that = this;
     $(document).on('click','a.pop',function(e){
       // Create a push state event
       let href = $(this).attr('href');
-      // href = that.shortenUrl(href);
       history.pushState(null, null, href);
       // Call the changePage function
       that.changePage();
@@ -45,6 +36,8 @@ class PopStateHandler {
     // Get the current url
     let url = location.pathname;
     
+// .split('/')[0]
+    
     // Change which menu link that is active
     $('header nav div ul li a').removeClass('active');
     $(`header nav div ul li a[href="${url}"]`).addClass('active');
@@ -58,9 +51,7 @@ class PopStateHandler {
       '/om-oss': 'omOss',
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
-      '/bokningssida': 'bokningssida',
-      '/All the Money in the World': 'allTheMoney',
-      '/Django': 'django',
+      '/bokningssida': 'bokningssida'
     };
 
     // Call the right method
@@ -80,11 +71,9 @@ class PopStateHandler {
     if(!hash || !hashes[hash]){
       return;
     }
-
-    methodName = hashes[hash];
-    this[methodName]();
-
-  }
+      methodName = hashes[hash];
+      this[methodName]();
+    }
 
 
   // 6.urlを追加する時にここにも書く(line:53)
@@ -123,7 +112,8 @@ class PopStateHandler {
   }
 
   movie(){
-    // this.app.movie = new ModalMovie();
+    this.app.movie = new ModalMovie();
+
   }
 
 }

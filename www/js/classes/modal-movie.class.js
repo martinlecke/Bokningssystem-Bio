@@ -1,30 +1,25 @@
 class ModalMovie extends Base {
 	
-	// constructor(props){
-	// 	super();
+	constructor(props){
+		super();
+    for (let name in props) {
+ 			if (name !== 'template') {
+   		this[name] = props[name];
+ 			}
+		}
 
-	// 	for(let name in props){
-	// 		if(['title'].includes(name)){
-	// 			this[name] = props[name];
-	// 		}
-	// 	}
-			
-		
-	}	
+		this.modalShowing = []
+		for(let movie of Data.shows.slice(0, 7)){
+				this.modalShowing.push(new ModalShowing(movie))
+		}
 
-																			// $('#film-info').on('hidden.bs.modal', function (e){
-																			// 	location.hash = "";
-																			// });
+		// let movie = $(this).data('movie');
+    //   movie = movie.replace(/[, :']/g, "").toLowerCase();
+    //   movie = movie.replace(/[åä]/g, "a");
+    //   movie = movie.replace(/[ö]/g, "o");
+    //   return movie;
 
+    this.render('#modalmovie');
 
-
-
-																		// .modal({
-																	 //  			keyboard: true,
-																	 //  			show: true,
-																	 //  			focus: true
-
-																				// ９．　console.log("this", this);  this = '#modalid' を指している　(例: line 28,29)
-																				// $('#modalbutton').data("toggle", 'modal');
-																				// $("#modalbutton").data("target", "film-info");
-																			// });
+	}		
+}

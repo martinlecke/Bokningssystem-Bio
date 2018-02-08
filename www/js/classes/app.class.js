@@ -7,6 +7,10 @@ class App {
     this.navbar = new Navbar();
     this.navbar.render('header');
 
+    // Create a footer
+    this.footer = new Footer();
+    this.footer.render('footer');
+
     // Create a homepage
     this.homePage = new HomePage();
 
@@ -24,6 +28,9 @@ class App {
 
     // Create About page
     this.omOss = new About();
+
+    // Create ModalMovie
+    this.modalMovie = new ModalMovie();
 
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);　　　// this = App クラス（Appクラスに書かれているものが、全てpopStateHandlerに送られる）

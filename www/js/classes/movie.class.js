@@ -46,4 +46,9 @@ class Movie extends Base {
 		});
 		
 	}
+
+  click() {
+  	$('#modalmovie').empty();
+    this.clickedMovie = new ModalMovie(this);
+  }
 }

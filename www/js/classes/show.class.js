@@ -7,6 +7,7 @@ class Show extends Base {
     	if(['date','film','auditorium','time'].includes(name)){
       this[name] = props[name];
     }
+
     // this.auditorium = data.auditorium;
     // this.film = data.film;
     // this.date = data.date;
