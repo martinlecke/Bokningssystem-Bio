@@ -29,16 +29,16 @@ class Booking extends Base {
 		});
 
 		this.onRendered();
-		// this.bookingData = [];  // クラスを作ったので、配列は不要？
-		this.randomBookingNr();
+		this.bookingData = [];  // クラスを作ったので、配列は不要？
+
+		// this.randomBookingNr();
 		this.saveBookingDataToJson();
 		this.bookingAlert();
-
+		// this.showDate();
 
 	} // Closes constructor
 
 
-	// コンソールだけで動作していたメソッドが、このコードのおかげで、メソッドとして動くようになった
 	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
@@ -125,11 +125,12 @@ class Booking extends Base {
 		let ordinaryNr = Number($('#number-ordinary').text());
 		let childNr = Number($('#number-child').text());
 		let pensionerNr = Number($('#number-pensioner').text());
+
 		let sum = ordinaryNr + childNr + pensionerNr;
 		if (sum !== 0) {
 			$('#total-tickets').html(sum + ' st');
 		}
-		that.randomBookingNr();
+		that.randomBookingNr()
 	}
 
 
@@ -147,6 +148,9 @@ class Booking extends Base {
 			$('#amount').html(sum + ' kr');
 		}
 	}
+
+
+
 
 
 	// Save the booking info till JSON (バグ：電話番号にアルファベットも入力できてしまう)
@@ -227,6 +231,8 @@ class Booking extends Base {
 				}
 			));
 			that.saveToJSON(Data.booking);
+			// }
+
 		});
 	}
 
@@ -243,7 +249,7 @@ class Booking extends Base {
 		date = date.replace(/-/g, "");
 		date = date.split("-").join("");
 		date = date.slice(2, 8);
-		let number = date + 'N' + Math.floor(Math.random() * 3);
+		let number = date + 'N' + Math.floor(Math.random() * 1001);
 		that.checkRandomNumber(number);
 	}
 
@@ -251,7 +257,6 @@ class Booking extends Base {
 	// 乱数が重複してないか、チェックする
 	// Check the booking number if the number is not duplicated
 	checkRandomNumber(number) {
-		// console.log('typeof number - impara:', typeof number);
 		let that = this;
 
 		// test 
@@ -260,10 +265,10 @@ class Booking extends Base {
 		for (let i = 0; i < Data.booking.length; i++) {
 
 			// the numbers are duplicated (重複ありの場合)
-			if (Data.booking[i].bookingNr === number) {
+			if (Data.booking[i].bookingNr == number) {
 
-				console.log('typeof リストの中のbookingNr', Data.booking[i].bookingNr);  // typeof Data.booking[i].bookingNr -- type: string
-				console.log('typeof number', number);  // typeof number -- type: number
+				console.log('リストの中のbookingNr', Data.booking[i].bookingNr);  // typeof Data.booking[i].bookingNr -- type: string
+				console.log('number', number);  // typeof number -- type: number
 				console.log('重複している!!'); // the numbers are duplicated
 
 				// that.randomGenerator();   // これを入れるとループになる。（このランダムのメソッドを使いたい）
@@ -272,20 +277,21 @@ class Booking extends Base {
 				date = date.replace(/-/g, "");
 				date = date.split("-").join("");
 				date = date.slice(2, 8);
-				let number2 = date + 'N' + Math.floor(Math.random() * 3);
-				console.log('typeof number2: ', typeof number2);
+				let number2 = date + 'N' + Math.floor(Math.random() * 1001);
+				console.log('efter2 new  date: ', number2);
+
+
 				$('#bookingNr-booking').html(number2);
 				$('.hide-text').show();  // A reservation number appears
 
 			}
-			else if (Data.booking[i].bookingNr !== number) {
+			else {
 				// console.log('bookingNr(booking.json)', Data.booking[i].bookingNr);  
 				// console.log('number', number);
 				// console.log('重複なし'); 	 // the numbers are NOT duplicated
 				$('#bookingNr-booking').html(number);
-				$('.hide-text').show();  // (バグ: リフレッシュしても、文字が消えない)
+				$('.hide-text').show();  // A reservation number appears
 			}
-			else { return; }
 		}
 	}
 
@@ -297,7 +303,21 @@ class Booking extends Base {
 	// Make a booking number (date + N + random nr)
 	randomBookingNr() {
 		let that = this;
+		// $(document).on('keypress', '#email-booking', function (event) {
+
+
+
+
+		// let totalNr = Number ($('#total-tickets').text());
+		// if (totalNr > 0) {
+
+		// 	// $(document).on('keypress', '#email-booking', function (event) {
+			
+	
 		that.randomGenerator();
+		// }
+	
+		// );
 	}
 
 
