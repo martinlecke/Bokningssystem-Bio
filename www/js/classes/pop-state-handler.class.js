@@ -8,7 +8,7 @@ class PopStateHandler {
     // Add event handlers for a.pop-links once
     this.addEventHandler();
     // Call changePage on initial page load
-    this.changePage();
+    this.changePage();    
     // Call changePage on pop events
     // (the user clicks the forward or backward button)
     // from an arrow function to keep "this"
@@ -59,10 +59,13 @@ class PopStateHandler {
       '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
       '/bokningssida': 'bokningssida',
-      '/All the Money in the World': 'allTheMoney',
-      '/Django': 'django',
     };
 
+    let idxUrls = [];
+    for (let i = 0; i < Data.shows.length; i++) {
+      let idUrls = {['/'+ Data.shows[i].showid] : 'bokningssida'};
+      Object.assign(urls, idUrls);
+    }
     // Call the right method
     let methodName = urls[url];
     this[methodName]();
@@ -107,8 +110,15 @@ class PopStateHandler {
   }
 
   bokningssida(){
+    let id = location.pathname;
     $('main').empty();
-    this.app.booking.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+       // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+    // if(Showing.x == true) {
+    //   Showing.x.render('main');
+    // } else {
+      Showing.x = new Booking(id.slice(1, id.length));
+      Showing.x.render('main');
+    // }
   }
 
   login(){
@@ -119,5 +129,7 @@ class PopStateHandler {
     this.app.movie = new ModalMovie();
 
   }
+
+
 
 }

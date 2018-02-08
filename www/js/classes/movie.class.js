@@ -23,7 +23,7 @@ class Movie extends Base {
 				${that.description}
 				</p>
 				<div class="mt-2 mb-1 text-center">
-				<a class="pop" href="${that.title}">
+				<a class="pop" href="#filmmodal">
 				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
 				</a>
 				</div>`

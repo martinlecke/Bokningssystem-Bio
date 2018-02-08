@@ -1,7 +1,7 @@
 Object.assign(Showing.prototype, { template(){ return `
 
   <li>
-  	<span>${this.time}</span><a href="#">${this.film}</a>
+  	<span>${this.time}</span><a href="/${this.showid}" class="pop" data-id="${this.showid}">${this.film}</a>
   </li>
 
 `;}});

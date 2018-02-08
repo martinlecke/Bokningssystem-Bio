@@ -10,6 +10,7 @@ class Data{
     Data.shows = await JSON._load("shows");
 		Data.user = await JSON._load("users");
 		Data.booking = await JSON._load("booking");
+    Data.salong = await JSON._load("salong");
 
     
 		app.start();	// ２．上のが読み込まれたら、appクラスがスタートする
