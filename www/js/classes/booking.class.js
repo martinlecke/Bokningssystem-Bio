@@ -11,6 +11,7 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
+    Booking.markedSeats = [];
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -35,7 +36,6 @@ class Booking extends Base {
 		this.randomBookingNr();
 		this.saveBookingDataToJson();
 		this.bookingAlert();
-    
 	} // Closes constructor
 
   findShow(showid) {

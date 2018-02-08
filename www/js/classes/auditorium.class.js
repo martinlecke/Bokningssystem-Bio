@@ -9,9 +9,7 @@ class Auditorium extends Base {
     setTimeout(() => { 
       this.scale();
     }, 500);
-
   }
-
 
   find(find, where, property) {
     // Finds the show/auditorium and returns it by input arguments
@@ -23,10 +21,10 @@ class Auditorium extends Base {
   }
 
   renderRows() {
-    let salong = this.stora; // hardcoded stora salongen
+    let salong = this.stora;
     let rowStartIndex = 1;
     for (let row of salong.seatsPerRow) {
-      this.rows.push(new Row(row, rowStartIndex));
+      this.rows.push(new Row(row, rowStartIndex, this.show.unavailable));
       rowStartIndex += row;
     }
   }

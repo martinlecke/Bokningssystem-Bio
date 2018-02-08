@@ -51,6 +51,7 @@ class Showmaker {
             date: date,
             time: this.showtimes[j],
             showid: showid.slice(2, showid.length),
+            unavailable: [],
             url: urlMovie
           })); 
         }
@@ -79,6 +80,6 @@ class Showmaker {
       } // /for loop
    }
    saveToJSON(array){
-    JSON._save('shows.json', array);
+    JSON._save('showsNew.json', array);
   }
 }
