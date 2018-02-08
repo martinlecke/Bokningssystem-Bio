@@ -16,6 +16,9 @@ class App {
     // Create auditorium page
     this.auditorium = new Auditorium();
 
+    // Create kalendarium page
+    this.kalendarium = new Kalendarium();
+
     // Create booking page
     this.booking = new Booking();
 
