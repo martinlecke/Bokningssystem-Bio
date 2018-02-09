@@ -12,7 +12,7 @@ class App {
     // Create a homepage
     this.homePage = new HomePage();
 
-    // // create moviepage
+    // Create moviepage
     this.moviePage = new MoviePage();
 
     // Create kalendarium page
@@ -25,6 +25,6 @@ class App {
     this.modalMovie = new ModalMovie();
 
     // Initiate handling of SPA push/pop-state
-    new PopStateHandler(this);　　　// this = App クラス（Appクラスに書かれているものが、全てpopStateHandlerに送られる）
+    new PopStateHandler(this);
     }
 } 
