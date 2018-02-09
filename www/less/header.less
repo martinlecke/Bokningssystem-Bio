@@ -6,8 +6,17 @@ header{
 	h1{
 		color: white;
 		text-decoration: none;
-		font-size: 3.1rem;
+		// font-size: 3vw;
 		font-family: 'Spectral SC', serif;
+		@media (max-width: 575px){
+			font-size: 7vw;
+		}
+		@media (min-width: 576px) and (max-width: 992px){
+   		font-size: 8vw;
+		}
+		@media (min-width: 992.5px){
+			font-size: 4vw;
+		}
 	}
 	a.nav-link{
 		&.active, &:hover {
