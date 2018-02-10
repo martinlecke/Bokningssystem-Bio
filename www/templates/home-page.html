@@ -1,9 +1,8 @@
 Object.assign(HomePage.prototype, { template(){ return `
 <div class="container-fluid">
  	<div class="row">
- 		<div class="col-12">
-
- 			<div class="col-6 p-0 m-0">
+ 		
+ 			<div class="col-lg-9 px-0">
  				<!-- Slider / Carousel -->
  				<div id="movieslider" class="carousel slide ml-1" data-ride="carousel">
  					<div class="carousel-inner">
@@ -18,7 +17,7 @@ Object.assign(HomePage.prototype, { template(){ return `
  				</div>
  			</div>
 
-			<div class="col-3 p-0 m-0 d-inline-block">
+			<div class="col-lg-3 p-0">
 				<div class="calendertoday">
 					<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
 						Se kommande visningar
@@ -35,11 +34,8 @@ Object.assign(HomePage.prototype, { template(){ return `
 					</div>
 				</div>			
 			</div>
-
- 			
 		</div> 		
  	</div>
-</div>
 
 <div class="container">
 	<div class="row justify-content-around mt-5">
@@ -50,4 +46,4 @@ Object.assign(HomePage.prototype, { template(){ return `
 <div id="modalmovie">
 </div>
  
-`;}});	
+`;}});
