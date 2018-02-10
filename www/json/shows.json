@@ -35,7 +35,7 @@
     "date": "2018-02-09",
     "time": "16.00",
     "showid": "18020901",
-    "unavailable": [],
+    "unavailable": [1, 2, 3],
     "url": "django",
     "⚙": "Show"
   },

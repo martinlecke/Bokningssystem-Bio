@@ -38,19 +38,19 @@
     "⚙": "BookingData"
   },
   {
-    "title": "Paddington 2",
-    "date": "2018-02-10",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
+    "title": "Mordet på Orientexpressen",
+    "date": "2018-02-12",
+    "time": "21.00",
+    "auditorium": "Stora Salongen",
     "tickets": [
       {
         "ordinary": "0 st",
-        "child": "0 st",
+        "child": "2 st",
         "pensioner": "0 st",
-        "totalNr": "0"
+        "totalNr": "2 st"
       }
     ],
-    "amount": "0",
+    "amount": "130 kr",
     "bookingNr": "",
     "mobile": "",
     "email": "",
