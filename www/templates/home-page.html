@@ -1,7 +1,7 @@
 Object.assign(HomePage.prototype, { template(){ return `
 <div class="container-fluid">
  	<div class="row">
- 		<div class="col-lg-8 px-0">
+ 		<div class="col-12 px-0">
 
  			<!-- Slider / Carousel -->
  			<div id="movieslider" class="carousel slide" data-ride="carousel">
@@ -17,10 +17,10 @@ Object.assign(HomePage.prototype, { template(){ return `
  			</div>
 
  		</div>
- 		<div class="col-lg-4 p-0">
+ 		<div class="p-0 calendertoday-holder">
 
  			<div class="calendertoday">
- 				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+ 				<button class="btn d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
  					Se kommande visningar
  				</button>
  				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">

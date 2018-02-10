@@ -10,20 +10,22 @@
       display: inline-block;
     }
     .seat {
-      background: #ccc;
+      background: @gray;
       width: 50px;
       height: 50px;
       border-radius: 2px 2px 35% 35%;
       text-align: center;
       cursor: pointer;
       float:left;
-      &.hover,
+      &.hover {
+        background: @yellow-hover;
+      }
       &.clicked {
-        background: #ffc107;
+        background: @yellow;
       }
       &.booked {
-        background: #dc3545;
-      }
+        background: @red;
+      } 
     }
   }
 }
