@@ -19,7 +19,7 @@ class Movie extends Base {
 			content: function() {
 				return `
 				<h6 class="mb-0 d-inline">Handling: </h6>
-				<p class="description d-inline mb-0">
+				<p class="description d-inline">
 				${that.description}
 				</p>
 				<div class="mt-2 mb-1 text-center">
