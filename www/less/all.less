@@ -32,51 +32,54 @@ main {
 }
 
 // Ska flyttas in i main  när slidern finns i main
-.carousel-item {
-  min-height: 300px;
-  background-size: cover!important;
-  // background-position: center!important;
-  .infobox {
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    text-shadow: 1px 1px 0 black;
-    font-size: 34px;
-    margin-left: 50px;
-    @media @smartphone {
-      font-size: inherit;
-    }
-    button {
-      display: block;
-      border: none;
-      box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
-      background: tomato;
-      color: white;
-      border-radius: 2px 4px;
-      font-size: 12px;
-      cursor: pointer;
-      outline: none;
-      &:hover {
-        background: firebrick;
+.carousel-inner{
+  .whiteBorder();
+  .carousel-item {
+    min-height: 320px;
+    background-size: cover!important;
+    .infobox {
+      position: absolute;
+      bottom: 10px;
+      color: @offWhite;
+      text-shadow: 2px 2px 0 black;
+      font-size: 38px;
+      @media @smartphone {
+        font-size: inherit;
       }
-    }
-    a {
-      color: white;
+      button {
+        box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
+        background: @red;
+        color: @offWhite;
+        border-radius: 3px 6px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background: @darkerRed;
+        }
+      }
+      a {
+        color: @offWhite;
+      }
     }
   }
 }
 .calendertoday {
-    button {
-    width:100%;
-    cursor: pointer;
+  button {
+  width:100%;
+  cursor: pointer;
+    &:focus{
+      color: @offWhite;
+      box-shadow: none;
+      outline: 0;
+    }
   }
 }
 #calendertoday {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  background: slategrey;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+  background: #131414;
   z-index: 100;
-  min-height: 300px;
+  min-height: 340px;
   &.collapse.show,
   &.collapsing {
     display: flex;
@@ -102,12 +105,12 @@ main {
     border-left: 0;
   }
   li span {
-    color: khaki;
+    color: @yellow;
     font-weight: bold;
     padding-right: 20px;
   }
   a {
-    color: white;
+    color: @offWhite;
   }
 }
 .carousel-control-prev,
@@ -115,9 +118,7 @@ main {
   width: 5%;
 }
 
-
-
-h1, h2, h3, h4, h5, h6, button, li, a, div, .infobox:focus, .remove-focus{
+button, li, a, div, .remove-focus{
   border: none;
   outline: none;
 }

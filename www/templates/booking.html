@@ -1,6 +1,7 @@
 Object.assign(Booking.prototype, { template(){ return `
 
 <div class="booking container-fluid">
+	
 	<div class="row my-3">
 		<div class="col-12">
 			<h1 class="text-center">Bokningssida</h1>
@@ -18,9 +19,9 @@ Object.assign(Booking.prototype, { template(){ return `
 
 				<div class="col-12 col-md-6 mb-3 mt-4 mt-md-0 justify-content-center">
 					<h4 class="font-weight-bold mb-2">${this.movie.title}</h4>
-					<div>
-						${this.movie.length} minuter, ${this.movie.language}
-					</div>
+						<div>
+							${this.movie.length} minuter, ${this.movie.language}
+						</div>
 
 					<div class="film-details mt-4 mb-5">
 						<div>
@@ -196,11 +197,11 @@ Object.assign(Booking.prototype, { template(){ return `
 
 
 
-										<button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
+										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
 										 data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
-									<p class="mb-5">Vänligen berätta ditt bokningsnummer och betala för biljetterna på bio.</p>
+									<p class="mb-5"><small>Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
 								</ul>
 
 							</div>

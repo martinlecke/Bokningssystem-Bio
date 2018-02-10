@@ -2,9 +2,9 @@
 Object.assign(HomePage.prototype, { template(){ return `
 <div class="container-fluid">
  	<div class="row">
- 		<div class="col-lg-8 px-0">
+ 		<div class="col-lg-9 px-0">
  			<!-- Slider / Carousel -->
- 			<div id="movieslider" class="carousel slide" data-ride="carousel">
+ 			<div id="movieslider" class="carousel slide ml-1" data-ride="carousel">
  				<div class="carousel-inner">
  					${this.slider.render()}
  				</div>
@@ -17,17 +17,17 @@ Object.assign(HomePage.prototype, { template(){ return `
  			</div>
  		</div>
 
- 		<div class="col-lg-4 p-0">
+ 		<div class="col-lg-3 p-0">
  			<div class="calendertoday">
  				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
  					Se kommande visningar
  				</button>
  				<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
- 					<h3>Visningar idag</h3>
+ 					<h3 class="mb-0">Visningar idag</h3>
  					<ul>
  						${this.today.render()}
  					</ul>
- 					<h3>Visningar imorgon</h3>
+ 					<h3 class="mb-0">Visningar imorgon</h3>
  					<ul class="mb-0">
  						${this.tomorrow.render()} 
  					</ul>
@@ -37,7 +37,6 @@ Object.assign(HomePage.prototype, { template(){ return `
  	</div>
 
   <div class="row justify-content-around mt-5">
- 		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
  		${this.poster.render()}
  	</div>
 </div>

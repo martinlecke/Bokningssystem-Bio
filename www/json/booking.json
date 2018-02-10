@@ -36,5 +36,24 @@
     "mobile": "",
     "email": "r",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Paddington 2",
+    "date": "2018-02-10",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "0 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "0"
+      }
+    ],
+    "amount": "0",
+    "bookingNr": "",
+    "mobile": "",
+    "email": "",
+    "⚙": "BookingData"
   }
 ]
