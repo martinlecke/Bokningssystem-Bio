@@ -38,38 +38,19 @@
     "⚙": "BookingData"
   },
   {
-    "title": "Fiml title (lägg till senare)",
-    "date": "2018-02-14",
-    "time": "18.00",
+    "title": "Mordet på Orientexpressen",
+    "date": "2018-02-12",
+    "time": "21.00",
     "auditorium": "Stora Salongen",
     "tickets": [
       {
         "ordinary": "0 st",
-        "child": "0 st",
+        "child": "2 st",
         "pensioner": "0 st",
-        "totalNr": "0"
+        "totalNr": "2 st"
       }
     ],
-    "amount": "0",
-    "bookingNr": "739",
-    "mobile": "",
-    "email": "rewe@rerw",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Ballerinan och uppfinnaren",
-    "date": "2018-02-07",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "0 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "0"
-      }
-    ],
-    "amount": "0",
+    "amount": "130 kr",
     "bookingNr": "",
     "mobile": "",
     "email": "",

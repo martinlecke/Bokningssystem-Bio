@@ -4,7 +4,7 @@ class Booking extends Base {
 		super();
     this.auditorium = new Auditorium(showid);
     this.show = this.findShow(showid);
-    this.movie = this.findMovie(this.film);
+    this.movie = this.findMovie();
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
 		this.clickPlusPensioner();
@@ -33,24 +33,29 @@ class Booking extends Base {
 		this.onRendered();
 		this.bookingData = [];  // クラスを作ったので、配列は不要？
 
+		this.randomGenerator();
 		this.randomBookingNr();
+		//this.checkRandomNumber(date);
+
 		this.saveBookingDataToJson();
 		this.bookingAlert();
+		// this.showDate();
+
 	} // Closes constructor
 
-  findShow(showid) {
+  findShow(inparameter) {
     // Finds the show and return it
     for (let i = 0; i < Data.shows.length; i++) {
-      if (Data.shows[i].showid == showid) {
-        return Data.shows[i]
+      if (Data.shows[i].showid == inparameter) {
+        return Data.shows[i];
       }
     }
   }
-  findMovie(showid) {
+  findMovie() {
     // Finds the show and return it
     for (let i = 0; i < Data.movies.length; i++) {
       if (Data.movies[i].title == this.show.film) {
-        return Data.movies[i]
+        return Data.movies[i];
       }
     }
   }
@@ -71,7 +76,6 @@ class Booking extends Base {
 			this.onRendered();
 		});
 	}
-
 
 	// Ticket - child (plus button)
 	clickPlusChild() {
@@ -254,13 +258,150 @@ class Booking extends Base {
 
 
 
-	// もしアドレスが入力されたら、予約番号が出現する（それまでは、番号は隠される）
+
+
+
+
+	// 乱数を作る（日付+ N + 乱数）
 	randomBookingNr() {
 		$(document).on('keypress', '#email-booking', function (event) {
-			document.getElementById('bookingNr-booking').innerHTML = Math.floor(Math.random() * 1001);
-			$('.hide-text').show();
+
+
+			let date = Data.booking[0].date;
+			// console.log('before date: ', date);
+			date = date.replace(/-/g, "");
+			date = date.split("-").join("");
+			//	console.log('efter date: ', date);
+
+			date = date.slice(2, 8);
+			date = date + 'N' + Math.floor(Math.random() * 1001);
+			console.log('finally date: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
+
+			// let that = this;
+			// that.checkRandomNumber(date);
+
+
+			// ここから、他のメソッドにしたい
+
+
+
+			let randomArray = [];
+			randomArray.push(date);
+
+
+			console.log('randomArray', randomArray);  // ok! （arrayに数字が入った）
+
+			for (let i = 0; i < randomArray.length; i++) {
+				// console.log('array i:', randomArray[i]);   //ok! (arrayの数字が見える)
+				// console.log('date:', date);   // ok! (dateの数が見える)　上下同じ数字
+
+
+
+				// 重複なしの場合
+				if (randomArray[i] !== date) {
+
+					// console.log('重複なし & date', date);
+					document.getElementById('bookingNr-booking').innerHTML = date + '重複なし';
+					$('.hide-text').show();
+				}
+				// 重複する場合
+				else if (randomArray[i] === date) {
+					console.log('重複 & date', date);
+
+					// test test start
+					//　ランダムを作るコード
+					date = Data.booking[0].date;
+					console.log('before 2 date: ', date);
+					date = date.replace(/-/g, "");
+					date = date.split("-").join("");
+					console.log('efter2  date: ', date);
+
+					date = date.slice(2, 8);
+					date = date + 'N' + Math.floor(Math.random() * 1001);
+
+
+
+					console.log('乱数を再度作る: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
+					document.getElementById('bookingNr-booking').innerHTML = date + '新しい乱数';
+					$('.hide-text').show();
+
+
+					console.log('新しい乱数', date);
+					console.log('randomArray最終', randomArray);
+					// randomArray.push(date);    // これを表示すると永久にループ
+					// test test end
+
+
+
+				}
+
+
+			}
+			// }
+
 		});
 	}
+
+
+
+
+	// 新しいメソッド
+
+	randomGenerator() {
+  
+		let date = Data.booking[0].date;  // 仮のデーター
+		console.log('before date: ', date);
+		date = date.replace(/-/g, "");
+		date = date.split("-").join("");
+			console.log('efter date: ', date);
+
+		date = date.slice(2, 8);
+		date = date + 'N' + Math.floor(Math.random() * 1001);
+		console.log('finally date: ', date);   // 日付+ N + 乱数(t ex: 180214N0313) 作ったが、まだ表示されない
+
+	}
+
+
+	// Check the booking number if the number is not duplicated
+	// 乱数が重複してないか、チェックする
+	// checkRandomNumber(date) {
+
+
+	// }
+
+
+
+
+	// console.log('before randomArray', randomArray);
+	// console.log('beforerandomNr', randomNr);
+
+	// 	for (let i = 0; i < randomArray.length; i++) {
+	// 		if(randomArray[i] !== randomNr) {
+	// 			randomArray.push(randomNr);
+	// 		}
+	// 	}
+
+	// console.log('after randomArray', randomArray);	
+
+
+
+
+	// $(document).on('keypress', '#email-booking', function (event) {
+
+	// 	randomArray.push(Math.floor(Math.random() * 11));
+
+
+
+	// 	document.getElementById('bookingNr-booking').innerHTML = (date + 'N' + Math.floor(Math.random() * 1001));
+	// 	$('.hide-text').show();
+	// });
+	// }
+
+
+
+
+
+
 
 
 
@@ -270,6 +411,10 @@ class Booking extends Base {
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
 		});
 	}
+
+
+
+
 
 
 }

@@ -19,16 +19,17 @@ class Seat extends Base {
         this.marked = true;
         Booking.markedSeats.push(this.id);
       }
-      $(event.target).toggleClass('marked')
+      $(event.target).toggleClass('clicked')
     }
+    console.log(this);
   }
 
   mouseenter() {
-    $(event.target).addClass('hover-marked')
+    $(event.target).addClass('hover')
   }
   
   mouseleave() {
-    $(event.target).removeClass('hover-marked')
+    $(event.target).removeClass('hover')
   }
 
 } // /class

@@ -16,21 +16,12 @@ class PopStateHandler {
     window.addEventListener('popstate', () => this.changePage());
   }
 
-  // ５．urlのデーターの文字の大文字、スペース、コンマを消してくれる
-  shortenUrl(url){
-    url = url.replace(/,/g, "");
-    url = url.replace(/ /g, "");
-    url = url.toLowerCase();
-    return url;
-  }
-
   addEventHandler(){
     // make "that" the PopStateHandler object (since this will be the a tag inside the click function)
     let that = this;
     $(document).on('click','a.pop',function(e){
       // Create a push state event
       let href = $(this).attr('href');
-      // href = that.shortenUrl(href);
       history.pushState(null, null, href);
       // Call the changePage function
       that.changePage();
@@ -44,35 +35,32 @@ class PopStateHandler {
     // (replace part of the DOM etc.)
     // Get the current url
     let url = location.pathname;
-    
+        
     // Change which menu link that is active
     $('header nav div ul li a').removeClass('active');
     $(`header nav div ul li a[href="${url}"]`).addClass('active');
+    
     // A small "dictionary" of what method to call on which url
-
-
-    // 6.urlを追加する時にここに書く
     let urls = {
       '/': 'home',
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
-      '/auditorium': 'auditorium',
       '/kalendarium': 'kalendarium',
-      '/bokningssida': 'bokningssida',
+      '/bokningssida': 'bokningssida'
     };
 
-    let idxUrls = [];
     for (let i = 0; i < Data.shows.length; i++) {
       let idUrls = {['/'+ Data.shows[i].showid] : 'bokningssida'};
       Object.assign(urls, idUrls);
     }
+
     // Call the right method
     let methodName = urls[url];
     this[methodName]();
+
     // Set the right menu item active
     this.app.navbar.setActive(url);
   
-
     let hash = location.hash.replace(/^#/, '');
 
     let hashes = {
@@ -87,11 +75,9 @@ class PopStateHandler {
       this[methodName]();
     }
 
-
-  // 6.urlを追加する時にここにも書く(line:53)
   home(){
     $('main').empty();
-    this.app.homePage.render('main');   // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
+    this.app.homePage.render('main');
   }
 
   filmsida(){
@@ -104,21 +90,16 @@ class PopStateHandler {
     this.app.omOss.render('main');
   }
 
-  auditorium(){
+  kalendarium(){
     $('main').empty();
-    this.app.auditorium.render('main');
+    this.app.kalendarium.render('main');
   }
 
   bokningssida(){
     let id = location.pathname;
     $('main').empty();
-       // app クラスで作った、クラス（オブジェクト）をここで使う。　render - app クラスにもあるが、他のページを読んだ時に、一度ここで消して、再度読み込むため
-    // if(Showing.x == true) {
-    //   Showing.x.render('main');
-    // } else {
-      Showing.x = new Booking(id.slice(1, id.length));
-      Showing.x.render('main');
-    // }
+    Showing.x = new Booking(id.slice(1, id.length));
+    Showing.x.render('main');
   }
 
   login(){
@@ -127,9 +108,5 @@ class PopStateHandler {
 
   movie(){
     this.app.movie = new ModalMovie();
-
   }
-
-
-
 }

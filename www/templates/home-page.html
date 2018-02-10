@@ -1,8 +1,8 @@
-	 <!-- ここでの操作は、Homepageに書く -->
 Object.assign(HomePage.prototype, { template(){ return `
 <div class="container-fluid">
  	<div class="row">
  		<div class="col-lg-8 px-0">
+
  			<!-- Slider / Carousel -->
  			<div id="movieslider" class="carousel slide" data-ride="carousel">
  				<div class="carousel-inner">
@@ -15,9 +15,10 @@ Object.assign(HomePage.prototype, { template(){ return `
  					<span class="carousel-control-next-icon"></span>
  				</a>
  			</div>
- 		</div>
 
+ 		</div>
  		<div class="col-lg-4 p-0">
+
  			<div class="calendertoday">
  				<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
  					Se kommande visningar
@@ -33,11 +34,10 @@ Object.assign(HomePage.prototype, { template(){ return `
  					</ul>
  				</div>
  			</div>
+
  		</div>
  	</div>
-
   <div class="row justify-content-around mt-5">
- 		<!-- ９．このrenderはbaseクラスのrennder()からきているが、renderの内容は、movie-poster.html -->
  		${this.poster.render()}
  	</div>
 </div>
