@@ -21,6 +21,7 @@ class Seat extends Base {
       }
       $(event.target).toggleClass('clicked')
     }
+    console.log(this);
   }
 
   mouseenter() {

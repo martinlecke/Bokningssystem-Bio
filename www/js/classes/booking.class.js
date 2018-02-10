@@ -4,7 +4,7 @@ class Booking extends Base {
 		super();
     this.auditorium = new Auditorium(showid);
     this.show = this.findShow(showid);
-    this.movie = this.findMovie(this.film);
+    this.movie = this.findMovie();
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
 		this.clickPlusPensioner();
@@ -43,19 +43,19 @@ class Booking extends Base {
 
 	} // Closes constructor
 
-  findShow(showid) {
+  findShow(inparameter) {
     // Finds the show and return it
     for (let i = 0; i < Data.shows.length; i++) {
-      if (Data.shows[i].showid == showid) {
-        return Data.shows[i]
+      if (Data.shows[i].showid == inparameter) {
+        return Data.shows[i];
       }
     }
   }
-  findMovie(showid) {
+  findMovie() {
     // Finds the show and return it
     for (let i = 0; i < Data.movies.length; i++) {
       if (Data.movies[i].title == this.show.film) {
-        return Data.movies[i]
+        return Data.movies[i];
       }
     }
   }
@@ -76,7 +76,6 @@ class Booking extends Base {
 			this.onRendered();
 		});
 	}
-
 
 	// Ticket - child (plus button)
 	clickPlusChild() {
