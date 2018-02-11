@@ -24,9 +24,11 @@ class Auditorium extends Base {
   renderRows() {
     let salong = this.stora;
     let rowStartIndex = 1;
+    let rowNumber = 1;
     for (let row of salong.seatsPerRow) {
-      this.rows.push(new Row(row, rowStartIndex, this.show.unavailable));
+      this.rows.push(new Row(row, rowStartIndex, this.show.unavailable, rowNumber));
       rowStartIndex += row;
+      rowNumber += 1;
     }
   }
 
@@ -53,7 +55,8 @@ class Auditorium extends Base {
       // grabs data-id and loops through the selection and adds hover
       let id = $(this).data('id');
       for (let i = id; i < (id + Booking.selection - Booking.markedSeats.length); i++) {
-        $(`[data-id='${i}']`).addClass('hover');
+        let row = $(this).data('row');
+        $(`[data-id='${i}'][data-row='${row}']`).addClass('hover');
       }
     });
     $(document).on('mouseleave', '.seat', function() {
