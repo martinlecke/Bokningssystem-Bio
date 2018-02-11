@@ -71,7 +71,7 @@ Object.assign(Booking.prototype, { template(){ return `
 						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span>Upptagen
 					</li>
 					<li class="font-weight-bold mx-3">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">XXX</span>Vald plats
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span>Antal biljetter
 					</li>
 				</ul>
 			</div>

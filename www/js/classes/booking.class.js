@@ -16,7 +16,7 @@ class Booking extends Base {
 		this.bookingItems = [
 			{
 				type: 'ordinary',
-				text: 'Ordenarie'
+				text: 'Ordinarie'
 			},
 			{
 				type: 'child',
@@ -66,15 +66,14 @@ class Booking extends Base {
                Number( $('#number-child').text()) + 
                Number( $('#number-pensioner').text());
     Booking.selection = calc;
-    console.log(Booking.selection);
   }
 
 	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
     this.getNumberOfTicksets(); //updates selection
+    $('.seatslefttopick').text(Booking.selection);
 	}
-
 
 	// Ticket - ordinary (plus button)
 	clickPlusOrdinary() {

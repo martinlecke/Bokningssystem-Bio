@@ -11,15 +11,16 @@ class Seat extends Base {
     if(!$(event.target).hasClass('booked')) {
       if(this.marked == true) {
         this.marked = false;
+        $(event.target).removeClass('clicked')
         let index = Booking.markedSeats.indexOf(this.id);
         if(index !== -1) {
           Booking.markedSeats.splice(index, 1);
         }
-      } else {
+      } else if (Booking.selection - Booking.markedSeats.length !== 0 )  {
         this.marked = true;
         Booking.markedSeats.push(this.id);
+        $(event.target).addClass('clicked')
       }
-      $(event.target).toggleClass('clicked')
     }
     console.log(this);
   }

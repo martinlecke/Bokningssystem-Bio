@@ -52,7 +52,7 @@ class Auditorium extends Base {
     $(document).on('mouseenter', '.seat', function() {
       // grabs data-id and loops through the selection and adds hover
       let id = $(this).data('id');
-      for (let i = id; i < (id + Booking.selection); i++) {
+      for (let i = id; i < (id + Booking.selection - Booking.markedSeats.length); i++) {
         $(`[data-id='${i}']`).addClass('hover');
       }
     });
