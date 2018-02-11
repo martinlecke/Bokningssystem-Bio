@@ -1,6 +1,6 @@
 class Row extends Base {
   
-  constructor(numSeats, seatStartIndex, unavailable) {
+  constructor(numSeats, seatStartIndex, unavailable, rowNumber) {
     super();
     this.numSeats = numSeats;
     this.seatStartIndex = seatStartIndex;
@@ -9,11 +9,11 @@ class Row extends Base {
     for (var i = seatStartIndex; i < seatStartIndex+numSeats; i++) {
 
       if(this.unavailable.indexOf(i) == -1) {
-        this.seats.unshift(new Seat(i, true));
+        this.seats.unshift(new Seat(i, true, rowNumber));
       } else {
-        this.seats.unshift(new Seat(i, false));
+        this.seats.unshift(new Seat(i, false, rowNumber));
       }
-      
+      console.log(seatStartIndex);
     }
   }
 }

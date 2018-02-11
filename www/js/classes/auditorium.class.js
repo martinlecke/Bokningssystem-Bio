@@ -24,9 +24,11 @@ class Auditorium extends Base {
   renderRows() {
     let salong = this.stora;
     let rowStartIndex = 1;
+    let rowNumber = 1;
     for (let row of salong.seatsPerRow) {
-      this.rows.push(new Row(row, rowStartIndex, this.show.unavailable));
+      this.rows.push(new Row(row, rowStartIndex, this.show.unavailable, rowNumber));
       rowStartIndex += row;
+      rowNumber += 1;
     }
   }
 

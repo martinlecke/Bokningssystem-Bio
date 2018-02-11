@@ -1,10 +1,11 @@
 class Seat extends Base {
   
-  constructor(id, available) {
+  constructor(id, available, rowNumber) {
     super();
     this.id = id;
     this.available = available;
     this.marked = false;
+    this.row = rowNumber;
   }
 
   click() {
