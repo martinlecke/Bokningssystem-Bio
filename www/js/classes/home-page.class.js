@@ -36,8 +36,9 @@ class HomePage extends Base {
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
-		this.poster = Data.movies.slice(0, 6);   
+		this.poster = Data.movies.slice(0, 6); 
 	}
+
 
   toggleMovie() { // Work in progress for url / pop movie modal
     $(document).on('click','.movie-link', function() {
