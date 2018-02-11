@@ -22,16 +22,16 @@ Object.assign(HomePage.prototype, { template(){ return `
  		<div class="p-0 calendertoday-holder">
 
  			<div class="calendertoday">
- 				<button class="btn d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+ 				<button class="btn d-lg-none w-100" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
  					Se kommande visningar
  				</button>
  				<div id="calendertoday" class="collapse d-lg-flex p-3 pb-sm-4 justify-content-between flex-column">
  					<h3>Visningar idag</h3>
- 					<ul>
+ 					<ul class="list-unstyled m-0">
  						${this.today.render()}
  					</ul>
  					<h3>Visningar imorgon</h3>
- 					<ul class="mb-0">
+ 					<ul class="list-unstyled m-0">
  						${this.tomorrow.render()} 
  					</ul>
  				</div>

@@ -1,6 +1,40 @@
-#login{
-  color: black;
-  .close{
+#login {
+	color: black;
+	.modal-content{
+		// background-color: @gray;
+		border: black 3px solid;
+		.list-group-item{
+			border: black solid 1px;
+			border-radius: 0.45rem!important;
+		}
+		.form-control{
+			// background-color: @gray;
+			// border: 1px white solid;
+			// color: white;
+		}
+	}
+  .modal-header {
+    border: 0;
+    padding: 0;
+  }
+  .close {
+    border-radius: 50% 50%;
+    color: lightgray;
+    background: black;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 100;
+    border: 1px solid lightgray;
     font-size: 2rem;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: 0;
+    &:hover {
+      border-color: white;
+      color: white;
+    }
   }
 }
