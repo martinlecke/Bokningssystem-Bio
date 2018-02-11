@@ -98,7 +98,7 @@ Object.assign(Booking.prototype, { template(){ return `
 						<div class="col-12 col-md-8 mb-3 mt-4 mt-md-5 px-4 px-md-5 justify-content-center">
 							<h4 id="title-booking" class="font-weight-bold mb-2">${this.movie.title}</h4>
 							<div class="mt-4">
-								<ul class="pl-0">
+								<ul class="list-unstyled pl-0">
 									<li class="mb-2">
 										<span class="font-weight-bold mr-2">Visningsdatum: </span>
 										<span id="date-booking">${this.show.date}</span>
@@ -121,7 +121,7 @@ Object.assign(Booking.prototype, { template(){ return `
 										</li> -->
 
 									<div class="d-flex justify-content-start mt-2 mb-4">
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li class="mr-2">Ordenarie:</li>
 											<li class="mr-2">Barn:</li>
 											<li class="mr-2">Pensionäre:</li>
@@ -131,7 +131,7 @@ Object.assign(Booking.prototype, { template(){ return `
 											</li>
 										</ul>
 
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li>
 												<span>85</span> kr
 												<span>x</span>
@@ -157,7 +157,7 @@ Object.assign(Booking.prototype, { template(){ return `
 										<span class="font-weight-bold mr-2">Stolsnummer:</span>
 									</li>
 									<div class="d-flex justify-content-start mt-2 mb-3">
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li>
 												<span class="mr-1">Rad:</span>
 												<span class="mr-3">0</span>
@@ -167,7 +167,6 @@ Object.assign(Booking.prototype, { template(){ return `
 
 										</ul>
 									</div>
-
 
 									<hr class="email mt-4">
 
@@ -184,24 +183,15 @@ Object.assign(Booking.prototype, { template(){ return `
 												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
 										</div>
 
-										<li class="mr-2 font-weight-bold mt-5 d-flex justify-content-start" id="booking-nr">
+										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start" id="booking-nr">
 											<span class="mr-2 mb-1 hide-text">Bokningsnummer:</span>
 											<span class="mr-2 mb-1 hide-text" id="bookingNr-booking"></span>
 										</li>
-										<p class="hide-text">
-											<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
-										</p>
 
-
-									<!-- <hr class="email mt-4"> -->
-
-
-
-										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
-										 data-content="Skriv in email address och mobil nummer">Boka</button>
+										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
-									<p class="mb-5"><small>Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
+									<p class="mb-5"><small class="text-danger">Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
 								</ul>
 
 							</div>
