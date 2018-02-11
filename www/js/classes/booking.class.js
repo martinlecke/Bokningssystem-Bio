@@ -11,6 +11,7 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
+
     Booking.markedSeats = [];
 		this.bookingItems = [
 			{
@@ -40,7 +41,7 @@ class Booking extends Base {
 		this.saveBookingDataToJson();
 		this.bookingAlert();
 		// this.showDate();
-
+    this.getNumberOfTicksets();
 	} // Closes constructor
 
   findShow(inparameter) {
@@ -60,9 +61,18 @@ class Booking extends Base {
     }
   }
 
+  getNumberOfTicksets() {
+    let calc = Number( $('#number-ordinary').text()) +
+               Number( $('#number-child').text()) + 
+               Number( $('#number-pensioner').text());
+    Booking.selection = calc;
+    console.log(Booking.selection);
+  }
+
 	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
+    this.getNumberOfTicksets(); //updates selection
 	}
 
 

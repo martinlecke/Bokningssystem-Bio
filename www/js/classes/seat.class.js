@@ -24,12 +24,4 @@ class Seat extends Base {
     console.log(this);
   }
 
-  // mouseenter() {
-  //   $(event.target).addClass('hover')
-  // }
-  
-  // mouseleave() {
-  //   $(event.target).removeClass('hover')
-  // }
-
 } // /class
