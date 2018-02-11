@@ -37,6 +37,7 @@ class HomePage extends Base {
 			$("#movieslider").carousel('cycle');
 		}, 0);
 		this.poster = Data.movies.slice(0, 6); 
+    
 	}
 
 
