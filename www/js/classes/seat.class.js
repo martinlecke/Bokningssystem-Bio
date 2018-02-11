@@ -12,18 +12,18 @@ class Seat extends Base {
     if(!$(event.target).hasClass('booked')) {
       if(this.marked == true) {
         this.marked = false;
-        $(event.target).removeClass('clicked')
-        let index = Booking.markedSeats.indexOf(this.id);
-        if(index !== -1) {
-          Booking.markedSeats.splice(index, 1);
+        $(event.target).removeClass('clicked');
+        let co = 0;
+        for (let marked of Booking.markedSeats) {
+          if (marked.id == this.id) Booking.markedSeats.splice(co, 1);
+          co++;
         }
       } else if (Booking.selection - Booking.markedSeats.length !== 0 )  {
         this.marked = true;
-        Booking.markedSeats.push(this.id);
+        Booking.markedSeats.push({id: this.id, row: this.row});
         $(event.target).addClass('clicked')
       }
     }
-    console.log(this);
   }
 
 } // /class
