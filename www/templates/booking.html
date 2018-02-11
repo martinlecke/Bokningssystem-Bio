@@ -62,16 +62,16 @@ Object.assign(Booking.prototype, { template(){ return `
         ${this.auditorium.render()}
       </div>
 
-			<div class="col-6 col-sm-4 col-md-8 col-lg-6 bg-white text-dark my-5 mx-auto seat-info">
-				<ul class="d-md-flex justify-content-around py-3 pl-0 list-unstyled">
-					<li class="font-weight-bold mb-3 mb-md-0">
-						<span class="badge badge-pill badge-success mr-3 px-2 py-2">50</span>Ledig
+			<div class="col-12 bg-white text-dark seat-info">
+				<ul class="d-md-flex justify-content-center py-3 pl-0 list-unstyled">
+					<li class="font-weight-bold mx-3 mb-md-0">
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span>Ledig
 					</li>
-					<li class="font-weight-bold mb-3 mb-md-0">
-						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">3</span>Upptagen
+					<li class="font-weight-bold mx-3 mb-md-0">
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span>Upptagen
 					</li>
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">3</span>Vald plats
+					<li class="font-weight-bold mx-3">
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">XXX</span>Vald plats
 					</li>
 				</ul>
 			</div>
@@ -79,7 +79,6 @@ Object.assign(Booking.prototype, { template(){ return `
 	</div>
 
 	<!-- Booking -->
-	<hr class="bg-secondary">
 
 	<div class="row">
 		<div class="col-12">

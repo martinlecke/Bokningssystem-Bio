@@ -4,7 +4,6 @@ class Auditorium extends Base {
     super();
     this.show = this.find(showid, 'shows', 'showid');
     this.stora = this.find(this.show.auditorium, 'salong', 'auditorium');
-    this.selection = 2;
     this.rows = [];
     this.renderRows();
     setTimeout(() => { 
@@ -50,11 +49,10 @@ class Auditorium extends Base {
   }
 
   setupHandler() {
-    let that = this;
     $(document).on('mouseenter', '.seat', function() {
       // grabs data-id and loops through the selection and adds hover
       let id = $(this).data('id');
-      for (let i = id; i < (id + that.selection); i++) {
+      for (let i = id; i < (id + Booking.selection); i++) {
         $(`[data-id='${i}']`).addClass('hover');
       }
     });
