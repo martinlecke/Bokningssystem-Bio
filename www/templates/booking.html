@@ -2,9 +2,9 @@ Object.assign(Booking.prototype, { template(){ return `
 
 <div class="booking container-fluid">
 	
-	<div class="row my-3">
+	<div class="row">
 		<div class="col-12">
-			<h1 class="text-center">Bokningssida</h1>
+			<h1 class="text-center my-3">Bokningssida</h1>
 		</div>
 	</div>
 
@@ -53,10 +53,7 @@ Object.assign(Booking.prototype, { template(){ return `
 	<hr class="bg-secondary">
 	<div class="row">
 		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Välja platser</h2>
-			<div class="col-12 d-flex justify-content-center">
-				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
-			</div>
+			<h2 class="text-center mt-4 mb-5">Välj platser</h2>
 
 			<div class="col-12 text-center my-5 salong-holder">
         ${this.auditorium.render()}
