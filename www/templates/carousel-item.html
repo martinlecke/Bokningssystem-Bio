@@ -3,7 +3,7 @@ Object.assign(CarouselItem.prototype, { template(){ return `
 <div class="carousel-item carousel-splash ${this.active ? 'active' : ''}" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, #0e0f0f), url(imgs/${this.images});">
 	<div class="infobox">
 		<a href="#filmmodal" title="Länk till filmen" data-target="#filmmodal">${this.title}</a>
-		<button type="button" class="modal-test" data-toggle="modal" data-target="film-info" data-text="${this.title}">Mer om filmen</button>
+		<button type="button" class="modal-test d-block border-0" data-toggle="modal" data-target="film-info" data-text="${this.title}">Mer om filmen</button>
 	</div>
 </div>
 `;}});

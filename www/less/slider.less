@@ -1,0 +1,85 @@
+.carousel-inner{
+  .whiteBorder();
+  .carousel-item {
+    min-height: 320px;
+    background-size: cover!important;
+    .infobox {
+      position: absolute;
+      bottom: 10px;
+      color: @offWhite;
+      text-shadow: 2px 2px 0 black;
+      font-size: 38px;
+      @media @smartphone {
+        font-size: inherit;
+      }
+      button {
+        box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
+        background: @red;
+        color: @offWhite;
+        border-radius: 3px 6px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background: @darkerRed;
+        }
+      }
+      a {
+        color: @offWhite;
+      }
+    }
+  }
+}
+#calendertoday {
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+  background: #131414;
+  z-index: 100;
+  min-height: 340px;
+  &.collapse.show, &.collapsing {
+    display: flex;
+  }
+  @media @smartphone {
+    min-height: intial;
+  }
+  button {
+  width:100%;
+  cursor: pointer;
+    &:focus{
+      color: @offWhite;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+  h3 {
+    text-shadow: 1px 1px 0 black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 0;
+  }
+  li {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 0;
+    border-left: 0;
+  }
+  li span {
+    color: @yellow;
+    font-weight: bold;
+    padding-right: 20px;
+  }
+  a {
+    color: @offWhite;
+  }
+}
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+button, li, a, div, .remove-focus{
+  border: none;
+  outline: none;
+}
