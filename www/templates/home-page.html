@@ -19,7 +19,7 @@ Object.assign(HomePage.prototype, { template(){ return `
 
 			<div class="col-lg-3 p-0">
 				<div class="calendertoday">
-					<button class="btn btn-warning d-lg-none" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
+					<button class="btn btn-warning d-lg-none w-100" type="button" id="calendertoday-btn" data-toggle="collapse" data-target="#calendertoday" aria-expanded="false">
 						Se kommande visningar
 					</button>
 					<div id="calendertoday" class="collapse d-lg-flex p-3 justify-content-between flex-column">
@@ -37,8 +37,8 @@ Object.assign(HomePage.prototype, { template(){ return `
 		</div> 		
  	</div>
 
-<div class="container">
-	<div class="row justify-content-around mt-5">
+<div class="container-fluid">
+	<div class="row justify-content-between mt-5">
 		${this.poster.render()}
 	</div>
 </div>
