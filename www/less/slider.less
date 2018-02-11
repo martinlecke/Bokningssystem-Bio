@@ -1,31 +1,26 @@
 #movieslider {
-  .carousel-control-prev,
-  .carousel-control-next {
+  .carousel-control-prev, .carousel-control-next {
     width: 5%;
   }
   .carousel-item {
-    min-height: 50vh;
+    min-height: 65vh;
     background-size: cover!important;
     // background-position: center!important;
     .infobox {
-      display: block;
       position: absolute;
       bottom: 10px;
       color: white;
       text-shadow: 1px 1px 0 black;
-      font-size: 34px;
-      margin-left: 50px;
+      font-size: 36px;
       @media @smartphone {
         font-size: inherit;
       }
       button {
-        display: block;
-        border: none;
         box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
         background: @red;
         color: white;
-        border-radius: 2px 4px;
-        font-size: 12px;
+        border-radius: 4px;
+        font-size: 14px;
         cursor: pointer;
         outline: none;
         &:hover {
@@ -41,7 +36,6 @@
 
 .calendertoday {
   button {
-    width:100%;
     cursor: pointer;
     background: @red;
     color: white;
@@ -68,8 +62,7 @@
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     background: rgba(0,0,0,0.5);
     z-index: 100;
-    &.collapse.show,
-    &.collapsing {
+    &.collapse.show, &.collapsing {
       display: flex;
     }
     h3 {
@@ -82,7 +75,6 @@
       }
     }
     ul {
-      list-style-type: none;
       padding-left: 10px;
       margin: 0;
     }
