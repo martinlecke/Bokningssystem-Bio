@@ -70,6 +70,12 @@
     &.collapse.show,
     &.collapsing {
       display: flex;
+  button {
+  cursor: pointer;
+    &:focus{
+      color: @offWhite;
+      box-shadow: none;
+      outline: 0;
     }
     @media @smartphone {
       min-height: intial;

@@ -44,15 +44,20 @@ h6{
 	color: @red;
 }
 .poster-3{
-	max-width: 170px;
 	@media (max-width: 575px){
-	max-width: 130px;
-		// max-height: 122px;
-		// width: 100% !important;
-		// height: 75% !important;
+		max-height: 135px;
 	}
-	@media (min-width: 993px){
-		max-width: 230px;
+	@media (min-width: 575.5px) and (max-width: 767.5px){
+		min-width: 165px;
+		max-height: 234px;
+	}
+	@media (min-width: 768px) and (max-width: 992px){
+		min-width: 220px;
+		max-height: 310px;
+	}
+	@media (min-width: 992px){
+		min-width: 235px;
+		max-height: 315px;		
 	}
 }
 .poster-4{
@@ -75,15 +80,5 @@ img.poster{
 		opacity: 0.5;
 		transition: all .3s ease-in-out;
 		cursor: pointer;
-	}
-	@media (max-width: 575px){
-		// width: 80%;
-	}
-	@media (min-width: 576px) and (max-width: 992px){
-			// width: 155px;
-			// height: 225px;
-	}
-	@media (min-width: 993px){
-			// width: 50%;
 	}
 }
