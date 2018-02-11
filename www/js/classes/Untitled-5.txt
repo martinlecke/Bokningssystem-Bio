@@ -1,0 +1,14 @@
+randomGenerator() {
+	let that = this;
+	let maxRandomNr = 3;
+	if (maxRandomNr > Data.booking.length) {
+		let date = Data.booking[0].date;  // 仮のデーター
+		date = date.replace(/-/g, "");
+		date = date.split("-").join("");
+		date = date.slice(2, 8);
+		let number = date + 'N' + Math.floor(Math.random() * maxRandomNr);
+		console.log('Random number', number);
+		that.checkRandomNumber(number);
+	}
+	return console.log('no more random nr');  // ランダム終了
+}

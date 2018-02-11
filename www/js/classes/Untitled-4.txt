@@ -1,0 +1,35 @@
+validateMobileNr() {
+
+		// 	let tel = document.getElementById('tel').value.replace(/[━.*‐.*―.*－.*\-.*ー.*\-]/gi, '');
+		// 	if (!tel.match(/^(0[5-9]0[0-9]{8}|0[1-9][1-9][0-9]{7})$/)) {
+		// 		error.innerText = 'エラーメッセージ';
+		// 	}
+
+		let val = number.value;
+		if (/^\d{10}$/.test(val)) {
+			// value is ok, use it
+		} else {
+			$('#booking-alert').attr('data-content', 'Ange mobilnummer');
+			$('#booking-alert').popover('show');
+			// alert("Invalid number; must be ten digits")
+			number.focus()
+			return false
+		}
+
+
+
+
+
+
+
+		if (mobile === '') {
+			$('#booking-alert').attr('data-content', 'Ange mobilnummer');
+			$('#booking-alert').popover('show');
+		}
+
+		else if (!mobile.match(/^[0-9]+$/)) {
+			$('#booking-alert').attr('data-content', 'Ange rätt mobil nummer');
+			$('#booking-alert').popover('show');
+		}
+
+	}

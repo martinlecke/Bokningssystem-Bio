@@ -1,0 +1,53 @@
+// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
+saveBookingDataToJson() {
+	let that = this;
+	$(document).on('click', '#booking-alert', function () {
+		let title = $('#title-booking').text();
+		let date = $('#date-booking').text();
+		let time = $('#time-booking').text();
+		let auditorium = $('#auditorium-booking').text();
+		let ordinary = $('#number-ordinary2').text();
+		let child = $('#number-child2').text();
+		let pensioner = $('#number-pensioner2').text();
+		let totalNr = $('#total-tickets').text();
+		let amount = $('#amount').text();
+		let bookingNr = $('#bookingNr-booking').text();
+		let email = $('#email-booking').val();
+		let mobile = $('#mobile-booking').val();
+
+		// Här kommer några metoder
+		// metod: check email address
+		// metod: check telnr 
+
+
+		// Lägg till "seats" senare
+		Data.booking.push(new BookingData(
+			{
+				title: title,
+				date: date,
+				time: time,
+				auditorium: auditorium,
+				tickets: [
+					{
+						ordinary: ordinary,
+						child: child,
+						pensioner: pensioner,
+						totalNr: totalNr
+					}
+				],
+				amount: amount,
+				// seats: [
+				// 	{
+				// 		row: row,
+				// 		seatnumber: number
+				// 	}
+				// ],
+				bookingNr: bookingNr,
+				mobile: mobile,
+				email: email
+			}
+		));
+		that.saveToJSON(Data.booking);
+		// }
+	});
+}

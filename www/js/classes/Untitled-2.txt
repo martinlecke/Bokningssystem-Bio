@@ -1,0 +1,17 @@
+		this.bookingItems = [
+			{
+				type: 'ordinary',
+				text: 'Ordenarie'
+			},
+			{
+				type: 'child',
+				text: 'Barn (under 12år)'
+			},
+			{
+				type: 'pensioner',
+				text: 'Pensionär'
+			}];
+
+		this.bookingItems.forEach((button, i) => {
+			this.bookingItems[i] = new BookingItem(button);
+		});

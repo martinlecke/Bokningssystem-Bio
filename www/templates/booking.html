@@ -178,11 +178,27 @@ Object.assign(Booking.prototype, { template(){ return `
 											<label for="mobile-booking" class="font-weight-bold">Mobilnummer</label>
 											<!-- pattern="\d*" -->
 											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="11" placeholder="Ange mobilnummer (t.ex 07012..., +45 701234...)">
+
 										</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 										<div class="form-group mt-4">
-												<label for="email-booking" class="font-weight-bold">Email address</label>
-												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
+											<label for="email-booking" class="font-weight-bold">Email address</label>
+											<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
 										</div>
 
 										<li class="mr-2 font-weight-bold mt-5 d-flex justify-content-start" id="booking-nr">
@@ -193,13 +209,22 @@ Object.assign(Booking.prototype, { template(){ return `
 											<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
 										</p>
 
-
-									<!-- <hr class="email mt-4"> -->
-
+										<!-- <hr class="email mt-4"> -->
 
 
-										<button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
-										 data-content="Skriv in email address och mobil nummer">Boka</button>
+
+
+										<!-- test start -->
+										<!-- <button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
+										 data-content="Skriv in email address och mobil nummer">Boka</button> -->
+										<a href="#" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus">Boka</a>
+										<!-- test end -->
+
+
+
+
+
+
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
 									<p class="mb-5">Vänligen berätta ditt bokningsnummer och betala för biljetterna på bio.</p>

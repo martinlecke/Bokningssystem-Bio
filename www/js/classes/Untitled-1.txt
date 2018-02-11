@@ -1,0 +1,101 @@
+	// Ticket - ordinary (plus button)
+	clickPlusOrdinary() {
+		$(document).on('click', '#plus-ordinary', () => {
+			let number = Number($('#number-ordinary').text());
+			number += 1;
+			$('#number-ordinary').val('');
+			$('#number-ordinary').html(number);
+			this.onRendered();
+		});
+	}
+
+
+	// Ticket - child (plus button)
+	clickPlusChild() {
+		$(document).on('click', '#plus-child', () => {
+			let number = Number($('#number-child').text());
+			number += 1;
+			//		$('.number-child').val('');
+			$('#number-child').html(number);
+			this.onRendered();
+		});
+	}
+
+
+	// Ticket - pensioner (plus button)
+	clickPlusPensioner() {
+		$(document).on('click', '#plus-pensioner', () => {
+			let number = Number($('#number-pensioner').text());
+			number += 1;
+			//		$('.number-pensioner').val('');
+			$('#number-pensioner').html(number);
+			this.onRendered();
+		});
+	}
+
+
+	// Ticket - ordinary (minus button)
+	clickMinusOrdinary() {
+		$(document).on('click', '#minus-ordinary', () => {
+			let number = Number($('#number-ordinary').text());
+			if (number !== 0) {
+				number -= 1;
+				$('#number-ordinary').html(number);
+			}
+			this.onRendered();
+		});
+	}
+
+
+	// Ticket - child (minus button)
+	clickMinusChild() {
+		$(document).on('click', '#minus-child', () => {
+			let number = Number($('#number-child').text());
+			if (number !== 0) {
+				number -= 1;
+				$('#number-child').html(number);
+			}
+			this.onRendered();
+		});
+	}
+
+
+	// Ticket - pensioner (minus button)
+	clickMinusPensioner() {
+		$(document).on('click', '#minus-pensioner', () => {
+			let number = Number($('#number-pensioner').text());
+			if (number !== 0) {
+				number -= 1;
+				$('#number-pensioner').html(number);
+			}
+			this.onRendered();
+		});
+	}
+
+
+	calcTotalTickets() {
+		let ordinaryNr = Number($('#number-ordinary').text());
+		let childNr = Number($('#number-child').text());
+		let pensionerNr = Number($('#number-pensioner').text());
+
+		let sum = ordinaryNr + childNr + pensionerNr;
+		if (sum !== 0) {
+			$('#total-tickets').html(sum + ' st');
+		}
+	}
+
+
+	calcTotalPrice() {
+		let ordinaryNr = Number($('#number-ordinary').text());
+		let childNr = Number($('#number-child').text());
+		let pensionerNr = Number($('#number-pensioner').text());
+		let sum = (ordinaryNr * 85) + (childNr * 65) + (pensionerNr * 75);
+
+		$('#number-ordinary2').html(ordinaryNr + ' st');
+		$('#number-child2').html(childNr + ' st');
+		$('#number-pensioner2').html(pensionerNr + ' st');
+
+		if (sum !== 0) {
+			$('#amount').html(sum + ' kr');
+		}
+	}
