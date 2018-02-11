@@ -1,4 +1,3 @@
-// All.less
 // Styling for the overall page before header, main and footer loads
    * {
     -moz-box-sizing: border-box;
@@ -18,7 +17,7 @@
   }
 
 body {
-  background: #131414;
+  background: @black;
   color: white;
   font-family: 'Open Sans';
   display: flex;
@@ -31,93 +30,18 @@ main {
   flex-grow: 1;
 }
 
-// Ska flyttas in i main  när slidern finns i main
-.carousel-item {
-  min-height: 300px;
-  background-size: cover!important;
-  // background-position: center!important;
-  .infobox {
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    text-shadow: 1px 1px 0 black;
-    font-size: 34px;
-    margin-left: 50px;
-    @media @smartphone {
-      font-size: inherit;
-    }
-    button {
-      display: block;
-      border: none;
-      box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
-      background: tomato;
-      color: white;
-      border-radius: 2px 4px;
-      font-size: 12px;
-      cursor: pointer;
-      outline: none;
-      &:hover {
-        background: firebrick;
-      }
-    }
-    a {
-      color: white;
-    }
-  }
-}
-.calendertoday {
-    button {
-    width:100%;
-    cursor: pointer;
-  }
-}
-#calendertoday {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  background: slategrey;
-  z-index: 100;
-  min-height: 300px;
-  &.collapse.show,
-  &.collapsing {
-    display: flex;
-  }
-  @media @smartphone {
-    min-height: intial;
-  }
-  h3 {
-    text-shadow: 1px 1px 0 black;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 10px;
-    margin: 0;
-  }
-  li {
-    padding-bottom: 2px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 0;
-    border-left: 0;
-  }
-  li span {
-    color: khaki;
-    font-weight: bold;
-    padding-right: 20px;
-  }
-  a {
-    color: white;
-  }
-}
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
 
-
-
-h1, h2, h3, h4, h5, h6, button, li, a, div, .infobox:focus, .remove-focus{
-  border: none;
-  outline: none;
+html, body {
+  margin: 0;
 }
+main {
+flex-grow: 1;
+  @media (max-width: 548px){
+    width: 114%;
+  }
+}
+// .main-content {
+//   padding-top: 5%; 
+//   margin: 0 auto;
+//   max-width: 260px;
+// }

@@ -28,27 +28,27 @@ Object.assign(ModalMovie.prototype, { template(){ return `
             <div class="col-12 col-md-5 mb-5"> 
               <img class="img-fluid" src="${this.poster}" alt="${this.title}"> 
               <div class="film-details mt-3"> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Produktionsår: </span> 
                   <span>${this.productionYear}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Längd: </span> 
-                  <span>${this.length}</span> 
+                  <span>${this.length} minuter</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Genre: </span> 
                   <span>${this.genre}</span> 
-                </div> 
-                <div> 
+                </div>
+                <div class="mb-1">
                   <span class="font-weight-bold">Språk: </span> 
                   <span>${this.language}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Regissör: </span>
                   <span>${this.director}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Skådespelare: </span> 
                   <span>${this.actors}</span> 
                 </div>
@@ -69,7 +69,7 @@ Object.assign(ModalMovie.prototype, { template(){ return `
                 </div> 
                 <div class="col-12 mt-5"> 
                   <h3>Filmvisningar</h3> 
-                  <ul class="pl-0"> 
+                  <ul class="pl-0 list-unstyled"> 
 
                     ${this.modalShowing.render()}
                     
