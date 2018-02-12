@@ -1,71 +1,96 @@
 Object.assign(Navbar.prototype, { template(){ return `
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg p-1 pl-3">
   <a class="navbar-brand pr-1 pop" href="/"><h1>Filmvisarna</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler mb-1 px-1 py-0 mb-sm-2 px-sm-2 py-sm-1 px-md-3 py-md-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse pt-2" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       ${this.items.render()}
     </ul>
   </div>
   <!-- Modal Start -->
-  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <!-- Modal Header Start -->
-        <div class="modal-header">
-          <h3 class="modal-title">Välkommen att logga in!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span class="close" aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!-- Modal Body Start -->
-        <div class="modal-body">
-        	<form class="w-75 mx-auto">
-        		<!-- Modal Email Input Start -->
-        	  <div class="form-group row">
-        	    <label for="">E-mail address</label>
-        	    <input type="email" class="form-control" id="email-input-login" aria-describedby="emailHelp" value="" placeholder="Skriv din E-mail address här">
-        	    <small id="emailHelp" class="form-text text-muted">Vi delar aldrig ut din email till någon annan.</small>
-        	  </div>
-        		<!-- Modal Password Input Start -->
-        	  <div class="form-group row">
-        	    <label for="exampleInputPassword1">Lösenord	</label>
-        	    <input type="password" class="form-control" id="password-input-login" placeholder="Skriv i ditt lösenord här">
-        	  </div>
-        	  <div class="row float-right">
-        	  	<button type="submit" class="btn btn-primary">Logga in</button>
-        		</div>
-        	</form>
-        </div>
-        <!-- Modal Footer Start -->
-        <div class="modal-footer">
-        <!-- <h3 class="">Registrera dig här!</h3> -->
-        	<form class="w-100">
-        	  <div class="form-row">
-        			<!-- Modal Email Input Start -->
-        	    <div class="form-group col-md-6">
-        	      <label for="">E-mail address</label>
-        	      <input type="email" class="form-control" id="email-input-register" aria-describedby="emailHelp" placeholder="Email">
-        	    	<small class="form-text text-muted">Fyll i din e-mail. Observera att det är på den angivna e-mail dina bokningar kommer att skickas till.</small>
-        	    </div>
-        			<!-- Modal Password Input Start -->
-        	    <div class="form-group col-md-6">
-        	      <label for="inputPassword">Password</label>
-        	      <input type="password" class="form-control" id="password-input-register" placeholder="Password">
-        	    	<div class="float-right mr-5 mt-3">
-        	  			<button type="submit" class="btn btn-primary" id="submit-register">Skapa konto</button>
-        	  		</div>
-        			</div>
-        	  </div>
-        	</form> 
-        </div> <!-- Modal Footer End -->
-      </div> <!-- Modal Content End -->
-    </div> <!-- Modal Dialog End --> 
-  </div> <!-- Modal End -->
-<!-- Modal End-->
-</nav>
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!-- Modal Header Start -->
+          <div class="modal-header d-flex justify-content-end"> 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> 
+          </div>
+          <!-- Modal Body Start -->
+          <div class="modal-body">
+            <div id="accordion">
+              <div class="list-group">
+                <a class="list-group-item list-group-item-action btn-primary" data-toggle="collapse" data-target="#login-form" aria-expanded="true" aria-controls="login-form">
+                  <div id="login-collapse">
+                    <h5 class="mb-0">Logga in</h5>
+                  </div>
+                </a>
 
-`;}});
+                <div id="login-form" class="collapse show" aria-labelledby="login-collapse" data-parent="#accordion">
+                  <div class="card-body">
+
+                     <form class="w-100 px-3">
+                      <!-- Modal Email Input Start -->
+                      <div class="form-group row">
+                        <label for="">E-mail address</label>
+                        <input type="email" class="form-control" id="email-input-login" aria-describedby="emailHelp" value="" placeholder="Skriv din E-mail address här">
+                        <small id="emailHelp" class="form-text text-muted">Vi delar aldrig ut din email till någon annan.</small>
+                      </div>
+                      <!-- Modal Password Input Start -->
+                      <div class="form-group row">
+                        <label for="exampleInputPassword1">Lösenord </label>
+                        <input type="password" class="form-control" id="password-input-login" placeholder="Skriv i ditt lösenord här">
+                      </div>
+                      <div class="row float-right mb-3">
+                        <button type="submit" class="btn btn-primary" id="submit-login">Logga in</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group">
+                <a class="list-group-item list-group-item-action btn-primary" data-toggle="collapse" data-target="#register" aria-expanded="true" aria-controls="login-form">
+                  <div id="login-collapse">
+                    <h5 class="mb-0">Registrering</h5>
+                  </div>
+                </a>
+
+                <div id="register" class="collapse" aria-labelledby="register-collapse" data-parent="#accordion">
+                  <div class="card-body">
+                    
+                    <form class="w-100 px-3">
+                      <div class="form-group row">
+                      <!-- Modal Email Input Start -->
+                        <label for="">E-mail address</label>
+                        <input type="email" class="form-control" id="email-input-register" aria-describedby="emailHelp" placeholder="Email">
+                        <small class="form-text text-muted">Fyll i din e-mail. Observera att det är på den angivna e-mail dina bokningar kommer att skickas till.</small>
+                      </div>
+                      <!-- Modal Password Input Start -->
+                      <div class="form-group row">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="password-input-register" placeholder="Skriv i ditt lösenord här">
+                      </div>
+                      <div class="float-right mb-3">
+                        <button type="submit" class="btn btn-primary" id="submit-register">Skapa konto</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- Modal Content End -->
+      </div> <!-- Modal Dialog End --> 
+    </div> <!-- Modal End -->
+  </nav>
+
+  `;}});

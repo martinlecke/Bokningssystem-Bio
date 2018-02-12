@@ -1,35 +1,29 @@
 class Seat extends Base {
   
-  constructor(id, available) {
+  constructor(id, available, rowNumber) {
     super();
     this.id = id;
     this.available = available;
     this.marked = false;
+    this.row = rowNumber;
   }
 
   click() {
     if(!$(event.target).hasClass('booked')) {
       if(this.marked == true) {
         this.marked = false;
-        let index = Booking.markedSeats.indexOf(this.id);
-        if(index !== -1) {
-          Booking.markedSeats.splice(index, 1);
+        $(event.target).removeClass('clicked');
+        let co = 0;
+        for (let marked of Booking.markedSeats) {
+          if (marked.id == this.id) Booking.markedSeats.splice(co, 1);
+          co++;
         }
-      } else {
+      } else if (Booking.selection - Booking.markedSeats.length !== 0 )  {
         this.marked = true;
-        Booking.markedSeats.push(this.id);
+        Booking.markedSeats.push({id: this.id, row: this.row});
+        $(event.target).addClass('clicked')
       }
-      $(event.target).toggleClass('clicked')
     }
-    console.log(this);
-  }
-
-  mouseenter() {
-    $(event.target).addClass('hover')
-  }
-  
-  mouseleave() {
-    $(event.target).removeClass('hover')
   }
 
 } // /class

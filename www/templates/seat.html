@@ -1,5 +1,5 @@
 Object.assign(Seat.prototype, { template(){ return `
-  <div class="seat clearfix ${this.available ? '' : 'booked'}">
+  <div class="seat clearfix ${this.available ? '' : 'booked'}" data-id="${this.id}" data-row="${this.row}">
     ${this.id}
   </div>
 

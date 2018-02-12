@@ -1,9 +1,10 @@
 Object.assign(Booking.prototype, { template(){ return `
 
 <div class="booking container-fluid">
-	<div class="row my-3">
+	
+	<div class="row">
 		<div class="col-12">
-			<h1 class="text-center">Bokningssida</h1>
+			<h1 class="text-center my-3">Bokningssida</h1>
 		</div>
 	</div>
 
@@ -18,9 +19,9 @@ Object.assign(Booking.prototype, { template(){ return `
 
 				<div class="col-12 col-md-6 mb-3 mt-4 mt-md-0 justify-content-center">
 					<h4 class="font-weight-bold mb-2">${this.movie.title}</h4>
-					<div>
-						${this.movie.length} minuter, ${this.movie.language}
-					</div>
+						<div>
+							${this.movie.length} minuter, ${this.movie.language}
+						</div>
 
 					<div class="film-details mt-4 mb-5">
 						<div>
@@ -52,25 +53,22 @@ Object.assign(Booking.prototype, { template(){ return `
 	<hr class="bg-secondary">
 	<div class="row">
 		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Välja platser</h2>
-			<div class="col-12 d-flex justify-content-center">
-				<p class="text-center mb-2">Välj platser genom att klicka på stolar</p>
-			</div>
+			<h2 class="text-center mt-4 mb-5">Välj platser</h2>
 
 			<div class="col-12 text-center my-5 salong-holder">
         ${this.auditorium.render()}
       </div>
 
-			<div class="col-6 col-sm-4 col-md-8 col-lg-6 bg-white text-dark my-5 mx-auto seat-info mb-5">
-				<ul class="d-md-flex justify-content-around py-3 pl-0">
-					<li class="font-weight-bold mb-3 mb-md-0">
-						<span class="badge badge-pill badge-success mr-3 px-2 py-2">50</span>Ledig
+			<div class="col-12 bg-white text-dark seat-info">
+				<ul class="d-md-flex justify-content-center py-3 pl-0 list-unstyled">
+					<li class="font-weight-bold mx-3 mb-md-0">
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span>Ledig
 					</li>
-					<li class="font-weight-bold mb-3 mb-md-0">
-						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">3</span>Upptagen
+					<li class="font-weight-bold mx-3 mb-md-0">
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span>Upptagen
 					</li>
-					<li class="font-weight-bold">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2">3</span>Vald plats
+					<li class="font-weight-bold mx-3">
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span>Antal biljetter
 					</li>
 				</ul>
 			</div>
@@ -78,7 +76,6 @@ Object.assign(Booking.prototype, { template(){ return `
 	</div>
 
 	<!-- Booking -->
-	<hr class="bg-secondary">
 
 	<div class="row">
 		<div class="col-12">
@@ -97,7 +94,7 @@ Object.assign(Booking.prototype, { template(){ return `
 						<div class="col-12 col-md-8 mb-3 mt-4 mt-md-5 px-4 px-md-5 justify-content-center">
 							<h4 id="title-booking" class="font-weight-bold mb-2">${this.movie.title}</h4>
 							<div class="mt-4">
-								<ul class="pl-0">
+								<ul class="list-unstyled pl-0">
 									<li class="mb-2">
 										<span class="font-weight-bold mr-2">Visningsdatum: </span>
 										<span id="date-booking">${this.show.date}</span>
@@ -120,7 +117,7 @@ Object.assign(Booking.prototype, { template(){ return `
 										</li> -->
 
 									<div class="d-flex justify-content-start mt-2 mb-4">
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li class="mr-2">Ordenarie:</li>
 											<li class="mr-2">Barn:</li>
 											<li class="mr-2">Pensionäre:</li>
@@ -130,7 +127,7 @@ Object.assign(Booking.prototype, { template(){ return `
 											</li>
 										</ul>
 
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li>
 												<span>85</span> kr
 												<span>x</span>
@@ -156,7 +153,7 @@ Object.assign(Booking.prototype, { template(){ return `
 										<span class="font-weight-bold mr-2">Stolsnummer:</span>
 									</li>
 									<div class="d-flex justify-content-start mt-2 mb-3">
-										<ul class="pl-4">
+										<ul class="list-unstyled pl-4">
 											<li>
 												<span class="mr-1">Rad:</span>
 												<span class="mr-3">0</span>
@@ -166,7 +163,6 @@ Object.assign(Booking.prototype, { template(){ return `
 
 										</ul>
 									</div>
-
 
 									<hr class="email mt-4">
 
@@ -183,24 +179,15 @@ Object.assign(Booking.prototype, { template(){ return `
 												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
 										</div>
 
-										<li class="mr-2 font-weight-bold mt-5 d-flex justify-content-start" id="booking-nr">
+										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start" id="booking-nr">
 											<span class="mr-2 mb-1 hide-text">Bokningsnummer:</span>
 											<span class="mr-2 mb-1 hide-text" id="bookingNr-booking"></span>
 										</li>
-										<p class="hide-text">
-											<small class="text-danger">* Glöm inte ta med bokningsnummer</small>
-										</p>
 
-
-									<!-- <hr class="email mt-4"> -->
-
-
-
-										<button type="submit" class="btn btn-primary font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus"
-										 data-content="Skriv in email address och mobil nummer">Boka</button>
+										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
-									<p class="mb-5">Vänligen berätta ditt bokningsnummer och betala för biljetterna på bio.</p>
+									<p class="mb-5"><small class="text-danger">Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
 								</ul>
 
 							</div>

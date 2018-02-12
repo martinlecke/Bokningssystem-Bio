@@ -1,0 +1,102 @@
+#movieslider {
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  .carousel-item {
+    min-height: 65vh;
+    background-size: cover!important;
+    // background-position: center!important;
+    .infobox {
+      position: absolute;
+      bottom: 10px;
+      color: white;
+      text-shadow: 1px 1px 0 black;
+      font-size: 36px;
+      @media @smartphone {
+        font-size: inherit;
+      }
+      button {
+        box-shadow: 1px 1px solid rgba(0, 0, 0, 0.5);
+        background: @red;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background: @red-hover;
+        }
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.calendertoday {
+  button {
+    cursor: pointer;
+    background: @red;
+    color: white;
+    &:hover {
+      background: @red-hover;
+      border-color: @red-hover;
+    }
+  }
+}
+
+.calendertoday-holder {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  @media @desktop {
+    position: relative;
+    width: 100%;
+    right: inherit;
+    top: inherit;
+    border-bottom: 2px solid @red;
+    padding-bottom: 40px;
+  }
+  #calendertoday {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+    &.collapse.show, &.collapsing {
+      display: flex;
+    }
+    h3 {
+      text-shadow: 1px 1px 0 black;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      &:nth-of-type(even) {
+        margin-top: 20px;
+      }
+    }
+    ul {
+      padding-left: 10px;
+      margin: 0;
+    }
+    li {
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-right: 0;
+      border-left: 0;
+      &:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+    li span {
+      color: gold;
+      font-weight: bold;
+      padding-right: 20px;
+    }
+    a {
+      color: white;
+      width: 100%;
+      display: block;
+    }
+
+  }
+}
