@@ -43,11 +43,11 @@ class Booking extends Base {
 		this.calcTotalPrice();
 	}
 
-	// test - metod
+	// refaktorering  - test metod
 
 	//clickPlus() {
 	// let type = [ordinary, child, pensioner];
-	// 	$(document).on('click', '#plus-this.bookingItems.type', () => {
+	// 	$(document).on('click', '#plus-${this.bookingItems.type}', () => {
 	// 		let number = Number($('#number-ordinary').text());
 	// 		number += 1;
 	// 		$('#number-ordinary').val('');
@@ -160,6 +160,7 @@ class Booking extends Base {
 	}
 
 
+	// ??? 乱数のバグ1 - 文字を入力するたび、数字が変わる（重複番号を含む - line:167） 
 	// Make a booking number (date + N + random nr)
 	randomBookingNr() {
 		let that = this;
@@ -169,59 +170,45 @@ class Booking extends Base {
 	}
 
 
-
+	// ??? 予約したい映画のindex番号が入るようにしたい (マーティンに訊く)
 	// Make a random nr
 	randomGenerator() {
 		let that = this;
 		let maxRandomNr = 3;  // temporary nr (仮の番号)
 		if (maxRandomNr > Data.booking.length) {
-			let date = Data.booking[0].date; 
+			let date = Data.booking[0].date;     // ????? test - [0] = 180214N0 (ここに予約したい映画のindex番号が入るようにしたい)
 			date = date.replace(/-/g, "");
-			date = date.split("-").join("");
 			date = date.slice(2, 8);
 			let number = date + 'N' + Math.floor(Math.random() * maxRandomNr);
 			console.log('Random number', number);
 			that.checkRandomNumber(number);
 		}
-		return console.log('There is not random nr left.');  // If the random number exceeds the max number, random nr isn't created (ランダム終了)
+		return console.log('There is not random nr left.');  // test - if the random number exceeds the max number, random nr isn't created (ランダム終了)
 	}
 
-	
+
 	// Check the booking number if the number is not duplicated（乱数が重複してないか、チェック）
 	checkRandomNumber(number) {
 		let that = this;
-		// number = '180214N0';  // test - JSONのリストと同じ番号にする
-
 		for (let i = 0; i < Data.booking.length; i++) {
-			console.log('The number already saved in JSON:', Data.booking[i].bookingNr);　
-			// console.log('random number:', number);
+			console.log(Data.booking[i].bookingNr + ' is already saved in JSON');
 
-			// If the random number and the number stored in 
-			// booking.json are the same, make a new random number
-			// 重複ありの場合(乱数を作り直す)
-			if (Data.booking[i].bookingNr == number) {
-				console.log('random nr (重複用): ', number);
-				console.log('It is dplicate! 重複している');
-
-				// Make a new random nr 
-				let number2 = number.substring(7, -1) + Math.floor(Math.random() * 2);
-				console.log('number2(new): ', number2);  // type: string
-				number = number2;
-				that.checkRandomNumber(number);
-
-				//Show the booking nr
-				$('.hide-text').show();
-				return $('#bookingNr-booking').html(number2);
-			}
-			else if (Data.booking[i].bookingNr != number) {
-				console.log('リストbookingNr(なし)', Data.booking[i].bookingNr);  // typeof Data.booking[i].bookingNr -- type: string
-				console.log('random nr (なし)', number);  // typeof number -- type: number
-				console.log('重複なし');
-
+			// If the random number and the number stored in
+			// booking.json are the same, make a new random number // 重複あるの時は、乱数を作り直す
+			if (Data.booking[i].bookingNr != number) {
+				console.log('Random nr(' + number + ') is NOT saved in JSON (= 重複なし)');  // typeof Data.booking[i].bookingNr -- type: string
 				$('.hide-text').show();
 				return $('#bookingNr-booking').html(number);
 			}
-			else { return console.log('ランダム終了'); }  // 消す?
+			else if (Data.booking[i].bookingNr == number) {
+				console.log('Random nr(' + number + ') is duplicated (= 重複)');
+
+				// Make a new random nr
+				let newRandomNr = number.substring(7, -1) + Math.floor(Math.random() * 3);  // maxRandom = 3;
+				console.log(newRandomNr + ' is a new random nr (= 再度、乱数を作成)');  // type: string
+				number = newRandomNr;
+				that.checkRandomNumber(number);
+			}
 		}
 	}
 
@@ -245,7 +232,7 @@ class Booking extends Base {
 
 			// Här kommer några metoder
 			// metod: check email address
-			// metod: check telnr 
+			// metod: check telnr
 
 
 			// Lägg till "seats" senare
@@ -280,7 +267,13 @@ class Booking extends Base {
 		});
 	}
 
-	
+
+	saveToJSON(array) {
+		JSON._save('booking.json', array);
+	}
+
+
+
 	// Alert
 	bookingAlert() {
 		$(document).on('keyup', '#booking-alert', function () {
