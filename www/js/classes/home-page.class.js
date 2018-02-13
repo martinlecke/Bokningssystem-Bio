@@ -30,26 +30,23 @@ class HomePage extends Base {
 				let time = new Date(shows.date + ' 00:00:00').getTime(); // 24h*60min*60sek*1000ms = 86400000ms
 				return new Date().getTime() > time - 86400000;
 			})
-			.map((shows)=>new Showing(undefined, shows)); 　// undefined = line20 (shows) のことで、既に作っているからundefinedになる, shows = shows.tomorrow i showing.class
+			.map((shows)=>new Showing(undefined, shows));
+
 		// Startar slider om 0 sekunder! (nästa frame). Tidintervall på slider är 5 sekunder
 		setTimeout(function(){
 			$("#movieslider").carousel('cycle');
 		}, 0);
-    console.log(this.today);
-		
-		this.poster = Data.movies.slice(0, 6);   
-
+		this.poster = Data.movies.slice(0, 6); 
+    
 	}
 
-  toggleMovie() {
+
+  toggleMovie() { // Work in progress for url / pop movie modal
     $(document).on('click','.movie-link', function() {
       let movie = $(this).data('movie');
       movie = movie.replace(/[, :']/g, "").toLowerCase();
       movie = movie.replace(/[åä]/g, "a");
       movie = movie.replace(/[ö]/g, "o");
-
     });
-  
   }
-
 }

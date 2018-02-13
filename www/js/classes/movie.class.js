@@ -12,7 +12,7 @@ class Movie extends Base {
 
 	onRendered(){
 		 let that = this;
-		$(document).find(`[data-movie="${that.title}"] [data-toggle="popover"]`).popover({ 
+		$(document).find(`[data-popover="${that.title}"] [data-toggle="popover"]`).popover({ 
 			trigger: "manual", 
 			html: true,
 			placement: 'top',
@@ -23,7 +23,7 @@ class Movie extends Base {
 				${that.description}
 				</p>
 				<div class="mt-2 mb-1 text-center">
-				<a class="pop" href="${that.title}">
+				<a class="pop" href="#filmmodal">
 				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
 				</a>
 				</div>`

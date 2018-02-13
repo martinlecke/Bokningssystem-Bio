@@ -10,18 +10,23 @@
       display: inline-block;
     }
     .seat {
-      background: #ccc;
+      background: @gray;
       width: 50px;
       height: 50px;
       border-radius: 2px 2px 35% 35%;
       text-align: center;
       cursor: pointer;
       float:left;
+      &.hover {
+        background: @yellow-hover;
+      }
+      &.clicked {
+        background: @yellow;
+      }
+      &.booked {
+        background: @red;
+      } 
     }
   }
-}
-.hover-marked,
-.marked {
-  background: tomato!important;
 }
 

@@ -1,133 +1,98 @@
- * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-} 
-html {
-	overflow-y: scroll;
-}
- html, body {
-	margin: 0;
-} 
-.main-content {
- 	padding-top: 5%; 
-	margin: 0 auto;
-	max-width: 260px;
-}
-#photos a {  
-  display: inline-block;
-}
-#photos a {
-	margin: 0 auto;
-	padding: 0;
-	text-decoration: none;
-}
-#photos img {
-	position: relative;
-	float: left;
-	width: 80%
-}
-#photos p {  
-  position: absolute;
-  top: 95%;
-  left: 41%;  
-  transform: translate(-50%, -50%);
+.kalendarium{
+	color: White bold;
+	font-family: 'Cheltenham Bold Extra Condensed';
+	
+	h5{
+		color: white;
+		font-size: 30px;
+	}
+
+	h1{
+		color: white;
+		text-align :center;
+	}
+
+	
+
+	.buttons {
+		background-color: #ffbb33;
+	}
+
+
+	.card-header{
+		background: linear-gradient(to bottom, #333300 42%, #ff0000 100%);
+	}
+
+	.collapse.show{
+		background: #e9e9e9;
+    color: black;
+    border: solid;
+    font-weight: bold; 
+    font-size: 100%;
+	}
+
+	.film{
+		width: 35%; 
+	}
+
+	.auditorium{
+		width: 30%; 
+	}
+
+	.time{
+		width: 20%; 
+	}
+
+	.button{
+		width: 10%;
+		margin-right: 15px;
+	}
+
+	.li-tag{
+
+		// @media @mobile-min(min-width: 320px){
+		// }
+
+		// @media @mobile-max(max-width: 425px){
+
+		// }
+
+		// @media @tablet-min(min-width: 426px){
+
+		// }
+
+		// @media @tablet-max(max-width: 768px){
+		// }
+
+		// @media @pc-min(min-width: 769px){
+		// }
+
+		// @media @pc-lg-min(max-width: 1200px){
+		// }
+
+
+		// @tablet-min: ~"screen and (min-width: 768px)";
+		// @tablet-max: ~"screen and (max-width: 991px)";
+		// @pc-min: ~"screen and (min-width: 992px)";
+		// @pc-lg-min: ~"screen and (min-width: 1200px)";
+
+		// @smartphone: ~"(max-width: 575px)"; // Extra small devices (portrait phones, less than 574px)
+		// @tablet: ~"(max-width: 768px)"; // Medium devices (tablets, less than 992px)
+		// @desktop: ~"(max-width: 992px)"; // Large devices (desktops, less than 1200px)
+
+	
+  }
+	//Iphone media queries Portrait and Landscape //
+  @media only screen{
+
+  }
+	
+	//Galaxy & Google Pixel & HTC & Windows phones media queries Portrait and Landscape //
+  @media screen{
+  	
+  }
+
 }
 
-#container1 {
-	background: linear-gradient(to bottom, #660033 0%, #ff0000 100%);
-	height: auto;
-    overflow:auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-#container2 {
-	background: linear-gradient(to bottom, #660033 0%, #ff0000 100%);
-	height: auto;
-    overflow:auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-#container3 {
-	background: linear-gradient(to right, #660033 0%, #ff0000 100%);
-	height: auto;
-    overflow:auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-#container4 {
-	background: linear-gradient(to left, #660033 0%, #ff0000 100%);
-	height: auto;
-    overflow:auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-#container5 {
-	background: linear-gradient(to top, #660033 0%, #ff0000 100%);
-	height: auto;
-    overflow:auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-#container6 {
-	background: linear-gradient(to top, #660033 0%, #ff0000 100%);
-    height: auto;
-    overflow:auto;
-   	border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-#container7 {
-	background: linear-gradient(to top, #660033 0%, #ff0000 100%);
-    height: auto;
-    overflow: auto;
-    border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
-	border: 5px ridge #db0d2f;
-}
-
-.weekdays {
-	font-size: 40px;
-	font-family: 'Open Sans';
-	text-align: center;
-	margin-bottom: 10px;
-}
-
-.buttons {
-	background-color: #ffbb33;
-	margin-top: 5px;
-	padding: 10px;
-}
-
-.ul-1 {
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px;
-	margin-bottom: 10px;
-	font-size: 18px;
-}
-.li-tag {
-	list-style-type: none;
-	display: inline-block;
-	padding: 15px;
-	font-size: 18px;
-	text-align: center;
-}
 
 

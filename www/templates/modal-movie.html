@@ -28,29 +28,35 @@ Object.assign(ModalMovie.prototype, { template(){ return `
             <div class="col-12 col-md-5 mb-5"> 
               <img class="img-fluid" src="${this.poster}" alt="${this.title}"> 
               <div class="film-details mt-3"> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Produktionsår: </span> 
                   <span>${this.productionYear}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Längd: </span> 
-                  <span>${this.length}</span> 
+                  <span>${this.length} minuter</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Genre: </span> 
                   <span>${this.genre}</span> 
-                </div> 
-                <div> 
+                </div>
+                <div class="mb-1">
                   <span class="font-weight-bold">Språk: </span> 
                   <span>${this.language}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Regissör: </span>
                   <span>${this.director}</span> 
                 </div> 
-                <div> 
+                <div class="mb-1"> 
                   <span class="font-weight-bold">Skådespelare: </span> 
                   <span>${this.actors}</span> 
+                </div>
+                <div> 
+                  <span class="font-weight-bold">Pris: </span> 
+                  <span>Ordinarie ${this.priceOrdinarie}kr, </span> 
+                  <span>Pensionär ${this.pricePensionar}kr, </span> 
+                  <span>Barn ${this.priceBarn}kr</span> 
                 </div> 
               </div> 
             </div>
@@ -63,41 +69,10 @@ Object.assign(ModalMovie.prototype, { template(){ return `
                 </div> 
                 <div class="col-12 mt-5"> 
                   <h3>Filmvisningar</h3> 
-                  <ul class="pl-0"> 
-                    <hr> 
-                    <li> 
-                      <a href="#" class="text-dark"> 
-                      <div> 
-                        <i class="fa fa-calendar" aria-hidden="true"></i> 
-                        <span class="ml-2 font-weight-bold"></span> 
-                      </div> 
-                      <div> 
-                        <i class="fa fa-clock-o" aria-hidden="true"></i> 
-                        <span class="ml-2 font-weight-bold"></span> 
-                        <span></span> 
-                        <span class="ml-5"> 
-                          <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="">Boka</button> 
-                        </span> 
-                      </div> 
-                      </a> 
-                    </li> 
-                    <hr> 
-                    <li>  
-                      <a href="#" class="text-dark"> 
-                      <div> 
-                        <i class="fa fa-calendar" aria-hidden="true"></i> 
-                        <span class="ml-2 font-weight-bold"></span> 
-                      </div> 
-                      <div> 
-                        <i class="fa fa-clock-o" aria-hidden="true"></i> 
-                        <span class="ml-2 font-weight-bold"></span> 
-                        <span></span> 
-                        <span class="ml-5"> 
-                          <button type="button" class="btn btn-danger font-weight-bold" data-toggle="modal" data-target="">Boka</button>
-                        </span> 
-                      </div> 
-                      </a> 
-                    </li> 
+                  <ul class="pl-0 list-unstyled"> 
+
+                    ${this.modalShowing.render()}
+                    
                   </ul> 
                 </div> 
               </div> 

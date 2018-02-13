@@ -5,9 +5,8 @@ class Navbar extends Base {
     this.items = [
       new NavbarItem('Startsida', '/'),
       new NavbarItem('Filmer','/filmer'),
+      new NavbarItem('Kalendarium','/kalendarium'),
       new NavbarItem('Om oss','/om-oss'),
-      new NavbarItem('Auditorium (tillfällig)','/auditorium'),
-      new NavbarItem('Bokningssida','/bokningssida'),
       new NavbarItem('Logga in','#login')
 
     ];

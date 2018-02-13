@@ -1,8 +1,10 @@
 class Booking extends Base {
 
-	constructor() {
+	constructor(showid) {
 		super();
-		let urlName = location.pathname.split('/')[2];
+    this.auditorium = new Auditorium(showid);
+    this.show = this.findShow(showid);
+    this.movie = this.findMovie();
 		this.clickPlusOrdinary();
 		this.clickPlusChild();
 		this.clickPlusPensioner();
@@ -10,10 +12,11 @@ class Booking extends Base {
 		this.clickMinusChild();
 		this.clickMinusPensioner();
 
+    Booking.markedSeats = [];
 		this.bookingItems = [
 			{
 				type: 'ordinary',
-				text: 'Ordenarie'
+				text: 'Ordinarie'
 			},
 			{
 				type: 'child',
@@ -34,13 +37,39 @@ class Booking extends Base {
 		// this.validateEmail();
 		//this.validateMobileNr();
 		this.bookingAlert();
-
+		// this.showDate();
+    this.getNumberOfTicksets();
 	} // Closes constructor
 
+  findShow(inparameter) {
+    // Finds the show and return it
+    for (let i = 0; i < Data.shows.length; i++) {
+      if (Data.shows[i].showid == inparameter) {
+        return Data.shows[i];
+      }
+    }
+  }
+  findMovie() {
+    // Finds the show and return it
+    for (let i = 0; i < Data.movies.length; i++) {
+      if (Data.movies[i].title == this.show.film) {
+        return Data.movies[i];
+      }
+    }
+  }
+
+  getNumberOfTicksets() {
+    let calc = Number( $('#number-ordinary').text()) +
+               Number( $('#number-child').text()) + 
+               Number( $('#number-pensioner').text());
+    Booking.selection = calc;
+  }
 
 	onRendered() {
 		this.calcTotalTickets();
 		this.calcTotalPrice();
+    this.getNumberOfTicksets(); //updates selection
+    $('.seatslefttopick').text(Booking.selection);
 	}
 
 	// refaktorering  - test metod
@@ -67,7 +96,6 @@ class Booking extends Base {
 			this.onRendered();
 		});
 	}
-
 
 	// Ticket - child (plus button)
 	clickPlusChild() {
