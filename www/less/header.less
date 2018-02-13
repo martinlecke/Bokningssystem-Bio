@@ -1,7 +1,4 @@
 header{
-	@media (max-width: 548px){
-    width: 114%;
-  }
   background: @red;
 	// background: linear-gradient(to top, #131414 1%, @lightRed 99%);
 	.active{
@@ -11,14 +8,16 @@ header{
 		color: white;
 		text-decoration: none;
 		font-family: 'Spectral SC', serif;
+    margin: 0 ;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 		@media (max-width: 575px){
-			font-size: 7vw;
+			font-size: 5vw;
 		}
 		@media (min-width: 576px) and (max-width: 992px){
-   		font-size: 8vw;
+   		font-size: 3vw;
 		}
 		@media (min-width: 992.5px){
-			font-size: 4vw;
+			font-size: 3vw;
 		}
 	}
 	a.nav-link{
@@ -36,10 +35,7 @@ header{
 	}
 	.navbar-toggler {
     border-color: rgb(255,255,255);
-  	&:focus{
-  		box-shadow: none;
-      outline: 0;
-  	}
+    cursor: pointer;
   }
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
