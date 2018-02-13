@@ -26,5 +26,10 @@ class App {
 
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
+
+    // Restore logged in user (on hard page reload)
+    if(localStorage.loggedIn){
+      User.loggedIn = JSON._parse(localStorage.loggedIn);
     }
+  }
 } 
