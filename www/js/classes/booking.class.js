@@ -160,20 +160,55 @@ class Booking extends Base {
 	}
 
 
-	// ??? 乱数のバグ1 - 文字を入力するたび、数字が変わる（重複番号を含む - line:167） 
+	
 	// Make a booking number (date + N + random nr)
 	randomBookingNr() {
 		let that = this;
-		$(document).on('keypress', '#email-booking', function (event) {
+		$(document).one('click', '#email-booking', function (event) {  // .one = only first click
 			that.randomGenerator();
 		});
+	}
+
+	setDate(){
+		// Temporary method because we should set the date depending of what screening is chosen
+		// when creating this booking object...
+		let d = new Date();
+		let year = d.getFullYear();
+		let month = d.getMonth() + 1;
+		if(month < 10){ month = "0" + month;}
+		let date = d.getDate();
+		if(date < 10){ date = "0" + date};
+		this.date =  year + '-' + month + '-' + date;
 	}
 
 
 	// ??? 予約したい映画のindex番号が入るようにしたい (マーティンに訊く)
 	// Make a random nr
 	randomGenerator() {
-		let that = this;
+
+		this.setDate(); // We must have a booking date before creating the random booking number
+
+		let allBookingNumbers = [];
+		for(let booking of Data.booking){
+			allBookingNumbers.push(booking.bookingNr);
+		}
+
+		let maxRandomNr = 3;
+
+		if(allBookingNumbers.includes(this.date.replace(/-/g,'') + 'N' + (maxRandomNr - 1))){
+			throw(new Error("There is no random number left to use."))
+		}
+
+		let newBookingNumber;
+		while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)){
+			newBookingNumber = this.date.replace(/-/g,'') + 'N' + Math.floor(Math.random() * maxRandomNr);
+		}
+
+    this.bookingNr = newBookingNumber;
+
+		console.log(this);  // randomNr
+
+		/*let that = this;
 		let maxRandomNr = 3;  // temporary nr (仮の番号)
 		if (maxRandomNr > Data.booking.length) {
 			let date = Data.booking[0].date;     // ????? test - [0] = 180214N0 (ここに予約したい映画のindex番号が入るようにしたい)
@@ -187,18 +222,21 @@ class Booking extends Base {
 	}
 
 
+	// ??? バグ - 0 と 2　だけが出現する 
 	// Check the booking number if the number is not duplicated（乱数が重複してないか、チェック）
 	checkRandomNumber(number) {
 		let that = this;
 		for (let i = 0; i < Data.booking.length; i++) {
-			console.log(Data.booking[i].bookingNr + ' is already saved in JSON');
+	//		console.log(Data.booking[i].bookingNr + ' is already saved in JSON');
 
-			// If the random number and the number stored in
-			// booking.json are the same, make a new random number // 重複あるの時は、乱数を作り直す
-			if (Data.booking[i].bookingNr != number) {
+// test start
+
+
+			// If there is already the random nr in JSON, make a new random nr // 重複あるの時は、乱数を作り直す
+			if (Data.booking[i].bookingNr != number) {  // typeof: string & number
 				console.log('Random nr(' + number + ') is NOT saved in JSON (= 重複なし)');  // typeof Data.booking[i].bookingNr -- type: string
 				$('.hide-text').show();
-				return $('#bookingNr-booking').html(number);
+				$('#bookingNr-booking').html(number);  // return を取り除く
 			}
 			else if (Data.booking[i].bookingNr == number) {
 				console.log('Random nr(' + number + ') is duplicated (= 重複)');
@@ -209,7 +247,13 @@ class Booking extends Base {
 				number = newRandomNr;
 				that.checkRandomNumber(number);
 			}
-		}
+
+			
+// test end
+
+
+
+		}  // close for-loop */
 	}
 
 
@@ -276,7 +320,7 @@ class Booking extends Base {
 
 	// Alert
 	bookingAlert() {
-		$(document).on('keyup', '#booking-alert', function () {
+		$(document).on('click', '#booking-alert', function () {
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
 		});
 	}
