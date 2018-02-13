@@ -18,15 +18,11 @@ class Movie extends Base {
 			placement: 'top',
 			content: function() {
 				return `
-				<h6 class="mb-0 d-inline">Handling: </h6>
+				<h6 class="mb-0 d-inline">${that.title}</h6><br>
 				<p class="description d-inline">
-				${that.description}
+				  ${that.description}
 				</p>
-				<div class="mt-2 mb-1 text-center">
-				<a class="pop" href="#filmmodal">
-				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
-				</a>
-				</div>`
+				<div class="mt-2 mb-1 text-center">`
 			}
 		})
 		.on("mouseenter", function () {
@@ -51,4 +47,7 @@ class Movie extends Base {
   	$('#modalmovie').empty();
     this.clickedMovie = new ModalMovie(this);
   }
+
+
+
 }

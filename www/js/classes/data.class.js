@@ -8,7 +8,7 @@ class Data{
 		Data.movies = await JSON._load("film");
 		Data.upcoming = await JSON._load("premiar");
     Data.shows = await JSON._load("shows");
-		Data.user = await JSON._load("users");
+		// Data.user = await JSON._load("users");
 		Data.booking = await JSON._load("booking");
     Data.salong = await JSON._load("salong");
     
