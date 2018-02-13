@@ -1,9 +1,10 @@
 class User extends Base {
 	
 	constructor(props){
-	super();
+		super();
 		for(let name in props){
 			this[name] = props[name];
 		}
+		// Object.assign(this, props);
 	}
 }
