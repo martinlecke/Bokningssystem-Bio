@@ -11,14 +11,10 @@ class Kalendarium extends Base {
 		  showsByDayHash[show.date].push(show);
 		}
 
-		console.log('showsByDay',showsByDayHash);
-
 		let showsByDay = [];
 		for(let date in showsByDayHash){
 		  showsByDay.push(new Day({shows: showsByDayHash[date]}));
 		}
-
-		console.log('showsByDay', showsByDay);
 		this.days = showsByDay
 	}
 } // /class

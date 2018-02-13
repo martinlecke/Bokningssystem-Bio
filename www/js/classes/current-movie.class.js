@@ -45,6 +45,11 @@ class CurrentMovie extends Base {
 		});
 	}
 
+  click() {
+    console.log( this);
+    $('#modalmovie').empty();
+    this.clickedMovie = new ModalMovie(this);
+  }
 	
 
 }
