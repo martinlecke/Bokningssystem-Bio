@@ -12,7 +12,7 @@ class Booking extends Base {
 		this.clickMinusChild();
 		this.clickMinusPensioner();
 
-    Booking.markedSeats = [];
+    this.Booking.markedSeats = [];
 		this.bookingItems = [
 			{
 				type: 'ordinary',
