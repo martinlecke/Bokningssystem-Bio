@@ -1,6 +1,9 @@
 header{
   background: @red;
   text-transform: uppercase;
+  .nav-item.active a{
+    color: rgba(255,255,255,1);
+  }
 	h1{
 		color: white;
 		text-decoration: none;
@@ -17,13 +20,13 @@ header{
 			font-size: 3vw;
 		}
 	}
+
 	a.nav-link{
 		font-size: 0.85rem;
 		color: rgba(255,255,255,0.7);
 		font-weight: bold;
 		text-decoration: none;
-		&:hover,
-    .active {
+		&:hover {
 			color: rgba(255,255,255,1);
 		}
 	}
@@ -39,4 +42,5 @@ header{
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
+
 }
