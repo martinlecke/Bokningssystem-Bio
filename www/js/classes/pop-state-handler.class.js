@@ -14,6 +14,7 @@ class PopStateHandler {
     // from an arrow function to keep "this"
     // inside changePage pointing to the PopStateHandler object
     window.addEventListener('popstate', () => this.changePage());
+    this.modalClosing();
   }
 
   addEventHandler(){
@@ -108,5 +109,10 @@ class PopStateHandler {
 
   movie(){
     this.app.movie = new ModalMovie();
+  }
+  modalClosing() {
+    $(document).on('click', '.pop', function () {
+      $('.modal').modal('hide');
+    });
   }
 }
