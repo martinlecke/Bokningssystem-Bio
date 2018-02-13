@@ -4,7 +4,7 @@ Object.assign(Booking.prototype, { template(){ return `
 	
 	<div class="row">
 		<div class="col-12">
-			<h1 class="text-center my-3">Bokningssida</h1>
+			<h1 class="text-center my-3">Bokning</h1>
 		</div>
 	</div>
 
@@ -60,15 +60,15 @@ Object.assign(Booking.prototype, { template(){ return `
       </div>
 
 			<div class="col-12 bg-white text-dark seat-info">
-				<ul class="d-md-flex justify-content-center py-3 pl-0 list-unstyled">
+				<ul class="d-flex justify-content-center py-3 pl-0 list-unstyled audiinfo">
 					<li class="font-weight-bold mx-3 mb-md-0">
-						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span>Ledig
+						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block d-md-inline">Ledig</span>
 					</li>
 					<li class="font-weight-bold mx-3 mb-md-0">
-						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span>Upptagen
+						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span><span class="d-block d-md-inline">Upptagen</span>
 					</li>
 					<li class="font-weight-bold mx-3">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span>Antal biljetter
+						<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span><span class="d-block d-md-inline">Biljetter</span>
 					</li>
 				</ul>
 			</div>
@@ -79,16 +79,16 @@ Object.assign(Booking.prototype, { template(){ return `
 
 	<div class="row">
 		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Bekräfta bokningen</h2>
+			<h2 class="text-center mt-4 mb-5">Sammanfattning</h2>
 
 			<!-- 時間など、プロパティに差し替える -->
 
 			<div class="row">
-				<div class="col-12 col-sm-9 d-flex justify-content-center mx-auto">
-					<div class="bg-white text-dark d-md-flex justify-content-start confirmation mx-auto mb-5">
+				<div class="col-12 col-md-10 col-lg-8 justify-content-center mx-auto bg-white">
+					<div class=" text-dark d-md-flex justify-content-start confirmation mx-auto my-5">
 
 						<!-- Booking info  -->
-						<div class="col-12 col-md-4 text-center mt-4 my-md-5 ml-md-3">
+						<div class="col-12 col-md-4 text-center mt-4 my-5 ml-3">
 							<img src="${this.movie.poster}" alt="${this.movie.title}">
 						</div>
 						<div class="col-12 col-md-8 mb-3 mt-4 mt-md-5 px-4 px-md-5 justify-content-center">
@@ -96,7 +96,7 @@ Object.assign(Booking.prototype, { template(){ return `
 							<div class="mt-4">
 								<ul class="list-unstyled pl-0">
 									<li class="mb-2">
-										<span class="font-weight-bold mr-2">Visningsdatum: </span>
+										<span class="font-weight-bold mr-2">Datum: </span>
 										<span id="date-booking">${this.show.date}</span>
 									</li>
 									<li class="mb-2">
@@ -118,9 +118,9 @@ Object.assign(Booking.prototype, { template(){ return `
 
 									<div class="d-flex justify-content-start mt-2 mb-4">
 										<ul class="list-unstyled pl-4">
-											<li class="mr-2">Ordenarie:</li>
+											<li class="mr-2">Ordinarie:</li>
 											<li class="mr-2">Barn:</li>
-											<li class="mr-2">Pensionäre:</li>
+											<li class="mr-2">Pensionär:</li>
 											<hr class="text-dark my-2 underline">
 											<li class="mr-2">
 												<span class="font-weight-bold mr-2 mb-2">Total:</span>
@@ -169,13 +169,13 @@ Object.assign(Booking.prototype, { template(){ return `
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
-											<label for="mobile-booking" class="font-weight-bold">Mobilnummer</label>
+											<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
 											<!-- pattern="\d*" -->
 											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="11" placeholder="Ange mobilnummer (t.ex 07012..., +45 701234...)">
 										</div>
 
 										<div class="form-group mt-4">
-												<label for="email-booking" class="font-weight-bold">Email address</label>
+												<label for="email-booking" class="font-weight-bold">Email:</label>
 												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
 										</div>
 
@@ -186,8 +186,8 @@ Object.assign(Booking.prototype, { template(){ return `
 
 										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
-									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
-									<p class="mb-5"><small class="text-danger">Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
+									<p class="font-weight-bold mr-2 mb-0">Oi!</p>
+									<p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret till biografen!</small></p>
 								</ul>
 
 							</div>
