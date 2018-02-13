@@ -23,9 +23,7 @@ class Movie extends Base {
 				${that.description}
 				</p>
 				<div class="mt-2 mb-1 text-center">
-				<a class="pop" href="#filmmodal">
-				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
-				</a>
+				<button type="button" class="btn btn-danger btn-sm movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">Klicka här för biljettbokning</button>
 				</div>`
 			}
 		})
@@ -51,4 +49,5 @@ class Movie extends Base {
   	$('#modalmovie').empty();
     this.clickedMovie = new ModalMovie(this);
   }
+
 }
