@@ -60,7 +60,7 @@ Object.assign(Booking.prototype, { template(){ return `
       </div>
 
 			<div class="col-12 seat-info">
-				<ul class="d-flex py-3 pl-0 list-unstyled audiinfo mx-auto">
+				<ul class="d-flex py-3 pl-0 list-unstyled audiinfo justify-content-center mx-auto">
 					<li class="font-weight-bold mx-3 mb-md-0">
 						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block d-md-inline">Ledig</span>
 					</li>
@@ -169,6 +169,8 @@ Object.assign(Booking.prototype, { template(){ return `
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
+                      ${User.loggedIn ? '<p><b>Inloggad som:</b> ' + User.loggedIn.email + '</p>' : ''}
+                      ${!User.loggedIn ? `
 											<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
 											<!-- pattern="\d*" -->
 											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="13" placeholder="Ange mobilnummer (t.ex 07012.., +45701234...)">
@@ -178,6 +180,7 @@ Object.assign(Booking.prototype, { template(){ return `
 										<div class="form-group mt-4">
 											<label for="email-booking" class="font-weight-bold">Email address</label>
 											<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
+                      ` : ''}
 										</div>
 
 										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start" id="booking-nr">

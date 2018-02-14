@@ -40,6 +40,10 @@ class Booking extends Base {
 		this.validateMobileNr();
 		// this.showDate();
 		this.getNumberOfTicksets();
+    setTimeout(() => {
+      this.randomGenerator();
+    }, 0);
+    
 	} // Closes constructor
 
 	findShow(inparameter) {
@@ -179,24 +183,30 @@ class Booking extends Base {
 		}
 	}
 
-	randomGenerator() {
-		let that = this;
-		$(document).one('click', '#email-booking', function (event) {  // .one = only first click
-			let allBookingNumbers = [];
-			for (let booking of Data.booking) {
-				allBookingNumbers.push(booking.bookingNr);
-			}
-			let newBookingNumber;
-			let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
-			while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
-				newBookingNumber = Math.random().toString(36).slice(-10);
-			}
-			this.bookingNr = newBookingNumber;
-			// console.log(this);  
-			$('.hide-text').show();
-			$('#bookingNr-booking').html(this.bookingNr);
-		});
-	}
+    randomGenerator() {
+      let that = this;
+      if(User.loggedIn) {getRandom();}
+      $(document).one('click', '#email-booking', function (event) {  // .one = only first click
+        getRandom();
+      });
+
+      function getRandom() {
+        let allBookingNumbers = [];
+        for (let booking of Data.booking) {
+          allBookingNumbers.push(booking.bookingNr);
+        }
+        let newBookingNumber;
+        let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
+          newBookingNumber = Math.random().toString(36).slice(-10);
+        }
+        let bookingNr = newBookingNumber;
+        console.log(bookingNr, this);  
+        $('.hide-text').show();
+        $('#bookingNr-booking').html(bookingNr);
+      }
+
+    }
 
 
 
@@ -246,7 +256,10 @@ class Booking extends Base {
 	saveBookingDataToJson() {
 		let that = this;
 		$(document).on('click', '#booking-alert', function () {
-
+      if(User.loggedIn) {
+        that.wrongEmail = false;
+        that.wrongMobile = false;
+      }
 			if (that.wrongEmail == true || that.wrongMobile == true) {   // ここに　||　で付け足す    // もし間違いが入力されたら、ボタンが押せない
 				return;
 			}
@@ -293,11 +306,23 @@ class Booking extends Base {
 					seats: seats,　　　// 上で配列を作ったので、ここでは他のと一緒の形式
 					bookingNr: bookingNr,
 					mobile: mobile,
-					email: email
+					email: email,
+          user: User.loggedIn.email
 				}
 			));
+
+      //loops through the seat objects and pushes unavailable seats to the show and save to json
+      for (let seat of seats) {
+        seat.id = Number(seat.id)
+        that.show.unavailable.push(seat);
+      }
+      JSON._save('shows.json', Data.shows)
+      //////// -->
+
 			that.saveToJSON(Data.booking);
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
+      
+      // window.location = "/"
 		});
 	}
 

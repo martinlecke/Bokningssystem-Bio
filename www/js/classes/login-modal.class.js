@@ -27,12 +27,7 @@ class Login extends Base {
 				try {
 				  fromJson = await JSON._load("users/" + email);
 				} catch(e){
-          $('.alert').alert('close');
-          $('#email-input-login').parent().append(`
-            <div class="alert alert-danger my-3" role="alert">
-              Användaren finns inte.
-            </div>
-          `);
+          alert('dude');
 				}
 				if(fromJson && fromJson.password == password){
 					that.setLoggedInUser(fromJson);
@@ -53,6 +48,7 @@ class Login extends Base {
 				}
 		});
 	}
+
 
 	register(){
 		let that = this;
