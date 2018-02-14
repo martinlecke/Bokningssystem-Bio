@@ -1,6 +1,10 @@
 class App {
 
   start(){
+    // Keep/Restore logged in user (on hard page reload)
+    if(localStorage.loggedIn){
+      User.loggedIn = JSON._parse(localStorage.loggedIn); //Om logout ska fungera så måste det ske en hardpagereload efteråt.
+    }
     // Create a navbar
     this.navbar = new Navbar();
     this.navbar.render('header');
@@ -21,12 +25,10 @@ class App {
     // Create About page
     this.omOss = new About();
 
+    // Create Mina sidor page
+    this.minaSidor = new MinaSidor();
+
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
-
-    // Keep/Restore logged in user (on hard page reload)
-    if(localStorage.loggedIn){
-      User.loggedIn = JSON._parse(localStorage.loggedIn);
-    }
   }
 } 

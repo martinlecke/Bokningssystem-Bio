@@ -44,6 +44,7 @@ class PopStateHandler {
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
       '/kalendarium': 'kalendarium',
+      '/mina-sidor': 'minaSidor',
       '#': 'close'
     };
 
@@ -81,7 +82,6 @@ class PopStateHandler {
 
     }
 
-
   home(){
     $('main').empty();
     this.app.homePage.render('main');
@@ -95,6 +95,11 @@ class PopStateHandler {
   omOss(){
     $('main').empty();
     this.app.omOss.render('main');
+  }
+
+  minaSidor(){
+    $('main').empty();
+    this.app.minaSidor.render('main');
   }
 
   kalendarium(){

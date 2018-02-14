@@ -63,4 +63,21 @@ class Login extends Base {
 				JSON._save('users/' + user.email, user);
 			});
 		}
+
+	onRendered(){
+		 let that = this;
+		$(document).find(`[data-popover="${that.title}"] [data-toggle="popover"]`).popover({ 
+			trigger: "manual", 
+			html: true,
+			placement: 'top',
+			content: function() {
+				return `
+				<h6 class="mb-0 d-inline">${that.title}</h6><br>
+				<p class="description d-inline">
+				  ${that.description}
+				</p>
+				<div class="mt-2 mb-1 text-center">`
+			}
+		});
+	}
 }
