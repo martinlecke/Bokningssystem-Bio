@@ -8,7 +8,7 @@ class Navbar extends Base {
       new NavbarItem('Kalendarium','/kalendarium'),
       new NavbarItem('Om oss','/om-oss')
     ];
-    console.log(!User.loggedIn);
+    console.log(!User.loggedIn == undefined);
     if (!User.loggedIn) {
       this.items.push(new NavbarItem('Logga in','#login'));
     } else {
@@ -22,6 +22,6 @@ class Navbar extends Base {
     for(let item of this.items){
       item.active = url == item.url;
     }
-    this.render();
+    // this.render();
   }
 }
