@@ -30,5 +30,21 @@ class App {
 
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
+    this.logout();
   }
+
+  logout(){
+    $(document).on('click', "a[href='#logout']", function() {
+        delete User.loggedIn;
+        delete localStorage.loggedIn;
+        console.log('deleted');
+        // setTimeout(function() {
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
+          console.log('ny navbar')
+        // },0);
+    });
+  }
+  
 } 

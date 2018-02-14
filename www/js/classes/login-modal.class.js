@@ -10,8 +10,8 @@ class Login extends Base {
 		});
 		this.register();
 		this.login();
-    this.logout();
-		App.logout = this.logout; // So we can test from console
+  //   this.logout();
+		// App.logout = this.logout; // So we can test from console
 	}
 
  	setLoggedInUser(user){
@@ -48,20 +48,20 @@ class Login extends Base {
 		});
 	}
 
-	logout(){
-		$(document).on('click', "a[href='#logout']", function() {
-        delete User.loggedIn;
-        delete localStorage.loggedIn;
-        console.log('deleted');
-        // setTimeout(function() {
-          $('header').empty();
-          this.navbar = new Navbar();
-          this.navbar.render('header');
-          console.log('ny navbar')
-        // },0);
-    });
+	// logout(){
+	// 	$(document).on('click', "a[href='#logout']", function() {
+ //        delete User.loggedIn;
+ //        delete localStorage.loggedIn;
+ //        console.log('deleted');
+ //        // setTimeout(function() {
+ //          $('header').empty();
+ //          this.navbar = new Navbar();
+ //          this.navbar.render('header');
+ //          console.log('ny navbar')
+ //        // },0);
+ //    });
 
-	}
+	// }
 
 	register(){
 		let that = this;
