@@ -23,6 +23,7 @@ class Seat extends Base {
         Booking.markedSeats.push({id: this.id, row: this.row});
         $(event.target).addClass('clicked')
       }
+      Booking.showSeatNumber();
     }
   }
 
