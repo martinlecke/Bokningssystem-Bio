@@ -59,8 +59,8 @@ Object.assign(Booking.prototype, { template(){ return `
         ${this.auditorium.render()}
       </div>
 
-			<div class="col-12 bg-white text-dark seat-info">
-				<ul class="d-flex justify-content-center py-3 pl-0 list-unstyled audiinfo">
+			<div class="col-12 seat-info">
+				<ul class="d-flex py-3 pl-0 list-unstyled audiinfo mx-auto">
 					<li class="font-weight-bold mx-3 mb-md-0">
 						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block d-md-inline">Ledig</span>
 					</li>
