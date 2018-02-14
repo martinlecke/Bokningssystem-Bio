@@ -104,6 +104,7 @@ class PopStateHandler {
       this.mypage = new MinaSidor();
       this.mypage.render('main');
     } else {
+      $('.alert').alert('close');
       let alert = $(`<div class="alert alert-danger" role="alert">
           Du behöver logga in för att nå denna sida.
         </div>`);

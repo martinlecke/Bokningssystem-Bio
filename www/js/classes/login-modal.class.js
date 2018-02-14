@@ -27,22 +27,30 @@ class Login extends Base {
 				try {
 				  fromJson = await JSON._load("users/" + email);
 				} catch(e){
-					alert("Användaren finns inte!");
+          $('.alert').alert('close');
+          $('#email-input-login').parent().append(`
+            <div class="alert alert-danger my-3" role="alert">
+              Användaren finns inte.
+            </div>
+          `);
 				}
-				console.log(fromJson);
-				console.log(fromJson.password, password)
 				if(fromJson && fromJson.password == password){
 					that.setLoggedInUser(fromJson);
+          $('.modal').modal('hide');
+          $('.modal-backdrop').hide();
+          location.hash = "";
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
 				}
 				else {
-					alert("Fel lösenord!");
+          $('.alert').alert('close');
+					$('#password-input-login').parent().append(`
+            <div class="alert alert-danger my-3" role="alert">
+              Fel lösenord.
+            </div>
+          `);
 				}
-        $('.modal').modal('hide');
-        $('.modal-backdrop').hide();
-
-        $('header').empty();
-        this.navbar = new Navbar();
-        this.navbar.render('header');
 		});
 	}
 
@@ -62,6 +70,12 @@ class Login extends Base {
 				);
 				that.setLoggedInUser(user);
 				JSON._save('users/' + user.email, user);
+        $('.modal').modal('hide');
+        $('.modal-backdrop').hide();
+        location.hash = "";
+        $('header').empty();
+        this.navbar = new Navbar();
+        this.navbar.render('header');
 			});
 		}
 

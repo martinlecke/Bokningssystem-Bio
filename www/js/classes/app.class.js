@@ -37,14 +37,13 @@ class App {
     $(document).on('click', "a[href='#logout']", function() {
         delete User.loggedIn;
         delete localStorage.loggedIn;
-        console.log('deleted');
-        // setTimeout(function() {
-          $('header').empty();
-          this.navbar = new Navbar();
-          this.navbar.render('header');
-          console.log('ny navbar')
-        // },0);
+        $('header').empty();
+        this.navbar = new Navbar();
+        this.navbar.render('header');
+        $('.modal').modal('hide');
+        $('.modal-backdrop').hide();
+        location.hash = "";
     });
   }
-  
+
 } 
