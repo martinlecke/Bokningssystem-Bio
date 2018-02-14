@@ -11,15 +11,15 @@ class Movie extends Base {
       this.url = this.makeUrl();
       console.log(window.location.hash.indexOf(this.url));
       if(window.location.hash.indexOf(this.url) != -1) {
-        $('#filmmodal').modal('show');
+        // $('#filmmodal').modal('show');
       }
       $('#filmmodal').on('hidden.bs.modal', function (e){
         location.hash = "";
       });
     }, 0);
     
-
 	}
+
 
 	onRendered(){
 		 let that = this;

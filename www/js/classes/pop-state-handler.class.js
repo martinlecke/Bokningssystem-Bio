@@ -44,6 +44,7 @@ class PopStateHandler {
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
       '/kalendarium': 'kalendarium',
+      '#': 'close'
     };
 
     for (let i = 0; i < Data.shows.length; i++) {
@@ -62,7 +63,6 @@ class PopStateHandler {
 
     let hashes = {
       'login': 'login',
-      // 'movie': 'movie'
     };
 
     for (let i = 0; i < Data.movies.length; i++) {
@@ -113,8 +113,13 @@ class PopStateHandler {
     this.app.login = new Login();
   }
 
+  close() {
+    $('.modal').modal('hide');
+  }
+
   movie(){
     this.app.movie = new ModalMovie();
+    $('#filmmodal').modal('show');
     
   }
   modalClosing() {
