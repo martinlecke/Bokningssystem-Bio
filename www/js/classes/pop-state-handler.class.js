@@ -1,9 +1,6 @@
 class PopStateHandler {
 
-  // Note: Only instantiate PopStateHandler once!
-
-  constructor(app){　　// ４．App クラスから送られた、引数
-  
+  constructor(app){  
     this.app = app;
     // Add event handlers for a.pop-links once
     this.addEventHandler();
@@ -47,7 +44,8 @@ class PopStateHandler {
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
       '/kalendarium': 'kalendarium',
-      '/bokningssida': 'bokningssida'
+      '/mina-sidor': 'minaSidor',
+      '#': 'close'
     };
 
     for (let i = 0; i < Data.shows.length; i++) {
@@ -66,14 +64,22 @@ class PopStateHandler {
 
     let hashes = {
       'login': 'login',
-      'movie': 'movie'
+    };
+
+    for (let i = 0; i < Data.movies.length; i++) {
+      let movieUrls = Data.movies[i].title;
+      movieUrls = movieUrls.replace(/[, :']/g, "").toLowerCase();
+      movieUrls = movieUrls.replace(/[åä]/g, "a");
+      movieUrls = movieUrls.replace(/[ö]/g, "o");
+      hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
     }
 
     if(!hash || !hashes[hash]){
       return;
     }
-      methodName = hashes[hash];
-      this[methodName]();
+    methodName = hashes[hash];
+    this[methodName]();
+
     }
 
   home(){
@@ -91,6 +97,11 @@ class PopStateHandler {
     this.app.omOss.render('main');
   }
 
+  minaSidor(){
+    $('main').empty();
+    this.app.minaSidor.render('main');
+  }
+
   kalendarium(){
     $('main').empty();
     this.app.kalendarium.render('main');
@@ -99,16 +110,32 @@ class PopStateHandler {
   bokningssida(){
     let id = location.pathname;
     $('main').empty();
-    Showing.x = new Booking(id.slice(1, id.length));
-    Showing.x.render('main');
+    Showing.bookingpage = new Booking(id.slice(1, id.length));
+    Showing.bookingpage.render('main');
   }
 
   login(){
     this.app.login = new Login();
   }
 
+  close() {
+    $('.modal').modal('hide');
+  }
+
   movie(){
-    this.app.movie = new ModalMovie();
+    function makeUrl(movie) {
+      movie = movie.replace(/[, :']/g, "").toLowerCase();
+      movie = movie.replace(/[åä]/g, "a");
+      movie = movie.replace(/[ö]/g, "o");
+      return movie;
+    }
+
+    let movie = Data.movies.find(function(movie) {
+      return ('#' + makeUrl(movie.title)) == location.hash; 
+    });
+    new ModalMovie(movie);
+    $('#filmmodal').modal('show');
+    
   }
   modalClosing() {
     $(document).on('click', '.pop', function () {

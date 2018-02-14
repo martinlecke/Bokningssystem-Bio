@@ -2,7 +2,6 @@ class Login extends Base {
 	
 	constructor(){
 		super();
-		this.reset();
 		if(window.location.hash.indexOf('login') != -1) {
   		$('#login').modal('show');
 		}
@@ -11,13 +10,9 @@ class Login extends Base {
 		});
 		this.register();
 		this.login();
-		window.logout = this.logout; // So we can test from console
+    this.logout();
+		App.logout = this.logout; // So we can test from console
 	}
-
-	reset(){
-   	this.name = '';
-   	this.pass = '';
- 	}
 
  	setLoggedInUser(user){
 		User.loggedIn = user;
@@ -27,6 +22,7 @@ class Login extends Base {
 	login(){
 		let that = this;
 		$(document).on('click', "#submit-login", async function(e){
+        e.preventDefault();
 				let email = $('#email-input-login').val();
 				let password = $('#password-input-login').val();
 				let fromJson;
@@ -43,13 +39,28 @@ class Login extends Base {
 				else {
 					alert("Fel lösenord!");
 				}
+        $('.modal').modal('hide');
+        $('.modal-backdrop').hide();
+
+        $('header').empty();
+        this.navbar = new Navbar();
+        this.navbar.render('header');
 		});
 	}
 
 	logout(){
-		// Put this inside an event handler
-		delete User.loggedIn;
-		delete localStorage.loggedIn;
+		$(document).on('click', "a[href='#logout']", function() {
+        delete User.loggedIn;
+        delete localStorage.loggedIn;
+        console.log('deleted');
+        // setTimeout(function() {
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
+          console.log('ny navbar')
+        // },0);
+    });
+
 	}
 
 	register(){
@@ -58,7 +69,6 @@ class Login extends Base {
 				e.preventDefault();
 				let email = $("#email-input-register").val();
 				let password = $("#password-input-register").val();
-				// let generateId = that.generateId(); 
 
 				let user = new User(
 					{
@@ -70,4 +80,21 @@ class Login extends Base {
 				JSON._save('users/' + user.email, user);
 			});
 		}
+
+	onRendered(){
+		 let that = this;
+		$(document).find(`[data-popover="${that.title}"] [data-toggle="popover"]`).popover({ 
+			trigger: "manual", 
+			html: true,
+			placement: 'top',
+			content: function() {
+				return `
+				<h6 class="mb-0 d-inline">${that.title}</h6><br>
+				<p class="description d-inline">
+				  ${that.description}
+				</p>
+				<div class="mt-2 mb-1 text-center">`
+			}
+		});
+	}
 }

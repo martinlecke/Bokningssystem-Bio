@@ -6,5 +6,4 @@ class NavbarItem extends Base {
     this.url = url;
     this.active = false;
   }
-
 }
