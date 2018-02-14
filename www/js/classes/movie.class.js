@@ -7,6 +7,17 @@ class Movie extends Base {
 				this[name] = props[name];
 			}
 		}
+    setTimeout(() => {
+      this.url = this.makeUrl();
+      console.log(window.location.hash.indexOf(this.url));
+      if(window.location.hash.indexOf(this.url) != -1) {
+        $('#filmmodal').modal('show');
+      }
+      $('#filmmodal').on('hidden.bs.modal', function (e){
+        location.hash = "";
+      });
+    }, 0);
+    
 
 	}
 
@@ -46,8 +57,16 @@ class Movie extends Base {
   click() {
   	$('#modalmovie').empty();
     this.clickedMovie = new ModalMovie(this);
+    $('#filmmodal').modal('show');
+    $('.popover').popover('hide');
   }
 
-
+  makeUrl() {
+    let title = this.title;
+    title = title.replace(/[, :']/g, "").toLowerCase();
+    title = title.replace(/[åä]/g, "a");
+    title = title.replace(/[ö]/g, "o");
+    return title;
+  }
 
 }

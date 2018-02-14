@@ -43,7 +43,6 @@ class PopStateHandler {
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
       '/kalendarium': 'kalendarium',
-      '/bokningssida': 'bokningssida'
     };
 
     for (let i = 0; i < Data.shows.length; i++) {
@@ -62,7 +61,7 @@ class PopStateHandler {
 
     let hashes = {
       'login': 'login',
-      'movie': 'movie'
+      // 'movie': 'movie'
     };
 
     for (let i = 0; i < Data.movies.length; i++) {
@@ -76,9 +75,11 @@ class PopStateHandler {
     if(!hash || !hashes[hash]){
       return;
     }
-      methodName = hashes[hash];
-      this[methodName]();
+    methodName = hashes[hash];
+    this[methodName]();
+
     }
+
 
   home(){
     $('main').empty();
