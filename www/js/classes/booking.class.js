@@ -84,7 +84,6 @@ class Booking extends Base {
 			$('#number-ordinary').val('');
 			$('#number-ordinary').html(number);
 			this.onRendered();
-      this.auditorium.render();
 		});
 	}
 
@@ -121,6 +120,8 @@ class Booking extends Base {
 				$('#number-ordinary').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
@@ -134,6 +135,8 @@ class Booking extends Base {
 				$('#number-child').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
@@ -147,6 +150,8 @@ class Booking extends Base {
 				$('#number-pensioner').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
