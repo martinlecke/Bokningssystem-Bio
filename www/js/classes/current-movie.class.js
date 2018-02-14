@@ -2,11 +2,7 @@ class CurrentMovie extends Base {
 	
 	constructor(props){
 		super();
-		for(let name in props){
-			if(['title','poster', 'description'].includes(name)){
-				this[name] = props[name];
-			}
-		}
+		Object.assign(this, props);
 	}
 
 	onRendered(){

@@ -1,12 +1,8 @@
 class UpcomingMovie extends Base {
 	
 	constructor(props){
-	super();
-		for(let name in props){
-			if(['title','poster', 'description'].includes(name)){
-				this[name] = props[name];
-			}
-		}
+		super();
+		Object.assign(this, props);
 	}
 
 	onRendered(){
@@ -17,14 +13,10 @@ class UpcomingMovie extends Base {
 			placement: 'top',
 			content: function() {
 				return `
-				<h6 class="mb-0 d-inline">Handling: </h6>
-				<p class="description d-inline">
-				${that.description}
-				</p>
-				<div class="mt-2 mb-1 text-center">
-				<a class="pop" href="${that.title}">
-				<button type="button" class="btn btn-danger btn-sm">Klicka här för biljettbokning</button>
-				</a>
+				<h6 class="mb-0 d-inline">${that.title}</h6><br>
+					<p class="description d-inline">
+						${that.description}
+					</p>
 				</div>`
 			}
 		})
