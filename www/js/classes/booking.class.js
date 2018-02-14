@@ -11,6 +11,7 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
+		this.wrongEmail = true;
 
 		Booking.markedSeats = [];
 		this.bookingItems = [
@@ -34,9 +35,8 @@ class Booking extends Base {
 		Booking.showSeatNumber = this.showSeatNumber;
 		this.randomGenerator();
 		this.saveBookingDataToJson();
-		// this.validateEmail();
+		this.validateEmail();
 		// this.validateMobileNr();
-		this.bookingAlert();
 		// this.showDate();
 		this.getNumberOfTicksets();
 	} // Closes constructor
@@ -168,9 +168,7 @@ class Booking extends Base {
 	showSeatNumber() {
 		$('#seat-booking').empty();
 		for (let seat of Booking.markedSeats) {
-			// $('<li></li>').append('<span id="seat-booking">Stolnr: ' + seat.id + ' (' + 'Rad: ' + seat.row + ')</span>').appendTo('#seat-booking');
-			$('<li></li>').append('<span id="row-booking">Rad: ' + seat.row + '</span><span class="ml-3" id="id-booking">Stolnr: ' + seat.id + '</span>').appendTo('#seat-booking');
-
+			$('<li></li>').append('Rad: <span  class="mr-3 row-booking">' + seat.row + '</span>Stolnr: <span class="id-booking">' + seat.id + '</span>').appendTo('#seat-booking');
 		}
 	}
 
@@ -193,89 +191,94 @@ class Booking extends Base {
 		});
 	}
 
-
-
-	// generateId() {
-	// 	let userId = "";   // 前はuserId
-	// 	let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-	// 	for (let i = 0; i < 6; i++) {
-	// 		userId += possible.charAt(Math.floor(Math.random() * possible.length));   // 
-	// 	}
-	// 	return userId;
-	// }
-
-
-
-	// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
-	saveBookingDataToJson() {
-		let that = this;
-		$(document).on('click', '#booking-alert', function () {
-			let title = $('#title-booking').text();
-			let date = $('#date-booking').text();
-			let time = $('#time-booking').text();
-			let auditorium = $('#auditorium-booking').text();
-			let ordinary = $('#number-ordinary2').text();
-			let child = $('#number-child2').text();
-			let pensioner = $('#number-pensioner2').text();
-			let totalNr = $('#total-tickets').text();
-			let amount = $('#amount').text();
-			let bookingNr = $('#bookingNr-booking').text();
+	validateEmail() {
+		$(document).on('keyup', '#email-booking', () => {
 			let email = $('#email-booking').val();
-			let mobile = $('#mobile-booking').val();
-			let id = $('#id-booking').val();
-			let row = $('#row-booking').val();
-			// let seats = $('#seat-booking').val();
-
-			// Här kommer några metoder
-			// metod: check email address
-			// metod: check telnr
-
-
-			// Lägg till "seats" senare
-			Data.booking.push(new BookingData(
-				{
-					title: title,
-					date: date,
-					time: time,
-					auditorium: auditorium,
-					tickets: [
-						{
-							ordinary: ordinary,
-							child: child,
-							pensioner: pensioner,
-							totalNr: totalNr
-						}
-					],
-					amount: amount,
-					seats: [
-						{
-							// seat: seat,
-							id: id,
-							row: row
-						}
-					],
-					bookingNr: bookingNr,
-					mobile: mobile,
-					email: email
-				}
-			));
-			that.saveToJSON(Data.booking);
+			// if (email === '') {
+			// 	$('#email-booking').attr('data-content', 'Ange email adress');
+			// 	$('#email-booking').popover('show');
+			// 	this.wrongEmail = true;
 			// }
+			if (!email.includes('@') || !email.includes('.') || email === '') {
+				$('#emali-booking').attr('data-content', 'Ange rätt email adress');
+				$('#email-booking').popover('show');
+				this.wrongEmail = true;
+			}
+			else {
+				$('#email-booking').popover('hide');
+				this.wrongEmail = false;
+			}
 		});
+
 	}
 
-	saveToJSON(array) {
-		JSON._save('booking.json', array);
+		// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
+		saveBookingDataToJson() {
+			let that = this;
+			$(document).on('click', '#booking-alert', function () {
+
+				if (that.wrongEmail == true) {   // ここに　||　で付け足す
+					return;
+				}
+
+				let title = $('#title-booking').text();
+				let date = $('#date-booking').text();
+				let time = $('#time-booking').text();
+				let auditorium = $('#auditorium-booking').text();
+				let ordinary = $('#number-ordinary2').text();
+				let child = $('#number-child2').text();
+				let pensioner = $('#number-pensioner2').text();
+				let totalNr = $('#total-tickets').text();
+				let amount = $('#amount').text();
+				let bookingNr = $('#bookingNr-booking').text();
+				let email = $('#email-booking').val();
+				let mobile = $('#mobile-booking').val();
+
+
+				let jqueryIds = $('.id-booking');  // det är array
+
+				let seats = [];
+				for (let id of jqueryIds) {
+					seats.push({
+						id: $(id).text(),
+						row: $(id).prev('.row-booking').text()
+					});
+				}
+
+				Data.booking.push(new BookingData(
+					{
+						title: title,
+						date: date,
+						time: time,
+						auditorium: auditorium,
+						tickets: [
+							{
+								ordinary: ordinary,
+								child: child,
+								pensioner: pensioner,
+								totalNr: totalNr
+							}
+						],
+						amount: amount,
+						seats: seats,
+						bookingNr: bookingNr,
+						mobile: mobile,
+						email: email
+					}
+				));
+				that.saveToJSON(Data.booking);
+				
+				alert('Tack för bokning! Vi skickade ett mail till dig.');
+				// }
+			});
+		}
+
+		saveToJSON(array) {
+			JSON._save('booking.json', array);
+		}
+
+
 	}
-
-	bookingAlert() {
-		$(document).on('click', '#booking-alert', function () {
-			alert('Tack för bokning! Vi skickade ett mail till dig.');
-		});
-	}
-
-
-}
 
 
 
