@@ -11,7 +11,8 @@ class Booking extends Base {
 		this.clickMinusOrdinary();
 		this.clickMinusChild();
 		this.clickMinusPensioner();
-		this.wrongEmail = true;
+		this.wrongEmail = true;   // 最初は入力できる状態にしておく
+		this.wrongMobile = true;
 
 		Booking.markedSeats = [];
 		this.bookingItems = [
@@ -36,7 +37,7 @@ class Booking extends Base {
 		this.randomGenerator();
 		this.saveBookingDataToJson();
 		this.validateEmail();
-		// this.validateMobileNr();
+		this.validateMobileNr();
 		// this.showDate();
 		this.getNumberOfTicksets();
 	} // Closes constructor
@@ -191,6 +192,30 @@ class Booking extends Base {
 		});
 	}
 
+
+
+	validateMobileNr() {
+		$(document).on('keyup', '#mobile-booking', () => {
+			let mobile = Number($('#mobile-booking').val());
+			console.log(mobile.length);
+			console.log(typeof mobile);
+			if (mobile === '' || !mobile.length === 10) {
+				$('#booking-alert').attr('data-content', 'Ange rätt mobilnummer');
+				$('#booking').popover('show');
+				this.wrongMobile = true;
+			}
+			else if (!mobile.includes('+') && !mobile.length === 12) {
+				$('#booking-alert').attr('data-content', 'Ange "+" och landnummer');
+				$('#booking').popover('show');
+				this.wrongMobile = true;
+			}
+			else {
+				$('#mobile-booking').popover('hide');
+				this.wrongMobile = false;   // 間違いじゃない、保存できる
+			}
+		});
+	}
+
 	validateEmail() {
 		$(document).on('keyup', '#email-booking', () => {
 			let email = $('#email-booking').val();
@@ -200,85 +225,82 @@ class Booking extends Base {
 			// 	this.wrongEmail = true;
 			// }
 			if (!email.includes('@') || !email.includes('.') || email === '') {
-				$('#emali-booking').attr('data-content', 'Ange rätt email adress');
-				$('#email-booking').popover('show');
-				this.wrongEmail = true;
+				$('#booking-alert').attr('data-content', 'Ange rätt email adress');
+				$('#booking').popover('show');
+				this.wrongEmail = true;   // 間違いがある
 			}
 			else {
 				$('#email-booking').popover('hide');
-				this.wrongEmail = false;
+				this.wrongEmail = false;   // 間違いじゃない、保存できる
 			}
 		});
-
 	}
 
-		// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
-		saveBookingDataToJson() {
-			let that = this;
-			$(document).on('click', '#booking-alert', function () {
+	// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
+	saveBookingDataToJson() {
+		let that = this;
+		$(document).on('click', '#booking-alert', function () {
 
-				if (that.wrongEmail == true) {   // ここに　||　で付け足す
-					return;
+			if (that.wrongEmail == true || that.wrongMobile == true) {   // ここに　||　で付け足す    // もし間違いが入力されたら、ボタンが押せない
+				return;
+			}
+
+			let title = $('#title-booking').text();
+			let date = $('#date-booking').text();
+			let time = $('#time-booking').text();
+			let auditorium = $('#auditorium-booking').text();
+			let ordinary = $('#number-ordinary2').text();
+			let child = $('#number-child2').text();
+			let pensioner = $('#number-pensioner2').text();
+			let totalNr = $('#total-tickets').text();
+			let amount = $('#amount').text();
+			let bookingNr = $('#bookingNr-booking').text();
+			let email = $('#email-booking').val();
+			let mobile = $('#mobile-booking').val();
+
+
+			let jqueryIds = $('.id-booking');  // det är array
+
+			let seats = [];
+			for (let id of jqueryIds) {
+				seats.push({
+					id: $(id).text(),   // text は最初の一個しか保存できない、２つ以上になると、繋がって出力される
+					row: $(id).prev('.row-booking').text()    // prev = 1つ上の（ここでは、１つ上のspan）
+				});
+			}
+
+			Data.booking.push(new BookingData(
+				{
+					title: title,
+					date: date,
+					time: time,
+					auditorium: auditorium,
+					tickets: [
+						{
+							ordinary: ordinary,
+							child: child,
+							pensioner: pensioner,
+							totalNr: totalNr
+						}
+					],
+					amount: amount,
+					seats: seats,　　　// 上で配列を作ったので、ここでは他のと一緒の形式
+					bookingNr: bookingNr,
+					mobile: mobile,
+					email: email
 				}
-
-				let title = $('#title-booking').text();
-				let date = $('#date-booking').text();
-				let time = $('#time-booking').text();
-				let auditorium = $('#auditorium-booking').text();
-				let ordinary = $('#number-ordinary2').text();
-				let child = $('#number-child2').text();
-				let pensioner = $('#number-pensioner2').text();
-				let totalNr = $('#total-tickets').text();
-				let amount = $('#amount').text();
-				let bookingNr = $('#bookingNr-booking').text();
-				let email = $('#email-booking').val();
-				let mobile = $('#mobile-booking').val();
-
-
-				let jqueryIds = $('.id-booking');  // det är array
-
-				let seats = [];
-				for (let id of jqueryIds) {
-					seats.push({
-						id: $(id).text(),
-						row: $(id).prev('.row-booking').text()
-					});
-				}
-
-				Data.booking.push(new BookingData(
-					{
-						title: title,
-						date: date,
-						time: time,
-						auditorium: auditorium,
-						tickets: [
-							{
-								ordinary: ordinary,
-								child: child,
-								pensioner: pensioner,
-								totalNr: totalNr
-							}
-						],
-						amount: amount,
-						seats: seats,
-						bookingNr: bookingNr,
-						mobile: mobile,
-						email: email
-					}
-				));
-				that.saveToJSON(Data.booking);
-				
-				alert('Tack för bokning! Vi skickade ett mail till dig.');
-				// }
-			});
-		}
-
-		saveToJSON(array) {
-			JSON._save('booking.json', array);
-		}
-
-
+			));
+			that.saveToJSON(Data.booking);
+			alert('Tack för bokning! Vi skickade ett mail till dig.');
+		});
 	}
+
+	saveToJSON(array) {
+		JSON._save('booking.json', array);
+	}
+
+
+}
 
 
 
