@@ -4,8 +4,6 @@ class CarouselItem extends Base {
 		super();
     Object.assign(this, props);
 	}
-		
-	
 
   click() {
     $('#modalmovie').empty();

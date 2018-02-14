@@ -58,7 +58,6 @@ class Login extends Base {
 				e.preventDefault();
 				let email = $("#email-input-register").val();
 				let password = $("#password-input-register").val();
-				// let generateId = that.generateId(); 
 
 				let user = new User(
 					{
