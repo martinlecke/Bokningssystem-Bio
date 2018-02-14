@@ -73,6 +73,7 @@ class Booking extends Base {
 		this.calcTotalPrice();
     this.getNumberOfTicksets(); //updates selection
     $('.seatslefttopick').text(Booking.selection);
+
 	}
 
 	// Ticket - ordinary (plus button)
@@ -83,6 +84,7 @@ class Booking extends Base {
 			$('#number-ordinary').val('');
 			$('#number-ordinary').html(number);
 			this.onRendered();
+      this.auditorium.render();
 		});
 	}
 
