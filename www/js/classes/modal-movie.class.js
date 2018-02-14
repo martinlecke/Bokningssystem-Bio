@@ -14,9 +14,7 @@ class ModalMovie extends Base {
     	}
     } 
     this.render('#modalmovie');
-
   }
-
 
   click() {
     $('#filmmodal').on('hidden.bs.modal', function (e){

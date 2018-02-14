@@ -118,7 +118,17 @@ class PopStateHandler {
   }
 
   movie(){
-    this.app.movie = new ModalMovie();
+    function makeUrl(movie) {
+      movie = movie.replace(/[, :']/g, "").toLowerCase();
+      movie = movie.replace(/[åä]/g, "a");
+      movie = movie.replace(/[ö]/g, "o");
+      return movie;
+    }
+
+    let movie = Data.movies.find(function(movie) {
+      return ('#' + makeUrl(movie.title)) == location.hash; 
+    });
+    new ModalMovie(movie);
     $('#filmmodal').modal('show');
     
   }

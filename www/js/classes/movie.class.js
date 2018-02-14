@@ -9,17 +9,12 @@ class Movie extends Base {
 		}
     setTimeout(() => {
       this.url = this.makeUrl();
-      console.log(window.location.hash.indexOf(this.url));
-      if(window.location.hash.indexOf(this.url) != -1) {
-        // $('#filmmodal').modal('show');
-      }
-      $('#filmmodal').on('hidden.bs.modal', function (e){
-        location.hash = "";
-      });
+
+      $('#filmmodal').modal('show');
+
     }, 0);
     
 	}
-
 
 	onRendered(){
 		 let that = this;
@@ -46,7 +41,7 @@ class Movie extends Base {
 		.on("mouseleave", function () {
 			let that = this;
 			setTimeout(function () {
-				if (!$(".popover:hover").length) {　　// hoverの時間をキープできる
+				if (!$(".popover:hover").length) {
 					$(that).popover("hide");
 				}
 			}, 300);
@@ -56,8 +51,7 @@ class Movie extends Base {
 
   click() {
   	$('#modalmovie').empty();
-    this.clickedMovie = new ModalMovie(this);
-    $('#filmmodal').modal('show');
+    
     $('.popover').popover('hide');
   }
 
