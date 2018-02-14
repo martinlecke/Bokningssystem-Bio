@@ -105,8 +105,8 @@ class PopStateHandler {
   bokningssida(){
     let id = location.pathname;
     $('main').empty();
-    Showing.x = new Booking(id.slice(1, id.length));
-    Showing.x.render('main');
+    Showing.bookingpage = new Booking(id.slice(1, id.length));
+    Showing.bookingpage.render('main');
   }
 
   login(){
