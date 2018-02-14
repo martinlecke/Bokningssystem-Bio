@@ -21,9 +21,6 @@ class App {
     // Create About page
     this.omOss = new About();
 
-    // Create ModalMovie
-    this.modalMovie = new ModalMovie();
-
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
 

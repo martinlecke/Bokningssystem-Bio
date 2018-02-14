@@ -2,9 +2,6 @@ class BookingData extends Base {
 
 	constructor(props){
 		super();
-			for(let name in props){
-				this[name] = props[name];
-			}
-		}
-
+		Object.assign(this, props);	
+	}
 }

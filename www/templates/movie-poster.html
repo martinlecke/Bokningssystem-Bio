@@ -1,7 +1,7 @@
 Object.assign(Movie.prototype, { template(){ return `
 
 <div class="col-4 text-center mb-5">
-	<a href="#filmmodal" class="movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">
+	<a href="#movie" class="movie-link" data-popover="${this.title}">
     <img class="img-fluid poster poster-3" src="${this.poster}" data-toggle="popover">
     <h5 class="mt-3 mb-4">${this.title}</h5>
   </a>

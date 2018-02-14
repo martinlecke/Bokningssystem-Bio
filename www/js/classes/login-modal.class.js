@@ -2,7 +2,6 @@ class Login extends Base {
 	
 	constructor(){
 		super();
-		this.reset();
 		if(window.location.hash.indexOf('login') != -1) {
   		$('#login').modal('show');
 		}
@@ -13,11 +12,6 @@ class Login extends Base {
 		this.login();
 		window.logout = this.logout; // So we can test from console
 	}
-
-	reset(){
-   	this.name = '';
-   	this.pass = '';
- 	}
 
  	setLoggedInUser(user){
 		User.loggedIn = user;

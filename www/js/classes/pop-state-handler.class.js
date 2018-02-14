@@ -1,9 +1,6 @@
 class PopStateHandler {
 
-  // Note: Only instantiate PopStateHandler once!
-
-  constructor(app){　　// ４．App クラスから送られた、引数
-  
+  constructor(app){  
     this.app = app;
     // Add event handlers for a.pop-links once
     this.addEventHandler();
@@ -66,6 +63,14 @@ class PopStateHandler {
     let hashes = {
       'login': 'login',
       'movie': 'movie'
+    };
+
+    for (let i = 0; i < Data.movies.length; i++) {
+      let movieUrls = Data.movies[i].title;
+      movieUrls = movieUrls.replace(/[, :']/g, "").toLowerCase();
+      movieUrls = movieUrls.replace(/[åä]/g, "a");
+      movieUrls = movieUrls.replace(/[ö]/g, "o");
+      hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
     }
 
     if(!hash || !hashes[hash]){
@@ -108,5 +113,6 @@ class PopStateHandler {
 
   movie(){
     this.app.movie = new ModalMovie();
+    
   }
 }
