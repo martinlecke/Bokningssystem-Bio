@@ -72,6 +72,7 @@ class PopStateHandler {
       movieUrls = movieUrls.replace(/[åä]/g, "a");
       movieUrls = movieUrls.replace(/[ö]/g, "o");
       hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
+
     }
 
     if(!hash || !hashes[hash]){
