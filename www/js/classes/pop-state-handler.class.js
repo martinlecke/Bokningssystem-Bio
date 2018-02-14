@@ -98,8 +98,17 @@ class PopStateHandler {
   }
 
   minaSidor(){
-    $('main').empty();
-    this.app.minaSidor.render('main');
+    if(User.loggedIn) {
+      $('main').empty();
+      this.mypage = new MinaSidor();
+      this.mypage.render('main');
+    } else {
+      let alert = $(`<div class="alert alert-danger" role="alert">
+          Du behöver logga in för att nå denna sida.
+        </div>`);
+      $('main').append(alert);
+    }
+    
   }
 
   kalendarium(){

@@ -25,8 +25,8 @@ class App {
     // Create About page
     this.omOss = new About();
 
-    // Create Mina sidor page
-    this.minaSidor = new MinaSidor();
+    // // Create Mina sidor page
+    // this.minaSidor = new MinaSidor();
 
     // Initiate handling of SPA push/pop-state
     new PopStateHandler(this);
