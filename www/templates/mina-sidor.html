@@ -4,27 +4,22 @@ Object.assign(MinaSidor.prototype, { template(){ return `
 	<div class="row">
 		<div class="col-12">
 			<h2 class="mt-5 text-center">Mina bokningar</h2>
+
 				<div class="row">
-					
-					<div class="col-6 mt-5">
-					<h3 class="text-center mb-4">Dina kommande bokningar</h3>
-						
+
+					<div class="col-12 col-md-6 mt-5">
+          <h3 class="text-center mb-4">Kommande visningar</h3>
 						${this.myBookedShow.render()}
-
 				  </div> <!-- Stänger col-6 -->
 
-					<div class="col-6 mt-5">
-					<h3 class="text-center mb-4">Dina tidigare bokningar</h3>
-						
+					<div class="col-12 col-md-6 mt-5">
+          <h3 class="text-center mb-4">Tidigare visningar</h3>
 						${this.myPastShows.render()}
-
 				  </div> <!-- Stänger col-6 -->
 
-					</div>
 				</div>
 
 			</div>
-
 		</div>
 	</div>
 </div>

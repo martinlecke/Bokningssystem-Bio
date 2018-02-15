@@ -1,19 +1,19 @@
 Object.assign(MyBookedShow.prototype, { template(){ return `
 
 <div id="mina-sidor-accordion">
-  <div class="card border-danger mb-3 mx-auto" style="max-width: 18rem;">
+  <div class="card border-danger mb-3 mx-auto">
   	<a class="collapse-header" data-toggle="collapse" data-target="#collapse-this-showing" aria-expanded="true" aria-controls="collapse-this-showing">
 	  	<div class="card-header" >
-	    	<h5 class="text-danger font-weight-bold mb-0" id="headingOne">Film och datum?</h5>
+	    	<h5 class="text-danger font-weight-bold mb-0" id="headingOne">${this.title}</h5>
 	    </div>
     </a>
     <div id="collapse-this-showing" class="collapse show" aria-labelledby="headingOne" data-parent="#mina-sidor-accordion">
-   	  <div class="card-body text-danger">
-   	    <ul class="card-text list-unstyled font-weight-bold">
-   	    	<li class="">Salong</li>
-   	    	<li>stolnr, radnr</li>
-   	    	<li>tid </li>
-   	    	<li>bokningsnummer:</li>
+   	  <div class="card-body text-dark">
+   	    <ul class="card-text list-unstyled">
+          <li><strong>Datum:</strong> ${this.date} - <strong>Tid:</strong>  ${this.time}</li>
+   	    	<li class=""><strong>Salong:</strong>  ${this.auditorium}</li>
+   	    	${this.seatAndRows.render()}
+   	    	<li><strong>Bokningsnummer:</strong>  ${this.bookingNr}</li>
    	    </ul>	
    	  </div> <!-- Stänger card body -->
    	</div> <!-- Stänger collapse -->

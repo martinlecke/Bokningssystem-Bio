@@ -2,15 +2,42 @@ class MinaSidor extends Base {
 	
 	constructor(){
 		super();
-		this.myBookedShow = []
-		for(let show of Data.booking){
-			this.myBookedShow.push(new MyBookedShow(show))
-		}
+    if(User.loggedIn) {
+      Object.assign(this, User.loggedIn);
+      this.start();
+    }
+  }
 
-		this.myPastShows = []
-		for(let show of Data.booking){
-			this.myPastShows.push(new MyPastShows(show))
-		}
+  start() {
+    this.myBookedShow = []
+    console.log(this.bookings);
+    let comingShows = this.bookings.filter((shows)=>{
+        // Removes all shows from past todays date 
+        let time = new Date(shows.date + ' 23:59:59');
+        return new Date() < new Date(time.getTime());
+      })
+    for(let booking of comingShows){
+      this.myBookedShow.push(new MyBookedShow(booking))
+    }
 
-	}
+    this.myPastShows = []
+    console.log('this.bookings', this.bookings);
+    let pastShows = this.bookings.filter((shows)=>{
+        // Removes all shows from past todays date
+        let time = new Date(shows.date + ' 00:00:00');
+        return new Date().getTime() > new Date(time).getTime();
+      })
+    .filter((shows)=>{
+        // Removes all shows from past todays date 
+        let time = new Date(shows.date + ' 23:59:59');
+        return new Date() > new Date(time.getTime());
+      })
+    for(let booking of pastShows){
+      this.myPastShows.push(new MyBookedShow(booking))
+    }
+
+  }
+
+
+
 }
