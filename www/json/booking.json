@@ -1136,5 +1136,29 @@
     "bookingNr": "vmhw8d7k0t",
     "user": "lecke.martin@gmail.com",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 46,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "kb2ld0ivo9",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
   }
 ]

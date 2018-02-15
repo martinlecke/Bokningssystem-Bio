@@ -49,7 +49,7 @@ class Login extends Base {
               Du är nu inloggad som <strong>${User.loggedIn.email}</strong>.
             </div>`);
           $('header').prepend($alert);
-          $alert.slideDown().delay(2000).slideUp();
+          $alert.slideDown().delay(3000).slideUp();
 				}
 				else {
           $('.wrongpassword').alert('close');
@@ -85,6 +85,11 @@ class Login extends Base {
           $('header').empty();
           this.navbar = new Navbar();
           this.navbar.render('header');
+          let $alert = $(`<div class="alert alert-success" role="alert">
+              Välkommen till Filmvisarna, <strong>${User.loggedIn.email}</strong>! Du är nu inloggad!
+            </div>`);
+          $('header').prepend($alert);
+          $alert.slideDown().delay(3000).slideUp();
         }
 
 			});

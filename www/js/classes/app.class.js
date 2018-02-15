@@ -44,7 +44,7 @@ class App {
             Du är nu <strong>utloggad!</strong>
           </div>`);
         $('header').prepend($alert);
-        $alert.slideDown().delay(2000).slideUp();
+        $alert.slideDown().delay(3000).slideUp();
     });
   }
 
