@@ -11,7 +11,6 @@ class ModalMovie extends Base {
     let filteredShows = Data.shows.filter((shows)=>{
         // Removes all shows from past todays date 
         let time = new Date(shows.date + ' 23:59:59');
-        console.log(new Date() < new Date(time.getTime()) && this.title == shows.film);
         return new Date() < new Date(time.getTime()) && this.title == shows.film;
       })
     filteredShows.forEach((show) => {

@@ -18,7 +18,6 @@ class MinaSidor extends Base {
     for(let booking of comingShows){
       this.myBookedShow.push(new MyBookedShow(booking))
     }
-    console.log(this.myBookedShow)
 
 
     this.myPastShows = []

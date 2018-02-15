@@ -1100,5 +1100,41 @@
     "bookingNr": "u0in9ccbjw",
     "user": "lecke.martin@gmail.com",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Paddington 2",
+    "date": "2018-02-16",
+    "time": "21.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "4 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "4 st"
+      }
+    ],
+    "amount": "340 kr",
+    "seats": [
+      {
+        "id": 72,
+        "row": "8"
+      },
+      {
+        "id": 73,
+        "row": "8"
+      },
+      {
+        "id": 74,
+        "row": "8"
+      },
+      {
+        "id": 75,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "vmhw8d7k0t",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
   }
 ]
