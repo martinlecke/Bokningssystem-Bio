@@ -8,7 +8,6 @@ class Booking extends Base {
     if(!App.instanceReady) this.doOnce();
     Booking.markedSeats = [];
 		this.wrongEmail = true;   // 最初は入力できる状態にしておく
-		this.wrongMobile = true;
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -43,7 +42,6 @@ class Booking extends Base {
     this.clickMinusPensioner();
     this.saveBookingDataToJson();
     this.validateEmail();
-    this.validateMobileNr();
     this.getNumberOfTicksets();
     this.onRendered();
     App.instanceReady = true;
@@ -69,12 +67,8 @@ class Booking extends Base {
 
 	getNumberOfTicksets() {
 		let calc = Number($('#number-ordinary').text()) +
-			Number($('#number-child').text()) +
-			Number($('#number-pensioner').text());
-      // console.log('calc', calc);
-      // console.log('Ordinary', Number($('#number-ordinary').text()));
-      // console.log('Child', Number($('#number-child').text()));
-      // console.log('Pensionär', Number($('#number-pensioner').text()));
+		Number($('#number-child').text()) +
+		Number($('#number-pensioner').text());
 		Booking.selection = calc;
 	}
 
@@ -89,7 +83,6 @@ class Booking extends Base {
 	clickPlusOrdinary() {
 		$(document).on('click', '#plus-ordinary', () => {
 			let number = Number($('#number-ordinary').text());
-      console.log(number);
 			number += 1;
 			$('#number-ordinary').val('');
 			$('#number-ordinary').html(number);
@@ -102,7 +95,6 @@ class Booking extends Base {
 		$(document).on('click', '#plus-child', () => {
 			let number = Number($('#number-child').text());
 			number += 1;
-			//		$('.number-child').val('');
 			$('#number-child').html(number);
 			this.onRendered();
 		});
@@ -113,7 +105,6 @@ class Booking extends Base {
 		$(document).on('click', '#plus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
 			number += 1;
-			//		$('.number-pensioner').val('');
 			$('#number-pensioner').html(number);
 			this.onRendered();
 		});
@@ -209,7 +200,6 @@ class Booking extends Base {
         newBookingNumber = Math.random().toString(36).slice(-10);
       }
       let bookingNr = newBookingNumber;
-      console.log('nu körs random bokningsnummer',bookingNr);  
       $('.hide-text').show();
       $('#bookingNr-booking').html(bookingNr);
     }
@@ -218,60 +208,32 @@ class Booking extends Base {
 
 
 
-	validateMobileNr() {
-		$(document).on('keyup', '#mobile-booking', () => {
-			let mobile = Number($('#mobile-booking').val());
-			console.log(mobile.length);
-			console.log(typeof mobile);
-			if (mobile === '' || !mobile.length === 10) {
-				$('#booking-alert').attr('data-content', 'Ange rätt mobilnummer');
-				$('#booking').popover('show');
-				this.wrongMobile = true;
-			}
-			else if (!mobile.includes('+') && !mobile.length === 12) {
-				$('#booking-alert').attr('data-content', 'Ange "+" och landnummer');
-				$('#booking').popover('show');
-				this.wrongMobile = true;
-			}
-			else {
-				$('#mobile-booking').popover('hide');
-				this.wrongMobile = false;   // 間違いじゃない、保存できる
-			}
-		});
-	}
 
 	validateEmail() {
 		$(document).on('keyup', '#email-booking', () => {
 			let email = $('#email-booking').val();
-			// if (email === '') {
-			// 	$('#email-booking').attr('data-content', 'Ange email adress');
-			// 	$('#email-booking').popover('show');
-			// 	this.wrongEmail = true;
-			// }
 			if (!email.includes('@') || !email.includes('.') || email === '') {
-				$('#booking-alert').attr('data-content', 'Ange rätt email adress');
-				$('#booking').popover('show');
-				this.wrongEmail = true;   // 間違いがある
+				$('#email-booking').attr('data-content', 'Ange rätt email adress');
+				$('#email-booking').popover('show');
+				this.wrongEmail = true;
 			}
 			else {
 				$('#email-booking').popover('hide');
-				this.wrongEmail = false;   // 間違いじゃない、保存できる
+				this.wrongEmail = false;
 			}
 		});
 	}
 
-	// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
+	// Save the booking data till JSON 
 	saveBookingDataToJson() {
 		let that = this;
 		$(document).on('click', '#booking-alert', function () {
       if(User.loggedIn) {
         that.wrongEmail = false;
-        that.wrongMobile = false;
       }
-			if (that.wrongEmail == true || that.wrongMobile == true) {   // ここに　||　で付け足す    // もし間違いが入力されたら、ボタンが押せない
+			if (that.wrongEmail == true) {
 				return;
 			}
-
 			let title = $('#title-booking').text();
 			let date = $('#date-booking').text();
 			let time = $('#time-booking').text();
@@ -283,16 +245,13 @@ class Booking extends Base {
 			let amount = $('#amount').text();
 			let bookingNr = $('#bookingNr-booking').text();
 			let email = $('#email-booking').val();
-			let mobile = $('#mobile-booking').val();
 
-
-			let jqueryIds = $('.id-booking');  // det är array
-
+			let jqueryIds = $('.id-booking');
 			let seats = [];
 			for (let id of jqueryIds) {
 				seats.push({
-					id: $(id).text(),   // text は最初の一個しか保存できない、２つ以上になると、繋がって出力される
-					row: $(id).prev('.row-booking').text()    // prev = 1つ上の（ここでは、１つ上のspan）
+					id: $(id).text(),
+					row: $(id).prev('.row-booking').text()
 				});
 			}
       let bookingData = new BookingData(
@@ -310,13 +269,12 @@ class Booking extends Base {
 						}
 					],
 					amount: amount,
-					seats: seats,　　　// 上で配列を作ったので、ここでは他のと一緒の形式
+					seats: seats,
 					bookingNr: bookingNr,
-					mobile: mobile,
-					email: email,
-          user: User.loggedIn.email
+					email: email
 				}
 			);
+      if (User.loggedIn) Object.assign(bookingData,{user: User.loggedIn.email});
       Data.booking.push(bookingData);
 
       //loops through the seat objects and pushes unavailable seats to the show and save to json
@@ -334,9 +292,17 @@ class Booking extends Base {
 
 
 			that.saveToJSON(Data.booking);
-			alert('Tack för bokning! Vi skickade ett mail till dig.');
-      
-      // window.location = "/"
+
+
+			$(this).parent().append(`
+            <div class="alert alert-success my-3" role="alert">
+              Tack för din bokning!
+            </div>
+            <p class="font-weight-bold mr-2 mb-0"></p>
+            <p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret för att hämta ut dina biljetter!</small></p>
+          `);
+      $('.ticket-picker').remove();
+      $(this).hide();
 		});
 	}
 
@@ -346,8 +312,3 @@ class Booking extends Base {
 
 
 }
-
-
-
-
-

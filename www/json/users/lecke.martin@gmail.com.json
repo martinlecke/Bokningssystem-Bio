@@ -1,0 +1,138 @@
+{
+  "email": "lecke.martin@gmail.com",
+  "password": "awesome",
+  "bookings": [
+    {
+      "title": "Molly's Game",
+      "date": "2018-02-25",
+      "time": "18.30",
+      "auditorium": "Stora Salongen",
+      "tickets": [
+        {
+          "ordinary": "1 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "1 st"
+        }
+      ],
+      "amount": "85 kr",
+      "seats": [
+        {
+          "id": 1,
+          "row": "1"
+        }
+      ],
+      "bookingNr": "sgdu296ad5",
+      "user": "lecke.martin@gmail.com",
+      "⚙": "BookingData"
+    },
+    {
+      "title": "Maze Runner: The Death Cure",
+      "date": "2018-02-15",
+      "time": "18.30",
+      "auditorium": "Lilla Salongen",
+      "tickets": [
+        {
+          "ordinary": "1 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "1 st"
+        }
+      ],
+      "amount": "85 kr",
+      "seats": [
+        {
+          "id": 26,
+          "row": "4"
+        }
+      ],
+      "bookingNr": "9ynb07zu9r",
+      "user": "lecke.martin@gmail.com",
+      "⚙": "BookingData"
+    },
+    {
+      "title": "Paddington 2",
+      "date": "2018-02-16",
+      "time": "21.00",
+      "auditorium": "Stora Salongen",
+      "tickets": [
+        {
+          "ordinary": "4 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "4 st"
+        }
+      ],
+      "amount": "340 kr",
+      "seats": [
+        {
+          "id": 72,
+          "row": "8"
+        },
+        {
+          "id": 73,
+          "row": "8"
+        },
+        {
+          "id": 74,
+          "row": "8"
+        },
+        {
+          "id": 75,
+          "row": "8"
+        }
+      ],
+      "bookingNr": "vmhw8d7k0t",
+      "user": "lecke.martin@gmail.com",
+      "⚙": "BookingData"
+    },
+    {
+      "title": "Molly's Game",
+      "date": "2018-02-16",
+      "time": "16.00",
+      "auditorium": "Stora Salongen",
+      "tickets": [
+        {
+          "ordinary": "1 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "1 st"
+        }
+      ],
+      "amount": "85 kr",
+      "seats": [
+        {
+          "id": 46,
+          "row": "5"
+        }
+      ],
+      "bookingNr": "kb2ld0ivo9",
+      "user": "lecke.martin@gmail.com",
+      "⚙": "BookingData"
+    }
+  ],
+  "undefined": {
+    "email": "lecke.martin@gmail.com",
+    "password": "awesome",
+    "bookings": {
+      "↻": "$.bookings"
+    },
+    "undefined": {
+      "email": "lecke.martin@gmail.com",
+      "password": "awesome",
+      "bookings": {
+        "↻": "$.bookings"
+      },
+      "undefined": {
+        "email": "lecke.martin@gmail.com",
+        "password": "awesome",
+        "bookings": {
+          "↻": "$.bookings"
+        },
+        "⚙": "User"
+      },
+      "⚙": "User"
+    },
+    "⚙": "User"
+  }
+}

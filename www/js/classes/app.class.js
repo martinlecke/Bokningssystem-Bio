@@ -40,6 +40,11 @@ class App {
         $('.modal').modal('hide');
         $('.modal-backdrop').hide();
         location.hash = "";
+        let $alert = $(`<div class="alert alert-danger" role="alert">
+            Du är nu <strong>utloggad!</strong>
+          </div>`);
+        $('header').prepend($alert);
+        $alert.slideDown().delay(3000).slideUp();
     });
   }
 

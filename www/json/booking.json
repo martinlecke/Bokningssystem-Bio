@@ -310,5 +310,855 @@
     "bookingNr": ".jpwazry82",
     "user": "d@d.d",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 28,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "8tla91qi8e",
+    "email": "sad@asd.sd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "255 kr",
+    "seats": [
+      {
+        "id": 36,
+        "row": "5"
+      },
+      {
+        "id": 37,
+        "row": "5"
+      },
+      {
+        "id": 38,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "mmn3mjh909",
+    "email": "sdfsdf@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 46,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "min5rn1o9u",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 40,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "r13o5tdpw8",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 28,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "4hruyzpx06",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 54,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "njcl5soo3b",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 2,
+        "row": "1"
+      }
+    ],
+    "bookingNr": "h713908nmn",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 46,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "yl3ayabglk",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "All the Money in the World",
+    "date": "2018-02-16",
+    "time": "18.30",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [],
+    "bookingNr": "rwf6vjj4tq",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 61,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "xdcqf1g8tf",
+    "email": "sad@sad.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 74,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "l3pp1astlk",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 62,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "kd7pgajgdj",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "2 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "2 st"
+      }
+    ],
+    "amount": "170 kr",
+    "seats": [
+      {
+        "id": 19,
+        "row": "3"
+      }
+    ],
+    "bookingNr": "9k48534rwh",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 30,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "ri43x4c8yw",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 54,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "hcql81sfki",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 61,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "4x4hx3snfa",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 49,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "o6gzspw1h6",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "2 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "215 kr",
+    "seats": [
+      {
+        "id": 41,
+        "row": "5"
+      },
+      {
+        "id": 42,
+        "row": "5"
+      },
+      {
+        "id": 43,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "lgsvcrh31i",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Paddington 2",
+    "date": "2018-02-10",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 4,
+        "row": "1"
+      }
+    ],
+    "bookingNr": "w8r2ijlfcn",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Call Me by Your Name",
+    "date": "2018-02-21",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 37,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "honqpsmimj",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 19,
+        "row": "3"
+      }
+    ],
+    "bookingNr": "81clfdjv2i",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 76,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "i5y7tdipvs",
+    "user": "1@1.1",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [],
+    "bookingNr": "uepfsazjpt",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "2 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "235 kr",
+    "seats": [
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "7c3ss45l19",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "255 kr",
+    "seats": [
+      {
+        "id": 39,
+        "row": "5"
+      },
+      {
+        "id": 40,
+        "row": "5"
+      },
+      {
+        "id": 41,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "kmr6ptg63n",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 39,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "hncpletkgy",
+    "user": "d@d.d",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 21,
+        "row": "3"
+      }
+    ],
+    "bookingNr": "n310fn6epl",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-25",
+    "time": "18.30",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 56,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "qjn882s9wf",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "All the Money in the World",
+    "date": "2018-02-16",
+    "time": "18.30",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 32,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "le0a563gpa",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-25",
+    "time": "18.30",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 1,
+        "row": "1"
+      }
+    ],
+    "bookingNr": "sgdu296ad5",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 26,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "9ynb07zu9r",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Jumanji: Welcome to the Jungle",
+    "date": "2018-03-03",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 47,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "u0in9ccbjw",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Paddington 2",
+    "date": "2018-02-16",
+    "time": "21.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "4 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "4 st"
+      }
+    ],
+    "amount": "340 kr",
+    "seats": [
+      {
+        "id": 72,
+        "row": "8"
+      },
+      {
+        "id": 73,
+        "row": "8"
+      },
+      {
+        "id": 74,
+        "row": "8"
+      },
+      {
+        "id": 75,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "vmhw8d7k0t",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 46,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "kb2ld0ivo9",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
   }
 ]
