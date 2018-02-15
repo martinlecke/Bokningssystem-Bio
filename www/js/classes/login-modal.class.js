@@ -60,38 +60,41 @@ class Login extends Base {
 
 	register(){
 		let that = this;
-			$(document).on('click', "#submit-register", function(e){
+			$(document).on('click', "#submit-register", (e) => {
 				e.preventDefault();
 				let email = $("#email-input-register").val();
 				let password = $("#password-input-register").val();
+        if(this.validateEmail(email)) {
+          let user = new User(
+            {
+              email: email,
+              password: password,
+              bookings: []
+            }
+          );
+          that.setLoggedInUser(user);
+          JSON._save('users/' + user.email, user);
+          $('.modal').modal('close');
+          $('.modal-backdrop').hide();
+          location.hash = "";
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
+        }
 
-				let user = new User(
-					{
-						email: email,
-						password: password,
-            bookings: []
-					}
-				);
-				that.setLoggedInUser(user);
-				JSON._save('users/' + user.email, user);
-        $('.modal').modal('hide');
-        $('.modal-backdrop').hide();
-        location.hash = "";
-        $('header').empty();
-        this.navbar = new Navbar();
-        this.navbar.render('header');
 			});
 		}
 
-	// onRendered(){ // Tänkt att aktivera en popover när man klickat på logga ut, för att säkerställa att man vill logga ut.
-	// 	 let that = this;
-	// 	$(document).find(`[data-popover=""] [data-toggle="popover"]`).popover({ 
-	// 		trigger: "manual", 
-	// 		html: true,
-	// 		placement: 'top',
-	// 		content: function() {
-	// 			return ` `
-	// 		}
-	// 	});
-	// }  
+  validateEmail(email) {
+    if (!email.includes('@') || !email.includes('.') || email === '') {
+      $('.wronguser').alert('close');
+      $('#email-input-register').parent().append(`
+        <div class="alert alert-danger my-3 wronguser" role="alert">
+          Ange en korrekt emailadress.
+        </div>
+      `);
+      return false;
+    }
+    return true;
+  }
 }
