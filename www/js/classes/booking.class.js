@@ -102,7 +102,6 @@ class Booking extends Base {
 		$(document).on('click', '#plus-child', () => {
 			let number = Number($('#number-child').text());
 			number += 1;
-			//		$('.number-child').val('');
 			$('#number-child').html(number);
 			this.onRendered();
 		});
@@ -113,7 +112,6 @@ class Booking extends Base {
 		$(document).on('click', '#plus-pensioner', () => {
 			let number = Number($('#number-pensioner').text());
 			number += 1;
-			//		$('.number-pensioner').val('');
 			$('#number-pensioner').html(number);
 			this.onRendered();
 		});
@@ -218,49 +216,23 @@ class Booking extends Base {
 
 
 
-	validateMobileNr() {
-		$(document).on('keyup', '#mobile-booking', () => {
-			let mobile = Number($('#mobile-booking').val());
-			console.log(mobile.length);
-			console.log(typeof mobile);
-			if (mobile === '' || !mobile.length === 10) {
-				$('#booking-alert').attr('data-content', 'Ange rätt mobilnummer');
-				$('#booking').popover('show');
-				this.wrongMobile = true;
-			}
-			else if (!mobile.includes('+') && !mobile.length === 12) {
-				$('#booking-alert').attr('data-content', 'Ange "+" och landnummer');
-				$('#booking').popover('show');
-				this.wrongMobile = true;
-			}
-			else {
-				$('#mobile-booking').popover('hide');
-				this.wrongMobile = false;   // 間違いじゃない、保存できる
-			}
-		});
-	}
 
 	validateEmail() {
 		$(document).on('keyup', '#email-booking', () => {
 			let email = $('#email-booking').val();
-			// if (email === '') {
-			// 	$('#email-booking').attr('data-content', 'Ange email adress');
-			// 	$('#email-booking').popover('show');
-			// 	this.wrongEmail = true;
-			// }
 			if (!email.includes('@') || !email.includes('.') || email === '') {
-				$('#booking-alert').attr('data-content', 'Ange rätt email adress');
-				$('#booking').popover('show');
-				this.wrongEmail = true;   // 間違いがある
+				$('#email-booking').attr('data-content', 'Ange rätt email adress');
+				$('#email-booking').popover('show');
+				this.wrongEmail = true;
 			}
 			else {
 				$('#email-booking').popover('hide');
-				this.wrongEmail = false;   // 間違いじゃない、保存できる
+				this.wrongEmail = false;
 			}
 		});
 	}
 
-	// Save the booking info till JSON (Bug - バグ：電話番号にアルファベットも入力できてしまう)
+	// Save the booking data till JSON 
 	saveBookingDataToJson() {
 		let that = this;
 		$(document).on('click', '#booking-alert', function () {
@@ -268,10 +240,9 @@ class Booking extends Base {
         that.wrongEmail = false;
         that.wrongMobile = false;
       }
-			if (that.wrongEmail == true || that.wrongMobile == true) {   // ここに　||　で付け足す    // もし間違いが入力されたら、ボタンが押せない
+			if (that.wrongEmail == true || that.wrongMobile == true) {
 				return;
 			}
-
 			let title = $('#title-booking').text();
 			let date = $('#date-booking').text();
 			let time = $('#time-booking').text();
@@ -285,14 +256,12 @@ class Booking extends Base {
 			let email = $('#email-booking').val();
 			let mobile = $('#mobile-booking').val();
 
-
-			let jqueryIds = $('.id-booking');  // det är array
-
+			let jqueryIds = $('.id-booking');
 			let seats = [];
 			for (let id of jqueryIds) {
 				seats.push({
-					id: $(id).text(),   // text は最初の一個しか保存できない、２つ以上になると、繋がって出力される
-					row: $(id).prev('.row-booking').text()    // prev = 1つ上の（ここでは、１つ上のspan）
+					id: $(id).text(),
+					row: $(id).prev('.row-booking').text()
 				});
 			}
       let bookingData = new BookingData(
@@ -310,7 +279,7 @@ class Booking extends Base {
 						}
 					],
 					amount: amount,
-					seats: seats,　　　// 上で配列を作ったので、ここでは他のと一緒の形式
+					seats: seats,
 					bookingNr: bookingNr,
 					mobile: mobile,
 					email: email,
@@ -346,8 +315,3 @@ class Booking extends Base {
 
 
 }
-
-
-
-
-

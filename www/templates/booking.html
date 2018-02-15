@@ -158,17 +158,13 @@ Object.assign(Booking.prototype, { template(){ return `
 
 
                       ${!User.loggedIn ? `
-											<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
-											<!-- pattern="\d*" -->
-											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="13" placeholder="Ange mobilnummer (t.ex 07012.., +45701234...)">
-
+											
 										</div>
 
 										<div class="form-group mt-4">
 											<label for="email-booking" class="font-weight-bold">Email address</label>
-											<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
+											<input type="email" class="form-control" id="email-booking" placeholder="exempel@xxxxxx.xxxx">
                       ` : ''}
-
 										</div>
 
 										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start hide-text" id="booking-nr">
