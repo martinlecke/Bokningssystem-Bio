@@ -57,7 +57,7 @@ Object.assign(Booking.prototype, { template(){ return `
 	</div>
 	<div class="row">
 	
-		<div class="col-10 mx-auto bg-white text-dark d-flex justify-content-start">	
+		<div class="col-11 col-md-8 mx-auto bg-white text-dark d-flex justify-content-start">	
 			<div class="col-12 p-0">
 			<h2 class="text-center mt-4 d-block">Sammanställning</h2>
 
@@ -67,7 +67,7 @@ Object.assign(Booking.prototype, { template(){ return `
 						<img class="img-fluid movie-poster-summary" src="${this.movie.poster}" alt="${this.movie.title}">
 					</div>
 
-					<div class="col-12 col-sm-8 mt-4 pl-5">
+					<div class="col-12 col-sm-8 mt-4">
 					<h4 id="title-booking" class="font-weight-bold mb-2">${this.movie.title}</h4>
 						<ul class="list-unstyled pl-0 mt-4">
 							<li class="mb-2">
@@ -149,8 +149,6 @@ Object.assign(Booking.prototype, { template(){ return `
 
 								<button type="button" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 							</form>
-							<p class="font-weight-bold mr-2 mb-0">Oi!</p>
-							<p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret till biografen!</small></p>
 						</ul>
 
 					</div>
