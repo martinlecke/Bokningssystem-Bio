@@ -64,7 +64,7 @@ class Login extends Base {
 				e.preventDefault();
 				let email = $("#email-input-register").val();
 				let password = $("#password-input-register").val();
-        if(this.validateEmail(email)) {
+        if(this.validateEmail(email) && this.doesUserExist(email)) {
           let user = new User(
             {
               email: email,
@@ -96,5 +96,26 @@ class Login extends Base {
       return false;
     }
     return true;
+  }
+  doesUserExist(email) {
+    //checks if file exist on server
+    $.ajax({
+        url:'/json/user/' + email,
+        type:'HEAD',
+        error: function()
+        {
+          $('.wronguser').alert('close');
+          $('#email-input-register').parent().append(`
+            <div class="alert alert-danger my-3 wronguser" role="alert">
+             Oops! Användaren tycks redan finnas.
+            </div>
+          `);
+          return false;
+        },
+        success: function()
+        {
+          return true;
+        }
+    });
   }
 }
