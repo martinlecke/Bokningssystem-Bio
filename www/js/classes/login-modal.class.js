@@ -45,6 +45,12 @@ class Login extends Base {
           $('header').empty();
           this.navbar = new Navbar();
           this.navbar.render('header');
+          $('.alert').alert('close');
+          let $alert = $(`<div class="alert alert-success" role="alert">
+              Du är nu inloggad som <strong>${User.loggedIn.email}</strong>.
+            </div>`);
+          $('header').prepend($alert);
+          $alert.slideDown().delay(2000).slideUp();
 				}
 				else {
           $('.wrongpassword').alert('close');
