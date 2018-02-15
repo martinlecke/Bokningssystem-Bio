@@ -19,6 +19,7 @@ class MinaSidor extends Base {
       this.myBookedShow.push(new MyBookedShow(booking))
     }
 
+
     this.myPastShows = []
     let pastShows = this.bookings.filter((shows)=>{
         // Removes all shows from past todays date

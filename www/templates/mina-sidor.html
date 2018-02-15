@@ -9,7 +9,7 @@ Object.assign(MinaSidor.prototype, { template(){ return `
 
 					<div class="col-12 col-md-6 mt-5">
           <h3 class="text-center mb-4">Kommande visningar</h3>
-						${!this.myBookedShow == [] ? '<p>Du har inte gjort några bokningar.</p>' : this.myBookedShow.render()}
+						${this.myBookedShow == [] ? '<p>Du har inte gjort några bokningar.</p>' : this.myBookedShow.render()}
 				  </div> <!-- Stänger col-6 -->
 
 					<div class="col-12 col-md-6 mt-5">

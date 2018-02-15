@@ -5,11 +5,16 @@
   	background: linear-gradient(to bottom, @black, rgba(0,0,0,0.3), @black 15%), url(/imgs/curtain.jpg);
   	background-size: contain;
   }
-	img {
-		max-width: 200px;
+	.image-poster {
 		border: 2px solid #fff;
 		border-radius: 10px;
 	}
+
+	.movie-poster-summary{
+		border: 2px solid @black;
+		border-radius: 10px;	
+	}
+
 	.film-details {
 		font-size: 1.2rem;
 	}
@@ -56,14 +61,12 @@
 		width: 100%;
 	}
 
-	.form-control {
-		width: 80%;
-	}
 	.hide-text {
 		display: none;
 	}
+
 	.btn, .btn-primary{
-	.redButton();
+		.redButton();
 	}
   .audiinfo {
     li {

@@ -377,6 +377,30 @@
       {
         "id": 1,
         "row": "1"
+      },
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      },
+      {
+        "id": 39,
+        "row": "5"
+      },
+      {
+        "id": 40,
+        "row": "5"
+      },
+      {
+        "id": 41,
+        "row": "5"
       }
     ],
     "url": "django",
@@ -408,6 +432,14 @@
       {
         "id": 46,
         "row": "6"
+      },
+      {
+        "id": 39,
+        "row": "5"
+      },
+      {
+        "id": 21,
+        "row": "3"
       }
     ],
     "url": "mazerunnerthedeathcure",
@@ -529,6 +561,10 @@
       {
         "id": 61,
         "row": "7"
+      },
+      {
+        "id": 32,
+        "row": "4"
       }
     ],
     "url": "allthemoneyintheworld",
@@ -540,7 +576,24 @@
     "date": "2018-02-16",
     "time": "21.00",
     "showid": "18021628",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 72,
+        "row": "8"
+      },
+      {
+        "id": 73,
+        "row": "8"
+      },
+      {
+        "id": 74,
+        "row": "8"
+      },
+      {
+        "id": 75,
+        "row": "8"
+      }
+    ],
     "url": "paddington2",
     "⚙": "Show"
   },
@@ -800,7 +853,20 @@
     "date": "2018-02-25",
     "time": "18.30",
     "showid": "180225117",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 56,
+        "row": "6"
+      },
+      {
+        "id": 1,
+        "row": "1"
+      },
+      {
+        "id": 26,
+        "row": "4"
+      }
+    ],
     "url": "mollysgame",
     "⚙": "Show"
   },
@@ -980,7 +1046,12 @@
     "date": "2018-03-03",
     "time": "18.30",
     "showid": "180303123",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 47,
+        "row": "6"
+      }
+    ],
     "url": "jumanjiwelcometothejungle",
     "⚙": "Show"
   },
