@@ -44,14 +44,14 @@ Object.assign(Booking.prototype, { template(){ return `
 
 		<div class="col-12 seat-info">
 			<ul class="d-flex pt-3 pl-0 list-unstyled audiinfo justify-content-center mx-auto mb-0">
-				<li class="font-weight-bold mx-3 mb-md-0">
-					<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block d-md-inline">Ledig</span>
+				<li class="font-weight-bold mx-3 mb-md-0 pill-width">
+					<span class="badge badge-pill badge-success px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block">Ledig</span>
 				</li>
-				<li class="font-weight-bold mx-3 mb-md-0">
-					<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span><span class="d-block d-md-inline">Upptagen</span>
+				<li class="font-weight-bold mx-3 mb-md-0 pill-width">
+					<span class="badge badge-pill badge-danger px-2 py-2">${this.show.unavailable.length}</span><span class="d-block">Upptagen</span>
 				</li>
-				<li class="font-weight-bold mx-3">
-					<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span><span class="d-block d-md-inline">Antal biljetter</span>
+				<li class="font-weight-bold mx-3 pill-width">
+					<span class="badge badge-pill badge-warning px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span><span class="d-block">Antal biljetter</span>
 				</li>
 			</ul>
 		</div>
