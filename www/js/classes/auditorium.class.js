@@ -10,6 +10,7 @@ class Auditorium extends Base {
       this.scale();
     }, 100);
     this.setupHandler();
+    console.log(this);
   }
 
   find(find, where, property) {

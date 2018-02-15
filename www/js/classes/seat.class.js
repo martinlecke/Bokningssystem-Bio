@@ -31,8 +31,9 @@ class Seat extends Base {
         // }
         this.marked = true;
         Booking.markedSeats.push({id: this.id, row: this.row});
-        $(`[data-id="${id}"]`).addClass('clicked');
-      } 
+        $(event.target).addClass('clicked')
+      }
+      Booking.showSeatNumber();
     }
   }
 
