@@ -27,8 +27,7 @@ class Movie extends Base {
 				<h6 class="mb-0 d-inline">${that.title}</h6><br>
 				<p class="description d-inline">
 				  ${that.description}
-				</p>
-				<div class="mt-2 mb-1 text-center">`
+				</p>`
 			}
 		})
 		.on("mouseenter", function () {

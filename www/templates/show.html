@@ -1,11 +1,10 @@
 Object.assign(Show.prototype, { template(){ return `
 		
 			<ul class="d-flex justify-content-between w-100 p-0">
-				<li class="li-tag film d-block mb-lg-0 pl-lg-3">${this.film}</li>
-				<li class="li-tag auditorium d-block mb-lg-0 pl-lg-5 w-25 mx-2 ">${this.auditorium}</li>
-				<li class="li-tag time d-block float-right mb-lg-0">${this.time}</li>
+				<li class="li-tag film font-weight-bold d-block mb-lg-0 pl-lg-3">${this.film}</li>
+				<li class="li-tag auditorium d-block mb-lg-0 pl-lg-5">${this.auditorium}</li>
+				<li class="li-tag font-weight-bold d-block float-right mb-lg-0">${this.time}</li>
 				<li class="li-tag button d-block float-right"><a href="/${this.showid}" class="pop btn btn-danger btn-sm text-center">Boka</a></li>
-
 			</ul>
 			<hr>
 `;}});

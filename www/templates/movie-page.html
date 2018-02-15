@@ -5,13 +5,13 @@ Object.assign(MoviePage.prototype, { template(){ return `
 		<div class="col-12">
 			<h2 class="mt-3"> Alla aktuella filmer</h2>
 		
-			<div class="row justify-content-around mt-5">
+			<div class="row justify-content-around mt-5 movie-posters">
 				${this.currentMovie.render()}
 			</div>
 
 			<h2 class="mt-2">Alla kommande filmer</h2>
 
-			<div class="row justify-content-around mt-5">
+			<div class="row justify-content-around mt-5 movie-posters">
 				${this.upcomingMovie.render()}
 			</div>
 
