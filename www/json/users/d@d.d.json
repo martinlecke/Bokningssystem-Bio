@@ -3,6 +3,54 @@
   "password": "ddd",
   "bookings": [
     {
+      "title": "Paddington 2",
+      "date": "2018-02-10",
+      "time": "16.00",
+      "auditorium": "Lilla Salongen",
+      "tickets": [
+        {
+          "ordinary": "1 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "1 st"
+        }
+      ],
+      "amount": "85 kr",
+      "seats": [
+        {
+          "id": 4,
+          "row": "1"
+        }
+      ],
+      "bookingNr": "w8r2ijlfcn",
+      "user": "d@d.d",
+      "⚙": "BookingData"
+    },
+    {
+      "title": "Call Me by Your Name",
+      "date": "2018-02-21",
+      "time": "16.00",
+      "auditorium": "Lilla Salongen",
+      "tickets": [
+        {
+          "ordinary": "1 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "1 st"
+        }
+      ],
+      "amount": "85 kr",
+      "seats": [
+        {
+          "id": 37,
+          "row": "5"
+        }
+      ],
+      "bookingNr": "honqpsmimj",
+      "user": "d@d.d",
+      "⚙": "BookingData"
+    },
+    {
       "title": "Django",
       "date": "2018-02-15",
       "time": "16.00",
@@ -18,61 +66,20 @@
       "amount": "85 kr",
       "seats": [
         {
-          "id": 1,
-          "row": "1"
+          "id": 19,
+          "row": "3"
         }
       ],
-      "bookingNr": "wt18vbr9e3",
-      "user": "d@d.d",
-      "⚙": "BookingData"
-    },
-    {
-      "title": "Solsidan",
-      "date": "2018-02-08",
-      "time": "18.30",
-      "auditorium": "Lilla Salongen",
-      "tickets": [
-        {
-          "ordinary": "3 st",
-          "child": "0 st",
-          "pensioner": "0 st",
-          "totalNr": "3 st"
-        }
-      ],
-      "amount": "255 kr",
-      "seats": [
-        {
-          "id": 38,
-          "row": "5"
-        },
-        {
-          "id": 39,
-          "row": "5"
-        },
-        {
-          "id": 40,
-          "row": "5"
-        }
-      ],
-      "bookingNr": ".jpwazry82",
+      "bookingNr": "81clfdjv2i",
       "user": "d@d.d",
       "⚙": "BookingData"
     }
   ],
-  "⚙": "User",
   "undefined": {
     "email": "d@d.d",
     "password": "ddd",
     "bookings": {
       "↻": "$.bookings"
-    },
-    "undefined": {
-      "email": "d@d.d",
-      "password": "ddd",
-      "bookings": {
-        "↻": "$.bookings"
-      },
-      "⚙": "User"
     },
     "⚙": "User"
   }

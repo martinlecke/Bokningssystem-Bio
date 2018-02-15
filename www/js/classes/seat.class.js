@@ -22,13 +22,6 @@ class Seat extends Base {
           co++;
         }
       } else if (Booking.selection - Booking.markedSeats.length > 0 )  {
-        // if(!Seat.noLoopThroughOterSeats){
-        //   Seat.noLoopThroughOterSeats = true;
-        //   for (let i = id; i < id + Booking.selection; i++) {
-        //     $(`[data-id="${i}"]`).trigger('click');
-        //   }
-        //   Seat.noLoopThroughOterSeats = false;
-        // }
         this.marked = true;
         Booking.markedSeats.push({id: this.id, row: this.row});
         $(event.target).addClass('clicked')

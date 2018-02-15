@@ -45,6 +45,11 @@ class Login extends Base {
           $('header').empty();
           this.navbar = new Navbar();
           this.navbar.render('header');
+          let $alert = $(`<div class="alert alert-success" role="alert">
+              Du är nu inloggad som <strong>${User.loggedIn.email}</strong>.
+            </div>`);
+          $('header').prepend($alert);
+          $alert.slideDown().delay(2000).slideUp();
 				}
 				else {
           $('.wrongpassword').alert('close');
@@ -60,38 +65,62 @@ class Login extends Base {
 
 	register(){
 		let that = this;
-			$(document).on('click', "#submit-register", function(e){
+			$(document).on('click', "#submit-register", (e) => {
 				e.preventDefault();
 				let email = $("#email-input-register").val();
 				let password = $("#password-input-register").val();
+        if(this.validateEmail(email) && this.doesUserExist(email)) {
+          let user = new User(
+            {
+              email: email,
+              password: password,
+              bookings: []
+            }
+          );
+          that.setLoggedInUser(user);
+          JSON._save('users/' + user.email, user);
+          $('.modal').modal('close');
+          $('.modal-backdrop').hide();
+          location.hash = "";
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
+        }
 
-				let user = new User(
-					{
-						email: email,
-						password: password,
-            bookings: []
-					}
-				);
-				that.setLoggedInUser(user);
-				JSON._save('users/' + user.email, user);
-        $('.modal').modal('hide');
-        $('.modal-backdrop').hide();
-        location.hash = "";
-        $('header').empty();
-        this.navbar = new Navbar();
-        this.navbar.render('header');
 			});
 		}
 
-	// onRendered(){ // Tänkt att aktivera en popover när man klickat på logga ut, för att säkerställa att man vill logga ut.
-	// 	 let that = this;
-	// 	$(document).find(`[data-popover=""] [data-toggle="popover"]`).popover({ 
-	// 		trigger: "manual", 
-	// 		html: true,
-	// 		placement: 'top',
-	// 		content: function() {
-	// 			return ` `
-	// 		}
-	// 	});
-	// }  
+  validateEmail(email) {
+    if (!email.includes('@') || !email.includes('.') || email === '') {
+      $('.wronguser').alert('close');
+      $('#email-input-register').parent().append(`
+        <div class="alert alert-danger my-3 wronguser" role="alert">
+          Ange en korrekt emailadress.
+        </div>
+      `);
+      return false;
+    }
+    return true;
+  }
+  doesUserExist(email) {
+    //checks if file exist on server
+    $.ajax({
+        url:'/json/user/' + email,
+        type:'HEAD',
+        error: function()
+        {
+          $('.wronguser').alert('close');
+          $('#email-input-register').parent().append(`
+            <div class="alert alert-danger my-3 wronguser" role="alert">
+             Oops! Användaren tycks redan finnas.
+            </div>
+          `);
+          return false;
+        },
+        success: function()
+        {
+          return true;
+        }
+    });
+  }
 }

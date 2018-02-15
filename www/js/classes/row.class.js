@@ -13,7 +13,6 @@ class Row extends Base {
         } else {
           this.seats.unshift(new Seat(i, false, rowNumber));
         }
-        // console.log('this row', this.unavailable[i].id);
     }
 
   }
