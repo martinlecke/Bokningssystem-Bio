@@ -436,6 +436,10 @@
       {
         "id": 39,
         "row": "5"
+      },
+      {
+        "id": 21,
+        "row": "3"
       }
     ],
     "url": "mazerunnerthedeathcure",
@@ -557,6 +561,10 @@
       {
         "id": 61,
         "row": "7"
+      },
+      {
+        "id": 32,
+        "row": "4"
       }
     ],
     "url": "allthemoneyintheworld",
@@ -828,7 +836,20 @@
     "date": "2018-02-25",
     "time": "18.30",
     "showid": "180225117",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 56,
+        "row": "6"
+      },
+      {
+        "id": 1,
+        "row": "1"
+      },
+      {
+        "id": 26,
+        "row": "4"
+      }
+    ],
     "url": "mollysgame",
     "⚙": "Show"
   },
@@ -1008,7 +1029,12 @@
     "date": "2018-03-03",
     "time": "18.30",
     "showid": "180303123",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 47,
+        "row": "6"
+      }
+    ],
     "url": "jumanjiwelcometothejungle",
     "⚙": "Show"
   },
