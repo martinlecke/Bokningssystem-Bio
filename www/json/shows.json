@@ -5,20 +5,7 @@
     "date": "2018-02-08",
     "time": "16.00",
     "showid": "18020800",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [{"id": 1, "row": 1},{"id": 2, "row": 1},{"id": 3, "row": 1}],
     "url": "django",
     "⚙": "Show"
   },
@@ -48,20 +35,7 @@
     "date": "2018-02-09",
     "time": "16.00",
     "showid": "18020901",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [{"id": 1, "row": 1},{"id": 2, "row": 1},{"id": 3, "row": 1}],
     "url": "django",
     "⚙": "Show"
   },
@@ -121,20 +95,7 @@
     "date": "2018-02-11",
     "time": "16.00",
     "showid": "18021103",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [{"id": 1, "row": 1},{"id": 2, "row": 1},{"id": 3, "row": 1}],
     "url": "callmebyyourname",
     "⚙": "Show"
   },
@@ -204,32 +165,7 @@
     "date": "2018-02-13",
     "time": "18.30",
     "showid": "18021315",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      },
-      {
-        "id": 4,
-        "row": 1
-      },
-      {
-        "id": 5,
-        "row": 1
-      },
-      {
-        "id": 6,
-        "row": 1
-      }
-    ],
+    "unavailable": [{"id": 1, "row": 1},{"id": 2, "row": 1},{"id": 3, "row": 1},{"id": 4, "row": 1},{"id": 5, "row": 1},{"id": 6, "row": 1}],
     "url": "mollysgame",
     "⚙": "Show"
   },
@@ -279,20 +215,7 @@
     "date": "2018-02-15",
     "time": "16.00",
     "showid": "18021507",
-    "unavailable": [
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      }
-    ],
+    "unavailable": [],
     "url": "django",
     "⚙": "Show"
   },
@@ -312,12 +235,7 @@
     "date": "2018-02-15",
     "time": "21.00",
     "showid": "18021527",
-    "unavailable": [
-      {
-        "id": 5,
-        "row": 1
-      }
-    ],
+    "unavailable": [],
     "url": "mazerunnerthedeathcure",
     "⚙": "Show"
   },
@@ -327,20 +245,7 @@
     "date": "2018-02-16",
     "time": "16.00",
     "showid": "18021608",
-    "unavailable": [
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      },
-      {
-        "id": 4,
-        "row": 1
-      }
-    ],
+    "unavailable": [{"id": 2, "row": 1},{"id": 3, "row": 1},{"id": 4, "row": 1}],
     "url": "mollysgame",
     "⚙": "Show"
   },

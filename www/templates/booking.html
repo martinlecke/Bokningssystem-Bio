@@ -138,13 +138,13 @@ Object.assign(Booking.prototype, { template(){ return `
 										<span class="font-weight-bold mr-2">Stolsnummer:</span>
 									</li>
 									<div class="d-flex justify-content-start mt-2 mb-3">
-										<ul class="list-unstyled pl-4" id="seat-booking">
-											<!-- <li>
+										<ul class="list-unstyled pl-4">
+											<li>
 												<span class="mr-1">Rad:</span>
 												<span class="mr-3">0</span>
 												<span class="mr-1">Stolsnr:</span>
 												<span>0</span>
-											</li> -->
+											</li>
 
 										</ul>
 									</div>
@@ -154,18 +154,14 @@ Object.assign(Booking.prototype, { template(){ return `
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
-                      ${User.loggedIn ? '<p><b>Inloggad som:</b> ' + User.loggedIn.email + '</p>' : ''}
-                      ${!User.loggedIn ? `
 											<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
 											<!-- pattern="\d*" -->
-											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="13" placeholder="Ange mobilnummer (t.ex 07012.., +45701234...)">
-
+											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="11" placeholder="Ange mobilnummer (t.ex 07012..., +45 701234...)">
 										</div>
 
 										<div class="form-group mt-4">
-											<label for="email-booking" class="font-weight-bold">Email address</label>
-											<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
-                      ` : ''}
+												<label for="email-booking" class="font-weight-bold">Email:</label>
+												<input type="email" class="form-control" id="email-booking" placeholder="Ange e-postadress (exempel@xxx.xxxx)">
 										</div>
 
 										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start" id="booking-nr">
@@ -173,7 +169,7 @@ Object.assign(Booking.prototype, { template(){ return `
 											<span class="mr-2 mb-1 hide-text" id="bookingNr-booking"></span>
 										</li>
 
-										<button type="button" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
+										<button type="submit" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
 									<p class="font-weight-bold mr-2 mb-0">Oi!</p>
 									<p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret till biografen!</small></p>

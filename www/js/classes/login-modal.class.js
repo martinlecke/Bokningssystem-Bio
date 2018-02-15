@@ -10,6 +10,8 @@ class Login extends Base {
 		});
 		this.register();
 		this.login();
+    this.logout();
+		App.logout = this.logout; // So we can test from console
 	}
 
  	setLoggedInUser(user){
@@ -27,28 +29,39 @@ class Login extends Base {
 				try {
 				  fromJson = await JSON._load("users/" + email);
 				} catch(e){
-          alert('dude');
+					alert("Användaren finns inte!");
 				}
+				console.log(fromJson);
+				console.log(fromJson.password, password)
 				if(fromJson && fromJson.password == password){
 					that.setLoggedInUser(fromJson);
-          $('.modal').modal('hide');
-          $('.modal-backdrop').hide();
-          location.hash = "";
-          $('header').empty();
-          this.navbar = new Navbar();
-          this.navbar.render('header');
 				}
 				else {
-          $('.alert').alert('close');
-					$('#password-input-login').parent().append(`
-            <div class="alert alert-danger my-3" role="alert">
-              Fel lösenord.
-            </div>
-          `);
+					alert("Fel lösenord!");
 				}
+        $('.modal').modal('hide');
+        $('.modal-backdrop').hide();
+
+        $('header').empty();
+        this.navbar = new Navbar();
+        this.navbar.render('header');
 		});
 	}
 
+	logout(){
+		$(document).on('click', "a[href='#logout']", function() {
+        delete User.loggedIn;
+        delete localStorage.loggedIn;
+        console.log('deleted');
+        // setTimeout(function() {
+          $('header').empty();
+          this.navbar = new Navbar();
+          this.navbar.render('header');
+          console.log('ny navbar')
+        // },0);
+    });
+
+	}
 
 	register(){
 		let that = this;
@@ -60,18 +73,11 @@ class Login extends Base {
 				let user = new User(
 					{
 						email: email,
-						password: password,
-            bookings: []
+						password: password
 					}
 				);
 				that.setLoggedInUser(user);
 				JSON._save('users/' + user.email, user);
-        $('.modal').modal('hide');
-        $('.modal-backdrop').hide();
-        location.hash = "";
-        $('header').empty();
-        this.navbar = new Navbar();
-        this.navbar.render('header');
 			});
 		}
 

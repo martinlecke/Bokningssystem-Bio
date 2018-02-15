@@ -72,7 +72,6 @@ class PopStateHandler {
       movieUrls = movieUrls.replace(/[åä]/g, "a");
       movieUrls = movieUrls.replace(/[ö]/g, "o");
       hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
-
     }
 
     if(!hash || !hashes[hash]){
@@ -99,18 +98,8 @@ class PopStateHandler {
   }
 
   minaSidor(){
-    if(User.loggedIn) {
-      $('main').empty();
-      this.mypage = new MinaSidor();
-      this.mypage.render('main');
-    } else {
-      $('.alert').alert('close');
-      let alert = $(`<div class="alert alert-danger" role="alert">
-          Du behöver logga in för att nå denna sida.
-        </div>`);
-      $('main').append(alert);
-    }
-    
+    $('main').empty();
+    this.app.minaSidor.render('main');
   }
 
   kalendarium(){
