@@ -32,7 +32,7 @@ Object.assign(Booking.prototype, { template(){ return `
 
 	<!-- Number of ticket -->
 	<div class="row">
-		<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto mt-5">
+		<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto mt-5 ticket-picker">
 
 			${this.bookingItems.render()}
 
@@ -68,8 +68,6 @@ Object.assign(Booking.prototype, { template(){ return `
 		<div class="col-12">
 			
 
-			<!-- 時間など、プロパティに差し替える -->
-
 			<div class="row">
 				<div class="col-12 col-md-10 col-lg-8 justify-content-center mx-auto bg-white text-dark ">
 					<h2 class="text-center mt-4">Sammanställning</h2>
@@ -96,10 +94,6 @@ Object.assign(Booking.prototype, { template(){ return `
 									<li class="mb-2">
 										<span class="font-weight-bold mr-2">Antal biljetter:</span><span class="mr-2" id="total-tickets">0</span>
 									</li>
-									<!-- <li class="mr-2">
-											<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
-											<span class="mr-2 amount">0</span> kr
-										</li> -->
 
 									<div class="d-flex justify-content-start mt-2 mb-4">
 										<ul class="list-unstyled pl-4">
@@ -139,18 +133,9 @@ Object.assign(Booking.prototype, { template(){ return `
 									</li>
 									<div class="d-flex justify-content-start mt-2 mb-3">
 										<ul class="list-unstyled pl-4" id="seat-booking">
-											<!-- <li>
-												<span class="mr-1">Rad:</span>
-												<span class="mr-3">0</span>
-												<span class="mr-1">Stolsnr:</span>
-												<span>0</span>
-											</li> -->
-
 										</ul>
 									</div>
-
 									<hr class="email mt-4">
-
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
@@ -174,8 +159,6 @@ Object.assign(Booking.prototype, { template(){ return `
 
 										<button type="button" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
-									<p class="font-weight-bold mr-2 mb-0">Oi!</p>
-									<p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret till biografen!</small></p>
 								</ul>
 
 							</div>

@@ -8,7 +8,6 @@ class Booking extends Base {
     if(!App.instanceReady) this.doOnce();
     Booking.markedSeats = [];
 		this.wrongEmail = true;   // 最初は入力できる状態にしておく
-		this.wrongMobile = true;
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -43,7 +42,6 @@ class Booking extends Base {
     this.clickMinusPensioner();
     this.saveBookingDataToJson();
     this.validateEmail();
-    this.validateMobileNr();
     this.getNumberOfTicksets();
     this.onRendered();
     App.instanceReady = true;
@@ -69,12 +67,8 @@ class Booking extends Base {
 
 	getNumberOfTicksets() {
 		let calc = Number($('#number-ordinary').text()) +
-			Number($('#number-child').text()) +
-			Number($('#number-pensioner').text());
-      // console.log('calc', calc);
-      // console.log('Ordinary', Number($('#number-ordinary').text()));
-      // console.log('Child', Number($('#number-child').text()));
-      // console.log('Pensionär', Number($('#number-pensioner').text()));
+		Number($('#number-child').text()) +
+		Number($('#number-pensioner').text());
 		Booking.selection = calc;
 	}
 
@@ -89,7 +83,6 @@ class Booking extends Base {
 	clickPlusOrdinary() {
 		$(document).on('click', '#plus-ordinary', () => {
 			let number = Number($('#number-ordinary').text());
-      console.log(number);
 			number += 1;
 			$('#number-ordinary').val('');
 			$('#number-ordinary').html(number);
@@ -207,7 +200,6 @@ class Booking extends Base {
         newBookingNumber = Math.random().toString(36).slice(-10);
       }
       let bookingNr = newBookingNumber;
-      console.log('nu körs random bokningsnummer',bookingNr);  
       $('.hide-text').show();
       $('#bookingNr-booking').html(bookingNr);
     }
@@ -238,9 +230,8 @@ class Booking extends Base {
 		$(document).on('click', '#booking-alert', function () {
       if(User.loggedIn) {
         that.wrongEmail = false;
-        that.wrongMobile = false;
       }
-			if (that.wrongEmail == true || that.wrongMobile == true) {
+			if (that.wrongEmail == true) {
 				return;
 			}
 			let title = $('#title-booking').text();
@@ -254,7 +245,6 @@ class Booking extends Base {
 			let amount = $('#amount').text();
 			let bookingNr = $('#bookingNr-booking').text();
 			let email = $('#email-booking').val();
-			let mobile = $('#mobile-booking').val();
 
 			let jqueryIds = $('.id-booking');
 			let seats = [];
@@ -281,11 +271,10 @@ class Booking extends Base {
 					amount: amount,
 					seats: seats,
 					bookingNr: bookingNr,
-					mobile: mobile,
-					email: email,
-          user: User.loggedIn.email
+					email: email
 				}
 			);
+      if (User.loggedIn) Object.assign(bookingData,{user: User.loggedIn.email});
       Data.booking.push(bookingData);
 
       //loops through the seat objects and pushes unavailable seats to the show and save to json
@@ -303,9 +292,17 @@ class Booking extends Base {
 
 
 			that.saveToJSON(Data.booking);
-			alert('Tack för bokning! Vi skickade ett mail till dig.');
-      
-      // window.location = "/"
+
+
+			$(this).parent().append(`
+            <div class="alert alert-success my-3" role="alert">
+              Tack för din bokning!
+            </div>
+            <p class="font-weight-bold mr-2 mb-0"></p>
+            <p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret för att hämta ut dina biljetter!</small></p>
+          `);
+      $('.ticket-picker').remove();
+      $(this).hide();
 		});
 	}
 
