@@ -36,18 +36,18 @@ class Auditorium extends Base {
     // returns largest number in row
     let numberOfSeats = Math.max.apply(null, this.stora.seatsPerRow);
     // seatsize in px on width on 960px
-    let seatSize = 960 / numberOfSeats;
+    let seatSize = 600 / numberOfSeats;
     if (seatSize > 96) seatSize = 96;
     // window sizes
     let w = $('.salong-holder').width();
     let h = $(window).height();
     // getting the scales in both axis
-    let wScale = w / 960;
+    let wScale = w / 600;
     let hScale = h / 500; // 50% of viewport
     // Sets sizes for .seat
     $('.seat').css('width', seatSize).css('height', seatSize);
     // Change salong scale if height is too big
-    $('.salong').css('width', '960px').css('transform', `scale(${Math.min(hScale, wScale) > 1 ? 1 : Math.min(hScale, wScale)})`).css('height', ((seatSize * this.stora.seatsPerRow.length) * Math.min(hScale, wScale) * 1.2)+'px');
+    $('.salong').css('width', '600px').css('transform', `scale(${Math.min(hScale, wScale) > 1 ? 1 : Math.min(hScale, wScale)})`).css('height', ((seatSize * this.stora.seatsPerRow.length) * Math.min(hScale, wScale) * 1.2)+'px');
   }
 
   setupHandler() {
