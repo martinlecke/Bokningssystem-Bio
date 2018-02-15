@@ -7,6 +7,9 @@ class Login extends Base {
 		}
 		$('#login').on('hidden.bs.modal', function (e){
 			location.hash = "";
+      $('.alert').alert('close');
+      $('#email-input-login').val('');
+      $('#password-input-login').val('');
 		});
 		this.register();
 		this.login();
@@ -27,7 +30,12 @@ class Login extends Base {
 				try {
 				  fromJson = await JSON._load("users/" + email);
 				} catch(e){
-          alert('dude');
+          $('.wronguser').alert('close');
+          $('#email-input-login').parent().append(`
+            <div class="alert alert-danger my-3 wronguser" role="alert">
+              Användarnamnet finns inte.
+            </div>
+          `);
 				}
 				if(fromJson && fromJson.password == password){
 					that.setLoggedInUser(fromJson);
@@ -39,9 +47,9 @@ class Login extends Base {
           this.navbar.render('header');
 				}
 				else {
-          $('.alert').alert('close');
+          $('.wrongpassword').alert('close');
 					$('#password-input-login').parent().append(`
-            <div class="alert alert-danger my-3" role="alert">
+            <div class="alert alert-danger my-3 wrongpassword" role="alert">
               Fel lösenord.
             </div>
           `);

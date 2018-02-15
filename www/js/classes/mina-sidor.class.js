@@ -10,7 +10,6 @@ class MinaSidor extends Base {
 
   start() {
     this.myBookedShow = []
-    console.log(this.bookings);
     let comingShows = this.bookings.filter((shows)=>{
         // Removes all shows from past todays date 
         let time = new Date(shows.date + ' 23:59:59');
@@ -21,7 +20,6 @@ class MinaSidor extends Base {
     }
 
     this.myPastShows = []
-    console.log('this.bookings', this.bookings);
     let pastShows = this.bookings.filter((shows)=>{
         // Removes all shows from past todays date
         let time = new Date(shows.date + ' 00:00:00');
