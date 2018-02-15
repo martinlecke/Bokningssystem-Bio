@@ -11,23 +11,23 @@ class ModalShowing extends Base {
     this.seatsLeft = this.seatCalc();
 	}
 
-  find(find, where, property) {
-    // Finds the show/auditorium and returns it by input arguments
-    for (let i = 0; i < Data[where].length; i++) {
-      if (Data[where][i][property] == find) {
-        return Data[where][i]
-      }
+find(find, where, property) {
+  // Finds the show/auditorium and returns it by input arguments
+  for (let i = 0; i < Data[where].length; i++) {
+    if (Data[where][i][property] == find) {
+      return Data[where][i]
     }
   }
+}
 
-  seatCalc() {
-    let calc = this.salong.seats - this.unavailable.length;
-    return calc;
-  }
+seatCalc() {
+  let calc = this.salong.seats - this.unavailable.length;
+  return calc;
+}
 
-  click() {
-    if($(event.target).hasClass('pop')) {
-      $('.modal-backdrop').remove();
-    }
+click() {
+  if($(event.target).hasClass('pop')) {
+    $('.modal-backdrop').remove();
   }
+}
 }
