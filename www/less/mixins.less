@@ -1,6 +1,12 @@
-.whiteBorder() {
-	border-radius: 15px;
-	border: solid @offWhite 2px;
+.movielist() {
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.25);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    border-bottom: 1.5px solid white;
+  }
+
 }
 
 .redButton(){
@@ -9,7 +15,7 @@
 	color: white;
 	cursor: pointer;
 		&:hover{
-	    background-color: @darkerRed;
-	    border-color: @darkerRed;
+	    background-color: @red-hover;
+	    border-color: @red-hover;
 		}
 }

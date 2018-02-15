@@ -1,15 +1,9 @@
 Object.assign(Booking.prototype, { template(){ return `
 
-<div class="booking container-fluid">
-	
+<div class="booking container">
 	<div class="row">
-		<div class="col-12">
-			<h1 class="text-center my-3">Bokningssida</h1>
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-12 col-sm-9 d-flex justify-content-center mx-auto">
+		<div class="col-12 col-sm-9 d-flex justify-content-center mx-auto mt-4">
 			<div class="d-md-flex justify-content-start confirmation mx-auto mt-4">
 
 				<!-- Bookning info  -->
@@ -17,7 +11,7 @@ Object.assign(Booking.prototype, { template(){ return `
 					<img src="${this.movie.poster}" alt="${this.show.film}">
 				</div>
 
-				<div class="col-12 col-md-6 mb-3 mt-4 mt-md-0 justify-content-center">
+				<div class="col-9 mb-3 mt-4 mt-md-0 justify-content-center">
 					<h4 class="font-weight-bold mb-2">${this.movie.title}</h4>
 						<div>
 							${this.movie.length} minuter, ${this.movie.language}
@@ -37,58 +31,53 @@ Object.assign(Booking.prototype, { template(){ return `
 	</div>
 
 	<!-- Number of ticket -->
-	<hr class="bg-secondary">
 	<div class="row">
-		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Antal biljetter</h2>
-			<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto">
+		<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto mt-5">
 
-				${this.bookingItems.render()}
+			${this.bookingItems.render()}
 
-			</div>
 		</div>
 	</div>
 
 	<!-- Choose seats -->
-	<hr class="bg-secondary">
 	<div class="row">
-		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Välj platser</h2>
 
-			<div class="col-12 text-center my-5 salong-holder">
-        ${this.auditorium.render()}
-      </div>
-
-			<div class="col-12 bg-white text-dark seat-info">
-				<ul class="d-md-flex justify-content-center py-3 pl-0 list-unstyled">
-					<li class="font-weight-bold mx-3 mb-md-0">
-						<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span>Ledig
-					</li>
-					<li class="font-weight-bold mx-3 mb-md-0">
-						<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span>Upptagen
-					</li>
-					<li class="font-weight-bold mx-3">
-						<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span>Antal biljetter
-					</li>
-				</ul>
-			</div>
+		<div class="col-12 seat-info">
+			<ul class="d-flex pt-3 pl-0 list-unstyled audiinfo justify-content-center mx-auto mb-0">
+				<li class="font-weight-bold mx-3 mb-md-0">
+					<span class="badge badge-pill badge-success mr-3 px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block d-md-inline">Ledig</span>
+				</li>
+				<li class="font-weight-bold mx-3 mb-md-0">
+					<span class="badge badge-pill badge-danger mr-3 px-2 py-2">${this.show.unavailable.length}</span><span class="d-block d-md-inline">Upptagen</span>
+				</li>
+				<li class="font-weight-bold mx-3">
+					<span class="badge badge-pill badge-warning mr-3 px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span><span class="d-block d-md-inline">Antal biljetter</span>
+				</li>
+			</ul>
 		</div>
+
+		<div class="text-center mt-5 salong-holder">
+      ${this.auditorium.render()}
+    </div>
+
 	</div>
 
 	<!-- Booking -->
 
 	<div class="row">
 		<div class="col-12">
-			<h2 class="text-center mt-4 mb-5">Bekräfta bokningen</h2>
+			
 
 			<!-- 時間など、プロパティに差し替える -->
 
 			<div class="row">
-				<div class="col-12 col-sm-9 d-flex justify-content-center mx-auto">
-					<div class="bg-white text-dark d-md-flex justify-content-start confirmation mx-auto mb-5">
+				<div class="col-12 col-md-10 col-lg-8 justify-content-center mx-auto bg-white text-dark ">
+					<h2 class="text-center mt-4">Sammanställning</h2>
+					<div class="d-md-flex justify-content-start confirmation mx-auto">
 
 						<!-- Booking info  -->
-						<div class="col-12 col-md-4 text-center mt-4 my-md-5 ml-md-3">
+						
+						<div class="col-12 col-md-4 text-center mt-4 my-5 ml-3">
 							<img src="${this.movie.poster}" alt="${this.movie.title}">
 						</div>
 						<div class="col-12 col-md-8 mb-3 mt-4 mt-md-5 px-4 px-md-5 justify-content-center">
@@ -96,20 +85,16 @@ Object.assign(Booking.prototype, { template(){ return `
 							<div class="mt-4">
 								<ul class="list-unstyled pl-0">
 									<li class="mb-2">
-										<span class="font-weight-bold mr-2">Visningsdatum: </span>
-										<span id="date-booking">${this.show.date}</span>
+										<span class="font-weight-bold mr-2">Datum: </span><span id="date-booking">${this.show.date}</span>
 									</li>
 									<li class="mb-2">
-										<span class="font-weight-bold mr-2">Tid: </span>
-										<span id="time-booking">${this.show.time}</span>
+										<span class="font-weight-bold mr-2">Tid: </span><span id="time-booking">${this.show.time}</span>
 									</li>
 									<li class="mb-2">
-										<span class="font-weight-bold mr-2">Salong: </span>
-										<span id="auditorium-booking">${this.show.auditorium}</span>
+										<span class="font-weight-bold mr-2">Salong: </span><span id="auditorium-booking">${this.show.auditorium}</span>
 									</li>
 									<li class="mb-2">
-										<span class="font-weight-bold mr-2">Antal biljetter:</span>
-										<span class="mr-2" id="total-tickets">0</span>
+										<span class="font-weight-bold mr-2">Antal biljetter:</span><span class="mr-2" id="total-tickets">0</span>
 									</li>
 									<!-- <li class="mr-2">
 											<span class="font-weight-bold mr-2 mb-1">Totalpriset:</span>
@@ -118,9 +103,9 @@ Object.assign(Booking.prototype, { template(){ return `
 
 									<div class="d-flex justify-content-start mt-2 mb-4">
 										<ul class="list-unstyled pl-4">
-											<li class="mr-2">Ordenarie:</li>
+											<li class="mr-2">Ordinarie:</li>
 											<li class="mr-2">Barn:</li>
-											<li class="mr-2">Pensionäre:</li>
+											<li class="mr-2">Pensionär:</li>
 											<hr class="text-dark my-2 underline">
 											<li class="mr-2">
 												<span class="font-weight-bold mr-2 mb-2">Total:</span>
@@ -169,7 +154,11 @@ Object.assign(Booking.prototype, { template(){ return `
 									<!-- Forms -->
 									<form class="my-4">
 										<div class="form-group">
-											<label for="mobile-booking" class="font-weight-bold">Mobilnummer</label>
+                      ${User.loggedIn ? '<p><b>Inloggad som:</b> ' + User.loggedIn.email + '</p>' : ''}
+
+
+                      ${!User.loggedIn ? `
+											<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
 											<!-- pattern="\d*" -->
 											<input type="text" class="form-control" id="mobile-booking" minlength="9" maxlength="15" placeholder="T.ex 07012.., +45701234...">
 
@@ -178,17 +167,18 @@ Object.assign(Booking.prototype, { template(){ return `
 										<div class="form-group mt-4">
 											<label for="email-booking" class="font-weight-bold">Email address</label>
 											<input type="email" class="form-control" id="email-booking" placeholder="exempel@xxxxxx.xxxx">
+                      ` : ''}
 										</div>
 
-										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start" id="booking-nr">
-											<span class="mr-2 mb-1 hide-text">Bokningsnummer:</span>
-											<span class="mr-2 mb-1 hide-text" id="bookingNr-booking"></span>
+										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start hide-text" id="booking-nr">
+											<span class="mr-2 mb-1">Bokningsnummer:</span>
+											<span class="mr-2 mb-1" id="bookingNr-booking"></span>
 										</li>
 
 										<button type="button" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
 									</form>
-									<p class="font-weight-bold mr-2 mb-0">Observera!</p>
-									<p class="mb-5"><small class="text-danger">Vänligen spara ditt bokningsnummer. Du betalar för biljetterna på plats.</small></p>
+									<p class="font-weight-bold mr-2 mb-0">Oi!</p>
+									<p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret till biografen!</small></p>
 								</ul>
 
 							</div>

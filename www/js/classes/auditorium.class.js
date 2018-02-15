@@ -6,10 +6,11 @@ class Auditorium extends Base {
     this.stora = this.find(this.show.auditorium, 'salong', 'auditorium');
     this.rows = [];
     this.renderRows();
-    setTimeout(() => { 
+    setTimeout(() => {
       this.scale();
-    }, 500);
+    }, 100);
     this.setupHandler();
+    console.log(this);
   }
 
   find(find, where, property) {
@@ -37,9 +38,9 @@ class Auditorium extends Base {
     let numberOfSeats = Math.max.apply(null, this.stora.seatsPerRow);
     // seatsize in px on width on 960px
     let seatSize = 960 / numberOfSeats;
-    if (seatSize > 50) seatSize = 50;
+    if (seatSize > 96) seatSize = 96;
     // window sizes
-    let w = $(window).width();
+    let w = $('.salong-holder').width();
     let h = $(window).height();
     // getting the scales in both axis
     let wScale = w / 960;
@@ -47,10 +48,14 @@ class Auditorium extends Base {
     // Sets sizes for .seat
     $('.seat').css('width', seatSize).css('height', seatSize);
     // Change salong scale if height is too big
-    $('.salong').css('transform', `scale(${Math.min(hScale, wScale) > 1 ? 1 : Math.min(hScale, wScale)})`);
+    $('.salong').css('width', '960px').css('transform', `scale(${Math.min(hScale, wScale) > 1 ? 1 : Math.min(hScale, wScale)})`).css('height', ((seatSize * this.stora.seatsPerRow.length) * Math.min(hScale, wScale) * 1.2)+'px');
   }
 
   setupHandler() {
+    $(window).on('resize', () => {
+      this.scale();
+    });
+
     $(document).on('mouseenter', '.seat', function() {
       // grabs data-id and loops through the selection and adds hover
       let id = $(this).data('id');

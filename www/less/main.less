@@ -1,4 +1,4 @@
-main > div:first-child > div:first-child { // weird but without classes! Needed for absolute
+main > div:first-child > div:first-child {
     position: relative;
 }
 
@@ -14,13 +14,9 @@ p.description{
 .btn, .btn-primary{
 	.redButton();
 }
-
 .popover {
 	background-color: @offWhite;
 	top: 40px !important;
-	// -webkit-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
-	// -moz-box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
-	// box-shadow: 6px 7px 25px 6px rgba(255,255,255,0.67);
 }
 div.popover-body{
 	padding-bottom: 5px;
@@ -44,9 +40,6 @@ h6{
 	color: @red;
 }
 .poster-3{
-	@media (max-width: 575px){
-		max-height: 135px;
-	}
 	@media (min-width: 575.5px) and (max-width: 767.5px){
 		min-width: 165px;
 		max-height: 234px;
@@ -62,23 +55,7 @@ h6{
 }
 .poster-4{
 	max-height: 250px;
-// 	@media (max-width: 575px){
-//     width: 100% !important;
-// 	}
-// 	@media (max-width: 992px) and (min-width: 576px){
-//     width: 100% !important;
-//     height: 75% !important;
-// 	}
-// 	@media (min-width: 993px){
-// 			width: 80% !important;
-// 			max-height: 305px;
-// 	}
 }
 img.poster{
-	.whiteBorder();
-	&:hover {
-		opacity: 0.5;
-		transition: all .3s ease-in-out;
-		cursor: pointer;
-	}
+	.movielist();
 }

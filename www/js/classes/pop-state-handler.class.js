@@ -1,9 +1,6 @@
 class PopStateHandler {
 
-  // Note: Only instantiate PopStateHandler once!
-
-  constructor(app){　　// ４．App クラスから送られた、引数
-  
+  constructor(app){  
     this.app = app;
     // Add event handlers for a.pop-links once
     this.addEventHandler();
@@ -14,6 +11,7 @@ class PopStateHandler {
     // from an arrow function to keep "this"
     // inside changePage pointing to the PopStateHandler object
     window.addEventListener('popstate', () => this.changePage());
+    this.modalClosing();
   }
 
   addEventHandler(){
@@ -46,7 +44,8 @@ class PopStateHandler {
       '/filmer': 'filmsida',
       '/om-oss': 'omOss',
       '/kalendarium': 'kalendarium',
-      '/bokningssida': 'bokningssida'
+      '/mina-sidor': 'minaSidor',
+      '#': 'close'
     };
 
     for (let i = 0; i < Data.shows.length; i++) {
@@ -65,14 +64,23 @@ class PopStateHandler {
 
     let hashes = {
       'login': 'login',
-      'movie': 'movie'
+    };
+
+    for (let i = 0; i < Data.movies.length; i++) {
+      let movieUrls = Data.movies[i].title;
+      movieUrls = movieUrls.replace(/[, :']/g, "").toLowerCase();
+      movieUrls = movieUrls.replace(/[åä]/g, "a");
+      movieUrls = movieUrls.replace(/[ö]/g, "o");
+      hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
+
     }
 
     if(!hash || !hashes[hash]){
       return;
     }
-      methodName = hashes[hash];
-      this[methodName]();
+    methodName = hashes[hash];
+    this[methodName]();
+
     }
 
   home(){
@@ -90,6 +98,21 @@ class PopStateHandler {
     this.app.omOss.render('main');
   }
 
+  minaSidor(){
+    if(User.loggedIn) {
+      $('main').empty();
+      this.mypage = new MinaSidor();
+      this.mypage.render('main');
+    } else {
+      $('.alert').alert('close');
+      let alert = $(`<div class="alert alert-danger" role="alert">
+          Du behöver logga in för att nå denna sida.
+        </div>`);
+      $('main').append(alert);
+    }
+    
+  }
+
   kalendarium(){
     $('main').empty();
     this.app.kalendarium.render('main');
@@ -98,15 +121,36 @@ class PopStateHandler {
   bokningssida(){
     let id = location.pathname;
     $('main').empty();
-    Showing.x = new Booking(id.slice(1, id.length));
-    Showing.x.render('main');
+    Showing.bookingpage = new Booking(id.slice(1, id.length));
+    Showing.bookingpage.render('main');
   }
 
   login(){
     this.app.login = new Login();
   }
 
+  close() {
+    $('.modal').modal('hide');
+  }
+
   movie(){
-    this.app.movie = new ModalMovie();
+    function makeUrl(movie) {
+      movie = movie.replace(/[, :']/g, "").toLowerCase();
+      movie = movie.replace(/[åä]/g, "a");
+      movie = movie.replace(/[ö]/g, "o");
+      return movie;
+    }
+
+    let movie = Data.movies.find(function(movie) {
+      return ('#' + makeUrl(movie.title)) == location.hash; 
+    });
+    new ModalMovie(movie);
+    $('#filmmodal').modal('show');
+    
+  }
+  modalClosing() {
+    $(document).on('click', '.pop', function () {
+      $('.modal').modal('hide');
+    });
   }
 }

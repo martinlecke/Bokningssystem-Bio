@@ -1,8 +1,8 @@
 Object.assign(Navbar.prototype, { template(){ return `
 
-<nav class="navbar navbar-expand-lg p-1 pl-3">
+<nav class="navbar navbar-expand-lg px-3">
   <a class="navbar-brand pr-1 pop" href="/"><h1>Filmvisarna</h1></a>
-  <button class="navbar-toggler mb-1 px-1 py-0 mb-sm-2 px-sm-2 py-sm-1 px-md-3 py-md-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler mb-1 px-1 py-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -10,6 +10,7 @@ Object.assign(Navbar.prototype, { template(){ return `
       ${this.items.render()}
     </ul>
   </div>
+  
   <!-- Modal Start -->
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -22,7 +23,7 @@ Object.assign(Navbar.prototype, { template(){ return `
           </div>
           <!-- Modal Body Start -->
           <div class="modal-body">
-            <div id="accordion">
+            <div id="login-accordion">
               <div class="list-group">
                 <a class="list-group-item list-group-item-action btn-primary" data-toggle="collapse" data-target="#login-form" aria-expanded="true" aria-controls="login-form">
                   <div id="login-collapse">
@@ -30,7 +31,7 @@ Object.assign(Navbar.prototype, { template(){ return `
                   </div>
                 </a>
 
-                <div id="login-form" class="collapse show" aria-labelledby="login-collapse" data-parent="#accordion">
+                <div id="login-form" class="collapse show" aria-labelledby="login-collapse" data-parent="#login-accordion">
                   <div class="card-body">
 
                      <form class="w-100 px-3">
@@ -61,7 +62,7 @@ Object.assign(Navbar.prototype, { template(){ return `
                   </div>
                 </a>
 
-                <div id="register" class="collapse" aria-labelledby="register-collapse" data-parent="#accordion">
+                <div id="register" class="collapse" aria-labelledby="register-collapse" data-parent="#login-accordion">
                   <div class="card-body">
                     
                     <form class="w-100 px-3">

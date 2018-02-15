@@ -5,16 +5,10 @@ class Booking extends Base {
 		this.auditorium = new Auditorium(showid);
 		this.show = this.findShow(showid);
 		this.movie = this.findMovie();
-		this.clickPlusOrdinary();
-		this.clickPlusChild();
-		this.clickPlusPensioner();
-		this.clickMinusOrdinary();
-		this.clickMinusChild();
-		this.clickMinusPensioner();
+    if(!App.instanceReady) this.doOnce();
+    Booking.markedSeats = [];
 		this.wrongEmail = true;   // 最初は入力できる状態にしておく
 		this.wrongMobile = true;
-
-		Booking.markedSeats = [];
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -30,15 +24,30 @@ class Booking extends Base {
 			}];
 
 		this.bookingItems.forEach((button, i) => {
-			this.bookingItems[i] = new BookingItem(button);
+		this.bookingItems[i] = new BookingItem(button);
 		});
-		this.onRendered();
 		Booking.showSeatNumber = this.showSeatNumber;
-		this.randomGenerator();
-		this.saveBookingDataToJson();
-		this.validateEmail();
-		this.getNumberOfTicksets();
+    setTimeout(() => {
+		  this.randomGenerator();
+    },0);
+
+    
 	} // Closes constructor
+
+  doOnce() {
+    this.clickPlusOrdinary();
+    this.clickPlusChild();
+    this.clickPlusPensioner();
+    this.clickMinusOrdinary();
+    this.clickMinusChild();
+    this.clickMinusPensioner();
+    this.saveBookingDataToJson();
+    this.validateEmail();
+    this.validateMobileNr();
+    this.getNumberOfTicksets();
+    this.onRendered();
+    App.instanceReady = true;
+  }
 
 	findShow(inparameter) {
 		// Finds the show and return it
@@ -62,6 +71,10 @@ class Booking extends Base {
 		let calc = Number($('#number-ordinary').text()) +
 			Number($('#number-child').text()) +
 			Number($('#number-pensioner').text());
+      // console.log('calc', calc);
+      // console.log('Ordinary', Number($('#number-ordinary').text()));
+      // console.log('Child', Number($('#number-child').text()));
+      // console.log('Pensionär', Number($('#number-pensioner').text()));
 		Booking.selection = calc;
 	}
 
@@ -76,6 +89,7 @@ class Booking extends Base {
 	clickPlusOrdinary() {
 		$(document).on('click', '#plus-ordinary', () => {
 			let number = Number($('#number-ordinary').text());
+      console.log(number);
 			number += 1;
 			$('#number-ordinary').val('');
 			$('#number-ordinary').html(number);
@@ -112,6 +126,8 @@ class Booking extends Base {
 				$('#number-ordinary').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
@@ -124,6 +140,8 @@ class Booking extends Base {
 				$('#number-child').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
@@ -136,6 +154,8 @@ class Booking extends Base {
 				$('#number-pensioner').html(number);
 			}
 			this.onRendered();
+      this.auditorium.render();
+      Booking.markedSeats = [];
 		});
 	}
 
@@ -169,23 +189,33 @@ class Booking extends Base {
 		}
 	}
 
-	randomGenerator() {
-		let that = this;
-		$(document).one('click', '#email-booking', function (event) {  // .one = only first click
-			let allBookingNumbers = [];
-			for (let booking of Data.booking) {
-				allBookingNumbers.push(booking.bookingNr);
-			}
-			let newBookingNumber;
-			let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
-			while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
-				newBookingNumber = Math.random().toString(36).slice(-10);
-			}
-			this.bookingNr = newBookingNumber;
-			$('.hide-text').show();
-			$('#bookingNr-booking').html(this.bookingNr);
-		});
-	}
+  randomGenerator() {
+    let that = this;
+    if(User.loggedIn) {getRandom();}
+    $(document).one('click', '#email-booking', function (event) {  // .one = only first click
+      getRandom();
+    });
+
+    function getRandom() {
+      let allBookingNumbers = [];
+      for (let booking of Data.booking) {
+        allBookingNumbers.push(booking.bookingNr);
+      }
+      let newBookingNumber;
+      let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
+      while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
+        newBookingNumber = Math.random().toString(36).slice(-10);
+      }
+      let bookingNr = newBookingNumber;
+      console.log('nu körs random bokningsnummer',bookingNr);  
+      $('.hide-text').show();
+      $('#bookingNr-booking').html(bookingNr);
+    }
+
+  }
+
+
+
 
 	validateEmail() {
 		$(document).on('keyup', '#email-booking', () => {
@@ -206,6 +236,10 @@ class Booking extends Base {
 	saveBookingDataToJson() {
 		let that = this;
 		$(document).on('click', '#booking-alert', function () {
+      if(User.loggedIn) {
+        that.wrongEmail = false;
+        that.wrongMobile = false;
+      }
 			if (that.wrongEmail == true || that.wrongMobile == true) {
 				return;
 			}
@@ -230,8 +264,7 @@ class Booking extends Base {
 					row: $(id).prev('.row-booking').text()
 				});
 			}
-
-			Data.booking.push(new BookingData(
+      let bookingData = new BookingData(
 				{
 					title: title,
 					date: date,
@@ -249,11 +282,30 @@ class Booking extends Base {
 					seats: seats,
 					bookingNr: bookingNr,
 					mobile: mobile,
-					email: email
+					email: email,
+          user: User.loggedIn.email
 				}
-			));
+			);
+      Data.booking.push(bookingData);
+
+      //loops through the seat objects and pushes unavailable seats to the show and save to json
+      for (let seat of seats) {
+        seat.id = Number(seat.id)
+        that.show.unavailable.push(seat);        
+      }
+      JSON._save('shows.json', Data.shows);
+
+      if(User.loggedIn) {
+        User.loggedIn.bookings.push(bookingData);
+      }
+      if(User.loggedIn) JSON._save('users/' + User.loggedIn.email, User.loggedIn);
+      //////// -->
+
+
 			that.saveToJSON(Data.booking);
 			alert('Tack för bokning! Vi skickade ett mail till dig.');
+      
+      // window.location = "/"
 		});
 	}
 
