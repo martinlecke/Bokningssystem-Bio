@@ -26,16 +26,11 @@ class Booking extends Base {
 		this.bookingItems.forEach((button, i) => {
 		this.bookingItems[i] = new BookingItem(button);
 		});
-		this.onRendered();
 		Booking.showSeatNumber = this.showSeatNumber;
     setTimeout(() => {
 		  this.randomGenerator();
     },0);
 
-		this.saveBookingDataToJson();
-		this.validateEmail();
-		this.validateMobileNr();
-		this.getNumberOfTicksets();
     
 	} // Closes constructor
 
@@ -46,6 +41,11 @@ class Booking extends Base {
     this.clickMinusOrdinary();
     this.clickMinusChild();
     this.clickMinusPensioner();
+    this.saveBookingDataToJson();
+    this.validateEmail();
+    this.validateMobileNr();
+    this.getNumberOfTicksets();
+    this.onRendered();
     App.instanceReady = true;
   }
 
@@ -295,8 +295,7 @@ class Booking extends Base {
 					row: $(id).prev('.row-booking').text()    // prev = 1つ上の（ここでは、１つ上のspan）
 				});
 			}
-
-			Data.booking.push(new BookingData(
+      let bookingData = new BookingData(
 				{
 					title: title,
 					date: date,
@@ -317,15 +316,22 @@ class Booking extends Base {
 					email: email,
           user: User.loggedIn.email
 				}
-			));
+			);
+      Data.booking.push(bookingData);
 
       //loops through the seat objects and pushes unavailable seats to the show and save to json
       for (let seat of seats) {
         seat.id = Number(seat.id)
-        that.show.unavailable.push(seat);
+        that.show.unavailable.push(seat);        
       }
-      JSON._save('shows.json', Data.shows)
+      JSON._save('shows.json', Data.shows);
+
+      if(User.loggedIn) {
+        User.loggedIn.bookings.push(bookingData);
+      }
+      if(User.loggedIn) JSON._save('users/' + User.loggedIn.email, User.loggedIn);
       //////// -->
+
 
 			that.saveToJSON(Data.booking);
 			alert('Tack för bokning! Vi skickade ett mail till dig.');

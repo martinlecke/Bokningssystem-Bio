@@ -1,1061 +1,25 @@
 [
   {
-    "title": "Fiml title (lägg till senare)",
-    "date": "2018-02-14",
-    "time": "18.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "bookingNr": "180214N0",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Fiml title (lägg till senare)",
-    "date": "2018-02-14",
-    "time": "18.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "0 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "0"
-      }
-    ],
-    "amount": "0",
-    "bookingNr": "180214N1",
-    "mobile": "",
-    "email": "r",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Mordet på Orientexpressen",
-    "date": "2018-02-12",
-    "time": "21.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "0 st",
-        "child": "2 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "130 kr",
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Mordet på Orientexpressen",
-    "date": "2018-02-12",
-    "time": "21.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "3 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "3 st"
-      }
-    ],
-    "amount": "255 kr",
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seat": "",
-    "bookingNr": "nwgdaxipib",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": ""
-      }
-    ],
-    "bookingNr": "oe9j9uz36o",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": "",
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "1 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "150 kr",
-    "seats": [
-      {
-        "id": ""
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": ""
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": "",
-        "row": ""
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "1 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "150 kr",
-    "seats": [
-      {
-        "id": "",
-        "row": ""
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": "",
-        "row": ""
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": "Stolnr: 70",
-        "row": "Rad: 8"
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": "70",
-        "row": "8"
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "1 st",
-        "pensioner": "1 st",
-        "totalNr": "3 st"
-      }
-    ],
-    "amount": "225 kr",
-    "seats": [
-      {
-        "id": "70",
-        "row": "8"
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "1 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "150 kr",
-    "seats": [
-      {
-        "id": "70",
-        "row": "8"
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
-        "id": "",
-        "row": ""
-      }
-    ],
-    "bookingNr": "0m7hzfa279",
-    "mobile": "0",
-    "email": "re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "1 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "150 kr",
-    "seats": [
-      {
-        "id": "71",
-        "row": "8"
-      },
-      {
-        "id": "72",
-        "row": "8"
-      }
-    ],
-    "bookingNr": "",
-    "mobile": "",
-    "email": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "phycgzlip2",
-    "mobile": "",
-    "email": "yuj@yhjk.uj",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "acanbikv8r",
-    "mobile": "09",
-    "email": "re@sre.com",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "acanbikv8r",
-    "mobile": "12",
-    "email": "re@sre.com",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "acanbikv8r",
-    "mobile": "012",
-    "email": "re@sre.com",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "acanbikv8r",
-    "mobile": "+45 7089653",
-    "email": "re@sre.com",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+45708965347",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "0708965347",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+ 45 70896534",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+45 70896534",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+45708965347",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+45 708965347",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "kw55cg918x",
-    "mobile": "+45 708965347",
-    "email": "rewe@rerw.re",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Star Wars: The Last Jedi",
-    "date": "2018-02-14",
-    "time": "16.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "7 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "7 st"
-      }
-    ],
-    "amount": "595 kr",
-    "seats": [
-      {
-        "id": "40",
-        "row": "5"
-      },
-      {
-        "id": "41",
-        "row": "5"
-      },
-      {
-        "id": "42",
-        "row": "5"
-      },
-      {
-        "id": "43",
-        "row": "5"
-      },
-      {
-        "id": "44",
-        "row": "5"
-      },
-      {
-        "id": "45",
-        "row": "5"
-      },
-      {
-        "id": "46",
-        "row": "5"
-      }
-    ],
-    "bookingNr": "xkh32ucmq4",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
+    "title": "Django",
     "date": "2018-02-15",
-    "time": "18.30",
+    "time": "16.00",
     "auditorium": "Lilla Salongen",
     "tickets": [
       {
-        "ordinary": "3 st",
+        "ordinary": "1 st",
         "child": "0 st",
         "pensioner": "0 st",
-        "totalNr": "3 st"
+        "totalNr": "1 st"
       }
     ],
-    "amount": "255 kr",
-    "seats": [],
-    "bookingNr": "69plbi993e",
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 38,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "rcthlyojk6",
     "user": "a@a.a",
     "⚙": "BookingData"
   },
@@ -1063,210 +27,6 @@
     "title": "Django",
     "date": "2018-02-15",
     "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "28",
-        "row": "4"
-      },
-      {
-        "id": "29",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "90oea1bhti",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "31",
-        "row": "4"
-      },
-      {
-        "id": "30",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "rsyt6b3uib",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Mordet på Orientexpressen",
-    "date": "2018-02-12",
-    "time": "21.00",
-    "auditorium": "Stora Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "1",
-        "row": "1"
-      },
-      {
-        "id": "2",
-        "row": "1"
-      }
-    ],
-    "bookingNr": "hnqzcwp9ws",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": "27",
-        "row": "4"
-      },
-      {
-        "id": "28",
-        "row": "4"
-      },
-      {
-        "id": "30",
-        "row": "4"
-      },
-      {
-        "id": "29",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "td7c7h3a4h",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "21.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "29",
-        "row": "4"
-      },
-      {
-        "id": "28",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "5b4n7mxj9m",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "21.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "29",
-        "row": "4"
-      },
-      {
-        "id": "30",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "9jgq39donh",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "21.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "2 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "2 st"
-      }
-    ],
-    "amount": "170 kr",
-    "seats": [
-      {
-        "id": "29",
-        "row": "4"
-      },
-      {
-        "id": "30",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "523zvan9h3",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "21.00",
     "auditorium": "Lilla Salongen",
     "tickets": [
       {
@@ -1279,139 +39,19 @@
     "amount": "255 kr",
     "seats": [
       {
-        "id": "28",
-        "row": "4"
-      },
-      {
-        "id": "29",
-        "row": "4"
-      },
-      {
-        "id": "30",
-        "row": "4"
-      }
-    ],
-    "bookingNr": "q3lud6n5uq",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": "6",
-        "row": "1"
-      },
-      {
-        "id": "1",
-        "row": "1"
-      },
-      {
-        "id": "44",
-        "row": "6"
-      },
-      {
-        "id": "55",
-        "row": "6"
-      }
-    ],
-    "bookingNr": "grabzbp9to",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": "6",
-        "row": "1"
-      },
-      {
-        "id": "1",
-        "row": "1"
-      },
-      {
-        "id": "44",
-        "row": "6"
-      },
-      {
-        "id": "55",
-        "row": "6"
-      }
-    ],
-    "bookingNr": "xligyr38xh",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
-      {
         "id": 29,
         "row": "4"
-      }
-    ],
-    "bookingNr": "s0vp5hlu7c",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
+      },
       {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [
+        "id": 30,
+        "row": "4"
+      },
       {
-        "id": 29,
+        "id": 31,
         "row": "4"
       }
     ],
-    "bookingNr": "s0vp5hlu7c",
+    "bookingNr": "ilhcm92ox3",
     "user": "a@a.a",
     "⚙": "BookingData"
   },
@@ -1422,454 +62,148 @@
     "auditorium": "Lilla Salongen",
     "tickets": [
       {
-        "ordinary": "1 st",
+        "ordinary": "2 st",
         "child": "0 st",
         "pensioner": "0 st",
-        "totalNr": "1 st"
+        "totalNr": "2 st"
       }
     ],
-    "amount": "85 kr",
+    "amount": "170 kr",
     "seats": [
       {
-        "id": 29,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "s0vp5hlu7c",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
+        "id": 44,
+        "row": "6"
+      },
       {
         "id": 45,
         "row": "6"
+      }
+    ],
+    "bookingNr": "wmfpcyvvzv",
+    "user": "a@a.a",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "2 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "2 st"
+      }
+    ],
+    "amount": "170 kr",
+    "seats": [
+      {
+        "id": 53,
+        "row": "6"
       },
+      {
+        "id": 54,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "zeylpejzlj",
+    "user": "a@a.a",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "255 kr",
+    "seats": [
+      {
+        "id": 50,
+        "row": "6"
+      },
+      {
+        "id": 51,
+        "row": "6"
+      },
+      {
+        "id": 52,
+        "row": "6"
+      }
+    ],
+    "bookingNr": "f99vvvhgfg",
+    "user": "a@a.a",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "255 kr",
+    "seats": [
+      {
+        "id": 3,
+        "row": "1"
+      },
+      {
+        "id": 4,
+        "row": "1"
+      },
+      {
+        "id": 5,
+        "row": "1"
+      }
+    ],
+    "bookingNr": "qswy13ud0i",
+    "user": "a@a.a",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "3 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "3 st"
+      }
+    ],
+    "amount": "255 kr",
+    "seats": [
       {
         "id": 46,
         "row": "6"
       },
       {
-        "id": 48,
-        "row": "6"
-      },
-      {
         "id": 47,
-        "row": "6"
-      }
-    ],
-    "bookingNr": "t0exqt3x1o",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 45,
-        "row": "6"
-      },
-      {
-        "id": 46,
         "row": "6"
       },
       {
         "id": 48,
         "row": "6"
-      },
-      {
-        "id": 47,
-        "row": "6"
       }
     ],
-    "bookingNr": "t0exqt3x1o",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 45,
-        "row": "6"
-      },
-      {
-        "id": 46,
-        "row": "6"
-      },
-      {
-        "id": 48,
-        "row": "6"
-      },
-      {
-        "id": 47,
-        "row": "6"
-      }
-    ],
-    "bookingNr": "t0exqt3x1o",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Django",
-    "date": "2018-02-15",
-    "time": "16.00",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 45,
-        "row": "6"
-      },
-      {
-        "id": 46,
-        "row": "6"
-      },
-      {
-        "id": 48,
-        "row": "6"
-      },
-      {
-        "id": 47,
-        "row": "6"
-      }
-    ],
-    "bookingNr": "t0exqt3x1o",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      }
-    ],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "1 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "1 st"
-      }
-    ],
-    "amount": "85 kr",
-    "seats": [],
-    "bookingNr": "",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 18,
-        "row": "3"
-      },
-      {
-        "id": 19,
-        "row": "3"
-      },
-      {
-        "id": 20,
-        "row": "3"
-      },
-      {
-        "id": 21,
-        "row": "3"
-      }
-    ],
-    "bookingNr": "80eh5g2af9",
-    "user": "a@a.a",
-    "⚙": "BookingData"
-  },
-  {
-    "title": "Maze Runner: The Death Cure",
-    "date": "2018-02-15",
-    "time": "18.30",
-    "auditorium": "Lilla Salongen",
-    "tickets": [
-      {
-        "ordinary": "4 st",
-        "child": "0 st",
-        "pensioner": "0 st",
-        "totalNr": "4 st"
-      }
-    ],
-    "amount": "340 kr",
-    "seats": [
-      {
-        "id": 18,
-        "row": "3"
-      },
-      {
-        "id": 19,
-        "row": "3"
-      },
-      {
-        "id": 20,
-        "row": "3"
-      },
-      {
-        "id": 21,
-        "row": "3"
-      }
-    ],
-    "bookingNr": "80eh5g2af9",
+    "bookingNr": "cclmhxodp6",
     "user": "a@a.a",
     "⚙": "BookingData"
   }
