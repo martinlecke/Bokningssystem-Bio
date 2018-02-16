@@ -128,9 +128,7 @@ Object.assign(Booking.prototype, { template(){ return `
 								<div class="form-group">
 	                ${User.loggedIn ? '<p><b>Inloggad som:</b> ' + User.loggedIn.email + '</p>' : ''}
 	                ${!User.loggedIn ? `
-									<label for="mobile-booking" class="font-weight-bold">Mobil:</label>
-									<input type="text" class="form-control w-75" id="mobile-booking" minlength="9" maxlength="13" placeholder="Ange mobilnummer (t.ex 07012.., +45701234...)">
-								</div>
+									
 
 								<div class="form-group mt-4">
 									<label for="email-booking" class="font-weight-bold">Email address</label>
@@ -144,6 +142,7 @@ Object.assign(Booking.prototype, { template(){ return `
 								</li>
 
 								<button type="button" class="btn btn-danger font-weight-bold mt-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
+							</div>
 							</form>
 						</ul>
 

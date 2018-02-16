@@ -206,11 +206,8 @@ class Booking extends Base {
 
   }
 
-
-
-
 	validateEmail() {
-		$(document).on('keyup', '#email-booking', () => {
+		$(document).on('click', '#booking-alert', () => {
 			let email = $('#email-booking').val();
 			if (!email.includes('@') || !email.includes('.') || email === '') {
 				$('#email-booking').attr('data-content', 'Ange rätt email adress');
