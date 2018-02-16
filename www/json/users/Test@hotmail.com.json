@@ -37,6 +37,50 @@
       "bookingNr": "ivxykkpm6o",
       "user": "Test@hotmail.com",
       "⚙": "BookingData"
+    },
+    {
+      "title": "Django",
+      "date": "2018-02-08",
+      "time": "16.00",
+      "auditorium": "Lilla Salongen",
+      "tickets": [
+        {
+          "ordinary": "6 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "6 st"
+        }
+      ],
+      "amount": "510 kr",
+      "seats": [
+        {
+          "id": 26,
+          "row": "4"
+        },
+        {
+          "id": 27,
+          "row": "4"
+        },
+        {
+          "id": 28,
+          "row": "4"
+        },
+        {
+          "id": 29,
+          "row": "4"
+        },
+        {
+          "id": 30,
+          "row": "4"
+        },
+        {
+          "id": 31,
+          "row": "4"
+        }
+      ],
+      "bookingNr": "uhyvg685px",
+      "user": "Test@hotmail.com",
+      "⚙": "BookingData"
     }
   ],
   "⚙": "User",
@@ -45,6 +89,22 @@
     "password": "Test",
     "bookings": {
       "↻": "$.bookings"
+    },
+    "undefined": {
+      "email": "Test@hotmail.com",
+      "password": "Test",
+      "bookings": {
+        "↻": "$.bookings"
+      },
+      "undefined": {
+        "email": "Test@hotmail.com",
+        "password": "Test",
+        "bookings": {
+          "↻": "$.bookings"
+        },
+        "⚙": "User"
+      },
+      "⚙": "User"
     },
     "⚙": "User"
   }
