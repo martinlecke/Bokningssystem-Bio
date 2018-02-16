@@ -5,20 +5,7 @@
     "date": "2018-02-08",
     "time": "16.00",
     "showid": "18020800",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [],
     "url": "django",
     "⚙": "Show"
   },
@@ -28,20 +15,7 @@
     "date": "2018-02-08",
     "time": "18.30",
     "showid": "18020810",
-    "unavailable": [
-      {
-        "id": 38,
-        "row": "5"
-      },
-      {
-        "id": 39,
-        "row": "5"
-      },
-      {
-        "id": 40,
-        "row": "5"
-      }
-    ],
+    "unavailable": [],
     "url": "solsidan",
     "⚙": "Show"
   },
@@ -61,20 +35,7 @@
     "date": "2018-02-09",
     "time": "16.00",
     "showid": "18020901",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [],
     "url": "django",
     "⚙": "Show"
   },
@@ -104,16 +65,7 @@
     "date": "2018-02-10",
     "time": "16.00",
     "showid": "18021002",
-    "unavailable": [
-      {
-        "id": 4,
-        "row": "1"
-      },
-      {
-        "id": 37,
-        "row": "5"
-      }
-    ],
+    "unavailable": [],
     "url": "paddington2",
     "⚙": "Show"
   },
@@ -143,20 +95,7 @@
     "date": "2018-02-11",
     "time": "16.00",
     "showid": "18021103",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      }
-    ],
+    "unavailable": [],
     "url": "callmebyyourname",
     "⚙": "Show"
   },
@@ -226,32 +165,7 @@
     "date": "2018-02-13",
     "time": "18.30",
     "showid": "18021315",
-    "unavailable": [
-      {
-        "id": 1,
-        "row": 1
-      },
-      {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      },
-      {
-        "id": 4,
-        "row": 1
-      },
-      {
-        "id": 5,
-        "row": 1
-      },
-      {
-        "id": 6,
-        "row": 1
-      }
-    ],
+    "unavailable": [],
     "url": "mollysgame",
     "⚙": "Show"
   },
@@ -301,108 +215,7 @@
     "date": "2018-02-15",
     "time": "16.00",
     "showid": "18021507",
-    "unavailable": [
-      {
-        "id": 38,
-        "row": "5"
-      },
-      {
-        "id": 29,
-        "row": "4"
-      },
-      {
-        "id": 30,
-        "row": "4"
-      },
-      {
-        "id": 31,
-        "row": "4"
-      },
-      {
-        "id": 44,
-        "row": "6"
-      },
-      {
-        "id": 45,
-        "row": "6"
-      },
-      {
-        "id": 53,
-        "row": "6"
-      },
-      {
-        "id": 54,
-        "row": "6"
-      },
-      {
-        "id": 50,
-        "row": "6"
-      },
-      {
-        "id": 51,
-        "row": "6"
-      },
-      {
-        "id": 52,
-        "row": "6"
-      },
-      {
-        "id": 3,
-        "row": "1"
-      },
-      {
-        "id": 4,
-        "row": "1"
-      },
-      {
-        "id": 5,
-        "row": "1"
-      },
-      {
-        "id": 46,
-        "row": "6"
-      },
-      {
-        "id": 47,
-        "row": "6"
-      },
-      {
-        "id": 48,
-        "row": "6"
-      },
-      {
-        "id": 37,
-        "row": "5"
-      },
-      {
-        "id": 1,
-        "row": "1"
-      },
-      {
-        "id": 27,
-        "row": "4"
-      },
-      {
-        "id": 26,
-        "row": "4"
-      },
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 39,
-        "row": "5"
-      },
-      {
-        "id": 40,
-        "row": "5"
-      },
-      {
-        "id": 41,
-        "row": "5"
-      }
-    ],
+    "unavailable": [],
     "url": "django",
     "⚙": "Show"
   },
@@ -412,36 +225,7 @@
     "date": "2018-02-15",
     "time": "18.30",
     "showid": "18021517",
-    "unavailable": [
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 36,
-        "row": "5"
-      },
-      {
-        "id": 37,
-        "row": "5"
-      },
-      {
-        "id": 38,
-        "row": "5"
-      },
-      {
-        "id": 46,
-        "row": "6"
-      },
-      {
-        "id": 39,
-        "row": "5"
-      },
-      {
-        "id": 21,
-        "row": "3"
-      }
-    ],
+    "unavailable": [],
     "url": "mazerunnerthedeathcure",
     "⚙": "Show"
   },
@@ -451,36 +235,7 @@
     "date": "2018-02-15",
     "time": "21.00",
     "showid": "18021527",
-    "unavailable": [
-      {
-        "id": 5,
-        "row": 1
-      },
-      {
-        "id": 10,
-        "row": "2"
-      },
-      {
-        "id": 40,
-        "row": "5"
-      },
-      {
-        "id": 28,
-        "row": "4"
-      },
-      {
-        "id": 54,
-        "row": "6"
-      },
-      {
-        "id": 2,
-        "row": "1"
-      },
-      {
-        "id": 46,
-        "row": "6"
-      }
-    ],
+    "unavailable": [],
     "url": "mazerunnerthedeathcure",
     "⚙": "Show"
   },
@@ -492,48 +247,20 @@
     "showid": "18021608",
     "unavailable": [
       {
-        "id": 2,
-        "row": 1
-      },
-      {
-        "id": 3,
-        "row": 1
-      },
-      {
-        "id": 4,
-        "row": 1
-      },
-      {
-        "id": 74,
-        "row": "8"
-      },
-      {
-        "id": 62,
-        "row": "7"
-      },
-      {
-        "id": 19,
-        "row": "3"
-      },
-      {
-        "id": 30,
+        "id": 31,
         "row": "4"
       },
       {
-        "id": 54,
-        "row": "6"
+        "id": 32,
+        "row": "4"
       },
       {
-        "id": 61,
-        "row": "7"
+        "id": 33,
+        "row": "4"
       },
       {
-        "id": 49,
-        "row": "6"
-      },
-      {
-        "id": 41,
-        "row": "5"
+        "id": 34,
+        "row": "4"
       },
       {
         "id": 42,
@@ -544,27 +271,23 @@
         "row": "5"
       },
       {
-        "id": 76,
-        "row": "8"
-      },
-      {
-        "id": 46,
-        "row": "5"
-      },
-      {
-        "id": 31,
+        "id": 26,
         "row": "4"
       },
       {
-        "id": 32,
+        "id": 27,
         "row": "4"
       },
       {
-        "id": 34,
+        "id": 28,
         "row": "4"
       },
       {
-        "id": 33,
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 30,
         "row": "4"
       }
     ],
@@ -577,16 +300,7 @@
     "date": "2018-02-16",
     "time": "18.30",
     "showid": "18021618",
-    "unavailable": [
-      {
-        "id": 61,
-        "row": "7"
-      },
-      {
-        "id": 32,
-        "row": "4"
-      }
-    ],
+    "unavailable": [],
     "url": "allthemoneyintheworld",
     "⚙": "Show"
   },
@@ -596,24 +310,7 @@
     "date": "2018-02-16",
     "time": "21.00",
     "showid": "18021628",
-    "unavailable": [
-      {
-        "id": 72,
-        "row": "8"
-      },
-      {
-        "id": 73,
-        "row": "8"
-      },
-      {
-        "id": 74,
-        "row": "8"
-      },
-      {
-        "id": 75,
-        "row": "8"
-      }
-    ],
+    "unavailable": [],
     "url": "paddington2",
     "⚙": "Show"
   },
@@ -873,20 +570,7 @@
     "date": "2018-02-25",
     "time": "18.30",
     "showid": "180225117",
-    "unavailable": [
-      {
-        "id": 56,
-        "row": "6"
-      },
-      {
-        "id": 1,
-        "row": "1"
-      },
-      {
-        "id": 26,
-        "row": "4"
-      }
-    ],
+    "unavailable": [],
     "url": "mollysgame",
     "⚙": "Show"
   },
@@ -1066,12 +750,7 @@
     "date": "2018-03-03",
     "time": "18.30",
     "showid": "180303123",
-    "unavailable": [
-      {
-        "id": 47,
-        "row": "6"
-      }
-    ],
+    "unavailable": [],
     "url": "jumanjiwelcometothejungle",
     "⚙": "Show"
   },

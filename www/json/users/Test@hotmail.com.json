@@ -1,0 +1,51 @@
+{
+  "email": "Test@hotmail.com",
+  "password": "Test",
+  "bookings": [
+    {
+      "title": "Molly's Game",
+      "date": "2018-02-16",
+      "time": "16.00",
+      "auditorium": "Stora Salongen",
+      "tickets": [
+        {
+          "ordinary": "4 st",
+          "child": "0 st",
+          "pensioner": "0 st",
+          "totalNr": "4 st"
+        }
+      ],
+      "amount": "340 kr",
+      "seats": [
+        {
+          "id": 31,
+          "row": "4"
+        },
+        {
+          "id": 32,
+          "row": "4"
+        },
+        {
+          "id": 33,
+          "row": "4"
+        },
+        {
+          "id": 34,
+          "row": "4"
+        }
+      ],
+      "bookingNr": "ivxykkpm6o",
+      "user": "Test@hotmail.com",
+      "⚙": "BookingData"
+    }
+  ],
+  "⚙": "User",
+  "undefined": {
+    "email": "Test@hotmail.com",
+    "password": "Test",
+    "bookings": {
+      "↻": "$.bookings"
+    },
+    "⚙": "User"
+  }
+}
