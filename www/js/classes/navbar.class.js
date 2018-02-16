@@ -6,7 +6,7 @@ class Navbar extends Base {
       new NavbarItem('Startsida', '/'),
       new NavbarItem('Filmer','/filmer'),
       new NavbarItem('Kalendarium','/kalendarium'),
-      new NavbarItem('Om oss','/om-oss')
+      new NavbarItem('Kiosken','/om-oss')
     ];
     if (!User.loggedIn) {
       this.items.push(new NavbarItem('Logga in','#login'));
