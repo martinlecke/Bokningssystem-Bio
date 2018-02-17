@@ -14,7 +14,14 @@
 	.movie-poster-summary{
 		border: 2px solid @black;
 		border-radius: 10px;	
-	}
+		max-width: 70%;
+		@media @mobile-min {
+			max-width: 125%;	
+		}
+		@media @tablet-min {
+			max-width: 75%;
+		}
+  }
 
 	.film-details {
 		font-size: 1.2rem;
@@ -78,5 +85,6 @@
     li {
       text-align: center;
     }
-  }
+	}
+	
 }
