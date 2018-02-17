@@ -5,9 +5,9 @@ class Booking extends Base {
 		this.auditorium = new Auditorium(showid);
 		this.show = this.findShow(showid);
 		this.movie = this.findMovie();
-    if(!App.instanceReady) this.doOnce();
-    Booking.markedSeats = [];
-		this.wrongEmail = true;   // 最初は入力できる状態にしておく
+		if (!App.instanceReady) this.doOnce();
+		Booking.markedSeats = [];
+		this.wrongEmail = true;
 		this.bookingItems = [
 			{
 				type: 'ordinary',
@@ -23,29 +23,27 @@ class Booking extends Base {
 			}];
 
 		this.bookingItems.forEach((button, i) => {
-		this.bookingItems[i] = new BookingItem(button);
+			this.bookingItems[i] = new BookingItem(button);
 		});
 		Booking.showSeatNumber = this.showSeatNumber;
-    setTimeout(() => {
-		  this.randomGenerator();
-    },0);
-
-    
+		setTimeout(() => {
+			this.randomGenerator();
+		}, 0);
 	} // Closes constructor
 
-  doOnce() {
-    this.clickPlusOrdinary();
-    this.clickPlusChild();
-    this.clickPlusPensioner();
-    this.clickMinusOrdinary();
-    this.clickMinusChild();
-    this.clickMinusPensioner();
-    this.saveBookingDataToJson();
-    this.validateEmail();
-    this.getNumberOfTicksets();
-    this.onRendered();
-    App.instanceReady = true;
-  }
+	doOnce() {
+		this.clickPlusOrdinary();
+		this.clickPlusChild();
+		this.clickPlusPensioner();
+		this.clickMinusOrdinary();
+		this.clickMinusChild();
+		this.clickMinusPensioner();
+		this.saveBookingDataToJson();
+		this.validateEmail();
+		this.getNumberOfTicksets();
+		this.onRendered();
+		App.instanceReady = true;
+	}
 
 	findShow(inparameter) {
 		// Finds the show and return it
@@ -67,8 +65,8 @@ class Booking extends Base {
 
 	getNumberOfTicksets() {
 		let calc = Number($('#number-ordinary').text()) +
-		Number($('#number-child').text()) +
-		Number($('#number-pensioner').text());
+			Number($('#number-child').text()) +
+			Number($('#number-pensioner').text());
 		Booking.selection = calc;
 	}
 
@@ -119,8 +117,8 @@ class Booking extends Base {
 				$('#number-ordinary').html(number);
 			}
 			this.onRendered();
-      this.auditorium.render();
-      Booking.markedSeats = [];
+			this.auditorium.render();
+			Booking.markedSeats = [];
 		});
 	}
 
@@ -133,8 +131,8 @@ class Booking extends Base {
 				$('#number-child').html(number);
 			}
 			this.onRendered();
-      this.auditorium.render();
-      Booking.markedSeats = [];
+			this.auditorium.render();
+			Booking.markedSeats = [];
 		});
 	}
 
@@ -147,8 +145,8 @@ class Booking extends Base {
 				$('#number-pensioner').html(number);
 			}
 			this.onRendered();
-      this.auditorium.render();
-      Booking.markedSeats = [];
+			this.auditorium.render();
+			Booking.markedSeats = [];
 		});
 	}
 
@@ -178,33 +176,32 @@ class Booking extends Base {
 	showSeatNumber() {
 		$('#seat-booking').empty();
 		for (let seat of Booking.markedSeats) {
-			$('<li></li>').append('Rad: <span  class="mr-3 row-booking">' + seat.row + '</span>Stolnr: <span class="id-booking">' + seat.id + '</span>').appendTo('#seat-booking');
+			$('<li></li>').append('Rad: <span class="mr-3 row-booking">' + seat.row + '</span>Stolnr: <span class="id-booking">' + seat.id + '</span>').appendTo('#seat-booking');
 		}
 	}
 
-  randomGenerator() {
-    let that = this;
-    if(User.loggedIn) {getRandom();}
-    $(document).one('click', '#email-booking', function (event) {  // .one = only first click
-      getRandom();
-    });
+	randomGenerator() {
+		let that = this;
+		if (User.loggedIn) { getRandom(); }
+		$(document).one('click', '#email-booking', function (event) {  // .one = only first click
+			getRandom();
+		});
 
-    function getRandom() {
-      let allBookingNumbers = [];
-      for (let booking of Data.booking) {
-        allBookingNumbers.push(booking.bookingNr);
-      }
-      let newBookingNumber;
-      let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
-      while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
-        newBookingNumber = Math.random().toString(36).slice(-10);
-      }
-      let bookingNr = newBookingNumber;
-      $('.hide-text').show();
-      $('#bookingNr-booking').html(bookingNr);
-    }
-
-  }
+		function getRandom() {
+			let allBookingNumbers = [];
+			for (let booking of Data.booking) {
+				allBookingNumbers.push(booking.bookingNr);
+			}
+			let newBookingNumber;
+			let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
+			while (!newBookingNumber || allBookingNumbers.includes(newBookingNumber)) {
+				newBookingNumber = Math.random().toString(36).slice(-10);
+			}
+			let bookingNr = newBookingNumber;
+			$('.hide-text').show();
+			$('#bookingNr-booking').html(bookingNr);
+		}
+	}
 
 	validateEmail() {
 		$(document).on('click', '#booking-alert', () => {
@@ -225,9 +222,9 @@ class Booking extends Base {
 	saveBookingDataToJson() {
 		let that = this;
 		$(document).on('click', '#booking-alert', function () {
-      if(User.loggedIn) {
-        that.wrongEmail = false;
-      }
+			if (User.loggedIn) {
+				that.wrongEmail = false;
+			}
 			if (that.wrongEmail == true) {
 				return;
 			}
@@ -251,7 +248,7 @@ class Booking extends Base {
 					row: $(id).prev('.row-booking').text()
 				});
 			}
-      let bookingData = new BookingData(
+			let bookingData = new BookingData(
 				{
 					title: title,
 					date: date,
@@ -271,25 +268,23 @@ class Booking extends Base {
 					email: email
 				}
 			);
-      if (User.loggedIn) Object.assign(bookingData,{user: User.loggedIn.email});
-      Data.booking.push(bookingData);
+			if (User.loggedIn) Object.assign(bookingData, { user: User.loggedIn.email });
+			Data.booking.push(bookingData);
 
-      //loops through the seat objects and pushes unavailable seats to the show and save to json
-      for (let seat of seats) {
-        seat.id = Number(seat.id)
-        that.show.unavailable.push(seat);        
-      }
-      JSON._save('shows.json', Data.shows);
+			//loops through the seat objects and pushes unavailable seats to the show and save to json
+			for (let seat of seats) {
+				seat.id = Number(seat.id)
+				that.show.unavailable.push(seat);
+			}
+			JSON._save('shows.json', Data.shows);
 
-      if(User.loggedIn) {
-        User.loggedIn.bookings.push(bookingData);
-      }
-      if(User.loggedIn) JSON._save('users/' + User.loggedIn.email, User.loggedIn);
-      //////// -->
-
+			if (User.loggedIn) {
+				User.loggedIn.bookings.push(bookingData);
+			}
+			if (User.loggedIn) JSON._save('users/' + User.loggedIn.email, User.loggedIn);
+			//////// -->
 
 			that.saveToJSON(Data.booking);
-
 
 			$(this).parent().append(`
             <div class="alert alert-success my-3" role="alert">
@@ -298,8 +293,8 @@ class Booking extends Base {
             <p class="font-weight-bold mr-2 mb-0"></p>
             <p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret för att hämta ut dina biljetter!</small></p>
           `);
-      $('.ticket-picker').remove();
-      $(this).hide();
+			$('.ticket-picker').remove();
+			$(this).hide();
 		});
 	}
 
