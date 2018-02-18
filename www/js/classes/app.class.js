@@ -3,7 +3,7 @@ class App {
   start(){
     // Keep/Restore logged in user (on hard page reload)
     if(localStorage.loggedIn){
-      User.loggedIn = JSON._parse(localStorage.loggedIn); //Om logout ska fungera så måste det ske en hardpagereload efteråt.
+      User.loggedIn = JSON._parse(localStorage.loggedIn); 
     }
     // Create a navbar
     this.navbar = new Navbar();
@@ -44,7 +44,7 @@ class App {
             Du är nu <strong>utloggad!</strong>
           </div>`);
         $('header').prepend($alert);
-        $alert.slideDown().delay(3000).slideUp();
+        $alert.slideDown().delay(4000).slideUp();
     });
   }
 

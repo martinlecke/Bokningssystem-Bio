@@ -1,19 +1,19 @@
 Object.assign(ModalShowing.prototype, { template(){ return `
-    <li class="mb-3 d-flex justify-content-between flex-wrap">
-      <span class="pl-0">
-        <i class="fa fa-calendar" aria-hidden="true"></i>
-        <p class="ml-2 font-weight-bold d-inline">${this.date}</p>
-      </span>
-      <span>
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <p class="ml-2 font-weight-bold d-inline">${this.time}</p>
-      </span>
-      <span>
-        ${this.seatsLeft} lediga (av ${this.salong.seats})
-      </span>
-      <span>
-        <a href="/${this.showid}" class="modal-booking-btn pop btn btn-danger btn-sm font-weight-bold">Boka</a>
-      </span>
-    </li>
+  <li class="mb-3 d-flex justify-content-between flex-wrap">
+    <span class="pl-0">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <p class="ml-2 font-weight-bold d-inline">${this.date}</p>
+    </span>
+    <span>
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <p class="ml-2 font-weight-bold d-inline">${this.time}</p>
+    </span>
+    <span>
+      ${this.seatsLeft} lediga (av ${this.salong.seats})
+    </span>
+    <span>
+      <a href="/${this.showid}" class="modal-booking-btn pop btn btn-danger btn-sm font-weight-bold">Boka</a>
+    </span>
+  </li>
   
 `;}});

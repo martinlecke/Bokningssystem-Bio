@@ -62,7 +62,6 @@ class Login extends Base {
 		});
 	}
 
-
 	register(){
 		let that = this;
 			$(document).on('click', "#submit-register", (e) => {
@@ -79,7 +78,6 @@ class Login extends Base {
           );
           that.setLoggedInUser(user);
           JSON._save('users/' + user.email, user);
-          // $('.modal').modal('close');
           $('.modal-backdrop').hide();
           location.hash = "";
           $('header').empty();
@@ -91,7 +89,6 @@ class Login extends Base {
           $('header').prepend($alert);
           $alert.slideDown().delay(3000).slideUp();
         }
-
 			});
 		}
 

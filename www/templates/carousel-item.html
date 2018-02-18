@@ -1,9 +1,10 @@
 Object.assign(CarouselItem.prototype, { template(){ return `
 
-<div class="carousel-item carousel-splash ${this.active ? 'active' : ''}" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, #0e0f0f), url(imgs/${this.images});">
-	<div class="infobox d-block ml-5 mb-3">
-		<a href="#filmmodal" class="movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">${this.title}</a>
-		<button type="button" href="#filmmodal" class="d-block border-0 movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">Mer om filmen</button>
+	<div class="carousel-item carousel-splash ${this.active ? 'active' : ''}" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, #0e0f0f), url(imgs/${this.images});">
+		<div class="infobox d-block ml-5 mb-3">
+			<a href="#filmmodal" class="movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">${this.title}</a>
+			<button type="button" href="#filmmodal" class="d-block border-0 movie-link" data-popover="${this.title}" data-toggle="modal" data-target="#filmmodal">Mer om filmen</button>
+		</div>
 	</div>
-</div>
+	
 `;}});

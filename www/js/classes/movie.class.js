@@ -9,11 +9,8 @@ class Movie extends Base {
 		}
     setTimeout(() => {
       this.url = this.makeUrl();
-
       $('#filmmodal').modal('show');
-
     }, 0);
-    
 	}
 
 	onRendered(){
@@ -49,8 +46,7 @@ class Movie extends Base {
 	}
 
   click() {
-  	$('#modalmovie').empty();
-    
+  	$('#modalmovie').empty();    
     $('.popover').popover('hide');
   }
 

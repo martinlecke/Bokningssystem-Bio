@@ -1,16 +1,18 @@
 Object.assign(Kalendarium.prototype, { template(){ return `
-<div class="kalendarium">
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="text-center text-white mb-4">Alla kommande visningar dag för dag</h2>
 
-        <div id="accordion">
-          ${this.days.render()}
+  <div class="kalendarium">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center text-white mb-4">Alla kommande visningar dag för dag</h2>
+
+          <div id="accordion">
+            ${this.days.render()}
+          </div>
+          
         </div>
-        
       </div>
     </div>
   </div>
-</div>
+
 `;}});

@@ -13,8 +13,8 @@ class Navbar extends Base {
     } else {
       this.items.push(new NavbarItem('Mina sidor','/mina-sidor'));
       this.items.push(new NavbarItem('Logga ut','#logout'));
-  }
-   this.setActive('/');
+      }
+      this.setActive('/');
   }
 
   setActive(url){
