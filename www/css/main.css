@@ -1,0 +1,100 @@
+p.description {
+  font-size: 0.7rem;
+  color: black;
+  margin-bottom: 0;
+}
+.movie-link:hover {
+  text-decoration: none;
+}
+.btn {
+  border: 1px solid #9c0000;
+  background-color: #9c0000;
+  color: white;
+}
+.popover {
+  background-color: #f2f2f2;
+  top: 40px !important;
+}
+div.popover-body {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+h5 {
+  font-size: 1.2rem;
+  color: white;
+}
+h5:hover {
+  text-decoration-color: white;
+  text-decoration: underline;
+}
+@media (max-width: 575px) {
+  h5 {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 992px) and (min-width: 576px) {
+  h5 {
+    font-size: 1rem;
+  }
+}
+h6 {
+  font-size: 0.8rem;
+  color: #9c0000;
+}
+.poster-3 {
+  height: 80%;
+}
+@media (max-width: 575px) {
+  .poster-3 {
+    width: 100% !important;
+    height: 75% !important;
+  }
+}
+@media (min-width: 993px) {
+  .poster-3 {
+    width: 60% !important;
+  }
+}
+.poster-4 {
+  max-height: 250px;
+}
+@media (max-width: 575px) {
+  .poster-4 {
+    width: 100% !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 576px) {
+  .poster-4 {
+    width: 100% !important;
+    height: 75% !important;
+  }
+}
+@media (min-width: 993px) {
+  .poster-4 {
+    width: 80% !important;
+    max-height: 305px;
+  }
+}
+img.poster {
+  opacity: 1.0;
+}
+img.poster:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 575px) {
+  img.poster {
+    width: 80%;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  img.poster {
+    width: 155px;
+    height: 225px;
+  }
+}
+@media (min-width: 993px) {
+  img.poster {
+    width: 50%;
+  }
+}
