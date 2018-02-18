@@ -51,6 +51,7 @@ class Auditorium extends Base {
   }
 
   setupHandler() {
+    
     $(window).on('resize', () => {
       this.scale();
     });
@@ -63,9 +64,11 @@ class Auditorium extends Base {
         $(`[data-id='${i}'][data-row='${row}']`).addClass('hover');
       }
     });
+
     $(document).on('mouseleave', '.seat', function() {
       $('.seat').removeClass('hover');
     });
+
   }
 
 }

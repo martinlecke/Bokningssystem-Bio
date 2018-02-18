@@ -7,7 +7,6 @@ class CarouselItem extends Base {
 
   click() {
     $('#modalmovie').empty();
-    /// its not this that should be passed to modalmovie  *????*
     this.clickedMovie = new ModalMovie(this);
   }
 

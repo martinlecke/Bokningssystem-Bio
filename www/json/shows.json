@@ -375,7 +375,32 @@
     "date": "2018-02-18",
     "time": "16.00",
     "showid": "180218010",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 60,
+        "row": "7"
+      },
+      {
+        "id": 74,
+        "row": "8"
+      },
+      {
+        "id": 70,
+        "row": "8"
+      },
+      {
+        "id": 72,
+        "row": "8"
+      },
+      {
+        "id": 58,
+        "row": "7"
+      }
+    ],
     "url": "ballerinanochuppfinnaren",
     "⚙": "Show"
   },
@@ -495,7 +520,12 @@
     "date": "2018-02-22",
     "time": "16.00",
     "showid": "180222014",
-    "unavailable": [],
+    "unavailable": [
+      {
+        "id": 27,
+        "row": "4"
+      }
+    ],
     "url": "mollysgame",
     "⚙": "Show"
   },

@@ -21,6 +21,5 @@ class Navbar extends Base {
     for(let item of this.items){
       item.active = url == item.url;
     }
-    // this.render();
   }
 }

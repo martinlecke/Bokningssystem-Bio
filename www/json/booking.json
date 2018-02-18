@@ -150,5 +150,209 @@
     "bookingNr": "uhyvg685px",
     "user": "Test@hotmail.com",
     "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-22",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 27,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "bsucpdxta5",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "4 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "4 st"
+      }
+    ],
+    "amount": "340 kr",
+    "seats": [
+      {
+        "id": 61,
+        "row": "7"
+      },
+      {
+        "id": 62,
+        "row": "7"
+      },
+      {
+        "id": 63,
+        "row": "7"
+      },
+      {
+        "id": 64,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "vv5rsqsdkh",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 29,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "gaz011evwq",
+    "email": "test@test.se",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 60,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "jriqf9l2h6",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 74,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "ykh61s6sr7",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 70,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "zaydu5x8ku",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 72,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "oly0nws538",
+    "email": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 58,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "glglqdtsbq",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
   }
 ]

@@ -71,17 +71,17 @@ class PopStateHandler {
       movieUrls = movieUrls.replace(/[, :']/g, "").toLowerCase();
       movieUrls = movieUrls.replace(/[åä]/g, "a");
       movieUrls = movieUrls.replace(/[ö]/g, "o");
-      hashes[movieUrls] = 'movie';  // Object.assign(hashes, {movieUrls : 'movie'}); Samma sak
-
+      hashes[movieUrls] = 'movie';
+      hashes['filmer/'+movieUrls] = 'movie';  
     }
 
     if(!hash || !hashes[hash]){
       return;
     }
+
     methodName = hashes[hash];
     this[methodName]();
-
-    }
+  }
 
   home(){
     $('main').empty();
@@ -111,7 +111,6 @@ class PopStateHandler {
         </div>`);
       $('main').prepend(alert);
     }
-    
   }
 
   kalendarium(){
@@ -147,11 +146,12 @@ class PopStateHandler {
     });
     new ModalMovie(movie);
     $('#filmmodal').modal('show');
-    
   }
+
   modalClosing() {
     $(document).on('click', '.pop', function () {
       $('.modal').modal('hide');
     });
   }
+
 }
