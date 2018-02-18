@@ -37,7 +37,7 @@
   {
     "auditorium": "Lilla Salongen",
     "film": "Solsidan",
-    "date": "2018-03-08",
+    "date": "2018-02-08", 
     "time": "18.30",
     "showid": "18020810",
     "unavailable": [],
@@ -167,7 +167,7 @@
   {
     "auditorium": "Stora Salongen",
     "film": "Mordet på Orientexpressen",
-    "date": "2018-03-09",
+    "date": "2018-02-12",
     "time": "21.00",
     "showid": "18021224",
     "unavailable": [],
@@ -227,7 +227,7 @@
   {
     "auditorium": "Lilla Salongen",
     "film": "Mordet på Orientexpressen",
-    "date": "2018-03-12",
+    "date": "2018-02-14", 
     "time": "21.00",
     "showid": "18021426",
     "unavailable": [],
