@@ -299,7 +299,9 @@ class Booking extends Base {
             <p class="mb-5"><small class="text-danger">Glöm inte ta med bokningsnumret för att hämta ut dina biljetter!</small></p>
           `);
       $('.ticket-picker').remove();
+      $('.salong-holder').remove();
       $(this).hide();
+      
 		});
 	}
 
