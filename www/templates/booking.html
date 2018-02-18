@@ -1,0 +1,161 @@
+Object.assign(Booking.prototype, { template(){ return `
+
+<div class="booking container">
+	<div class="row justify-content-center p-5 mt-3 ml-md-3">
+
+		<div class="col-12 col-md-4 col-lg-3 text-center">
+			<img class="img-fluid image-poster" src="${this.movie.poster}" alt="${this.show.film}">
+		</div>
+
+		<div class="col-10 col-sm-6 col-md-6 col-lg-3 mt-2 mt-md-0 p-3 ml-4">
+			<div class="mt-sm-2">
+				<h4 class="font-weight-bold mb-2">${this.movie.title}</h4>
+				<div>
+					${this.movie.length} minuter, ${this.movie.language}
+				</div>
+				<div class="film-details mt-4 mb-4">
+					<p class="mb-1"><i class="fa fa-calendar mr-2" aria-hidden="true"></i>${this.show.date}</p>
+					<p class="mb-1"><i class="fa fa-clock-o mr-2" aria-hidden="true"></i>${this.show.time}</p>
+					<p class="mb-1">${this.show.auditorium}</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-xl-10 d-md-flex justify-content-center mx-lg-auto mt-sm-5 pt-sm-5 ticket-picker">
+
+			${this.bookingItems.render()}
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-12 seat-info">
+			<ul class="d-flex pt-4 pl-0 list-unstyled audiinfo justify-content-center mx-auto mb-0">
+				<li class="font-weight-bold mx-3 mb-md-0 pill-width">
+					<span class="badge badge-pill badge-success px-2 py-2">${this.auditorium.stora.seats - this.show.unavailable.length}</span><span class="d-block">Ledig</span>
+				</li>
+				<li class="font-weight-bold mx-3 mb-md-0 pill-width">
+					<span class="badge badge-pill badge-danger px-2 py-2">${this.show.unavailable.length}</span><span class="d-block">Upptagen</span>
+				</li>
+				<li class="font-weight-bold mx-3 pill-width">
+					<span class="badge badge-pill badge-warning px-2 py-2 seatslefttopick">${Booking.markedSeats == false ? 0 : Booking.markedSeats}</span><span class="d-block">Antal biljetter</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="text-center mt-5 salong-holder">
+      ${this.auditorium.render()}
+    </div>
+
+	</div>
+	<div class="row">
+	
+		<div class="col-11 col-md-10 col-lg-8 mt-5 mx-auto bg-white text-dark d-flex justify-content-start">	
+			<div class="col-12 p-0">
+				<h2 class="text-center mt-4 d-block">Sammanställning</h2>
+
+				<div class="row mx-auto mt-5">
+			
+          <div class="col-12 col-sm-4 col-md-6 text-center">
+            <img class="img-fluid movie-poster-summary" src="${this.movie.poster}" alt="${this.movie.title}">
+          </div>
+ 
+          <div class="col-12 col-sm-8 col-md-6 mt-4 mt-sm-0 pl-sm-5 pl-md-2">
+						<div class="ml-5 ml-sm-0">
+							<h4 id="title-booking" class="font-weight-bold mb-2">${this.movie.title}</h4>
+							<ul class="list-unstyled pl-0 mt-4">
+								<li class="mb-2">
+									<span class="font-weight-bold mr-2">Datum: </span><span id="date-booking">${this.show.date}</span>
+								</li>
+								<li class="mb-2">
+									<span class="font-weight-bold mr-2">Tid: </span><span id="time-booking">${this.show.time}</span>
+								</li>
+								<li class="mb-2">
+									<span class="font-weight-bold mr-2">Salong: </span><span id="auditorium-booking">${this.show.auditorium}</span>
+								</li>
+								<li class="mb-2">
+									<span class="font-weight-bold mr-2">Antal biljetter:</span><span class="mr-2" id="total-tickets">0</span>
+								</li>
+
+								<div class="d-flex justify-content-start mt-2 mb-4">
+									<ul class="list-unstyled pl-4">
+										<li class="mr-2">Ordinarie:</li>
+										<li class="mr-2">Barn:</li>
+										<li class="mr-2">Pensionär:</li>
+										<hr class="text-dark my-2 underline">
+										<li class="mr-2">
+											<span class="font-weight-bold mr-2 mb-2">Total:</span>
+										</li>
+									</ul>
+
+									<ul class="list-unstyled pl-4">
+										<li>
+											<span>85</span> kr
+											<span>x</span>
+											<span id="number-ordinary2">0</span>
+										</li>
+										<li>
+											<span>65</span> kr
+											<span>x</span>
+											<span id="number-child2">0</span>
+										</li>
+										<li>
+											<span>75</span> kr
+											<span>x</span>
+											<span id="number-pensioner2">0</span>
+										</li>
+										<li class="mr-2 mt-3">
+											<span id="amount">0</span>
+										</li>
+									</ul>
+								</div>
+
+								<li class="mb-2">
+									<span class="font-weight-bold mr-2">Stolsnummer:</span>
+								</li>
+
+								<div class="d-flex justify-content-start mt-2 mb-3">
+
+									<ul class="list-unstyled pl-4" id="seat-booking">
+									
+									</ul>
+								</div>
+
+								<hr class="email mt-4">
+
+								<form class="my-4">
+
+									<div class="form-group">
+	                	${User.loggedIn ? '<p><b>Inloggad som:</b> ' + User.loggedIn.email + '</p>' : ''}
+	                	${!User.loggedIn ? `
+									
+										<div class="form-group mt-4">
+											<label for="email-booking" class="font-weight-bold">Email address:</label>
+											<input type="email" class="form-control w-75" id="email-booking" data-placement="top" placeholder="Ange emailadress (exempel@*****.***)">
+			                ` : ''}
+										</div>
+
+										<li class="mr-2 font-weight-bold mt-3 d-flex justify-content-start hide-text" id="booking-nr">
+										<span class="mr-2 mb-1">Bokningsnummer:</span>
+										<span class="mr-2 mb-1" id="bookingNr-booking"></span>
+										</li>
+
+										<button type="button" class="btn btn-danger font-weight-bold my-4" id="booking-alert" data-toggle="popover" data-trigger="focus" data-content="Skriv in email address och mobil nummer">Boka</button>
+									</div>
+									
+								</form>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- col-10 sammanställning div -->
+	</div> <!-- Row -->
+</div> <!-- Container -->
+
+`;}});

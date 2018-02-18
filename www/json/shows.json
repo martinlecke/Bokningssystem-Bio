@@ -1,0 +1,942 @@
+[
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Django",
+    "date": "2018-02-08",
+    "time": "16.00",
+    "showid": "18020800",
+    "unavailable": [
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      },
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 30,
+        "row": "4"
+      },
+      {
+        "id": 31,
+        "row": "4"
+      }
+    ],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Solsidan",
+    "date": "2018-03-08",
+    "time": "18.30",
+    "showid": "18020810",
+    "unavailable": [],
+    "url": "solsidan",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Jumanji: Welcome to the Jungle",
+    "date": "2018-02-08",
+    "time": "21.00",
+    "showid": "18020820",
+    "unavailable": [],
+    "url": "jumanjiwelcometothejungle",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Django",
+    "date": "2018-02-09",
+    "time": "16.00",
+    "showid": "18020901",
+    "unavailable": [],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-09",
+    "time": "18.30",
+    "showid": "18020911",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-02-09",
+    "time": "21.00",
+    "showid": "18020921",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Paddington 2",
+    "date": "2018-02-10",
+    "time": "16.00",
+    "showid": "18021002",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-02-10",
+    "time": "18.30",
+    "showid": "18021012",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-10",
+    "time": "21.00",
+    "showid": "18021022",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-02-11",
+    "time": "16.00",
+    "showid": "18021103",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-11",
+    "time": "18.30",
+    "showid": "18021113",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Downsizing",
+    "date": "2018-02-11",
+    "time": "21.00",
+    "showid": "18021123",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-02-12",
+    "time": "16.00",
+    "showid": "18021204",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All Inclusive",
+    "date": "2018-02-12",
+    "time": "18.30",
+    "showid": "18021214",
+    "unavailable": [],
+    "url": "allinclusive",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Mordet på Orientexpressen",
+    "date": "2018-03-09",
+    "time": "21.00",
+    "showid": "18021224",
+    "unavailable": [],
+    "url": "mordetpaorientexpressen",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Downsizing",
+    "date": "2018-02-13",
+    "time": "16.00",
+    "showid": "18021305",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Molly's Game",
+    "date": "2018-02-13",
+    "time": "18.30",
+    "showid": "18021315",
+    "unavailable": [],
+    "url": "mollysgame",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Downsizing",
+    "date": "2018-02-13",
+    "time": "21.00",
+    "showid": "18021325",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-14",
+    "time": "16.00",
+    "showid": "18021406",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-02-14",
+    "time": "18.30",
+    "showid": "18021416",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Mordet på Orientexpressen",
+    "date": "2018-03-12",
+    "time": "21.00",
+    "showid": "18021426",
+    "unavailable": [],
+    "url": "mordetpaorientexpressen",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Django",
+    "date": "2018-02-15",
+    "time": "16.00",
+    "showid": "18021507",
+    "unavailable": [],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "18.30",
+    "showid": "18021517",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-02-15",
+    "time": "21.00",
+    "showid": "18021527",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "showid": "18021608",
+    "unavailable": [
+      {
+        "id": 31,
+        "row": "4"
+      },
+      {
+        "id": 32,
+        "row": "4"
+      },
+      {
+        "id": 33,
+        "row": "4"
+      },
+      {
+        "id": 34,
+        "row": "4"
+      },
+      {
+        "id": 42,
+        "row": "5"
+      },
+      {
+        "id": 43,
+        "row": "5"
+      },
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      },
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 30,
+        "row": "4"
+      }
+    ],
+    "url": "mollysgame",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "All the Money in the World",
+    "date": "2018-02-16",
+    "time": "18.30",
+    "showid": "18021618",
+    "unavailable": [],
+    "url": "allthemoneyintheworld",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Paddington 2",
+    "date": "2018-02-16",
+    "time": "21.00",
+    "showid": "18021628",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-17",
+    "time": "16.00",
+    "showid": "18021709",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-02-17",
+    "time": "18.30",
+    "showid": "18021719",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-02-17",
+    "time": "21.00",
+    "showid": "18021729",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "showid": "180218010",
+    "unavailable": [
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 60,
+        "row": "7"
+      },
+      {
+        "id": 74,
+        "row": "8"
+      },
+      {
+        "id": 70,
+        "row": "8"
+      },
+      {
+        "id": 72,
+        "row": "8"
+      },
+      {
+        "id": 58,
+        "row": "7"
+      }
+    ],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Downsizing",
+    "date": "2018-02-18",
+    "time": "18.30",
+    "showid": "180218110",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-18",
+    "time": "21.00",
+    "showid": "180218210",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Paddington 2",
+    "date": "2018-02-19",
+    "time": "16.00",
+    "showid": "180219011",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-19",
+    "time": "18.30",
+    "showid": "180219111",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-02-19",
+    "time": "21.00",
+    "showid": "180219211",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-20",
+    "time": "16.00",
+    "showid": "180220012",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-02-20",
+    "time": "18.30",
+    "showid": "180220112",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Django",
+    "date": "2018-02-20",
+    "time": "21.00",
+    "showid": "180220212",
+    "unavailable": [],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-02-21",
+    "time": "16.00",
+    "showid": "180221013",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-21",
+    "time": "18.30",
+    "showid": "180221113",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Django",
+    "date": "2018-02-21",
+    "time": "21.00",
+    "showid": "180221213",
+    "unavailable": [],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Molly's Game",
+    "date": "2018-02-22",
+    "time": "16.00",
+    "showid": "180222014",
+    "unavailable": [
+      {
+        "id": 27,
+        "row": "4"
+      }
+    ],
+    "url": "mollysgame",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-02-22",
+    "time": "18.30",
+    "showid": "180222114",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Downsizing",
+    "date": "2018-02-22",
+    "time": "21.00",
+    "showid": "180222214",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-23",
+    "time": "16.00",
+    "showid": "180223015",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-23",
+    "time": "18.30",
+    "showid": "180223115",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-23",
+    "time": "21.00",
+    "showid": "180223215",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-24",
+    "time": "16.00",
+    "showid": "180224016",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Paddington 2",
+    "date": "2018-02-24",
+    "time": "18.30",
+    "showid": "180224116",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Borg",
+    "date": "2018-02-24",
+    "time": "21.00",
+    "showid": "180224216",
+    "unavailable": [],
+    "url": "borg",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-25",
+    "time": "16.00",
+    "showid": "180225017",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Molly's Game",
+    "date": "2018-02-25",
+    "time": "18.30",
+    "showid": "180225117",
+    "unavailable": [],
+    "url": "mollysgame",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Paddington 2",
+    "date": "2018-02-25",
+    "time": "21.00",
+    "showid": "180225217",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-02-26",
+    "time": "16.00",
+    "showid": "180226018",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-26",
+    "time": "18.30",
+    "showid": "180226118",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-26",
+    "time": "21.00",
+    "showid": "180226218",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-27",
+    "time": "16.00",
+    "showid": "180227019",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Django",
+    "date": "2018-02-27",
+    "time": "18.30",
+    "showid": "180227119",
+    "unavailable": [],
+    "url": "django",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-02-27",
+    "time": "21.00",
+    "showid": "180227219",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-28",
+    "time": "16.00",
+    "showid": "180228020",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-02-28",
+    "time": "18.30",
+    "showid": "180228120",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-02-28",
+    "time": "21.00",
+    "showid": "180228220",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Ballerinan och uppfinnaren",
+    "date": "2018-03-01",
+    "time": "16.00",
+    "showid": "180301021",
+    "unavailable": [],
+    "url": "ballerinanochuppfinnaren",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Borg",
+    "date": "2018-03-01",
+    "time": "18.30",
+    "showid": "180301121",
+    "unavailable": [],
+    "url": "borg",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Molly's Game",
+    "date": "2018-03-01",
+    "time": "21.00",
+    "showid": "180301221",
+    "unavailable": [],
+    "url": "mollysgame",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call Me by Your Name",
+    "date": "2018-03-02",
+    "time": "16.00",
+    "showid": "180302022",
+    "unavailable": [],
+    "url": "callmebyyourname",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-03-02",
+    "time": "18.30",
+    "showid": "180302122",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Solsidan",
+    "date": "2018-03-02",
+    "time": "21.00",
+    "showid": "180302222",
+    "unavailable": [],
+    "url": "solsidan",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Downsizing",
+    "date": "2018-03-03",
+    "time": "16.00",
+    "showid": "180303023",
+    "unavailable": [],
+    "url": "downsizing",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Jumanji: Welcome to the Jungle",
+    "date": "2018-03-03",
+    "time": "18.30",
+    "showid": "180303123",
+    "unavailable": [],
+    "url": "jumanjiwelcometothejungle",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Jumanji: Welcome to the Jungle",
+    "date": "2018-03-03",
+    "time": "21.00",
+    "showid": "180303223",
+    "unavailable": [],
+    "url": "jumanjiwelcometothejungle",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-03-04",
+    "time": "16.00",
+    "showid": "180304024",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Let The Sunshine In",
+    "date": "2018-03-04",
+    "time": "18.30",
+    "showid": "180304124",
+    "unavailable": [],
+    "url": "letthesunshinein",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Three Billboards Outside Ebbing, Missouri",
+    "date": "2018-03-04",
+    "time": "21.00",
+    "showid": "180304224",
+    "unavailable": [],
+    "url": "threebillboardsoutsideebbingmissouri",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-03-05",
+    "time": "16.00",
+    "showid": "180305025",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Star Wars: The Last Jedi",
+    "date": "2018-03-05",
+    "time": "18.30",
+    "showid": "180305125",
+    "unavailable": [],
+    "url": "starwarsthelastjedi",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Paddington 2",
+    "date": "2018-03-05",
+    "time": "21.00",
+    "showid": "180305225",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Maze Runner: The Death Cure",
+    "date": "2018-03-06",
+    "time": "16.00",
+    "showid": "180306026",
+    "unavailable": [],
+    "url": "mazerunnerthedeathcure",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Jumanji: Welcome to the Jungle",
+    "date": "2018-03-06",
+    "time": "18.30",
+    "showid": "180306126",
+    "unavailable": [],
+    "url": "jumanjiwelcometothejungle",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Paddington 2",
+    "date": "2018-03-06",
+    "time": "21.00",
+    "showid": "180306226",
+    "unavailable": [],
+    "url": "paddington2",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Borg",
+    "date": "2018-03-07",
+    "time": "16.00",
+    "showid": "180307027",
+    "unavailable": [],
+    "url": "borg",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Borg",
+    "date": "2018-03-07",
+    "time": "18.30",
+    "showid": "180307127",
+    "unavailable": [],
+    "url": "borg",
+    "⚙": "Show"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Jumanji: Welcome to the Jungle",
+    "date": "2018-03-07",
+    "time": "21.00",
+    "showid": "180307227",
+    "unavailable": [],
+    "url": "jumanjiwelcometothejungle",
+    "⚙": "Show"
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "4 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "4 st"
+      }
+    ],
+    "amount": "340 kr",
+    "seats": [
+      {
+        "id": 31,
+        "row": "4"
+      },
+      {
+        "id": 32,
+        "row": "4"
+      },
+      {
+        "id": 33,
+        "row": "4"
+      },
+      {
+        "id": 34,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "ivxykkpm6o",
+    "user": "Test@hotmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-16",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "2 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "2 st"
+      }
+    ],
+    "amount": "170 kr",
+    "seats": [
+      {
+        "id": 42,
+        "row": "5"
+      },
+      {
+        "id": 43,
+        "row": "5"
+      }
+    ],
+    "bookingNr": "6iki7czgh9",
+    "user": "sprintreview@hotmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Call Me by Your Name",
+    "date": "2018-02-17",
+    "time": "18.30",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "6 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "6 st"
+      }
+    ],
+    "amount": "510 kr",
+    "seats": [
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      },
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 30,
+        "row": "4"
+      },
+      {
+        "id": 31,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "om1eeod76o",
+    "user": "sprintreview@hotmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Django",
+    "date": "2018-02-08",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "6 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "6 st"
+      }
+    ],
+    "amount": "510 kr",
+    "seats": [
+      {
+        "id": 26,
+        "row": "4"
+      },
+      {
+        "id": 27,
+        "row": "4"
+      },
+      {
+        "id": 28,
+        "row": "4"
+      },
+      {
+        "id": 29,
+        "row": "4"
+      },
+      {
+        "id": 30,
+        "row": "4"
+      },
+      {
+        "id": 31,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "uhyvg685px",
+    "user": "Test@hotmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Molly's Game",
+    "date": "2018-02-22",
+    "time": "16.00",
+    "auditorium": "Lilla Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 27,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "bsucpdxta5",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "4 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "4 st"
+      }
+    ],
+    "amount": "340 kr",
+    "seats": [
+      {
+        "id": 61,
+        "row": "7"
+      },
+      {
+        "id": 62,
+        "row": "7"
+      },
+      {
+        "id": 63,
+        "row": "7"
+      },
+      {
+        "id": 64,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "vv5rsqsdkh",
+    "user": "lecke.martin@gmail.com",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 29,
+        "row": "4"
+      }
+    ],
+    "bookingNr": "gaz011evwq",
+    "email": "test@test.se",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 60,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "jriqf9l2h6",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 74,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "ykh61s6sr7",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 70,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "zaydu5x8ku",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 72,
+        "row": "8"
+      }
+    ],
+    "bookingNr": "oly0nws538",
+    "email": "asd@asd.asd",
+    "⚙": "BookingData"
+  },
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "date": "2018-02-18",
+    "time": "16.00",
+    "auditorium": "Stora Salongen",
+    "tickets": [
+      {
+        "ordinary": "1 st",
+        "child": "0 st",
+        "pensioner": "0 st",
+        "totalNr": "1 st"
+      }
+    ],
+    "amount": "85 kr",
+    "seats": [
+      {
+        "id": 58,
+        "row": "7"
+      }
+    ],
+    "bookingNr": "glglqdtsbq",
+    "user": "asd@asd.asd",
+    "⚙": "BookingData"
+  }
+]

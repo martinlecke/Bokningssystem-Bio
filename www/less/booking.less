@@ -1,0 +1,82 @@
+.booking {
+  background: linear-gradient(to bottom, @black, rgba(0,0,0,0.3), @black 25%), url(/imgs/curtain.jpg) no-repeat;
+  background-size: contain;
+  @media screen and (max-width: 575px){
+  	background: linear-gradient(to bottom, @black, rgba(0,0,0,0.3), @black 15%), url(/imgs/curtain.jpg);
+  	background-size: contain;
+  }
+	.image-poster {
+		border: 2px solid #fff;
+		border-radius: 10px;
+		max-width: 200px;
+	}
+	.movie-poster-summary{
+		border: 2px solid @black;
+		border-radius: 10px;	
+		max-width: 70%;
+		@media @mobile-min {
+			max-width: 125%;	
+		}
+		@media @tablet-min {
+			max-width: 70%;
+		}
+  }
+	.film-details {
+		font-size: 1.2rem;
+	}
+	hr {
+		width: 75%;
+		&.underline {
+			width: 220%;
+  		border-top: 1px solid #000;
+  		margin-left: 0;
+		}
+		&.email {
+			width: 90%;
+			margin-left: 0;
+		}
+	}
+	.rounded {
+		width: 110%;
+		border-radius: 2rem!important;
+		border: 3px solid #e9ecef!important;
+		&#booking-nr {
+			border: 3px solid #dc3545!important;
+			width: 60%;
+		}
+	}
+	.ticket {
+		font-size: 1rem;
+	}
+	.number {
+		font-size: 1.5rem;
+	}
+	.pill-width{
+		width: 33%;
+		.badge {
+			width: 35px;
+			height: 33px;
+			color: white;
+			font-size: 1rem;
+		}
+	}
+	.seat-info {
+		width: 100%;
+	}
+	.hide-text {
+		display: none;
+	}
+	input:focus{
+		border-color: @red;
+		outline-color: @red;
+	}
+	.btn, .btn-primary{
+		.redButton();
+	}
+  .audiinfo {
+    li {
+      text-align: center;
+    }
+	}
+	
+}

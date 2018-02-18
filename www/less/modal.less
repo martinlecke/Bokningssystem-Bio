@@ -1,0 +1,62 @@
+.modal {
+	// "Close" knappen för filmmodalen
+	  .modal-header {
+	    border: 0;
+	    padding: 0;
+	  }
+	  .close {
+	    border-radius: 50% 50%;
+	    color: lightgray;
+	    background: black;
+	    position: absolute;
+	    right: -20px;
+	    top: -20px;
+	    z-index: 100;
+	    border: 1px solid lightgray;
+	    font-size: 2rem;
+	    opacity: 1;
+	    height: 40px;
+	    width: 40px;
+	    cursor: pointer;
+	    outline: 0;
+	    &:hover {
+	      border-color: white;
+	      color: white;
+	    }
+	  }
+	.modal-booking-btn{
+		font-size: 0.75rem;
+		line-height: unset;
+		padding: .1rem .25rem;
+	}
+	.modal-body img {
+		display: none;
+		@media @tablet-min {
+			display: block;
+		}
+	}
+  .film-details {
+    font-size: 13px;
+  }
+	hr {
+		width: 150%;
+		@media @tablet-min {
+			width: 100%;
+		}
+	}
+	.booking {
+		margin-left: 3rem!important;
+		@media @mobile-min {
+			margin-left: 200px!important;
+		}
+		@media @tablet-min {
+		margin-left: 6rem!important;
+		}
+	}
+	h1 {
+		font-size: 2.1rem;
+	}
+	small {
+		font-size: 67%; 
+	}
+}

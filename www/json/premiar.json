@@ -1,0 +1,188 @@
+[
+  {
+    "title": "The Disaster Artist",
+    "productionYear": 2018,
+    "length": 103,
+    "active": true,
+    "genre": "Komedi",
+    "language": "Engelska(svensk text)",
+    "director": "James Franco",
+    "actors": [
+      "James Franco",
+      "Seth Rogen",
+      "Kristen Bell",
+      "Zac Efron"
+    ],
+    "description": "<p>En biografisk komedi som tar oss med bakom kulisserna på 'The Room', ofta kallad för världens sämsta film. Här får vi följa den excentriske Hollywood-outsidern Tommy Wiseau, vars passion för sitt filmskapande är lika stor som hans metoder är ifrågasatta.</p>",
+    "images": "/coming/disasterartist.jpg",
+    "poster": "/imgs/coming/posters/disasterartist-poster.jpg",
+    "youtubeTrailers": [
+      "sPSJYXi7BWA"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "Black Panther",
+    "productionYear": 2018,
+    "length": 133,
+    "active": true,
+    "genre": "Action, Äventyr, Sci-Fi",
+    "language": "Engelska(svensk text)",
+    "director": "Ryan Coogler",
+    "actors": [
+      "Chadwick Boseman",
+      "Michael B. Jordan",
+      "Andy Serkis",
+      "Lupita Nyong'o",
+      "Forrest Whitaker"
+    ],
+    "description": "<p>Efter händelserna i ”Captain America: Civil War” återvänder T’Challa till sitt hemland, det isolerade, högteknologiska afrikanska landet Wakanda, för att bli dess kung. Men när en gammal fiende dyker upp måste T’Challa, både som kung och Black Panther visa sin styrka. Han dras in i en konflikt som hotar inte bara Wakandas öde, utan hela världen.</p>",
+    "images": "/coming/blackpanther.jpg",
+    "poster": "/imgs/coming/posters/blackpanther-poster.jpg",
+    "youtubeTrailers": [
+      "xjDjIWPwcPU"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "The Shape of Water",
+    "productionYear": 2018,
+    "length": 119,
+    "active": true,
+    "genre": "Drama, Romantik, Fantasy",
+    "language": "Engelska(svensk text)",
+    "director": "Guillermo Del Toro",
+    "actors": [
+      "Sally Hawkin",
+      "Octavia Spencer",
+      "Michael Shannon",
+      "Richard Jenkins"
+    ],
+    "description": "<p>Elisa jobbar på ett statligt laboratorium. En dag upptäcker hon och hennes kollega Zelda ett hemligstämplat experiment och hennes liv förändras drastiskt. En annorlunda saga som utspelar sig under kalla kriget i USA år 1962.</p>",
+    "images": "/coming/blackpanther.jpg",
+    "poster": "/imgs/coming/posters/shapeofwater-poster.jpg",
+    "youtubeTrailers": [
+      "XFYWazblaUA"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "Pelle Kanin",
+    "productionYear": 2018,
+    "length": 119,
+    "active": true,
+    "genre": "Animerat, Komedi, Familj",
+    "language": "Svenska",
+    "director": "Will Gluck",
+    "actors": [
+      "Linus Wahlgren",
+      "Molly Sandén",
+      "Mimmi Sandén",
+      "Frida Sandén"
+    ],
+    "description": "<p>Filmadaption av Beatrix Potters klassiska saga om den rebelliska kaninen som försöker att smyga sig in till en bondes grönsaksodling.</p>",
+    "images": "/coming/pelle-kanin-poster.jpg",
+    "poster": "/imgs/coming/posters/pelle-kanin-poster.jpg",
+    "youtubeTrailers": [
+      "7Pa_Weidt08"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "Wonder",
+    "productionYear": 2018,
+    "length": 113,
+    "active": true,
+    "genre": "Drama, Familj",
+    "language": "Engelska(svensk text)",
+    "director": "Stephen Chbosky",
+    "actors": [
+      "Jacob Tremblay",
+      "Julia Roberts",
+      "Owen Wilson",
+      "Mandy Patinkin",
+      "Daveed Diggs"
+    ],
+    "description": "<p>August Pullman, en pojke med en ansiktsdeformation, ska börja femte klass och för första gången på en vanlig grundskola. Hans livsglädje och personlighet kommer att förändra livet för alla runt omkring honom. En ödmjuk, berörande och stark berättelse om att hitta sin styrka och välja att vara snäll.Filmen är baserad på New York Times-bästsäljaren med samma namn av R. J. Palacio.</p>",
+    "images": "/coming/wonder.jpg",
+    "poster": "/imgs/coming/posters/wonder-poster.jpg",
+    "youtubeTrailers": [
+      "ngiK1gQKgK8"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "Phantom Thread",
+    "productionYear": 2018,
+    "length": 130,
+    "active": true,
+    "genre": "Drama",
+    "language": "Engelska(svensk text)",
+    "director": "Paul Thomas Anderson",
+    "actors": [
+      "Daniel Day-Lewis",
+      "Lesley Manville",
+      "Camilla Rutherford",
+      "Vicky Krieps",
+      "Jane Perry"
+    ],
+    "description": "<p>”Phantom Thread” utspelar sig i 1950-talets London, där den berömde klänningsmakaren Reynolds Woodcock och hans syster står i den brittiska modescenens centrum. De klär kungligheter, filmstjärnor och societetslejon. Kvinnorna passerar i snabb revy i Woodcocks liv, men en dag möter han den unga och viljestarka Alma som blir både en inspirationskälla och älskarinna. Sakta men säkert börjar kärleken skapa revor i hans tidigare så välskräddade tillvaro.</p>",
+    "images": "/coming/phantomthread.jpg",
+    "poster": "/imgs/coming/posters/phantomthread-poster.jpg",
+    "youtubeTrailers": [
+      "xNsiQMeSvMk"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "Game Night",
+    "productionYear": 2018,
+    "length": 93,
+    "active": true,
+    "genre": "Komedi, Action",
+    "language": "Engelska(svensk text)",
+    "director": [
+      "Jonathan Goldstein",
+      "John Francis Daley"
+    ],
+    "actors": [
+      "Rachel Mcadams",
+      "Jason Bateman",
+      "Jesse Plemons",
+      "Kyle Chandler",
+      "Billy Magnussen"
+    ],
+    "description": "<p>”I nya actionkomedin ”Game Night” får vi följa Max och Annie vars par-spelkvällar intensifieras något när Max karismatiska bror Brooks ordnar en mordgåtefest, full av falska tjuvar och agenter. Plötsligt blir Brooks kidnappad, men det är ju bara en del av spelet… Eller?</p>",
+    "images": "/coming/gamenight.jpg",
+    "poster": "/imgs/coming/posters/gamenight-poster.jpg",
+    "youtubeTrailers": [
+      "fNtLIcyjsnI"
+    ],
+    "⚙": "UpcomingMovie"
+  },
+  {
+    "title": "I, Tonya",
+    "productionYear": 2018,
+    "length": 120,
+    "active": true,
+    "genre": "Drama, Komedi",
+    "language": "Engelska(svensk text)",
+    "director": "Craig Gillespie",
+    "actors": [
+      "Margot Robbie",
+      "Sebastian Stan",
+      "Allison Janney",
+      "Mckenna Grace",
+      "Bobby Cannavale",
+      "Julianne Nicholson"
+    ],
+    "description": "<p>”Den lovande konståkerskan Tonya Harding rankas högt i de amerikanska konståkningsmästerskapen, men hennes framtid som konståkerska blir mycket oviss när hennes ex-man ingriper. Baserad på den verkliga händelsen då Tonya Harding och hennes ex-man Jeff Gilooly anlitar en man för att bryta benet av Tonyas konkurrent Nancy Kerrigan vid de amerikanska konståkningsmästerskapen 1994, vilket ledde till slutet av Hardings karriär som konståkerska.</p>",
+    "images": "/coming/itonya.jpg",
+    "poster": "/imgs/coming/posters/itonya-poster.jpg",
+    "youtubeTrailers": [
+      "KuDQOMICfr0"
+    ],
+    "⚙": "UpcomingMovie"
+  }
+
+]

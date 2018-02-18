@@ -1,0 +1,38 @@
+#login {
+	color: black;
+	.modal-content{
+		.list-group-item{
+			border-radius: 0.45rem!important;
+		}
+	}
+  .modal-header {
+    border: 0;
+    padding: 0;
+  }
+  .close {
+    border-radius: 50% 50%;
+    color: lightgray;
+    background: black;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 100;
+    border: 1px solid lightgray;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: 0;
+    &:hover {
+      color: white;
+    }
+  }
+  .btn-primary {
+    background-color: @red;
+    color: white;
+    border: 0;
+    &:hover {
+      background: @red-hover;
+    }
+  }
+}

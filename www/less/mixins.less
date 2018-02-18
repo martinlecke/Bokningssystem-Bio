@@ -1,0 +1,20 @@
+.movielist() {
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.2);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    border-bottom: 1.5px solid white;
+  }
+}
+
+.redButton(){
+	border: 1px solid @red;
+	background-color: @red;
+	color: white;
+	cursor: pointer;
+		&:hover{
+	    background-color: @red-hover;
+	    border-color: @red-hover;
+		}
+}

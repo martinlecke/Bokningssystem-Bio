@@ -1,0 +1,428 @@
+[
+
+  {
+    "title": "Molly's Game",
+    "productionYear": 2018,
+    "length": 140,
+    "active": false,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Drama",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Aaron Sorkin",
+    "actors": [
+      "Jessica Chastain",
+      " Idris Elba",
+      " Kevin Costner",
+      " Michael Cera",
+      " Chris O'Dowd"
+    ],
+    "description": "Detta är den, verklighetsbaserade historien om Molly Bloom, landslagsåkerskan i puckelpist som efter en svår fallolycka sadlar om till slipad pokervärdinna för filmstjärnor, sportgiganter och makthavare. Hennes hemliga, lyxiga spelverksamhet pågår tills ryska maffiamedlemmar drar till sig FBI:s uppmärksamhet. ”The Poker Princess” ende allierade är försvarsadvokaten Charlie Jaffey och den hårdaste kritikern, hennes egen pappa.",
+    "images": "mollysgame.jpg",
+    "poster": "/imgs/posters/mollysgame-poster.jpg",
+    "youtubeTrailers": [
+      "Vu4UPet8Nyc"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Mordet på Orientexpressen",
+    "productionYear": 2017,
+    "length": 114,
+    "active": false,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Deckare, Drama",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Kenneth Branagh",
+    "actors": [
+      "Kenneth Branagh",
+      " Johnny Depp",
+      " Daisy Ridley",
+      " Penélope Cruz",
+      " Michelle Pfeiffer",
+      " Judi Dench",
+      " Josh Gad",
+      " Willem Dafoe"
+    ],
+    "description": "Vad som börjar som en extravagant tågresa genom Europa utvecklas snabbt till ett av de mest spännande mysterier som någonsin berättats. För en av tågets passagerare ska resan bli den allra sista, och alla övriga medresenärer är misstänkta. Tiden är knapp och en man måste lösa pusslet innan mördaren slår till igen.",
+    "images": "mordetpaorientexpressen.jpg",
+    "poster": "/imgs/posters/mordetpaorientexpressen-poster.jpg",
+    "youtubeTrailers": [
+      "Mq4m3yAoW8E"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Paddington 2",
+    "productionYear": 2017,
+    "length": 103,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Animerat, Komedi",
+    "language": "Svenska",
+    "director": "Paul King",
+    "actors": [
+      "Ben Whishaw",
+      " Hugh Grant",
+      " Hugh Bonneville",
+      " Sally Hawkins",
+      " Jim Broadbent",
+      " Brendan Gleeson"
+    ],
+    "description": "När Faster Lucy snart ska fylla 100 år tar sig Paddington an småjobb för att kunna köpa en present till henne. När någon sen tar hans present blir han så förtvivlad och upprörd att han beger sig ut på Londons gator för att leta reda på tjuven.",
+    "images": "paddington2.jpg",
+    "poster": "/imgs/posters/paddington2-poster.jpg",
+    "youtubeTrailers": [
+      "sw7RElt-SvE"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Maze Runner: The Death Cure",
+    "productionYear": 2018,
+    "length": 142,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Action, Sci-Fi, Thriller",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Wes Ball",
+    "actors": [
+      "Kaya Scodelario",
+      " Dylan O’Brien",
+      " Walton Goggins"
+    ],
+    "description": "I den avslutande delen av Maze Runner-trilogin leder Thomas sin grupp Gladers på deras farligaste uppdrag någonsin. För att rädda sina vänner måste de bryta sig in i den ökända ”Last City”, en WCKD-kontrollerad labyrint som riskerar att innebära slutet för dem alla. Den som klarar att ta sig ut levande kommer dock att få svar på alla de frågor som gruppen ställt ända sedan de först anlände.",
+    "images": "mazerunnerthedeathcure.jpg",
+    "poster": "/imgs/posters/mazerunnerthedeathcure-poster.jpg",
+    "youtubeTrailers": [
+      "S_9OSktlm6s"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Solsidan",
+    "productionYear": 2017,
+    "length": 104,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Komedi",
+    "language": "Svenska",
+    "director": [
+      "Felix Herngren", 
+      " Måns Herngren"
+    ],
+    "actors": [
+      "Felix Herngren",
+      " Mia Skäringer",
+      " Josephine Bornebusch",
+      " Johan Rheborg",
+      " Henrik Dorsin",
+      " Malin Cederbladh",
+      " Henrik Schyffert",
+      " Sven Wollter"
+    ],
+    "description": "En av Sveriges populäraste komediserier tar steget till vita duken! Vi får följa de tre paren i en komedi om kärlek, barnlängtan, knepiga föräldrar och oskrivna badregler i Torekov.",
+    "images": "solsidan.jpg",
+    "poster": "/imgs/posters/solsidan-poster.jpg",
+    "youtubeTrailers": [
+      "oHjC_sKhW_I"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Jumanji: Welcome to the Jungle",
+    "productionYear": 2017,
+    "length": 119,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Familj, Äventyr, Komedi",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Jake Kasdan",
+    "actors": [
+      "Dwayne Johnson",
+      " Karen Gillan",
+      " Kevin Hart",
+      " Jack Black",
+      " Missi Pyle"
+    ],
+    "description": "Genom en förtrollad spelkonsol sugs fyra skolungdomar i den farofyllda världen Jumanji, där de förvandlas till den respektive avatar de valt, alla med sina unika färdigheter. För att inte fastna i Jumanji i all evighet måste de ta sig igenom sitt livs äventyr - och överleva till sista nivån.",
+    "images": "jumanji.jpg",
+    "poster": "/imgs/posters/jumanji-poster.jpg",
+    "youtubeTrailers": [
+      "2QKg5SZ_35I"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Downsizing",
+    "productionYear": 2018,
+    "length": 135,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Komedi, Drama, Sci-Fi",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Alexander Payne",
+    "actors": [
+      "Kristen Wiig",
+      " Matt Damon",
+      " Laura Dern",
+      " Rolf Lassgård",
+      " Christoph Waltz",
+      " Neil Patrick Harris"
+    ],
+    "description": "Downsizing föreställer sig en värld där norska forskare, som en lösning på planetens överbefolkning, uppfinner ett sätt att krympa människor till en dryg decimeters längd och därpå föreslår en 200-årig global övergång från stort till smått. I en miniatyrvärld räcker pengarna längre, och drömmen om ett bättre liv lockar medelklassmannen Paul Safranek och hans fru Audrey att ge upp sina stressiga liv i Omaha för att istället starta ett nytt miniliv. Ett val som leder till många spännande äventyr.",
+    "images": "downsizing.jpg",
+    "poster": "/imgs/posters/downsizing-poster.jpg",
+    "youtubeTrailers": [
+      "UCrBICYM0yM"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "All the Money in the World",
+    "productionYear": 2017,
+    "length": 132,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Biografi, Kriminalitet, Drama",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Ridley Scott",
+    "actors": [
+      "Michelle Williams",
+      " Christopher Plummer",
+      " Mark Wahlberg"
+    ],
+    "description": "Rom 1973: Maskerade män kidnappar tonårspojken Paul. Hans farfar är J. Paul Getty en av rikaste männen på jorden, en oljemagnat. Man tror sig att en vänstervriden italiensk organisation ligger bakom.",
+    "images": "allthemoneyintheworld.jpg",
+    "poster": "/imgs/posters/allthemoneyintheworld-poster.jpg",
+    "youtubeTrailers": [
+      "KXHrCBkIxQQ"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Django",
+    "productionYear": 2017,
+    "length": 117,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Biografi, Drama, Musik",
+    "language": "Franska <small>(svensk text)</small>",
+    "director": "Étienne Comar",
+    "actors": [
+      "Reda Kateb",
+      " Cécile de France",
+      " Bea Palya"
+    ],
+    "description": "1943. I det ockuperade Paris spelar musikern Django Reinhardt swing-jazz. Han är på toppen av sin karriär. Men han tillhör också det romska folket som förföljs över hela Europa äger, och nu vill när det nazistiska propagandadepartementet skicka honom på turné i Tyskland.",
+    "images": "django.jpg",
+    "poster": "/imgs/posters/django-poster.jpg",
+    "youtubeTrailers": [
+      "Lw5DvTAVomA"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "productionYear": 2017,
+    "length": 115,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Drama, Komedi",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Martin McDonagh",
+    "actors": [
+      "Frances McDormand",
+      " Woody Harrelson",
+      " Sam Rockwell",
+      " Peter Dinklage"
+    ],
+    "description": "En mamma hamnar i konflikt med stadens poliskår då hon upplever att de inte gör en seriös utredning av mordet på hennes dotter.",
+    "images": "threebillboardsoutsideebbingmissouri.jpg",
+    "poster": "/imgs/posters/threebillboardsoutsideebbingmissouri-poster.jpg",
+    "youtubeTrailers": [
+      "Jit3YhGx5pU"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Call Me by Your Name",
+    "productionYear": 2017,
+    "length": 132,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Drama",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Luca Guadagnino",
+    "actors": [
+      "Armie Hammer",
+      " Timothée Chalamet",
+      " Michael Stuhlbarg"
+    ],
+    "description": "I Italien sommaren 1983 blir en ung italiensk-amerikansk man förälskad i en amerikansk student som kommer för att studera och bo hos hans familj. Tillsammans upplever de en oförglömlig sommar.",
+    "images": "callmebyyourname.jpg",
+    "poster": "/imgs/posters/callmebyyourname-poster.jpg",
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Borg",
+    "productionYear": 2017,
+    "length": 107,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": true,
+    "genre": "Drama, Sport",
+    "language": "Engelska <small>(svensk text)</small> & Svenska",
+    "director": "Janus Metz",
+    "actors": [
+      "Sverrir Gudnason",
+      " Shia LaBeouf",
+      " Tuva Novotny",
+      " Stellan Skarsgård"
+
+    ],
+    "description": "Filmen skildrar åren i Björn Borgs liv då han gjorde resan från Södertälje till världseliten, samt omkring rivaliteten mellan honom och amerikanen John McEnroe och finalmatchen dem emellan i Wimbledonmästerskapen 1980.",
+    "images": "borg.jpg",
+    "poster": "/imgs/posters/borg-poster.jpg",
+    "youtubeTrailers": [
+      "Hap-SWZ5NlM"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Let The Sunshine In",
+    "productionYear": 2017,
+    "length": 94,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Drama",
+    "language": "Franska <small>(svensk text)</small>",
+    "director": "Claire Denis",
+    "actors": [
+      "Juliette Binoche",
+      " Xavier Beauvois",
+      " Philippe Katerine"
+    ],
+    "description": "Isabelle, en frånskild konstnär i 50-års åldern, försöker sålla bland alla självcentrerade män i hopp om att åter finna kärleken.",
+    "images": "letthesunshinein.jpg",
+    "poster": "/imgs/posters/letthesunshinein-poster.jpg",
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "Star Wars: The Last Jedi",
+    "productionYear": 2017,
+    "length": 152,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Äventyr, Action, Fantasy",
+    "language": "Engelska <small>(svensk text)</small>",
+    "director": "Rian Johnson",
+    "actors": [
+      "Daisy Ridley",
+      " John Boyega",
+      " Mark Hamill"
+    ],
+    "description": "Rey utvecklar sina krafter som hon just har upptäckt, under Luke Skywalkers ledning. Han blir chockad över styrkan hos henne. Motståndsrörelsen förbereder sig samtidigt för den kommande striden mot First Order.",
+    "images": "starwars.jpg",
+    "poster": "/imgs/posters/starwars-poster.jpg",
+    "youtubeTrailers": [
+      "Q0CbN8sfihY"
+    ],
+    "⚙": "Movie"
+  },
+
+  {
+    "title": "All Inclusive",
+    "productionYear": 2017,
+    "length": 93,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "active": false,
+    "genre": "Komedi",
+    "language": "Svenska",
+    "director": "Karin Fahlén",
+    "actors": [
+      "Suzanne Reuter",
+      " Jennie Silfverhjelm",
+      " Liv Mjönes",
+      " Goran Bogdan"
+    ],
+    "description": "Tove och hennes präktiga syster Malin reser till Kroatien för att fira mamma Ingers 60-årsdag. Inger har just blivit lämnad av sin man och är djupt olycklig. Det hela urartar snabbt i en tävling om vem som bäst kan hjälpa Inger på fötter.",
+    "images": "/allinclusive.jpg",
+    "poster": "/imgs/posters/allinclusive-poster.jpg",
+    "youtubeTrailers": [
+      "Gtu-DdMTHn0"
+    ],
+    "⚙": "Movie"
+  },
+  
+  {
+    "title": "Ballerinan och uppfinnaren",
+    "productionYear": 2017,
+    "length": 89,
+    "priceOrdinarie": 85,
+    "pricePensionar": 75,
+    "priceBarn": 65,
+    "genre": "Animerad familjefilm",
+    "language": "Svenska",
+    "director": [
+      "Éric Summer",
+      " Éric Warin"
+    ],
+    "actors": [
+      "Elle Fanning",
+      " Dane DeHaan",
+      " Carly Rae Jepsen"
+    ],
+    "description": "Felicia är en föräldralös flicka som drömmer om att bli prima ballerina på Operan i Paris. Tillsammans med kamraten Victor, som har planer på att bli uppfinnare, beger hon sig till Paris, där man just håller på att bygga Eiffeltornet, för att där förverkliga sina drömmar.",
+    "images": "leap.jpg",
+    "poster": "/imgs/posters/leap-poster.jpg",
+    "youtubeTrailers": [
+      "dTwTXk4O9fc"
+    ],
+    "⚙": "Movie"
+  }
+
+]
